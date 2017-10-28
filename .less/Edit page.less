@@ -1,0 +1,199 @@
+@gradient-light-color: lighten(@main-page-bg, 7%);
+
+#EditPageHeader {
+    background-color: @gradient-light-color;
+    
+    &,
+    h2 {
+        color: @main-text;
+    }
+    
+    a,
+    & > h1 > a {
+        color: @links;
+    }
+}
+
+#EditPage {
+    // ========================================
+    //      Toolbar at the top of the page
+    // ========================================
+    .EditPageToolbar {
+        background-color: @main-page-bg;
+        .gradient(linear; @main-page-bg 0%, @gradient-light-color 50%; 0deg);
+        .box-shadow(0 4px 2px 0 rgba(0, 0, 0, 0.3));
+        
+        .cke_toolbar_expand a,
+        .diff-link {
+            color: @main-text;
+        }
+    }
+    
+    .preview_box {
+        h3.preview-header {
+            color: @main-text;
+            background: none;
+        }
+        
+        svg {
+            fill: @main-text;
+        }
+    }
+    
+    .diff-link {
+        color: @links;
+    }
+    
+    .wpMinoredit,
+    .wpSummary_canMinorEdit,
+    .scribunto_ignore_errors {
+        color: @main-text;
+    }
+    
+    #wpSummary {
+        .text-input-styling;
+        .placeholder({color: darken(@main-text, 15%)});
+    }
+    
+    #EditPageEditorWrapper,
+    #EditPageMain {
+        background-color: @gradient-light-color;
+    }
+    
+    // =================
+    //      Sidebar
+    // =================
+    #EditPageRail {
+        background-color: @main-page-bg;
+        .box-shadow(~"-2px 2px 2px @{gradient-light-color}, -1px 0 0 @{gradient-light-color}");
+    }
+    
+    .module_content {
+        background-color: @main-page-bg;
+        .gradient(linear; @main-page-bg 0%,  @gradient-light-color 50%; 0deg);
+    }
+    
+    &.editpage-sourcewidemode-on {
+        .module_content,
+        #EditPageRail {
+            background: none;
+        }
+        
+        .arrow {
+            border-right-color: @main-text;
+        }
+    }
+    
+    .editpage-widemode-trigger {
+        border-left-color: @table-border;
+        
+        .arrow {
+            border-left-color: @main-text;
+        }
+    }
+    
+    .module h3 {
+        background-color: @main-page-bg;
+        .gradient(linear; @main-page-bg 0%,  @gradient-light-color 100%; 0deg);
+        color: @main-text;
+        
+        img {
+            filter: invert(85%);
+        }
+    }
+    
+    .cke_button a {
+        // background-color: @table-header;
+        // border-color: @table-header;
+        .button-styling;
+        
+        &:hover{
+            background-image: none;
+        }
+        
+        span {
+            color: @main-text;
+        }
+    }
+    
+    .CategorySelect {
+        .input {
+            .placeholder({color: darken(@main-text, 15%)});
+        }
+        
+        .categories {
+            .text-input-styling;
+            
+            .category {
+                color: @main-text;
+                
+                &:hover {
+                    background-color: darken(#e6e6e6, 50%);
+                }
+            }
+        }
+    }
+    
+    // ===================
+    //      Text area
+    // ===================
+    #wpTextbox0 {
+        background-color: @edit-area-bg !important;
+    }
+    
+    #wpTextbox1 {
+        color: black;
+    }
+    
+    .loading-background,
+    .loading-message,
+    .loading-throbber {
+        background-color: @edit-area-bg;
+    }
+    
+    
+    
+    // ========================
+    //      Module console
+    // ========================
+    #mw-scribunto-console {
+        color: @main-text;
+        
+        &,
+        .mw-scribunto-console-fieldset {
+            background-color: @table-data;
+        }
+        
+        legend,
+        .mw-scribunto-message {
+            background: none;
+            color: darken(@main-text, 10%);
+        }
+        
+        // Output
+        .mw-scribunto-input {
+            color: @links;
+        }
+        
+        .mw-scribunto-normalOutput {
+            background: none;
+            color: @main-text;
+        }
+        
+        .mw-scribunto-error {
+            background: none;
+        }
+        
+        // Text input
+        #mw-scribunto-input {
+            .text-input-styling;
+        }
+        
+        // Clear button
+        input {
+            background-image: none;
+            .button-styling;
+        }
+    }
+}
+

@@ -1,0 +1,214 @@
+// ==========================
+//      {{Archive list}}
+// ==========================
+table.archive {
+    background-color: @table-data !important;
+    border: solid 1px @table-border !important;
+}
+
+// =======================
+//      {{Set price}}
+// =======================
+// Recolour the totals cell
+table.wikitable td[style="text-align:right;background:#F0F0F0;"] {
+    background: @table-header !important;
+}
+
+// ===========================
+//      {{Infobox Quest}}
+// ===========================
+.questdetails {
+    .table-infobox;
+    
+    .questdetails-header {
+        background-color: @table-header;
+    }
+}
+
+.questreq ul {
+    border-left: 1px dotted @main-text;
+}
+
+// ===================
+//      {{Quote}}
+// ===================
+blockquote.block {
+    background-color: @table-header;
+}
+
+.blockquote-mark {
+    &::before {
+        background: @main-page-bg;
+    }
+    
+    &::after {
+        color: @table-data;
+    }
+}
+
+// ====================
+//      {{Navbox}}
+// ====================
+.navbox {
+    color: @main-text;
+    
+    &,
+    .navbox-subgroup {
+        background-color: @main-page-bg;
+    }
+    
+    .navbox-group {
+        background: @table-header;
+        background-clip: padding-box;
+    }
+    
+    .navbox-list,
+    .navbox-group {
+        border: 2px solid @main-page-bg;
+    }
+    
+    .navbox-subgroup {
+        .navbox-title,
+        .navbox-group {
+            background: @table-header;
+            background-clip: padding-box;
+        }
+    }
+    
+    .navbox-title,
+    .navbox-footer {
+        border: 2px solid @main-page-bg;
+        color: @main-text;
+        background-color: @theme-blue;
+        background-clip: padding-box;
+        
+        a {
+            color: @main-text !important;
+        }
+    }
+    
+    .navbox-collapsible {
+        .navbox-title,
+        .navbox-footer {
+            background-color: @theme-blue-lighter;
+        }
+    }
+}
+
+// =========================
+//      {{Disassembly}}
+// =========================
+#DisassemblyT .header-top {
+    background: @table-header;
+}
+
+// ===========================
+//      {{Documentation}}
+// ===========================
+.documentation {
+    background-color: @documentation-bg;
+    color: @main-text;
+}
+
+// ======================
+//      {{shortcut}}
+// ======================
+.shortcut {
+    background: @table-data;
+    border: 1px solid @table-data;
+}
+
+// ==================
+//      <Tabber>
+// ==================
+.tabberlive {
+    ul.tabbernav {
+        li.tabberactive a {
+            .button-styling;
+        }
+        
+        li a {
+            background-color: lighten(@main-page-bg, 3%);
+            color: @main-text !important;
+            
+            &:hover {
+                background-color: lighten(@main-page-bg, 13%);
+            }
+        }
+    }
+    
+    div.tabbertab {
+        background-color: lighten(@main-page-bg, 3%);
+    }
+}
+
+// ==========================
+//      {{Infobox Item}}
+// ==========================
+.infobox-bonuses {
+    td {
+        .table-data;
+        background-color: @table-data;
+    }
+        
+    th {
+        .table-header;
+    }
+}
+
+// -----------------------
+//      Compare popup
+// -----------------------
+#modal {
+    background-color: @main-page-bg;
+    color: @main-text;
+    
+    // Add item input field
+    #cioItem {
+        .text-input-styling;
+    }
+    
+    // Stat colors
+    .cioPos {
+        color: @coins-positive;
+    }
+    
+    .cioNeg {
+        color: @coins-negative;
+    }
+    
+    // Totals row
+    #cioTotals {
+        background-color: @highlight-table-on;
+    }
+}
+
+// =========================================
+//      {{Eq infotable}} {{InfoHeader}}
+// =========================================
+.infotableBonuses {
+    .attribute-value {
+        .table-header;
+    }
+    
+    .attribute-total {
+        td,
+        th,
+        .attribute-value {
+            .table-header;
+        }
+    }
+}
+
+// =================================
+//      {{Infobox Monster new}}
+// =================================
+.infobox-monster {
+    .offensive-subheader {
+        color: #861c10;
+    }
+    
+    .defensive-subheader {
+        color: #32637c;
+    }
+}

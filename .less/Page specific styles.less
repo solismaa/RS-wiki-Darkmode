@@ -1,0 +1,244 @@
+// ===================
+//      Main page
+// ===================
+.mp-color-common() {
+    background-color: @table-data;
+    color: @main-text;
+}
+
+.mp-color {
+    .mp-color-common;
+    
+    // buttons
+    .mp-endrow .mp-endbox { 
+        background-color: @table-header;
+    }
+}
+
+.mp-color2 {
+    .mp-color-common;
+    
+    // buttons
+    .mp-endrow .mp-endbox2 { 
+        background-color: @table-header;
+    }
+}
+
+// Footer
+#mp-footer {
+    background: @categories;
+}
+
+// Pol show results table header
+#mp-poll-prev-results th {
+    background-color: @table-header;
+}
+
+#mp-recent a {
+    color: @links;
+}
+
+// ====================
+//      User pages
+// ====================
+.WikiaUserPagesHeader {
+    background: lighten(@main-page-bg, 2%);
+}
+
+#UserProfileMasthead {
+    a {
+        color: @links;
+    }
+    
+    .masthead-info {
+        background-color: @table-data;
+        
+        hgroup {
+            background-color: @theme-blue;
+            color: @main-text;
+            .gradient(linear; @theme-blue, lighten(@theme-blue, 5%); 0deg);
+        }
+    }
+    
+    .masthead-info-lower:before {
+        border-color: @table-data @table-data transparent transparent;
+    }
+    
+    .contributions-details a {
+        color: @main-text;
+    }
+    
+    .masthead-avatar .avatar {
+        border-color: @table-border;
+    }
+}
+
+.tabs {
+    border-bottom: solid 1px @table-border;
+    
+    .selected a {
+        // background: @table-data;
+        background: @main-page-bg;
+        color: @main-text;
+        border: solid 1px @table-border;
+        border-bottom: solid 1px transparent;
+    }
+}
+
+// =========================================
+//      [[RuneScape:Active discussions]]
+// =========================================
+.discussiontable {
+    color: @main-text;
+    
+    th {
+        background-color: @theme-blue-lighter;
+        
+        a {
+            color: lighten(@main-text, 10%) !important;
+        }
+    }
+    
+    &.noresults {
+        th {
+            background-color: darken(#e6e6e6, 55%);
+        
+            a {
+                color: lighten(@main-text, 0%) !important;
+            }
+        }
+       
+        .topic,
+        .edited,
+        .edited-by,
+        .yg-archive {
+            background-color: darken(#e6e6e6, 60%);
+            color: @main-text;
+        }
+    }
+    
+    .topic,
+    .edited,
+    .edited-by,
+    .yg-archive {
+        background-color: darken(#e6e6e6, 60%);
+        color: @main-text;
+    }
+    
+}
+
+
+// ============================
+//      [[Special:Search]]
+// ============================
+.Search .result-count {
+    color: @main-text;
+}
+
+// Advanced search
+.Search .SearchInput {
+    background-color: @table-data;
+    border-color: @table-data;
+    
+    // Search button image
+    .sprite {
+        .filter(brightness(85%)); 
+    }
+}
+
+// Namespace selection
+.Search .WikiaSearch .search-tabs {
+    .selected {
+        background-color: lighten(@main-page-bg, 5%);
+        
+        a {
+            color: @links;
+        }
+    }
+    
+    li a:hover {
+        background-color: lighten(@main-page-bg, 8%);
+    }
+}
+
+// ====================================
+//      [[Special:Recent changes]]
+// ====================================
+// byte marker colours
+.mw-plusminus-pos {
+    color: @coins-positive;
+}
+
+.mw-plusminus-neg {
+    color: @coins-negative;
+}
+
+// makes (abusefilter) tags stand out more
+.mw-tag-markers,
+.mw-tag-markers a {
+    color: red !important;
+}
+
+// remove certain styles from tags
+.mw-tag-marker-visualeditor a,
+.mw-tag-marker-visualeditor-needcheck a {
+    color: #e49f10 !important;
+}
+
+.recentchangestext {
+    .speedy-delete,
+    .speedy-move {
+        color: #cb1c00 !important;
+    }
+}
+
+// ==============================
+//      [[Special:Community]]
+// ==============================
+// Start here
+.community-page-card-module {
+    background: @table-data;
+    
+    .community-page-card-module-header {
+        background-color: @theme-blue-lighter;
+        color: @main-text;
+    }
+    
+    .community-page-card-module-header-icon {
+        fill: @theme-blue-lighter;
+    }
+    
+    .community-page-card-module-full-list-link {
+        color: @links;
+    }
+}
+
+// From the community
+.community-page-todo-list-module-content .portal-link a {
+    background: @table-data;
+    color: @main-text !important;
+    
+    &:hover {
+        color: white !important;
+    }
+}
+
+// Side rail
+.community-page-rail {
+    background: @table-data;
+    
+    .community-page-module-box {
+        background-color: @table-header;
+    }
+    
+    .community-page-module-section-title {
+        color: @main-text;
+    }
+}
+
+// ============================
+//      [[Special:Images]]
+// ============================
+.WikiaPage .page-header__counter {
+    color: @main-text;
+}

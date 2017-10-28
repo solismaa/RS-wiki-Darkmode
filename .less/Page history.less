@@ -1,0 +1,37 @@
+// =================
+//      Filters
+// =================
+//Search filter options
+div.mw-warning-with-logexcerpt, 
+.WikiaArticle .noarticletext, 
+.WikiaArticle fieldset, 
+#sp-contributions-footer {
+    background-color: @table-data;
+    border-color: @table-data;
+}
+
+.WikiaArticle #pagehistory li.selected {
+    background-color: @table-data;
+}
+
+// ===============
+//      Diffs
+// ===============
+table.diff, 
+td.diff-otitle, 
+td.diff-ntitle {
+    background-color: lighten(@main-page-bg, 3%);
+    color: @main-text;
+}
+
+td.diff-context, 
+.ArticlePreview.modalContent td.diff-context {
+    background: @table-data;
+    border-color: @table-data;
+    color: @main-text;
+}
+
+td.diff-deletedline, 
+td.diff-addedline {
+    color: @main-text;
+}

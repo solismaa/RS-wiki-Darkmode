@@ -1,0 +1,62 @@
+// =====================================
+//      Categories on wiki articles
+// =====================================
+.CategorySelect.articlePage {
+    // Add categories save cancel toolbar
+    div.toolbar {
+        background-color: lighten(@categories, 2%);
+        border-top-color: @table-border;
+        
+        #CategorySelectCancel {
+            .button-styling("cancel");
+        }
+        
+        #CategorySelectSave {
+            .button-styling;
+        }
+    }
+    
+    // Newly added category (before saving)
+    .category.new {
+        border-color: lighten(@table-data, 20%);
+        color: lighten(@main-text, 10%);
+        
+        &,
+        ul.toolbar {
+            background-color: lighten(@table-data, 20%);
+        }
+    }
+}
+
+.CategorySelect.articlePage, 
+.article-categories {
+    background: @categories;
+}
+
+#CategorySelectAdd {
+    // background: lighten(@table-data, 5%);
+    // border-color: lighten(@table-data, 5%);
+    // color: @main-text;
+    .button-styling("cancel");
+}
+
+// ============================
+//      Category namespace
+// ============================
+// ---------------
+//      Files
+// ---------------
+.WikiaArticle li.gallerybox {
+    border-color: @table-border;
+    background-color: @table-header;
+    
+    div.thumb {
+        background: @table-data;
+        border-color: @table-data; 
+    }
+}
+
+// Sound
+.ogg-player-options {
+    border-color: @table-border;
+}

@@ -1,0 +1,93 @@
+// ===================
+//      Infoboxes
+// ===================
+.WikiaArticle .infobox {
+    .table-wikitable;
+}
+
+// ====================
+//      Wikitables
+// ====================
+
+// -----------------------
+//      Default table
+// -----------------------
+table.wikitable {
+    .table-wikitable;
+    
+    > tr > td, 
+    > * > tr > td {
+        .table-data;
+    }
+    
+    > tr > th, 
+    > * > tr > th {
+        .table-header;
+    }
+}
+
+// --------------------
+//      Lighttable
+// --------------------
+.lighttable,
+#pengLocations {    
+    .highlight-over {
+        background-color: @highlight-table-hover;     
+    }
+    
+    .highlight-on {
+        background-color: @highlight-table-on;
+    }
+}
+
+// ------------------------
+//      Sortable table
+// ------------------------
+table.jquery-tablesorter.sortable th.headerSort .chevron {
+    & {
+        border-color: @main-text transparent transparent;
+    }
+    
+    &:first-child {
+        border-color: transparent transparent @main-text;
+    }
+}
+
+// -------------------
+//      N/A cells
+// -------------------
+.table-na {
+    background: darken(@table-data, 3%);
+} 
+
+// ====================================
+//      Darken colored table cells
+// ====================================
+// table.wikitable tr[style*="background"] > td {
+   // background: rgba(0, 0, 0, 0.6);
+// }
+
+// table.wikitable tr > td[style*="background"] {
+    // &/*:not([style*="background:#F0F0F0"])*/ {
+        // background-image: @table-colored-bg-overlay !important;
+    // }
+// }
+
+table.wikitable tr[style*="background"] td {
+    color: #000;
+    
+    a {
+        color: darken(@links, 5%);
+    }
+}
+
+table.wikitable {
+    td[style*="background"],
+    th[style*="background"] {
+        color: #000;
+    
+        a {
+            color: darken(@links, 5%);
+        }
+    }
+}

@@ -1,0 +1,222 @@
+// ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+//      COLORS
+// ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+@body-color:            #232323;
+@main-page-bg:          #262626;
+@main-text:             #c5c5c5;
+@table-data:            #36393E;
+@table-header:          #2F3136;
+@table-border:          #52555a;
+@categories:            #1d1d1d;
+@messasgeboxes:         @categories;
+@links:                 #5799c1;
+//@links:                 green;
+@redlinks:              #ba0000;
+@input-fields:          #3e3e3e;
+@highlight-table-hover: #006d13;
+@highlight-table-on:    #1e5400;
+@coins-positive:        #01c023;
+@coins-negative:        #c02614;
+@documentation-bg:      lighten(@main-page-bg, 3%);
+@code-tag-bg:           lighten(@main-page-bg, 9%);
+@pre-tag-bg:            lighten(@main-page-bg, 9%);
+@edit-area-bg:          #a9a9a9;
+@theme-blue:            darken(#438ab5, 15%);
+@theme-blue-lighter:    lighten(@theme-blue, 8%);
+
+// ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+//      FILES
+// ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+// @body-bg-image: url('https://i.imgur.com/bADk6bv.jpg');
+// @table-colored-bg-overlay: url('https://i.imgur.com/uJCatVz.png');
+// @main-page-bg-image: url('https://i.imgur.com/LWRwEfz.png');
+// @table-data-image: url('https://i.imgur.com/9tN8HHt.png');
+// @table-header-image: url('https://i.imgur.com/RRBZv1m.png');
+
+// ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+//      Imports
+// ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+@import "Cross browser mixins.less";        // Mixins for better cross browser support
+@import "Mixins.less";
+@import "Tables.less";
+@import "Files.less";
+@import "Popups.less";
+@import "Messageboxes.less";
+@import "Templates.less";
+@import "Links.less";
+@import "Elements.less";
+@import "GEcharts.less";
+@import "Custom classes.less";
+@import "Page specific styles.less";
+@import "Page history.less";
+@import "Edit page.less";
+@import "Page header.less";
+@import "Categories.less";
+ 
+// ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+//      General styling
+// ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+
+// =========================================
+//      Body background image and color
+// =========================================
+#BgImage() {
+    background-image: url('@{filepath}Wiki-background_dark_mode.jpg');
+    width: 790px;
+    height: 844px;
+}
+
+body.background-dynamic.skin-oasis {
+    background-color: @body-color;
+    
+    &::before {
+        margin-left: -1282px;
+        @shadow: inset 40px -40px 40px 0px @body-color, inset -40px -10px 40px 0px @body-color;
+        .box-shadow( @shadow );
+        #BgImage;
+    }
+    
+    &::after {
+        margin-right: -1282px;
+        background-position: -710px 0;
+        @shadow: inset -40px -40px 40px 0px @body-color, inset 40px -10px 40px 0px @body-color;
+        .box-shadow( @shadow );
+        #BgImage;
+    }
+    
+    .background-image-gradient {
+        background: none;
+        
+        &::before {
+            //background: none;
+            left: -webkit-calc(~"50% - 532px");
+            left: calc(~"50% - 532px");
+            #gradient .horizontal(rgba(0, 0, 0, 0), @main-page-bg, 0%, 100%);
+        }
+        
+        &::after {
+            right: -webkit-calc(~"50% - 532px");
+            right: calc(~"50% - 532px");
+            #gradient .horizontal(@main-page-bg, rgba(0, 0, 0, 0), 0%, 100%);
+        }
+        
+        &::before,
+        &::after,
+        & {
+            height: 834px;
+        }
+    }
+}
+
+// ===================
+//      Wikiapage
+// ===================
+
+// -----------------------------------
+//      Background and text color
+// -----------------------------------
+.WikiaPage {
+    border: 1px solid @table-border;
+    
+    .WikiaPageBackground {
+        background-color: @main-page-bg;
+    }
+    
+    // Page title text color
+    .page-header__title {
+        color: @main-text;
+    }
+}
+
+// Text color
+body {
+    color: @main-text;
+}
+
+// Section separation line color
+.WikiaArticle h2 {
+    border-bottom: solid 1px @main-text;
+}
+
+// --------------------------
+//      Table of content
+// --------------------------
+.WikiaArticle .toc {
+    .table-infobox;
+}
+
+// ---------------------------------------------------
+//      Other languages at the bottom of the page
+// ---------------------------------------------------
+.WikiaArticleInterlang {
+    background: @categories;
+}
+
+// ------------------
+//      Wikirail
+// ------------------
+.WikiaRail {
+    .rail-module {
+        background: @table-header;
+    }
+    
+    a {
+        color: @links;
+    }
+    
+    .activity-module .edit-info .edit-info-user,
+    .edit-info-time,
+    .rail-sticky-module .premium-recirculation-rail .content {
+        color: @main-text;
+    }
+}
+
+// ------------------------
+//      Page navigator
+// ------------------------
+// Example used on the bottom of [[Special:Search]]
+.wikia-paginator ul {
+    .paginator-page.active {
+        color: @main-text !important;
+    }
+    
+    .paginator-prev {
+        .button-styling("cancel");
+        
+        &::after {
+            border-right-color: lighten(@main-text, 10%);
+        }
+    }
+    
+    .paginator-next {
+        .button-styling("cancel");
+        
+        &::after {
+            border-left-color: lighten(@main-text, 10%);
+        }
+    }
+}
+
+// -------------------------------
+//      Autocomplete dropdown
+// -------------------------------
+body .ui-autocomplete {
+    .dropdown-styling;
+    .box-shadow(3px 3px 6px 0 rgba(0, 0, 0, 0.3));
+    
+    .ui-menu-item a:hover {
+        color: @links;
+        background-color: lighten(@table-header, 5%);
+    }
+}
+
+// ---------------------
+//      Page footer
+// ---------------------
+.WikiaBarWrapper .tools-menu {
+    .dropdown-styling;
+    
+    > li {
+        border-top-color: @table-border;
+    }
+}
