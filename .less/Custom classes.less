@@ -1,0 +1,61 @@
+// ===================
+//      sg-red
+//      sg-yellow
+//      sg-green
+// ===================
+// for skill calculators and interactive skill guides
+// includes modified link colour for accessibility
+// applies to a variety of templates used by a variety of scripts
+.sg-red,
+.nocell {
+    background: darken(#861c10, 10%);
+    color: @main-text;
+}
+
+.sg-yellow,
+.maybecell {
+    background: darken(#f3f0b0, 60%);
+    color: @main-text;
+}
+
+.sg-green,
+.yescell {
+    background: @highlight-table-on;
+    color: @main-text;
+}
+
+.sg-green,
+.yescell {
+    a {
+        color: @links !important;
+    }
+}
+
+// .sg-red,
+// .nocell,
+.sg-yellow,
+.maybecell {
+    a {
+        color: lighten(@links, 10%) !important;
+    }
+}
+
+// ===============
+//      Coins
+// ===============
+.coins-pos {
+    color: @coins-positive;
+}
+
+.coins-neg {
+    color: @coins-negative;
+}
+
+// ====================================
+//      Calculator extra info cell
+// ====================================
+// Example: [[Calculator:Herblore]]
+table.calc-extra-info {
+    background-color: @table-header !important;
+    border: solid 1px @table-border !important;
+}

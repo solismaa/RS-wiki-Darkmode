@@ -1,0 +1,150 @@
+// ================================
+//      GE chart on item pages
+// ================================
+// --------------------
+//      Background
+// --------------------
+.GEChartBox {
+    background: @table-header;
+}
+
+.highcharts-background {
+    fill: @table-header;
+}
+
+.highcharts-plot-background {
+    fill: @table-header;
+}
+
+// --------------------
+//      Axis color
+// --------------------
+.highcharts-grid-line {
+    stroke: @table-border;
+}
+
+.highcharts-axis-line {
+    stroke: @table-border;
+}
+
+// --------------------
+//      text color
+// --------------------
+.highcharts-title {
+    color: @main-text !important;
+}
+
+.highcharts-axis-labels > text {
+    fill: @main-text !important;
+}
+
+// ========================
+//      GE chart popup
+// ========================
+// --------------------
+//      Background
+// --------------------
+#GEchartpopup {
+    background: @table-header;
+    
+    a {
+        color: @links;
+    }
+}
+
+.highcharts-legend-box {
+    fill: @table-header;
+}
+
+// --------------------
+//      Axis color
+// --------------------
+.highcharts-navigator-outline {
+    stroke: @table-border;
+}
+
+.highcharts-label-box {
+    stroke: @table-border;
+}
+
+// --------------------
+//      text color
+// --------------------
+.highcharts-axis-title {
+    fill: @main-text !important;
+}
+
+// Input field notes
+#chartPropertiespopup {
+    color: @main-text;
+}
+
+// Legend
+.highcharts-legend-item text {
+    fill: @main-text !important;
+}
+
+// -----------------------------
+//      Inputs fields color
+// -----------------------------
+#averagepopup,
+#extraItempopup,
+.highcharts-range-selector {
+    .text-input-styling;
+}
+
+// Data range text
+.highcharts-range-input text {
+    fill: @main-text !important;
+}
+
+// Buttons
+.zoomButton {
+    .highcharts-button-box {
+        fill: @theme-blue-lighter;
+    }
+    
+    text {
+        fill: lighten(@main-text, 10%) !important;
+    }
+}
+
+// -------------------
+//      Scrollbar
+// -------------------
+.highcharts-scrollbar-track {
+    fill: lighten(@table-header, 10%);
+    stroke: lighten(@table-header, 10%);
+}
+
+.highcharts-scrollbar-button {
+    fill: lighten(@table-header, 20%);
+    stroke: lighten(@table-header, 20%);
+}
+
+.highcharts-scrollbar-arrow {
+    fill: lighten(@main-text, 10%);
+}
+
+.highcharts-scrollbar-thumb {
+    fill: lighten(@table-header, 30%);
+    stroke: lighten(@table-header, 30%);
+}
+
+.highcharts-scrollbar-rifles {
+    stroke: lighten(@main-text, 10%);
+    stroke-width: 2px;
+}
+
+// ============================
+//      Exchange namespace
+// ============================
+#rs-exchange-data {
+    .button-styling;
+}
+
+#gemw_guide {
+    color: @main-text !important;
+    border: none !important;
+    background: @messasgeboxes !important;
+}

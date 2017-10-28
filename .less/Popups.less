@@ -1,0 +1,293 @@
+// ======================
+//      RSW-Tooltips
+// ======================
+// References
+.rsw-tooltip {
+    background: @table-data;
+    
+    a {
+        color: @links;
+    }
+}
+
+// Example: Invention {{Disassembly}} junk chance tooltip
+.js-tooltip-wrapper {
+    &,
+    .js-tooltip-text {
+        background-color: lighten(@main-page-bg, 3%);
+    }
+}
+
+// =====================================
+//      Wikia-Tooltips and popovers
+// =====================================
+// popover example: edit page preview buttons hover-over tooltip
+.popover {
+    &.top,
+    &.wikiaBar,
+    &.wikiaBarMessage {
+        .arrow {
+            border-top-color: @table-header;
+        }
+    }
+    
+    &.right .arrow {
+        border-right-color: @table-header;
+    }
+    
+    &.bottom .arrow{
+        border-bottom-color: @table-header;
+    }
+    
+    &.left .arrow {
+        border-left-color: @table-header;
+    }
+    
+    .popover-inner {
+        border-color: @table-border;
+        background-color: @table-header;
+        
+        .popover-content {
+            background-color: @table-header;
+            color: @main-text;
+        }
+    }
+}
+
+// tooltip example: edit page preview device select tooltip
+.tooltip {
+    &.top .tooltip-arrow {
+        border-top-color: @table-header;
+    }
+    
+    &.right .tooltip-arrow {
+        border-right-color: @table-header;
+    }
+    
+    &.bottom .tooltip-arrow {
+        border-bottom-color: @table-header;
+    }
+    
+    &.left .tooltip-arrow {
+        border-left-color: @table-header;
+    }
+    
+    .tooltip-inner {
+        border-color: @table-border;
+        background-color: @table-header;
+    }
+}
+
+// =======================
+//      Image gallery
+// =======================
+.modalWrapper,
+.blackout {
+    background-color: @main-page-bg;
+    color: @main-text;
+    
+    a {
+        color: @links;
+    }
+    
+    h1 {
+        color: @links;
+    }
+    
+    .WikiaPhotoGalleryPreviewItemMenu {
+        &,
+        a {
+            .button-styling("no-hover");
+        }
+    }
+    
+    .accent {
+        border-color: @theme-blue-lighter;
+    }
+}
+
+.LightboxModal {
+    .WikiaLightbox {
+        .LightboxHeader,
+        .LightboxCarousel {
+            background-color: @table-data;
+        }   
+    }
+    
+    .LightboxHeader  {
+        border-bottom-color: @table-border !important;
+    
+        .more-info-button,
+        .share-button,
+        .close {
+            .button-styling;
+            
+            &::before {
+                filter: invert(85%);
+            }
+        }
+    }
+    
+    .LightboxCarousel {
+        border-top-color: @table-border !important;
+    
+        .carousel-arrow {
+            &.next::after {
+                border-left-color: @main-text !important;
+            }
+            
+            &.previous::after {
+                border-right-color: @main-text !important;
+            }
+        }
+    }
+}
+
+.WikiaLightbox a {
+    color: @links;
+}
+
+// =====================
+//      Modal popup
+// =====================
+// Example large: Show diffs pop up
+// Example small: Page footer "Customize" button popup
+.modal.large,
+.modal.small {
+    > header,
+    > footer {
+        background-color: @table-header;
+        
+        &,
+        h3 {
+            color: @main-text;
+        }
+        
+        .close {
+            filter: invert(85%);
+        }
+    }
+
+    section {
+        background-color: @main-page-bg;
+        color: @main-text;
+    }
+    
+    .button.primary,
+    .button.normal.primary {
+        .button-styling;
+    }
+    
+    .button.secondary,
+    .button.normal.secondary {
+        .button-styling("cancel");
+    }
+}
+
+// Page footer "Customize" button popup
+#MyToolsConfigurationWrapper {
+    section {
+        a {
+            color: @links;
+        }
+        
+        .search-box {
+            border-color: @table-border;
+            
+            input.search {
+                .text-input-styling;
+                .box-shadow(none);
+            }
+        }
+        
+        .popular-tools-group {
+            .gradient(linear; lighten(@main-page-bg, 5%), lighten(@main-page-bg, 10%); 0deg);
+            color: @main-text;
+            border-color: @table-border;
+            
+            .popular-toggle {
+                color: @main-text;
+                
+                .icon-hide {
+                    border-bottom-color: @main-text;
+                }
+                
+                .icon-show {
+                    border-top-color: @main-text;
+                }
+            }
+        }
+        
+        .autocomplete {
+            .dropdown-styling;
+            .box-shadow(3px 3px 6px 0 rgba(0, 0, 0, 0.3));
+            
+            .selected {
+                color: @links;
+                background-color: lighten(@table-header, 5%);
+            }
+        }
+        
+        .options-list {
+            border-color: @table-border;
+            
+            li {
+                border-bottom-color: @table-border;
+                
+                .tree-visual {
+                    background-color: darken(@table-border, 5%);
+                }
+                
+                &:hover {
+                    color: @main-text;
+                    background-color: lighten(@table-header, 5%);
+                }
+            }
+        }
+    }
+}
+
+#MyToolsRenameItem .input-box {
+    .text-input-styling;
+    .box-shadow(none);
+}
+
+// ==================================
+//      Choose Template type box
+// ==================================
+#TemplateClassificationEditModal {
+    header,
+    footer {
+        background-color: @table-header;
+        
+        &,
+        h3 {
+            color: @main-text;
+        }
+        
+        .close {
+            filter: invert(85%);
+        }
+    }
+    
+    section {
+        background-color: @main-page-bg;
+        color: darken(@main-text, 10%);
+        
+        a {
+            color: @links;
+        }
+        
+        .tc-type-name {
+            color: @main-text;
+        }
+    }
+    
+    .button.normal.primary {
+        .button-styling;
+    }
+    
+    .button.normal.secondary {
+        .button-styling("cancel");
+    }
+}

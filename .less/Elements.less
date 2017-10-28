@@ -1,0 +1,71 @@
+// ===================
+//      HTML tags
+// ===================
+.WikiaArticle  {
+    // ---------------
+    //      <pre>
+    // ---------------
+    pre {
+        border: solid 1px lighten(@pre-tag-bg, 5%);
+        background-color: @pre-tag-bg;
+        color: @main-text;
+    }
+    
+    // ----------------
+    //      <code>
+    // ----------------
+    code {
+        border: solid 1px lighten(@code-tag-bg, 5%);
+        background-color: @code-tag-bg;
+        color: @main-text;
+    }
+}
+
+// ======================
+//      Input fields
+// ======================
+
+// ---------------------------
+//      Text input fields
+// ---------------------------
+.WikiaPage,
+.modalWrapper {
+    input:not([type="submit"]):not([type=button]):not([type="reset"]) {
+        .text-input-styling;
+    }
+}
+
+textarea {
+    .text-input-styling;
+}
+
+// -----------------------------
+//      Select input fields
+// -----------------------------
+.WikiaPage,
+.modalWrapper {
+    select {
+        .text-input-styling;
+    }
+}
+
+// =================
+//      Buttons
+// =================
+a.wikia-button, 
+.wikia-single-button a,
+input[type="submit"], 
+input[type="reset"], 
+input[type="button"], 
+.button,
+button {
+    .button-styling;
+    
+    &.secondary {
+        .button-styling("cancel");
+    }
+}
+
+// .mw-submit {
+    // .button-styling !important;
+// }

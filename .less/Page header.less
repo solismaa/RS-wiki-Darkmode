@@ -1,0 +1,345 @@
+// =====================
+//      Edit button
+// =====================
+#ca-edit,
+#ca-viewsource {
+    .button-styling;
+    border-right-color: lighten(@main-text, 10%);
+        
+    &:hover {
+        border-right-color: lighten(@main-text, 10%);
+    }
+
+    // Pencil image
+    img {
+        .filter(brightness(85%));
+    }
+    
+    // Dropdown button
+    & + div.wds-dropdown {
+        // Button color
+        .wds-button {
+            .button-styling;
+            border-left-color: lighten(@main-text, 10%);
+            
+            &:hover {
+                border-left-color: lighten(@main-text, 10%);
+            }
+        }
+        
+        // Content colors
+        .dropdown-pointer-styling;
+        
+        .wds-dropdown__content {
+            .dropdown-styling;
+        }
+    }
+}
+
+#page-header-add-new-photo {
+    .button-styling;
+    
+    img {
+        .filter(brightness(85%));
+    }
+}
+
+// For darkmode and talk button
+.wds-button.wds-is-secondary {
+    &,
+    .WikiaPage .page-header & {
+        color: @main-text;
+        border-color: @table-border;
+    }
+}
+
+// For profile edit button and module save button
+.wikia-menu-button {
+    border: none;
+    
+    .codepage-publish-button,
+    .drop {
+        .button-styling;
+    }
+    
+    img.chevron {
+        border-top-color: @main-text;
+    }
+    
+    ul {
+        background-color: @table-header;
+        border-color: @table-border;
+        
+        li {
+            border-top: 1px solid @table-border;
+            
+            a {
+                color: @main-text !important;
+                
+                &:hover {
+                    background-color: lighten(@table-header, 5%);
+                }
+            }
+            
+            &:first-child {
+                border-top: none;
+            }
+            
+            &:hover {
+                background-color: transparent !important;
+            }
+        }
+    }
+}
+
+// =========================
+//      Language select
+// =========================
+#PageHeader .page-header__languages {
+    .dropdown-pointer-styling;
+    
+    .wds-dropdown__content {
+        .dropdown-styling;
+    }
+}
+
+// ==========================
+//      Wikiapage header
+// ==========================
+.wds-community-header {
+    // -------------------------------
+    //      Blue background color
+    // -------------------------------
+    background-color: @theme-blue;
+    
+    &::before {
+        .gradient(linear; fadeout(@theme-blue, 50%) 0px, fadeout(@theme-blue, 50%) 200px, @theme-blue 430px; 270deg);
+    }
+    
+    // --------------------
+    //      Text color
+    // --------------------
+    .wds-community-header__sitename a,
+    .wds-community-header__counter,
+    .wds-tabs__tab-label {
+        color: lighten(@main-text, 10%);
+    }
+    
+    #DisplayClockJS {
+        color: lighten(@main-text, 10%) !important;
+    }
+    
+    .wds-button.wds-is-secondary {
+        color: lighten(@main-text, 10%);
+        border-color: lighten(@main-text, 10%);
+        
+        svg {
+            fill: lighten(@main-text, 10%);
+        }
+    }
+    
+    // -------------------
+    //      Dropdowns
+    // -------------------
+    .wds-dropdown {
+        &::before {
+            border-bottom-color: @table-border;
+        }
+        
+        &::after {
+            border-bottom-color: @table-header;
+        }
+    }
+    
+    .wds-dropdown__content {
+        &,
+        .wds-list.wds-is-linked {
+            &,
+            .wds-dropdown-level-2 .wds-dropdown-level-2__content {
+                .dropdown-styling;
+            }
+            
+            li:hover > a {
+                color: @links;
+                background-color: lighten(@table-header, 5%);
+            }
+        }
+    }
+}
+
+// =======================
+//      Fandom header
+// =======================
+#globalNavigation {
+    // --------------------------
+    //      Background color
+    // --------------------------
+    .box-shadow(0 1px 0 0 darken(@main-page-bg, 10%));
+    
+    &,
+    .wds-global-navigation__account-menu, 
+    .wds-global-navigation__link, 
+    .wds-global-navigation__logo, 
+    .wds-global-navigation__notifications-menu, 
+    .wds-global-navigation__search, 
+    .wds-global-navigation__start-a-wiki, 
+    .wds-global-navigation__user-menu, 
+    .wds-global-navigation__wikis-menu {
+        background-color: @main-page-bg;
+    }
+    
+    .wds-global-navigation__account-menu, 
+    .wds-global-navigation__link, 
+    .wds-global-navigation__notifications-menu, 
+    .wds-global-navigation__user-menu, 
+    .wds-global-navigation__wikis-menu {
+        &:hover {
+            background-color: lighten(@main-page-bg, 10%);
+        }
+    }
+    
+    // --------------------
+    //      Text color
+    // --------------------
+    .wds-global-navigation__logo-image.wds-is-wds-company-logo-fandom > g > path:last-of-type,
+    .wds-global-navigation__logo-image.wds-is-wds-company-logo-powered-by-wikia > path {
+        fill: @main-text !important;
+    }
+    
+    a {
+        color: @main-text;
+    }
+    
+    .wds-global-navigation__wikis-menu {
+        span {
+            color: @main-text;
+        }
+        
+        path {
+            fill: @main-text;
+        }
+    }
+    
+    .wds-global-navigation__notifications-menu {
+        path {
+            fill: darken(@main-text, 10%);
+        }
+    }
+    
+    // When logged in
+    .wds-global-navigation__user-menu {
+        .wds-dropdown__toggle-chevron {
+            fill: darken(@main-text, 10%);
+        }
+        
+        &:hover {
+            color: darken(@main-text, 10%);
+        }
+    }
+    
+    // When not logged in
+    .wds-global-navigation__account-menu {
+        color: @main-text;
+        
+        path {
+            fill: darken(@main-text, 10%);
+        }
+        
+        .wds-global-navigation__account-menu-dropdown-caption {
+            color: @main-text;
+        }
+        
+        #global-navigation-anon-sign-in {
+            .button-styling;
+        }
+        
+        #global-navigation-anon-register {
+            .button-styling("cancel");
+        }
+    }
+    
+    .wds-global-navigation__start-a-wiki a:hover{
+        color: @links;
+    }
+    
+    // -------------------
+    //      Searchbar
+    // -------------------
+    .wds-global-navigation__search {
+        .wds-global-navigation__search-label {
+            background-color: @main-page-bg;
+            
+            path {
+                fill: darken(@main-text, 15%);
+            }
+        }
+        
+        .wds-global-navigation__search-input {
+            background-color: @main-page-bg;
+            color: @main-text;
+            
+            .placeholder({
+                color: darken(@main-text, 15%)
+            });
+        }
+        
+        .wds-global-navigation__search-submit {
+            .button-styling;
+        }
+        
+        .wds-global-navigation__search-suggestions .wds-is-selected a {
+            color: @links;
+            background-color: lighten(@table-header, 5%);
+        }
+    }
+    
+    
+    // -------------------
+    //      Dropdowns
+    // -------------------
+    .wds-dropdown {
+        .dropdown-pointer-styling;
+    }
+    
+    .wds-dropdown__content {
+        .dropdown-styling;
+    }
+    
+    // Logout button
+    .wds-sign-out__button {
+        color: @main-text;
+        
+        &:hover {
+            color: @links;
+            background-color: lighten(@table-header, 5%);
+        }
+    }
+    
+    // Notifications
+    .wds-notifications__dropdown-content {
+        color: @main-text;
+        
+        .wds-notifications__zero-state {
+            color: darken(@main-text, 15%);
+        }
+    }
+    
+    // Messages
+    #GlobalNavigationWallNotifications {
+        .notification {
+            border: none;
+            color: @main-text;
+            
+            &.empty {
+                background: @table-header;
+                color: darken(@main-text, 15%);
+                
+                &:hover {
+                    background: lighten(@table-header, 3%);
+                }
+            }
+        }
+        
+        .dropdown-styling;
+    }
+}
