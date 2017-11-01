@@ -1,0 +1,278 @@
+// ========================================
+//      Toolbar at the top of the page
+// ========================================
+.ve-init-mw-viewPageTarget-toolbar {
+    border-top-color: @table-border;
+}
+
+.oo-ui-toolbar-bar {
+    background-color: @main-page-bg;
+    .gradient(linear; @main-page-bg 0%, @gradient-light-color 50%; 0deg);
+    color: @main-text;
+    border-bottom-color: @table-border;
+    
+    .oo-ui-toolbar-actions {
+        // Save and cancel buttons
+        .ve-ui-toolbar-saveButton .oo-ui-buttonElement-button{
+            .button-styling;
+        }
+        
+        .ve-ui-toolbar-cancelButton .oo-ui-buttonElement-button {
+            .button-styling("cancel");
+        }
+    
+        // Remove an unwanted background
+        .oo-ui-toolbar-bar {
+            background: none;
+        }
+    }
+    
+    // --------------------------
+    //      Dropdown buttons
+    // --------------------------
+    .oo-ui-menuToolGroup {
+        border-color: darken(@table-border, 5%);
+    }
+    
+    // Colors when activated
+    .oo-ui-popupToolGroup-active.oo-ui-widget-enabled {
+        background-color: @table-header;
+        border-color: @table-border;
+        .gradient(linear; @table-header, lighten(@table-header, 10%); 0deg);
+        
+        .oo-ui-toolGroup-tools {
+            .dropdown-styling;
+            
+            .oo-ui-tool-title {
+                color: @main-text;
+            }
+            
+            > span:hover {
+                color: @links;
+                background-color: lighten(@table-header, 5%);
+            }
+        }
+    }
+    
+    // ------------------------
+    //      Toggle buttons
+    // ------------------------
+    // Colors when hovered over
+    .oo-ui-toolGroup.oo-ui-widget-enabled {
+        &:hover {
+            border-color: @table-border;
+        }
+        
+        .oo-ui-tool.oo-ui-widget-enabled {
+            &:hover {
+                border-color: lighten(@table-border, 5%);
+            }
+        }
+        
+        // Colors when activated
+        .oo-ui-tool-active.oo-ui-widget-enabled {
+            background-color: @table-header;
+            border-color: @table-border;
+            .gradient(linear; lighten(@table-header, 4%), lighten(@table-header, 14%); 0deg);
+        }
+    }
+}
+
+// ===================
+//      Edit page
+// ===================
+// HTML comment indicator
+.oo-ui-indicator-alert {
+    filter: invert(1);
+}
+
+// Change color of the icons
+.oo-ui-iconElement-icon,
+.oo-ui-indicatorElement-indicator {
+    filter: invert(85%);
+}
+
+// =======================================
+//      Small on page tooltips/popups
+// =======================================
+.oo-ui-popupWidget-popup {
+    background-color: @table-header;
+    border-color: @table-border;
+    
+    .ve-ui-contextOptionWidget {
+        .oo-ui-labelElement-label {
+            color: @main-text;
+        }
+        
+        .oo-ui-iconElement-icon {
+            filter: invert(85%);
+        }
+    }
+    
+    .oo-ui-optionWidget-highlighted {
+        background-color: lighten(@table-header, 5%);
+    }
+    
+    // Input fields
+    input,
+    textarea {
+        .text-input-styling;
+        .box-shadow(none);
+        .placeholder({color: darken(@main-text, 15%)});
+        
+        &:focus {
+            .text-input-styling !important;
+            .box-shadow(none) !important;
+        }
+    }
+}
+
+// Arrow
+.oo-ui-popupWidget-anchored .oo-ui-popupWidget-anchor {
+    .dropdown-pointer-styling;
+}
+
+// ====================
+//      Big Popups
+// ====================
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating {
+    > .oo-ui-dialog {
+        // ------------------
+        //      Blackout
+        // ------------------
+        background-color: fade(@main-page-bg, 50%);
+        
+        // --------------------
+        //      The window
+        // --------------------
+        > .oo-ui-window-frame {
+            border-color: @table-border;
+        
+            .oo-ui-iconElement-icon {
+                filter: invert(85%);
+            }
+            
+            .oo-ui-window-head,
+            .oo-ui-window-foot {
+                background-color: @table-header;
+            }
+
+            .oo-ui-window-body {
+                .box-shadow(0 0 0.33em @table-border);
+                background-color: @main-page-bg;
+                
+                // -------------------------------
+                //      Option type selection
+                // -------------------------------
+                .oo-ui-bookletLayout-outlinePanel {
+                    border-right-color: @table-border;
+                    
+                    .oo-ui-optionWidget-selected,
+                    .oo-ui-optionWidget-pressed {
+                        background-color: lighten(@table-header, 5%);
+                        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+                    }
+                }
+                
+                // -------------------------
+                //      Options content
+                // -------------------------
+                // Toolbar and content
+                .ve-ui-surfaceWidget-toolbar > .oo-ui-toolbar-bar,
+                .ve-ui-surfaceWidget-surface {
+                    border-color: @table-border;
+                }
+                
+                // Input fields
+                input,
+                textarea {
+                    .text-input-styling;
+                    .box-shadow(none);
+                    .placeholder({color: darken(@main-text, 15%)});
+                }
+                
+                // Filter
+                .ve-ui-mwTemplateDialog-filter {
+                    background-color: lighten(@table-header, 3%);
+                    border-bottom-color: @table-border;
+                }
+                
+                // Label
+                .oo-ui-labelElement-label {
+                    color: lighten(@main-text, 10%);
+                    //background-color: @table-data;
+                }
+                
+                // Search results
+                .oo-ui-searchWidget-results {
+                    .oo-ui-optionWidget {
+                        background-color: lighten(@table-header, 2%);
+                    }
+                    
+                    .oo-ui-optionWidget-highlighted {
+                        background-color: lighten(@table-header, 5%);
+                    }
+                    
+                    .ve-ui-mwParameterResultWidget-description {
+                        color: darken(@main-text, 15%);
+                    }
+                    
+                    .ve-ui-mwParameterResultWidget-name {
+                        color: @main-text;
+                        background-color: lighten(@table-header, 10%);
+                        border-color: @table-border;
+                    }
+                }
+            }
+            
+            .oo-ui-buttonElement-button {
+                .button-styling;
+            }
+            
+            .oo-ui-buttonElement-button.secondary {
+                .button-styling("cancel");
+            }
+        }
+    }
+    
+    // For windows without blackouts
+    > .oo-ui-dialog-overlayless {
+        background-color: transparent;
+    }
+}
+
+// -----------------------------
+//      Inserting a gallery
+// -----------------------------
+.ve-ui-wikiaSingleMediaCartWidget {
+    background-color: lighten(@main-page-bg, 3%);
+}
+
+.ve-ui-wikiaSingleMediaCartOptionImage {
+    border-color: @table-border;
+}
+
+.ve-ui-wikiaSingleMediaDialog .ve-ui-wikiaMediaResultsWidget .ve-ui-mwMediaResultWidget .oo-ui-labelElement-label,
+.ve-ui-wikiaMediaResultsWidget .ve-ui-mwMediaResultWidget .oo-ui-labelElement-label {
+    //color: lighten(@main-text, 10%);
+    background-color: @table-data;
+}
+
+.oo-ui-optionWidget-highlighted {
+    background-color: lighten(@table-header, 5%);
+}
+
+.ve-ui-wikiaMediaResultsWidget .ve-ui-mwMediaResultWidget-thumbnail.ve-ui-texture-transparency {
+    border-color: @table-border;
+}
+
+.ve-ui-wikiaCartWidget-wrapper {
+    border-left-color: @table-border;
+}
+
+// ==================================
+//      Discard/continue buttons
+// ==================================
+.oo-ui-window-content-ready .oo-ui-buttonElement-button .oo-ui-labelElement-label {
+    color: lighten(@main-text, 10%) !important;
+}
