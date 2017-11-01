@@ -1,7 +1,8 @@
 // =====================
 //      Edit button
 // =====================
-#ca-edit,
+#ca-edit,           // Source mode edit default button
+#ca-ve-edit,        // Visual mode edit default button
 #ca-viewsource {
     .button-styling;
     border-right-color: lighten(@main-text, 10%);
@@ -33,6 +34,18 @@
         .wds-dropdown__content {
             .dropdown-styling;
         }
+    }
+}
+
+#ca-ve-edit + .wds-dropdown #ca-edit {
+    // Prevent source mode button styling when Visual mode is default
+    color: @main-text;
+    background: none;
+    border: none;
+    
+    &:hover {
+        color: @links;
+        background-color: lighten(@table-header, 5%);
     }
 }
 

@@ -77,6 +77,34 @@ img.tex {
 .rsw-tooltip a {
   color: #5799c1;
 }
+#rsw-config {
+  border-color: #39769b;
+}
+#rsw-config #rsw-config-header {
+  background-color: #2F3136;
+  color: #c5c5c5;
+  border-bottom-color: #52555a;
+}
+#rsw-config #rsw-config-footer {
+  background-color: #2F3136;
+  color: #c5c5c5;
+  border-top-color: #52555a;
+}
+#rsw-config #rsw-config-body {
+  background-color: #262626;
+  color: #c5c5c5;
+}
+#rsw-config #rsw-config-body #rsw-config-delay input {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+}
+#rsw-config #rsw-config-body #rsw-config-note {
+  border-bottom-color: #52555a;
+}
+#rsw-config-background {
+  background-color: #262626;
+}
 .js-tooltip-wrapper,
 .js-tooltip-wrapper .js-tooltip-text {
   background-color: #2e2e2e;
@@ -202,35 +230,46 @@ img.tex {
   color: #5799c1;
 }
 .modal.large > header,
+.modal.medium > header,
 .modal.small > header,
 .modal.large > footer,
+.modal.medium > footer,
 .modal.small > footer {
   background-color: #2F3136;
 }
 .modal.large > header,
+.modal.medium > header,
 .modal.small > header,
 .modal.large > footer,
+.modal.medium > footer,
 .modal.small > footer,
 .modal.large > header h3,
+.modal.medium > header h3,
 .modal.small > header h3,
 .modal.large > footer h3,
+.modal.medium > footer h3,
 .modal.small > footer h3 {
   color: #c5c5c5;
 }
 .modal.large > header .close,
+.modal.medium > header .close,
 .modal.small > header .close,
 .modal.large > footer .close,
+.modal.medium > footer .close,
 .modal.small > footer .close {
   filter: invert(85%);
 }
 .modal.large section,
+.modal.medium section,
 .modal.small section {
   background-color: #262626;
   color: #c5c5c5;
 }
 .modal.large .button.primary,
+.modal.medium .button.primary,
 .modal.small .button.primary,
 .modal.large .button.normal.primary,
+.modal.medium .button.normal.primary,
 .modal.small .button.normal.primary {
   color: #dfdfdf;
   background-image: none;
@@ -238,12 +277,16 @@ img.tex {
   border-color: #39769b;
 }
 .modal.large .button.primary:hover,
+.modal.medium .button.primary:hover,
 .modal.small .button.primary:hover,
 .modal.large .button.normal.primary:hover,
+.modal.medium .button.normal.primary:hover,
 .modal.small .button.normal.primary:hover,
 .modal.large .button.primary:active,
+.modal.medium .button.primary:active,
 .modal.small .button.primary:active,
 .modal.large .button.normal.primary:active,
+.modal.medium .button.normal.primary:active,
 .modal.small .button.normal.primary:active {
   color: #dfdfdf;
   background-image: none;
@@ -251,8 +294,10 @@ img.tex {
   border-color: #4b92bc;
 }
 .modal.large .button.secondary,
+.modal.medium .button.secondary,
 .modal.small .button.secondary,
 .modal.large .button.normal.secondary,
+.modal.medium .button.normal.secondary,
 .modal.small .button.normal.secondary {
   color: #dfdfdf;
   background-image: none;
@@ -260,12 +305,16 @@ img.tex {
   background-color: #656b75;
 }
 .modal.large .button.secondary:hover,
+.modal.medium .button.secondary:hover,
 .modal.small .button.secondary:hover,
 .modal.large .button.normal.secondary:hover,
+.modal.medium .button.normal.secondary:hover,
 .modal.small .button.normal.secondary:hover,
 .modal.large .button.secondary:active,
+.modal.medium .button.secondary:active,
 .modal.small .button.secondary:active,
 .modal.large .button.normal.secondary:active,
+.modal.medium .button.normal.secondary:active,
 .modal.small .button.normal.secondary:active {
   color: #dfdfdf;
   background-image: none;
@@ -413,6 +462,9 @@ table.wikipedia {
 .official {
   background-color: #1d1d1d;
 }
+.messagebox.fimg {
+  background-color: #1d1d1d !important;
+}
 div#viewingold-warning,
 div#viewingnew-warning {
   background-color: #36393E;
@@ -557,44 +609,47 @@ blockquote.block {
 .infobox-monster .defensive-subheader {
   color: #32637c;
 }
-.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button),
-table.wikitable a:not(.button):not(.wds-button):not(.wikia-button),
-table.prettytable a:not(.button):not(.wds-button):not(.wikia-button),
-table.navbox a:not(.button):not(.wds-button):not(.wikia-button),
-table.messagebox a:not(.button):not(.wds-button):not(.wikia-button),
-image a:not(.button):not(.wds-button):not(.wikia-button),
-.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):link,
-table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):link,
-table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):link,
-table.navbox a:not(.button):not(.wds-button):not(.wikia-button):link,
-table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):link,
-image a:not(.button):not(.wds-button):not(.wikia-button):link,
-.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):visited,
-table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):visited,
-table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):visited,
-table.navbox a:not(.button):not(.wds-button):not(.wikia-button):visited,
-table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):visited,
-image a:not(.button):not(.wds-button):not(.wikia-button):visited {
+.WikiaArticle .references > li:target {
+  background-color: #36393E;
+}
+.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
+table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
+table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
+table.navbox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
+table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
+image a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
+.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):link,
+table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):link,
+table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):link,
+table.navbox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):link,
+table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):link,
+image a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):link,
+.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):visited,
+table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):visited,
+table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):visited,
+table.navbox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):visited,
+table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):visited,
+image a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):visited {
   color: #5799c1;
 }
-.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button).new,
-table.wikitable a:not(.button):not(.wds-button):not(.wikia-button).new,
-table.prettytable a:not(.button):not(.wds-button):not(.wikia-button).new,
-table.navbox a:not(.button):not(.wds-button):not(.wikia-button).new,
-table.messagebox a:not(.button):not(.wds-button):not(.wikia-button).new,
-image a:not(.button):not(.wds-button):not(.wikia-button).new,
-.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button).new:link,
-table.wikitable a:not(.button):not(.wds-button):not(.wikia-button).new:link,
-table.prettytable a:not(.button):not(.wds-button):not(.wikia-button).new:link,
-table.navbox a:not(.button):not(.wds-button):not(.wikia-button).new:link,
-table.messagebox a:not(.button):not(.wds-button):not(.wikia-button).new:link,
-image a:not(.button):not(.wds-button):not(.wikia-button).new:link,
-.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button).new:visited,
-table.wikitable a:not(.button):not(.wds-button):not(.wikia-button).new:visited,
-table.prettytable a:not(.button):not(.wds-button):not(.wikia-button).new:visited,
-table.navbox a:not(.button):not(.wds-button):not(.wikia-button).new:visited,
-table.messagebox a:not(.button):not(.wds-button):not(.wikia-button).new:visited,
-image a:not(.button):not(.wds-button):not(.wikia-button).new:visited {
+.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new,
+table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new,
+table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new,
+table.navbox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new,
+table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new,
+image a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new,
+.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:link,
+table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:link,
+table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:link,
+table.navbox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:link,
+table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:link,
+image a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:link,
+.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:visited,
+table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:visited,
+table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:visited,
+table.navbox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:visited,
+table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:visited,
+image a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:visited {
   color: #ba0000;
 }
 .WikiaArticle pre {
@@ -606,6 +661,9 @@ image a:not(.button):not(.wds-button):not(.wikia-button).new:visited {
   border: solid 1px #4a4a4a;
   background-color: #3d3d3d;
   color: #c5c5c5;
+}
+hr {
+  border-color: #52555a;
 }
 .WikiaPage input:not([type="submit"]):not([type=button]):not([type="reset"]),
 .modalWrapper input:not([type="submit"]):not([type=button]):not([type="reset"]) {
@@ -1038,7 +1096,7 @@ td.diff-addedline {
   color: #5799c1;
 }
 #EditPage .wpMinoredit,
-#EditPage .wpSummary_canMinorEdit,
+#EditPage .wpSummaryFields,
 #EditPage .scribunto_ignore_errors {
   color: #c5c5c5;
 }
@@ -1201,7 +1259,298 @@ td.diff-addedline {
   background-color: #4b92bc;
   border-color: #4b92bc;
 }
+#EditPageEditTools #editpage-specialchars {
+  border-color: #52555a !important;
+}
+.ve-init-mw-viewPageTarget-toolbar {
+  border-top-color: #52555a;
+}
+.oo-ui-toolbar-bar {
+  background-color: #262626;
+  background-image: -webkit-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: -moz-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: -ms-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: -o-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: linear-gradient(0deg, #262626 0%, #383838 50%);
+  color: #c5c5c5;
+  border-bottom-color: #52555a;
+}
+.oo-ui-toolbar-bar .oo-ui-toolbar-actions .ve-ui-toolbar-saveButton .oo-ui-buttonElement-button {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #39769b;
+  border-color: #39769b;
+}
+.oo-ui-toolbar-bar .oo-ui-toolbar-actions .ve-ui-toolbar-saveButton .oo-ui-buttonElement-button:hover,
+.oo-ui-toolbar-bar .oo-ui-toolbar-actions .ve-ui-toolbar-saveButton .oo-ui-buttonElement-button:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4b92bc;
+  border-color: #4b92bc;
+}
+.oo-ui-toolbar-bar .oo-ui-toolbar-actions .ve-ui-toolbar-cancelButton .oo-ui-buttonElement-button {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #656b75;
+  background-color: #656b75;
+}
+.oo-ui-toolbar-bar .oo-ui-toolbar-actions .ve-ui-toolbar-cancelButton .oo-ui-buttonElement-button:hover,
+.oo-ui-toolbar-bar .oo-ui-toolbar-actions .ve-ui-toolbar-cancelButton .oo-ui-buttonElement-button:active {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #4e5259;
+  background-color: #4e5259;
+}
+.oo-ui-toolbar-bar .oo-ui-toolbar-actions .oo-ui-toolbar-bar {
+  background: none;
+}
+.oo-ui-toolbar-bar .oo-ui-menuToolGroup {
+  border-color: #46484d;
+}
+.oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled {
+  background-color: #2F3136;
+  border-color: #52555a;
+  background-image: -webkit-linear-gradient(90deg, #2F3136, #474a51);
+  background-image: -moz-linear-gradient(90deg, #2F3136, #474a51);
+  background-image: -ms-linear-gradient(90deg, #2F3136, #474a51);
+  background-image: -o-linear-gradient(90deg, #2F3136, #474a51);
+  background-image: linear-gradient(0deg, #2F3136, #474a51);
+}
+.oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled .oo-ui-toolGroup-tools {
+  background-color: #2F3136;
+  border-color: #52555a;
+}
+.oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled .oo-ui-toolGroup-tools li > a {
+  color: #c5c5c5;
+}
+.oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled .oo-ui-toolGroup-tools li > a:hover {
+  color: #5799c1;
+  background-color: #3b3d44;
+}
+.oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled .oo-ui-toolGroup-tools ul::before,
+.oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled .oo-ui-toolGroup-tools ul::after {
+  background: none;
+}
+.oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled .oo-ui-toolGroup-tools .oo-ui-tool-title {
+  color: #c5c5c5;
+}
+.oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled .oo-ui-toolGroup-tools > span:hover {
+  color: #5799c1;
+  background-color: #3b3d44;
+}
+.oo-ui-toolbar-bar .oo-ui-toolGroup.oo-ui-widget-enabled:hover {
+  border-color: #52555a;
+}
+.oo-ui-toolbar-bar .oo-ui-toolGroup.oo-ui-widget-enabled .oo-ui-tool.oo-ui-widget-enabled:hover {
+  border-color: #5e6267;
+}
+.oo-ui-toolbar-bar .oo-ui-toolGroup.oo-ui-widget-enabled .oo-ui-tool-active.oo-ui-widget-enabled {
+  background-color: #2F3136;
+  border-color: #52555a;
+  background-image: -webkit-linear-gradient(90deg, #383b41, #50545c);
+  background-image: -moz-linear-gradient(90deg, #383b41, #50545c);
+  background-image: -ms-linear-gradient(90deg, #383b41, #50545c);
+  background-image: -o-linear-gradient(90deg, #383b41, #50545c);
+  background-image: linear-gradient(0deg, #383b41, #50545c);
+}
+.oo-ui-indicator-alert {
+  filter: invert(1);
+}
+.oo-ui-iconElement-icon,
+.oo-ui-indicatorElement-indicator {
+  filter: invert(85%);
+}
+.oo-ui-popupWidget-popup {
+  background-color: #2F3136;
+  border-color: #52555a;
+}
+.oo-ui-popupWidget-popup .ve-ui-contextOptionWidget .oo-ui-labelElement-label {
+  color: #c5c5c5;
+}
+.oo-ui-popupWidget-popup .ve-ui-contextOptionWidget .oo-ui-iconElement-icon {
+  filter: invert(85%);
+}
+.oo-ui-popupWidget-popup .oo-ui-optionWidget-highlighted {
+  background-color: #3b3d44;
+}
+.oo-ui-popupWidget-popup input,
+.oo-ui-popupWidget-popup textarea {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.oo-ui-popupWidget-popup input::-webkit-input-placeholder,
+.oo-ui-popupWidget-popup textarea::-webkit-input-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-popupWidget-popup input:-moz-placeholder,
+.oo-ui-popupWidget-popup textarea:-moz-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-popupWidget-popup input::-moz-placeholder,
+.oo-ui-popupWidget-popup textarea::-moz-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-popupWidget-popup input:-ms-input-placeholder,
+.oo-ui-popupWidget-popup textarea:-ms-input-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-popupWidget-popup input::-ms-input-placeholder,
+.oo-ui-popupWidget-popup textarea::-ms-input-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-popupWidget-popup input:focus,
+.oo-ui-popupWidget-popup textarea:focus {
+  background-color: #3e3e3e !important;
+  color: #c5c5c5 !important;
+  border: solid 1px #52555a !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.oo-ui-popupWidget-anchored .oo-ui-popupWidget-anchor::before {
+  border-bottom-color: #52555a;
+}
+.oo-ui-popupWidget-anchored .oo-ui-popupWidget-anchor::after {
+  border-bottom-color: #2F3136;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog {
+  background-color: rgba(38, 38, 38, 0.5);
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame {
+  border-color: #52555a;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-iconElement-icon {
+  filter: invert(85%);
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-head,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-foot {
+  background-color: #2F3136;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body {
+  -webkit-box-shadow: 0 0 0.33em #52555a;
+  -moz-box-shadow: 0 0 0.33em #52555a;
+  box-shadow: 0 0 0.33em #52555a;
+  background-color: #262626;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-bookletLayout-outlinePanel {
+  border-right-color: #52555a;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-bookletLayout-outlinePanel .oo-ui-optionWidget-selected,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-bookletLayout-outlinePanel .oo-ui-optionWidget-pressed {
+  background-color: #3b3d44;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .ve-ui-surfaceWidget-toolbar > .oo-ui-toolbar-bar,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .ve-ui-surfaceWidget-surface {
+  border-color: #52555a;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body input,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body textarea {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body input::-webkit-input-placeholder,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body textarea::-webkit-input-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body input:-moz-placeholder,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body textarea:-moz-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body input::-moz-placeholder,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body textarea::-moz-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body input:-ms-input-placeholder,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body textarea:-ms-input-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body input::-ms-input-placeholder,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body textarea::-ms-input-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .ve-ui-mwTemplateDialog-filter {
+  background-color: #36383e;
+  border-bottom-color: #52555a;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-labelElement-label {
+  color: #dfdfdf;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-searchWidget-results .oo-ui-optionWidget {
+  background-color: #34363b;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-searchWidget-results .oo-ui-optionWidget-highlighted {
+  background-color: #3b3d44;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-searchWidget-results .ve-ui-mwParameterResultWidget-description {
+  color: #9f9f9f;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-searchWidget-results .ve-ui-mwParameterResultWidget-name {
+  color: #c5c5c5;
+  background-color: #474a51;
+  border-color: #52555a;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-buttonElement-button {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #39769b;
+  border-color: #39769b;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-buttonElement-button:hover,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-buttonElement-button:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4b92bc;
+  border-color: #4b92bc;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-buttonElement-button.secondary {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #656b75;
+  background-color: #656b75;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-buttonElement-button.secondary:hover,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-buttonElement-button.secondary:active {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #4e5259;
+  background-color: #4e5259;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog-overlayless {
+  background-color: transparent;
+}
+.ve-ui-wikiaSingleMediaCartWidget {
+  background-color: #2e2e2e;
+}
+.ve-ui-wikiaSingleMediaCartOptionImage {
+  border-color: #52555a;
+}
+.ve-ui-wikiaSingleMediaDialog .ve-ui-wikiaMediaResultsWidget .ve-ui-mwMediaResultWidget .oo-ui-labelElement-label,
+.ve-ui-wikiaMediaResultsWidget .ve-ui-mwMediaResultWidget .oo-ui-labelElement-label {
+  background-color: #36393E;
+}
+.oo-ui-optionWidget-highlighted {
+  background-color: #3b3d44;
+}
+.ve-ui-wikiaMediaResultsWidget .ve-ui-mwMediaResultWidget-thumbnail.ve-ui-texture-transparency {
+  border-color: #52555a;
+}
+.ve-ui-wikiaCartWidget-wrapper {
+  border-left-color: #52555a;
+}
+.oo-ui-window-content-ready .oo-ui-buttonElement-button .oo-ui-labelElement-label {
+  color: #dfdfdf !important;
+}
 #ca-edit,
+#ca-ve-edit,
 #ca-viewsource {
   color: #dfdfdf;
   background-image: none;
@@ -1210,8 +1559,10 @@ td.diff-addedline {
   border-right-color: #dfdfdf;
 }
 #ca-edit:hover,
+#ca-ve-edit:hover,
 #ca-viewsource:hover,
 #ca-edit:active,
+#ca-ve-edit:active,
 #ca-viewsource:active {
   color: #dfdfdf;
   background-image: none;
@@ -1219,15 +1570,18 @@ td.diff-addedline {
   border-color: #4b92bc;
 }
 #ca-edit:hover,
+#ca-ve-edit:hover,
 #ca-viewsource:hover {
   border-right-color: #dfdfdf;
 }
 #ca-edit img,
+#ca-ve-edit img,
 #ca-viewsource img {
   -webkit-filter: brightness(85%);
   filter: brightness(85%);
 }
 #ca-edit + div.wds-dropdown .wds-button,
+#ca-ve-edit + div.wds-dropdown .wds-button,
 #ca-viewsource + div.wds-dropdown .wds-button {
   color: #dfdfdf;
   background-image: none;
@@ -1236,8 +1590,10 @@ td.diff-addedline {
   border-left-color: #dfdfdf;
 }
 #ca-edit + div.wds-dropdown .wds-button:hover,
+#ca-ve-edit + div.wds-dropdown .wds-button:hover,
 #ca-viewsource + div.wds-dropdown .wds-button:hover,
 #ca-edit + div.wds-dropdown .wds-button:active,
+#ca-ve-edit + div.wds-dropdown .wds-button:active,
 #ca-viewsource + div.wds-dropdown .wds-button:active {
   color: #dfdfdf;
   background-image: none;
@@ -1245,36 +1601,53 @@ td.diff-addedline {
   border-color: #4b92bc;
 }
 #ca-edit + div.wds-dropdown .wds-button:hover,
+#ca-ve-edit + div.wds-dropdown .wds-button:hover,
 #ca-viewsource + div.wds-dropdown .wds-button:hover {
   border-left-color: #dfdfdf;
 }
 #ca-edit + div.wds-dropdown::before,
+#ca-ve-edit + div.wds-dropdown::before,
 #ca-viewsource + div.wds-dropdown::before {
   border-bottom-color: #52555a;
 }
 #ca-edit + div.wds-dropdown::after,
+#ca-ve-edit + div.wds-dropdown::after,
 #ca-viewsource + div.wds-dropdown::after {
   border-bottom-color: #2F3136;
 }
 #ca-edit + div.wds-dropdown .wds-dropdown__content,
+#ca-ve-edit + div.wds-dropdown .wds-dropdown__content,
 #ca-viewsource + div.wds-dropdown .wds-dropdown__content {
   background-color: #2F3136;
   border-color: #52555a;
 }
 #ca-edit + div.wds-dropdown .wds-dropdown__content li > a,
+#ca-ve-edit + div.wds-dropdown .wds-dropdown__content li > a,
 #ca-viewsource + div.wds-dropdown .wds-dropdown__content li > a {
   color: #c5c5c5;
 }
 #ca-edit + div.wds-dropdown .wds-dropdown__content li > a:hover,
+#ca-ve-edit + div.wds-dropdown .wds-dropdown__content li > a:hover,
 #ca-viewsource + div.wds-dropdown .wds-dropdown__content li > a:hover {
   color: #5799c1;
   background-color: #3b3d44;
 }
 #ca-edit + div.wds-dropdown .wds-dropdown__content ul::before,
+#ca-ve-edit + div.wds-dropdown .wds-dropdown__content ul::before,
 #ca-viewsource + div.wds-dropdown .wds-dropdown__content ul::before,
 #ca-edit + div.wds-dropdown .wds-dropdown__content ul::after,
+#ca-ve-edit + div.wds-dropdown .wds-dropdown__content ul::after,
 #ca-viewsource + div.wds-dropdown .wds-dropdown__content ul::after {
   background: none;
+}
+#ca-ve-edit + .wds-dropdown #ca-edit {
+  color: #c5c5c5;
+  background: none;
+  border: none;
+}
+#ca-ve-edit + .wds-dropdown #ca-edit:hover {
+  color: #5799c1;
+  background-color: #3b3d44;
 }
 #page-header-add-new-photo {
   color: #dfdfdf;
@@ -1685,9 +2058,6 @@ body.background-dynamic.skin-oasis::before {
   -webkit-box-shadow: inset 40px -40px 40px 0px #232323, inset -40px -10px 40px 0px #232323;
   -moz-box-shadow: inset 40px -40px 40px 0px #232323, inset -40px -10px 40px 0px #232323;
   box-shadow: inset 40px -40px 40px 0px #232323, inset -40px -10px 40px 0px #232323;
-  background-image: url('http://runescape.wikia.com/wiki/Special:FilePath/Wiki-background_dark_mode.jpg');
-  width: 790px;
-  height: 844px;
 }
 body.background-dynamic.skin-oasis::after {
   margin-right: -1282px;
@@ -1695,6 +2065,9 @@ body.background-dynamic.skin-oasis::after {
   -webkit-box-shadow: inset -40px -40px 40px 0px #232323, inset 40px -10px 40px 0px #232323;
   -moz-box-shadow: inset -40px -40px 40px 0px #232323, inset 40px -10px 40px 0px #232323;
   box-shadow: inset -40px -40px 40px 0px #232323, inset 40px -10px 40px 0px #232323;
+}
+body.background-dynamic.skin-oasis::before,
+body.background-dynamic.skin-oasis::after {
   background-image: url('http://runescape.wikia.com/wiki/Special:FilePath/Wiki-background_dark_mode.jpg');
   width: 790px;
   height: 844px;
@@ -1759,17 +2132,32 @@ body {
 .WikiaRail .rail-sticky-module .premium-recirculation-rail .content {
   color: #c5c5c5;
 }
+.WikiaRail #wikia-recent-activity h2.has-icon {
+  border-bottom-color: #52555a;
+}
+.WikiaRail #wikia-recent-activity h2.has-icon svg {
+  fill: #9f9f9f;
+}
+.WikiaRail #wikia-recent-activity .community-page-rail-module {
+  border-top-color: #52555a;
+}
+.WikiaRail #wikia-recent-activity .community-page-rail-module .wds-avatar {
+  border-color: #52555a;
+}
 .wikia-paginator ul .paginator-page.active {
   color: #c5c5c5 !important;
 }
-.wikia-paginator ul .paginator-prev {
+.wikia-paginator ul .paginator-prev,
+.wikia-paginator ul .paginator-next {
   color: #dfdfdf;
   background-image: none;
   border-color: #656b75;
   background-color: #656b75;
 }
 .wikia-paginator ul .paginator-prev:hover,
-.wikia-paginator ul .paginator-prev:active {
+.wikia-paginator ul .paginator-next:hover,
+.wikia-paginator ul .paginator-prev:active,
+.wikia-paginator ul .paginator-next:active {
   color: #dfdfdf;
   background-image: none;
   border-color: #4e5259;
@@ -1777,19 +2165,6 @@ body {
 }
 .wikia-paginator ul .paginator-prev::after {
   border-right-color: #dfdfdf;
-}
-.wikia-paginator ul .paginator-next {
-  color: #dfdfdf;
-  background-image: none;
-  border-color: #656b75;
-  background-color: #656b75;
-}
-.wikia-paginator ul .paginator-next:hover,
-.wikia-paginator ul .paginator-next:active {
-  color: #dfdfdf;
-  background-image: none;
-  border-color: #4e5259;
-  background-color: #4e5259;
 }
 .wikia-paginator ul .paginator-next::after {
   border-left-color: #dfdfdf;

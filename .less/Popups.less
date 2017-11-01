@@ -1,7 +1,9 @@
 // ======================
 //      RSW-Tooltips
 // ======================
-// References
+// --------------------
+//      References
+// --------------------
 .rsw-tooltip {
     background: @table-data;
     
@@ -10,6 +12,43 @@
     }
 }
 
+// Referances settings popup
+#rsw-config {
+    border-color: @theme-blue-lighter;
+
+    #rsw-config-header {
+        background-color: @table-header;
+        color: @main-text;
+        border-bottom-color: @table-border;
+    }
+    
+    #rsw-config-footer {
+        background-color: @table-header;
+        color: @main-text;
+        border-top-color: @table-border;
+    }
+    
+    #rsw-config-body {
+        background-color: @main-page-bg;
+        color: @main-text;
+        
+        #rsw-config-delay input {
+            .text-input-styling;
+        }
+        
+        #rsw-config-note {
+            border-bottom-color: @table-border;
+        }
+    }
+}
+
+#rsw-config-background {
+    background-color: @main-page-bg;
+}
+
+// ---------------------------
+//      Template tooltips
+// ---------------------------
 // Example: Invention {{Disassembly}} junk chance tooltip
 .js-tooltip-wrapper {
     &,
@@ -153,6 +192,7 @@
 // Example large: Show diffs pop up
 // Example small: Page footer "Customize" button popup
 .modal.large,
+.modal.medium,
 .modal.small {
     > header,
     > footer {

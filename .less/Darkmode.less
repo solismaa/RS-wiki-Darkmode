@@ -10,7 +10,7 @@
 @categories:            #1d1d1d;
 @messasgeboxes:         @categories;
 @links:                 #5799c1;
-//@links:                 green;
+//@links:                 green;    // For testing
 @redlinks:              #ba0000;
 @input-fields:          #3e3e3e;
 @highlight-table-hover: #006d13;
@@ -23,15 +23,6 @@
 @edit-area-bg:          #a9a9a9;
 @theme-blue:            darken(#438ab5, 15%);
 @theme-blue-lighter:    lighten(@theme-blue, 8%);
-
-// ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-//      FILES
-// ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-// @body-bg-image: url('https://i.imgur.com/bADk6bv.jpg');
-// @table-colored-bg-overlay: url('https://i.imgur.com/uJCatVz.png');
-// @main-page-bg-image: url('https://i.imgur.com/LWRwEfz.png');
-// @table-data-image: url('https://i.imgur.com/9tN8HHt.png');
-// @table-header-image: url('https://i.imgur.com/RRBZv1m.png');
 
 // ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 //      Imports
@@ -49,7 +40,8 @@
 @import "Custom classes.less";
 @import "Page specific styles.less";
 @import "Page history.less";
-@import "Edit page.less";
+@import "Source editor.less";
+@import "Visual editor.less";
 @import "Page header.less";
 @import "Categories.less";
  
@@ -60,12 +52,6 @@
 // =========================================
 //      Body background image and color
 // =========================================
-#BgImage() {
-    background-image: url('@{filepath}Wiki-background_dark_mode.jpg');
-    width: 790px;
-    height: 844px;
-}
-
 body.background-dynamic.skin-oasis {
     background-color: @body-color;
     
@@ -73,7 +59,6 @@ body.background-dynamic.skin-oasis {
         margin-left: -1282px;
         @shadow: inset 40px -40px 40px 0px @body-color, inset -40px -10px 40px 0px @body-color;
         .box-shadow( @shadow );
-        #BgImage;
     }
     
     &::after {
@@ -81,7 +66,14 @@ body.background-dynamic.skin-oasis {
         background-position: -710px 0;
         @shadow: inset -40px -40px 40px 0px @body-color, inset 40px -10px 40px 0px @body-color;
         .box-shadow( @shadow );
-        #BgImage;
+    }
+    
+    &::before,
+    &::after {
+        background-image: url('@{filepath}Wiki-background_dark_mode.jpg');
+        //background-image: @body-bg-image;
+        width: 790px;
+        height: 844px;
     }
     
     .background-image-gradient {
@@ -169,6 +161,24 @@ body {
     .rail-sticky-module .premium-recirculation-rail .content {
         color: @main-text;
     }
+    
+    #wikia-recent-activity {
+        h2.has-icon {
+            border-bottom-color: @table-border;
+            
+            svg {
+                fill: darken(@main-text, 15%);
+            }
+        }
+        
+        .community-page-rail-module {
+            border-top-color: @table-border;
+            
+            .wds-avatar {
+                border-color: @table-border;
+            }
+        }
+    }
 }
 
 // ------------------------
@@ -180,20 +190,17 @@ body {
         color: @main-text !important;
     }
     
-    .paginator-prev {
-        .button-styling("cancel");
-        
-        &::after {
-            border-right-color: lighten(@main-text, 10%);
-        }
-    }
-    
+    .paginator-prev,
     .paginator-next {
         .button-styling("cancel");
-        
-        &::after {
-            border-left-color: lighten(@main-text, 10%);
-        }
+    }
+    
+    .paginator-prev::after {
+        border-right-color: lighten(@main-text, 10%);
+    }
+    
+    .paginator-next::after {
+        border-left-color: lighten(@main-text, 10%);
     }
 }
 
