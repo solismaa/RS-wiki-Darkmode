@@ -30,8 +30,18 @@
 }
 
 // Pol show results table header
-#mp-poll-prev-results th {
-    background-color: @table-header;
+#mp-poll-prev-results {
+    th {
+        background-color: @table-header;
+    }
+    
+    .hover {
+        border-color: @table-border !important;
+        
+        > div {
+            background-color: @table-border !important;
+        }
+    }
 }
 
 #mp-recent a {

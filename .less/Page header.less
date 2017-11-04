@@ -1,8 +1,9 @@
 // =====================
 //      Edit button
 // =====================
-#ca-edit,           // Source mode edit default button
-#ca-ve-edit,        // Visual mode edit default button
+#ca-edit,           // Source mode edit button
+#ca-ve-edit,        // Visual mode edit button
+#ca-addsection,     // Talk page add secton    
 #ca-viewsource {
     .button-styling;
     border-right-color: lighten(@main-text, 10%);
@@ -37,15 +38,19 @@
     }
 }
 
-#ca-ve-edit + .wds-dropdown #ca-edit {
-    // Prevent source mode button styling when Visual mode is default
-    color: @main-text;
-    background: none;
-    border: none;
-    
-    &:hover {
-        color: @links;
-        background-color: lighten(@table-header, 5%);
+#ca-edit,
+#ca-ve-edit,
+#ca-addsection {
+    // Prevent button styling when the button is located in the dropdown list
+    & + .wds-dropdown & {
+        color: @main-text;
+        background: none;
+        border: none;
+        
+        &:hover {
+            color: @links;
+            background-color: lighten(@table-header, 5%);
+        }
     }
 }
 
