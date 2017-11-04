@@ -38,6 +38,10 @@
         svg {
             fill: @main-text;
         }
+        
+        .preview_icon {
+            border-color: @table-border;
+        }
     }
     
     .diff-link {
@@ -143,6 +147,9 @@
     
     #wpTextbox1 {
         color: black;
+        
+        // Reset to default scrollbar
+        .scroll-bar-styling("default");
     }
     
     .loading-background,

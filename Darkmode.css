@@ -676,6 +676,25 @@ textarea {
   color: #c5c5c5;
   border: solid 1px #52555a;
 }
+textarea::-webkit-scrollbar {
+  width: 12px;
+}
+textarea::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #333333;
+  border: solid 1px #383838;
+}
+textarea::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #4d4d4d;
+  border: solid 1px #525252;
+}
 .WikiaPage select,
 .modalWrapper select {
   background-color: #3e3e3e;
@@ -1098,6 +1117,9 @@ td.diff-addedline {
 #EditPage .preview_box svg {
   fill: #c5c5c5;
 }
+#EditPage .preview_box .preview_icon {
+  border-color: #52555a;
+}
 #EditPage .diff-link {
   color: #5799c1;
 }
@@ -1219,6 +1241,11 @@ td.diff-addedline {
 }
 #EditPage #wpTextbox1 {
   color: black;
+}
+#EditPage #wpTextbox1::-webkit-scrollbar,
+#EditPage #wpTextbox1::-webkit-scrollbar-track,
+#EditPage #wpTextbox1::-webkit-scrollbar-thumb {
+  all: unset;
 }
 #EditPage .loading-background,
 #EditPage .loading-message,
@@ -1373,9 +1400,6 @@ td.diff-addedline {
 .oo-ui-popupWidget-popup .ve-ui-contextOptionWidget .oo-ui-labelElement-label {
   color: #c5c5c5;
 }
-.oo-ui-popupWidget-popup .ve-ui-contextOptionWidget .oo-ui-iconElement-icon {
-  filter: invert(85%);
-}
 .oo-ui-popupWidget-popup .oo-ui-optionWidget-highlighted {
   background-color: #3b3d44;
 }
@@ -1429,9 +1453,6 @@ td.diff-addedline {
 .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame {
   border-color: #52555a;
 }
-.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-iconElement-icon {
-  filter: invert(85%);
-}
 .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-head,
 .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-foot {
   background-color: #2F3136;
@@ -1449,6 +1470,9 @@ td.diff-addedline {
 .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-bookletLayout-outlinePanel .oo-ui-optionWidget-pressed {
   background-color: #3b3d44;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-bookletLayout-outlinePanel > .oo-ui-outlineControlsWidget {
+  background-color: #2e2e2e;
 }
 .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .ve-ui-surfaceWidget-toolbar > .oo-ui-toolbar-bar,
 .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .ve-ui-surfaceWidget-surface {
@@ -1554,6 +1578,28 @@ td.diff-addedline {
 }
 .oo-ui-window-content-ready .oo-ui-buttonElement-button .oo-ui-labelElement-label {
   color: #dfdfdf !important;
+}
+.oo-ui-panelLayout-scrollable::-webkit-scrollbar,
+.oo-ui-selectWidget::-webkit-scrollbar {
+  width: 12px;
+}
+.oo-ui-panelLayout-scrollable::-webkit-scrollbar-track,
+.oo-ui-selectWidget::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #333333;
+  border: solid 1px #383838;
+}
+.oo-ui-panelLayout-scrollable::-webkit-scrollbar-thumb,
+.oo-ui-selectWidget::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #4d4d4d;
+  border: solid 1px #525252;
 }
 #ca-edit,
 #ca-ve-edit,
@@ -1770,6 +1816,25 @@ td.diff-addedline {
 #PageHeader .page-header__languages .wds-dropdown__content ul::before,
 #PageHeader .page-header__languages .wds-dropdown__content ul::after {
   background: none;
+}
+#PageHeader .page-header__languages .wds-dropdown__content ul::-webkit-scrollbar {
+  width: 12px;
+}
+#PageHeader .page-header__languages .wds-dropdown__content ul::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #333333;
+  border: solid 1px #383838;
+}
+#PageHeader .page-header__languages .wds-dropdown__content ul::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #4d4d4d;
+  border: solid 1px #525252;
 }
 .wds-community-header {
   background-color: #2e5f7d;

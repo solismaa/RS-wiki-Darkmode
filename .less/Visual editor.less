@@ -104,9 +104,9 @@
             color: @main-text;
         }
         
-        .oo-ui-iconElement-icon {
-            filter: invert(85%);
-        }
+        // .oo-ui-iconElement-icon {
+            // filter: invert(85%);
+        // }
     }
     
     .oo-ui-optionWidget-highlighted {
@@ -148,9 +148,9 @@
         > .oo-ui-window-frame {
             border-color: @table-border;
         
-            .oo-ui-iconElement-icon {
-                filter: invert(85%);
-            }
+            // .oo-ui-iconElement-icon {
+                // filter: invert(85%);
+            // }
             
             .oo-ui-window-head,
             .oo-ui-window-foot {
@@ -171,6 +171,10 @@
                     .oo-ui-optionWidget-pressed {
                         background-color: lighten(@table-header, 5%);
                         text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+                    }
+                    
+                    > .oo-ui-outlineControlsWidget {
+                        background-color: lighten(@main-page-bg, 3%);
                     }
                 }
                 
@@ -275,4 +279,12 @@
 // ==================================
 .oo-ui-window-content-ready .oo-ui-buttonElement-button .oo-ui-labelElement-label {
     color: lighten(@main-text, 10%) !important;
+}
+
+// ====================
+//      Scrollbars
+// ====================
+.oo-ui-panelLayout-scrollable,
+.oo-ui-selectWidget {
+    .scroll-bar-styling;
 }
