@@ -612,6 +612,9 @@ blockquote.block {
 .WikiaArticle .references > li:target {
   background-color: #36393E;
 }
+.transcript {
+  background-color: #2e2e2e;
+}
 .WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
 table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
 table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
@@ -2152,6 +2155,55 @@ td.diff-addedline {
 }
 .ogg-player-options {
   border-color: #52555a;
+}
+.ns-120 .mw-content-text > ul li b:first-child,
+.transcript > ul li b:first-child,
+.ns-120 .mw-content-text > ul ul li b:first-child,
+.transcript > ul ul li b:first-child {
+  color: #01c023;
+}
+.ns-120 .mw-content-text > ul li:hover,
+.transcript > ul li:hover,
+.ns-120 .mw-content-text > ul ul li:hover,
+.transcript > ul ul li:hover {
+  background-color: #333333;
+  outline-color: #52555a;
+}
+.ns-120 .mw-content-text > ul li:hover li:hover,
+.transcript > ul li:hover li:hover,
+.ns-120 .mw-content-text > ul ul li:hover li:hover,
+.transcript > ul ul li:hover li:hover,
+.ns-120 .mw-content-text > ul li:hover li:hover li:hover li:hover,
+.transcript > ul li:hover li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul ul li:hover li:hover li:hover li:hover,
+.transcript > ul ul li:hover li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul li:hover li:hover li:hover li:hover li:hover li:hover,
+.transcript > ul li:hover li:hover li:hover li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul ul li:hover li:hover li:hover li:hover li:hover li:hover,
+.transcript > ul ul li:hover li:hover li:hover li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul li:hover li:hover li:hover li:hover li:hover li:hover li:hover li:hover,
+.transcript > ul li:hover li:hover li:hover li:hover li:hover li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul ul li:hover li:hover li:hover li:hover li:hover li:hover li:hover li:hover,
+.transcript > ul ul li:hover li:hover li:hover li:hover li:hover li:hover li:hover li:hover {
+  background-color: #292929;
+}
+.ns-120 .mw-content-text > ul li:hover li:hover li:hover,
+.transcript > ul li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul ul li:hover li:hover li:hover,
+.transcript > ul ul li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul li:hover li:hover li:hover li:hover li:hover,
+.transcript > ul li:hover li:hover li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul ul li:hover li:hover li:hover li:hover li:hover,
+.transcript > ul ul li:hover li:hover li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul li:hover li:hover li:hover li:hover li:hover li:hover li:hover,
+.transcript > ul li:hover li:hover li:hover li:hover li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul ul li:hover li:hover li:hover li:hover li:hover li:hover li:hover,
+.transcript > ul ul li:hover li:hover li:hover li:hover li:hover li:hover li:hover {
+  background-color: #333333;
+}
+.quest-action:hover {
+  background-color: #333333;
+  outline-color: #52555a;
 }
 body.background-dynamic.skin-oasis {
   background-color: #232323;
