@@ -1086,6 +1086,7 @@ td.diff-context,
 td.diff-deletedline,
 td.diff-addedline {
   color: #c5c5c5;
+  background-color: #36393E;
 }
 #EditPageHeader {
   background-color: #383838;
