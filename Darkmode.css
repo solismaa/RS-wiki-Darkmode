@@ -1095,6 +1095,9 @@ table.calc-extra-info {
 .WikiaPage .page-header__counter {
   color: #c5c5c5;
 }
+.UploadPhotos .options {
+  background-color: #2e2e2e;
+}
 div.mw-warning-with-logexcerpt,
 .WikiaArticle .noarticletext,
 .WikiaArticle fieldset,
