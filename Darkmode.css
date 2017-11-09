@@ -147,43 +147,39 @@ img.tex {
   border-color: #52555a;
   background-color: #2F3136;
 }
-.modalWrapper,
 .blackout {
+  background-color: #262626;
+}
+.wikiaThrobber {
+  background-color: #36393E;
+}
+.modalWrapper {
   background-color: #262626;
   color: #c5c5c5;
 }
-.modalWrapper a,
-.blackout a {
+.modalWrapper a {
   color: #5799c1;
 }
-.modalWrapper h1,
-.blackout h1 {
+.modalWrapper h1 {
   color: #5799c1;
 }
 .modalWrapper .WikiaPhotoGalleryPreviewItemMenu,
-.blackout .WikiaPhotoGalleryPreviewItemMenu,
-.modalWrapper .WikiaPhotoGalleryPreviewItemMenu a,
-.blackout .WikiaPhotoGalleryPreviewItemMenu a {
+.modalWrapper .WikiaPhotoGalleryPreviewItemMenu a {
   color: #dfdfdf;
   background-image: none;
   background-color: #39769b;
   border-color: #39769b;
 }
 .modalWrapper .WikiaPhotoGalleryPreviewItemMenu:hover,
-.blackout .WikiaPhotoGalleryPreviewItemMenu:hover,
 .modalWrapper .WikiaPhotoGalleryPreviewItemMenu a:hover,
-.blackout .WikiaPhotoGalleryPreviewItemMenu a:hover,
 .modalWrapper .WikiaPhotoGalleryPreviewItemMenu:active,
-.blackout .WikiaPhotoGalleryPreviewItemMenu:active,
-.modalWrapper .WikiaPhotoGalleryPreviewItemMenu a:active,
-.blackout .WikiaPhotoGalleryPreviewItemMenu a:active {
+.modalWrapper .WikiaPhotoGalleryPreviewItemMenu a:active {
   color: #dfdfdf;
   background-image: none;
   background-color: #39769b;
   border-color: #39769b;
 }
-.modalWrapper .accent,
-.blackout .accent {
+.modalWrapper .accent {
   border-color: #39769b;
 }
 .LightboxModal .WikiaLightbox .LightboxHeader,
@@ -228,6 +224,27 @@ img.tex {
 }
 .WikiaLightbox a {
   color: #5799c1;
+}
+#WikiaPhotoGalleryEditor .preview::-webkit-scrollbar,
+#WikiaPhotoGallerySearchResults::-webkit-scrollbar {
+  width: 12px;
+}
+#WikiaPhotoGalleryEditor .preview::-webkit-scrollbar-track,
+#WikiaPhotoGallerySearchResults::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #333333;
+  border: solid 1px #383838;
+}
+#WikiaPhotoGalleryEditor .preview::-webkit-scrollbar-thumb,
+#WikiaPhotoGallerySearchResults::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #4d4d4d;
 }
 .modal.large > header,
 .modal.medium > header,
@@ -696,7 +713,6 @@ textarea::-webkit-scrollbar-thumb {
   -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
-  border: solid 1px #525252;
 }
 .WikiaPage select,
 .modalWrapper select {
@@ -943,7 +959,6 @@ table.calc-extra-info {
   -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
-  border: solid 1px #525252;
 }
 .WikiaUserPagesHeader {
   background: #2b2b2b;
@@ -1318,6 +1333,10 @@ td.diff-addedline {
 #EditPageEditTools #editpage-specialchars {
   border-color: #52555a !important;
 }
+.modalContent .ImageUploadRight {
+  background-color: #2e2e2e;
+  border-bottom-color: #52555a;
+}
 .ve-init-mw-viewPageTarget-toolbar {
   border-top-color: #52555a;
 }
@@ -1622,7 +1641,6 @@ td.diff-addedline {
   -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
-  border: solid 1px #525252;
 }
 #ca-edit,
 #ca-ve-edit,
@@ -1857,7 +1875,6 @@ td.diff-addedline {
   -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
-  border: solid 1px #525252;
 }
 .wds-community-header {
   background-color: #2e5f7d;

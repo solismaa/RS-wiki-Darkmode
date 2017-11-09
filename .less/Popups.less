@@ -117,11 +117,23 @@
     }
 }
 
+// ===================
+//      Blackouts
+// ===================
+// Modal blackout
+.blackout {
+    background-color: @main-page-bg;
+}
+
+// File namespace -> appears on these pages -> next page
+.wikiaThrobber {
+    background-color: @table-data;
+}
+
 // =======================
 //      Image gallery
 // =======================
-.modalWrapper,
-.blackout {
+.modalWrapper {
     background-color: @main-page-bg;
     color: @main-text;
     
@@ -184,6 +196,14 @@
 
 .WikiaLightbox a {
     color: @links;
+}
+
+// ------------------------
+//      Gallery editor
+// ------------------------
+#WikiaPhotoGalleryEditor .preview,
+#WikiaPhotoGallerySearchResults {
+    .scroll-bar-styling;
 }
 
 // =====================
