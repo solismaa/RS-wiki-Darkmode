@@ -478,16 +478,21 @@ table.wikipedia {
   background: #1d1d1d !important;
   border: none !important;
 }
+.official,
+.forumheader,
 .messagebox,
 .messagebox.info,
 .messagebox.warn,
 .messagebox.obsolete,
-.forumheader,
 .messagebox.file,
 .messagebox.action,
+.messagebox.disambig,
+.messagebox.unsafe,
+.messagebox.easter,
+.messagebox.halloween,
 .messagebox.thanksgiving,
-.messagebox.safe,
-.official {
+.messagebox.christmas,
+.messagebox.safe {
   background-color: #1d1d1d;
 }
 .messagebox.fimg {

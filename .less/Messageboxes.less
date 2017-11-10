@@ -9,16 +9,26 @@ table.wikipedia {
 // ====================================
 //      Info and warn messageboxes
 // ====================================
-.messagebox, 
-.messagebox.info, 
-.messagebox.warn, 
-.messagebox.obsolete, 
-.forumheader, 
-.messagebox.file, 
-.messagebox.action, 
-.messagebox.thanksgiving,
-.messagebox.safe,
-.official {
+.messagebox {
+    &,
+    &.info,
+    &.warn,
+    &.obsolete,
+    &.file,
+    &.action,
+    &.disambig,
+    &.unsafe,
+    &.easter,
+    &.halloween,
+    &.thanksgiving,
+    &.christmas,
+    &.safe {
+        &:extend(.official);
+    }
+}
+
+.official,
+.forumheader {
     background-color: @messasgeboxes;
 }
 
