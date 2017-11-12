@@ -38,22 +38,28 @@
     }
 }
 
+// Prevent button styling when the button is located in the dropdown list
 #ca-edit,
 #ca-ve-edit,
 #ca-addsection {
-    // Prevent button styling when the button is located in the dropdown list
-    & + .wds-dropdown & {
-        color: @main-text;
-        background: none;
-        border: none;
-        
-        &:hover {
-            color: @links;
-            background-color: lighten(@table-header, 5%);
-        }
+    & + .wds-dropdown &,
+    & ~ .WikiaMenuElement & {
+        &:extend(#prevent-edit-button-styling all);
     }
 }
 
+#prevent-edit-button-styling {
+    color: @main-text;
+    background: none;
+    border: none;
+    
+    &:hover {
+        color: @links;
+        background-color: lighten(@table-header, 5%);
+    }
+}
+
+// [[Special:Images]]
 #page-header-add-new-photo {
     .button-styling;
     

@@ -1768,6 +1768,7 @@ td.diff-addedline {
 #ca-viewsource + div.wds-dropdown .wds-dropdown__content ul::after {
   background: none;
 }
+#prevent-edit-button-styling,
 #ca-edit + .wds-dropdown #ca-edit,
 #ca-edit + .wds-dropdown #ca-ve-edit,
 #ca-edit + .wds-dropdown #ca-addsection,
@@ -1776,11 +1777,21 @@ td.diff-addedline {
 #ca-ve-edit + .wds-dropdown #ca-addsection,
 #ca-addsection + .wds-dropdown #ca-edit,
 #ca-addsection + .wds-dropdown #ca-ve-edit,
-#ca-addsection + .wds-dropdown #ca-addsection {
+#ca-addsection + .wds-dropdown #ca-addsection,
+#ca-edit ~ .WikiaMenuElement #ca-edit,
+#ca-edit ~ .WikiaMenuElement #ca-ve-edit,
+#ca-edit ~ .WikiaMenuElement #ca-addsection,
+#ca-ve-edit ~ .WikiaMenuElement #ca-edit,
+#ca-ve-edit ~ .WikiaMenuElement #ca-ve-edit,
+#ca-ve-edit ~ .WikiaMenuElement #ca-addsection,
+#ca-addsection ~ .WikiaMenuElement #ca-edit,
+#ca-addsection ~ .WikiaMenuElement #ca-ve-edit,
+#ca-addsection ~ .WikiaMenuElement #ca-addsection {
   color: #c5c5c5;
   background: none;
   border: none;
 }
+#prevent-edit-button-styling:hover,
 #ca-edit + .wds-dropdown #ca-edit:hover,
 #ca-edit + .wds-dropdown #ca-ve-edit:hover,
 #ca-edit + .wds-dropdown #ca-addsection:hover,
@@ -1789,7 +1800,16 @@ td.diff-addedline {
 #ca-ve-edit + .wds-dropdown #ca-addsection:hover,
 #ca-addsection + .wds-dropdown #ca-edit:hover,
 #ca-addsection + .wds-dropdown #ca-ve-edit:hover,
-#ca-addsection + .wds-dropdown #ca-addsection:hover {
+#ca-addsection + .wds-dropdown #ca-addsection:hover,
+#ca-edit ~ .WikiaMenuElement #ca-edit:hover,
+#ca-edit ~ .WikiaMenuElement #ca-ve-edit:hover,
+#ca-edit ~ .WikiaMenuElement #ca-addsection:hover,
+#ca-ve-edit ~ .WikiaMenuElement #ca-edit:hover,
+#ca-ve-edit ~ .WikiaMenuElement #ca-ve-edit:hover,
+#ca-ve-edit ~ .WikiaMenuElement #ca-addsection:hover,
+#ca-addsection ~ .WikiaMenuElement #ca-edit:hover,
+#ca-addsection ~ .WikiaMenuElement #ca-ve-edit:hover,
+#ca-addsection ~ .WikiaMenuElement #ca-addsection:hover {
   color: #5799c1;
   background-color: #3b3d44;
 }
