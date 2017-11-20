@@ -2,6 +2,7 @@
 
 #EditPageHeader {
     background-color: @gradient-light-color;
+    border-color: @table-border;
     
     &,
     h2 {
@@ -22,6 +23,7 @@
         background-color: @main-page-bg;
         .gradient(linear; @main-page-bg 0%, @gradient-light-color 50%; 0deg);
         .box-shadow(0 4px 2px 0 rgba(0, 0, 0, 0.3));
+        border-color: @table-border;
         
         .cke_toolbar_expand a,
         .diff-link {
@@ -30,6 +32,8 @@
     }
     
     .preview_box {
+        border-color: @table-border;
+    
         h3.preview-header {
             color: @main-text;
             background: none;
@@ -156,51 +160,6 @@
     .loading-message,
     .loading-throbber {
         background-color: @edit-area-bg;
-    }
-    
-    
-    
-    // ========================
-    //      Module console
-    // ========================
-    #mw-scribunto-console {
-        color: @main-text;
-        
-        &,
-        .mw-scribunto-console-fieldset {
-            background-color: @table-data;
-        }
-        
-        legend,
-        .mw-scribunto-message {
-            background: none;
-            color: darken(@main-text, 10%);
-        }
-        
-        // Output
-        .mw-scribunto-input {
-            color: @links;
-        }
-        
-        .mw-scribunto-normalOutput {
-            background: none;
-            color: @main-text;
-        }
-        
-        .mw-scribunto-error {
-            background: none;
-        }
-        
-        // Text input
-        #mw-scribunto-input {
-            .text-input-styling;
-        }
-        
-        // Clear button
-        input {
-            background-image: none;
-            .button-styling;
-        }
     }
 }
 

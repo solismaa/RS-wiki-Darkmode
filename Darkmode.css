@@ -1143,6 +1143,7 @@ td.diff-addedline {
 }
 #EditPageHeader {
   background-color: #383838;
+  border-color: #52555a;
 }
 #EditPageHeader,
 #EditPageHeader h2 {
@@ -1162,10 +1163,14 @@ td.diff-addedline {
   -webkit-box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.3);
+  border-color: #52555a;
 }
 #EditPage .EditPageToolbar .cke_toolbar_expand a,
 #EditPage .EditPageToolbar .diff-link {
   color: #c5c5c5;
+}
+#EditPage .preview_box {
+  border-color: #52555a;
 }
 #EditPage .preview_box h3.preview-header {
   color: #c5c5c5;
@@ -1308,46 +1313,6 @@ td.diff-addedline {
 #EditPage .loading-message,
 #EditPage .loading-throbber {
   background-color: #a9a9a9;
-}
-#EditPage #mw-scribunto-console {
-  color: #c5c5c5;
-}
-#EditPage #mw-scribunto-console,
-#EditPage #mw-scribunto-console .mw-scribunto-console-fieldset {
-  background-color: #36393E;
-}
-#EditPage #mw-scribunto-console legend,
-#EditPage #mw-scribunto-console .mw-scribunto-message {
-  background: none;
-  color: #acacac;
-}
-#EditPage #mw-scribunto-console .mw-scribunto-input {
-  color: #5799c1;
-}
-#EditPage #mw-scribunto-console .mw-scribunto-normalOutput {
-  background: none;
-  color: #c5c5c5;
-}
-#EditPage #mw-scribunto-console .mw-scribunto-error {
-  background: none;
-}
-#EditPage #mw-scribunto-console #mw-scribunto-input {
-  background-color: #3e3e3e;
-  color: #c5c5c5;
-  border: solid 1px #52555a;
-}
-#EditPage #mw-scribunto-console input {
-  color: #dfdfdf;
-  background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
-}
-#EditPage #mw-scribunto-console input:hover,
-#EditPage #mw-scribunto-console input:active {
-  color: #dfdfdf;
-  background-image: none;
-  background-color: #4b92bc;
-  border-color: #4b92bc;
 }
 #EditPageEditTools #editpage-specialchars {
   border-color: #52555a !important;
@@ -2280,6 +2245,71 @@ td.diff-addedline {
 .quest-action:hover {
   background-color: #333333;
   outline-color: #52555a;
+}
+#theme-solarized-light {
+  background-color: #2e2e2e;
+  color: #c5c5c5;
+}
+.ace-solarized-light {
+  background-color: #2e2e2e;
+  color: #c5c5c5;
+}
+.ace-solarized-light .ace_gutter {
+  background-color: #3a3a3a;
+  color: #c5c5c5;
+}
+.ace-solarized-light .ace_marker-layer .ace_active-line,
+.ace-solarized-light .ace_gutter-active-line {
+  background-color: #474747;
+}
+.ace-solarized-light .ace_marker-layer .ace_selection {
+  background-color: rgba(173, 173, 173, 0.2);
+}
+.ace-solarized-light .ace_cursor {
+  color: #c5c5c5;
+}
+.EditPageEditor .editpage-editarea {
+  border-color: #52555a;
+}
+#EditPage #mw-scribunto-console {
+  color: #c5c5c5;
+}
+#EditPage #mw-scribunto-console,
+#EditPage #mw-scribunto-console .mw-scribunto-console-fieldset {
+  background-color: #36393E;
+}
+#EditPage #mw-scribunto-console legend,
+#EditPage #mw-scribunto-console .mw-scribunto-message {
+  background: none;
+  color: #acacac;
+}
+#EditPage #mw-scribunto-console .mw-scribunto-input {
+  color: #5799c1;
+}
+#EditPage #mw-scribunto-console .mw-scribunto-normalOutput {
+  background: none;
+  color: #c5c5c5;
+}
+#EditPage #mw-scribunto-console .mw-scribunto-error {
+  background: none;
+}
+#EditPage #mw-scribunto-console #mw-scribunto-input {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+}
+#EditPage #mw-scribunto-console input {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #39769b;
+  border-color: #39769b;
+}
+#EditPage #mw-scribunto-console input:hover,
+#EditPage #mw-scribunto-console input:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4b92bc;
+  border-color: #4b92bc;
 }
 body.background-dynamic.skin-oasis {
   background-color: #232323;
