@@ -929,6 +929,17 @@ table.calc-extra-info {
   background-color: #2F3136 !important;
   border: solid 1px #52555a !important;
 }
+.portal-link a,
+.portal-link.file a,
+.portal-link.article a,
+.portal-link.template a {
+  background-color: #36393E;
+  color: #c5c5c5 !important;
+}
+.portal-link a:hover {
+  background-color: #656b75;
+  color: #f8f8f8 !important;
+}
 .mp-color {
   background-color: #36393E;
   color: #c5c5c5;

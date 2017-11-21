@@ -59,3 +59,24 @@ table.calc-extra-info {
     background-color: @table-header !important;
     border: solid 1px @table-border !important;
 }
+
+// ================================
+//      Big navigation buttons
+// ================================
+// Example: [[Treasure Trails#Types of clues]]
+.portal-link {
+    &,
+    &.file,
+    &.article,
+    &.template {
+        a {
+            background-color: @table-data;
+            color: @main-text !important;
+        }
+    }
+    
+    a:hover {
+        background-color: lighten(@table-data, 20%);
+        color: lighten(@main-text, 20%) !important;
+    }
+}
