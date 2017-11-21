@@ -1332,6 +1332,27 @@ td.diff-addedline {
   background-color: #2e2e2e;
   border-bottom-color: #52555a;
 }
+#EditPageDialog.preview .modalContent .ArticlePreview {
+  border-color: #52555a;
+}
+#EditPageDialog.preview .modalContent .ArticlePreview::-webkit-scrollbar {
+  width: 12px;
+}
+#EditPageDialog.preview .modalContent .ArticlePreview::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #333333;
+  border: solid 1px #383838;
+}
+#EditPageDialog.preview .modalContent .ArticlePreview::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #4d4d4d;
+}
 .ve-init-mw-viewPageTarget-toolbar {
   border-top-color: #52555a;
 }
