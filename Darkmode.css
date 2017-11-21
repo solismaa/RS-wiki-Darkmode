@@ -2271,6 +2271,27 @@ td.diff-addedline {
 .EditPageEditor .editpage-editarea {
   border-color: #52555a;
 }
+.ace_scrollbar::-webkit-scrollbar,
+.ace_scrollbar-h::-webkit-scrollbar {
+  width: 12px;
+}
+.ace_scrollbar::-webkit-scrollbar-track,
+.ace_scrollbar-h::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #333333;
+  border: solid 1px #383838;
+}
+.ace_scrollbar::-webkit-scrollbar-thumb,
+.ace_scrollbar-h::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #4d4d4d;
+}
 #EditPage #mw-scribunto-console {
   color: #c5c5c5;
 }
