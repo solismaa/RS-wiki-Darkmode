@@ -36,9 +36,11 @@ table.wikitable > * > tr > th {
 #pengLocations .highlight-on {
   background-color: #1e5400;
 }
+table.jquery-tablesorter.sortable th.headerSort .chevron,
 table.jquery-tablesorter2 th.headerSort .chevron {
   border-color: #c5c5c5 transparent transparent;
 }
+table.jquery-tablesorter.sortable th.headerSort .chevron:first-child,
 table.jquery-tablesorter2 th.headerSort .chevron:first-child {
   border-color: transparent transparent #c5c5c5;
 }
