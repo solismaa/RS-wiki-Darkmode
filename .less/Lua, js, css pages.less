@@ -1,0 +1,141 @@
+// ========================
+//      General styles
+// ========================
+// These styles apply to lua, js and css pages
+
+// -----------------------
+//      Preview pages
+// -----------------------
+#theme-solarized-light {
+    background-color: @code-editor-bg;
+    color: darken(@main-text, 5%);
+}
+
+// -------------------
+//      Edit page
+// -------------------
+.ace-solarized-light {
+    background-color: @code-editor-bg;
+    color: darken(@main-text, 5%);
+    
+    // Row count sidebar
+    .ace_gutter {
+        background-color: lighten(@code-editor-bg, 5%);
+        color: @main-text;
+    }
+    
+    // Active line highlight
+    .ace_marker-layer .ace_active-line,
+    .ace_gutter-active-line {
+        background-color: lighten(@code-editor-bg, 10%);
+    }
+    
+    // Selection highlight
+    .ace_marker-layer .ace_selection {
+        background-color: fade(lighten(@code-editor-bg, 50%), 20%);
+    }
+    
+    // Cursor
+    .ace_cursor {
+        color: @main-text;
+    }
+}
+
+.EditPageEditor .editpage-editarea {
+    border-color: @table-border;
+}
+
+// Scrollbar styling
+.ace_scrollbar,
+.ace_scrollbar-h {
+    .scroll-bar-styling;
+}
+
+// ---------------------------
+//      code highlighting
+// ---------------------------
+// .ace-solarized-light for edit page
+// #theme-solarized-light for previews
+
+// variables and function declaration highlights
+.ace-solarized-light .ace_storage,  // js
+#theme-solarized-light .kw0         // js
+{
+    color: #14dc1c;
+}
+
+// indent image 
+.ace-solarized-light .ace_indent-guide {
+    filter: brightness(60%);
+}
+
+// function/variable call highlight
+.ace-solarized-light .ace_entity.ace_name.ace_function, 
+.ace-solarized-light .ace_entity.ace_name.ace_tag, 
+.ace-solarized-light .ace_support.ace_function, 
+.ace-solarized-light .ace_variable, 
+.ace-solarized-light .ace_variable.ace_language,
+#theme-solarized-light .me1,    // js
+#theme-solarized-light .kw3     // lua
+{
+    color: lighten(#268BD2, 10%);
+}
+
+// keywords
+.ace-solarized-light .ace_keyword, 
+.ace-solarized-light .ace_meta, 
+.ace-solarized-light .ace_support.ace_class, 
+.ace-solarized-light .ace_support.ace_type,
+#theme-solarized-light .kw1     // lua
+{
+    color: #c9e411;
+}
+
+
+// ===================
+//      Lua pages
+// ===================
+// ------------------------
+//      Module console
+// ------------------------
+#EditPage {
+    #mw-scribunto-console {
+        color: @main-text;
+        
+        &,
+        .mw-scribunto-console-fieldset {
+            background-color: @table-data;
+        }
+        
+        legend,
+        .mw-scribunto-message {
+            background: none;
+            color: darken(@main-text, 10%);
+        }
+        
+        // Output
+        .mw-scribunto-input {
+            color: @links;
+        }
+        
+        .mw-scribunto-normalOutput {
+            background: none;
+            color: @main-text;
+        }
+        
+        .mw-scribunto-error {
+            background: none;
+        }
+        
+        // Text input
+        #mw-scribunto-input {
+            .text-input-styling;
+        }
+        
+        // Clear button
+        input {
+            background-image: none;
+            .button-styling;
+        }
+    }
+}
