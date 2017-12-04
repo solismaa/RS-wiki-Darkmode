@@ -152,8 +152,9 @@ body {
 // ------------------
 //      Wikirail
 // ------------------
-.WikiaRail {
-    .rail-module {
+#WikiaRail {
+    .rail-module,
+    .module {
         background: @table-header;
     }
     
@@ -161,7 +162,6 @@ body {
         color: @links;
     }
     
-    .activity-module .edit-info .edit-info-user,
     .edit-info-time,
     .rail-sticky-module .premium-recirculation-rail .content {
         color: @main-text;
@@ -183,6 +183,30 @@ body {
                 border-color: @table-border;
             }
         }
+    }
+    
+    // js "Enter test mode" button
+    .content-review-module-test-mode-enable {
+        .button-styling("cancel");
+    }
+    
+    // Discord invite button
+    #rsw-discord .wds-button {
+        color: #fff;
+    }
+    
+    // Net neutrality info
+    #net-neutrality div {
+        .gradient(linear; fade(@table-header, 10%) 0px, fade(@table-header, 80%) 90px, @table-header 145px; 180deg);
+        
+        .wds-button {
+            .button-styling("cancel");
+        }
+    }
+    
+    // Trending fandom articles
+    #WikiaAdInContentPlaceHolder svg {
+        fill: darken(@main-text, 15%);
     }
 }
 

@@ -2470,28 +2470,67 @@ body {
 .WikiaArticleInterlang {
   background: #1d1d1d;
 }
-.WikiaRail .rail-module {
+#WikiaRail .rail-module,
+#WikiaRail .module {
   background: #2F3136;
 }
-.WikiaRail a {
+#WikiaRail a {
   color: #5799c1;
 }
-.WikiaRail .activity-module .edit-info .edit-info-user,
-.WikiaRail .edit-info-time,
-.WikiaRail .rail-sticky-module .premium-recirculation-rail .content {
+#WikiaRail .edit-info-time,
+#WikiaRail .rail-sticky-module .premium-recirculation-rail .content {
   color: #c5c5c5;
 }
-.WikiaRail #wikia-recent-activity h2.has-icon {
+#WikiaRail #wikia-recent-activity h2.has-icon {
   border-bottom-color: #52555a;
 }
-.WikiaRail #wikia-recent-activity h2.has-icon svg {
+#WikiaRail #wikia-recent-activity h2.has-icon svg {
   fill: #9f9f9f;
 }
-.WikiaRail #wikia-recent-activity .community-page-rail-module {
+#WikiaRail #wikia-recent-activity .community-page-rail-module {
   border-top-color: #52555a;
 }
-.WikiaRail #wikia-recent-activity .community-page-rail-module .wds-avatar {
+#WikiaRail #wikia-recent-activity .community-page-rail-module .wds-avatar {
   border-color: #52555a;
+}
+#WikiaRail .content-review-module-test-mode-enable {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #656b75;
+  background-color: #656b75;
+}
+#WikiaRail .content-review-module-test-mode-enable:hover,
+#WikiaRail .content-review-module-test-mode-enable:active {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #4e5259;
+  background-color: #4e5259;
+}
+#WikiaRail #rsw-discord .wds-button {
+  color: #fff;
+}
+#WikiaRail #net-neutrality div {
+  background-image: -webkit-linear-gradient(-90deg, rgba(47, 49, 54, 0.1) 0px, rgba(47, 49, 54, 0.8) 90px, #2F3136 145px);
+  background-image: -moz-linear-gradient(-90deg, rgba(47, 49, 54, 0.1) 0px, rgba(47, 49, 54, 0.8) 90px, #2F3136 145px);
+  background-image: -ms-linear-gradient(-90deg, rgba(47, 49, 54, 0.1) 0px, rgba(47, 49, 54, 0.8) 90px, #2F3136 145px);
+  background-image: -o-linear-gradient(-90deg, rgba(47, 49, 54, 0.1) 0px, rgba(47, 49, 54, 0.8) 90px, #2F3136 145px);
+  background-image: linear-gradient(180deg, rgba(47, 49, 54, 0.1) 0px, rgba(47, 49, 54, 0.8) 90px, #2F3136 145px);
+}
+#WikiaRail #net-neutrality div .wds-button {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #656b75;
+  background-color: #656b75;
+}
+#WikiaRail #net-neutrality div .wds-button:hover,
+#WikiaRail #net-neutrality div .wds-button:active {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #4e5259;
+  background-color: #4e5259;
+}
+#WikiaRail #WikiaAdInContentPlaceHolder svg {
+  fill: #9f9f9f;
 }
 .wikia-paginator ul .paginator-page.active {
   color: #c5c5c5 !important;
