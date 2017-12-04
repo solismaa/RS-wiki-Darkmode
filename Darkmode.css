@@ -63,14 +63,21 @@ table.wikitable th[style*="background"] a {
 }
 .article-thumb,
 .gifresize,
-.extimage {
+.extimage,
+.WikiaArticle .thumbinner {
   background-color: #36393E;
   color: #c5c5c5;
   border: solid 1px #52555a;
+  background-image: none;
 }
 .article-thumb .caption,
 .gifresize .caption,
-.extimage .caption {
+.extimage .caption,
+.WikiaArticle .thumbinner .caption,
+.article-thumb .thumbcaption,
+.gifresize .thumbcaption,
+.extimage .thumbcaption,
+.WikiaArticle .thumbinner .thumbcaption {
   width: auto;
   color: #c5c5c5;
   border-top: solid 1px #52555a;
