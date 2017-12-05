@@ -507,12 +507,6 @@ table.wikipedia {
 .messagebox.fimg {
   background-color: #1d1d1d !important;
 }
-div#viewingold-warning,
-div#viewingnew-warning {
-  background-color: #36393E;
-  color: #c5c5c5;
-  border: solid 1px #52555a;
-}
 table.archive {
   background-color: #36393E !important;
   border: solid 1px #52555a !important;
@@ -1160,6 +1154,17 @@ td.diff-deletedline,
 td.diff-addedline {
   color: #c5c5c5;
   background-color: #2e2e2e;
+}
+div#viewingold-warning,
+div#viewingnew-warning {
+  background-color: #36393E;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+}
+#mw-revision-info,
+#mw-revision-info-current,
+#mw-revision-nav {
+  color: #c5c5c5;
 }
 #EditPageHeader {
   background-color: #383838;
