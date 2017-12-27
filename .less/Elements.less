@@ -54,6 +54,48 @@ textarea {
     }
 }
 
+// -----------------------------
+//      Dropdown checkboxes
+// -----------------------------
+// Example: [[Special:RecentChanges]]
+.WikiaDropdown {
+    .selected-items {
+        background-color: @input-fields;
+        border-color: @table-border;
+        
+        .arrow {
+            border-top-color: @main-text;
+        }
+        
+        &:hover {
+            background-color: lighten(@input-fields, 5%);
+        }
+    }
+    
+    .dropdown {
+        background-color: @table-header;
+        border-color: @table-border;
+        .box-shadow(0 3px 6px 0 @table-header);
+        
+        .scroll-bar-styling;
+        
+        .toolbar {
+            background-color: darken(@table-header, 3%);
+            border-bottom-color: @table-border;
+        }
+        
+        .dropdown-item {
+            &:hover {
+                background-color: lighten(@table-header, 5%);
+            }
+            
+            &.selected {
+                background-color: lighten(@table-header, 2%);
+            }
+        }
+    }
+}
+
 // =================
 //      Buttons
 // =================
@@ -70,7 +112,3 @@ button {
         .button-styling("cancel");
     }
 }
-
-// .mw-submit {
-    // .button-styling !important;
-// }
