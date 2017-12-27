@@ -943,6 +943,9 @@ table.calc-extra-info {
   background-color: #656b75;
   color: #f8f8f8 !important;
 }
+table.alternating-rows tr:nth-child(even) {
+  background-color: #2F3136;
+}
 .mp-color {
   background-color: #36393E;
   color: #c5c5c5;

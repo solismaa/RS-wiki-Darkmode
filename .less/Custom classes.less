@@ -80,3 +80,11 @@ table.calc-extra-info {
         color: lighten(@main-text, 20%) !important;
     }
 }
+
+// ==========================
+//      Alternating rows
+// ==========================
+// Example: [[Experience/Table]]
+table.alternating-rows tr:nth-child(even) {
+    background-color: @table-header;
+}
