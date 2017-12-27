@@ -98,7 +98,7 @@ img.tex {
   color: #5799c1;
 }
 #rsw-config {
-  border-color: #39769b;
+  border-color: #2f69a8;
 }
 #rsw-config #rsw-config-header {
   background-color: #2F3136;
@@ -187,8 +187,8 @@ img.tex {
 .modalWrapper .WikiaPhotoGalleryPreviewItemMenu a {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
 }
 .modalWrapper .WikiaPhotoGalleryPreviewItemMenu:hover,
 .modalWrapper .WikiaPhotoGalleryPreviewItemMenu a:hover,
@@ -196,11 +196,11 @@ img.tex {
 .modalWrapper .WikiaPhotoGalleryPreviewItemMenu a:active {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
 }
 .modalWrapper .accent {
-  border-color: #39769b;
+  border-color: #2f69a8;
 }
 .LightboxModal .WikiaLightbox .LightboxHeader,
 .LightboxModal .WikiaLightbox .LightboxCarousel {
@@ -214,8 +214,8 @@ img.tex {
 .LightboxModal .LightboxHeader .close {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
 }
 .LightboxModal .LightboxHeader .more-info-button:hover,
 .LightboxModal .LightboxHeader .share-button:hover,
@@ -225,8 +225,8 @@ img.tex {
 .LightboxModal .LightboxHeader .close:active {
   color: #dfdfdf;
   background-image: none;
-  background-color: #4b92bc;
-  border-color: #4b92bc;
+  background-color: #4082ca;
+  border-color: #4082ca;
 }
 .LightboxModal .LightboxHeader .more-info-button::before,
 .LightboxModal .LightboxHeader .share-button::before,
@@ -310,8 +310,8 @@ img.tex {
 .modal.small .button.normal.primary {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
 }
 .modal.large .button.primary:hover,
 .modal.medium .button.primary:hover,
@@ -327,8 +327,8 @@ img.tex {
 .modal.small .button.normal.primary:active {
   color: #dfdfdf;
   background-image: none;
-  background-color: #4b92bc;
-  border-color: #4b92bc;
+  background-color: #4082ca;
+  border-color: #4082ca;
 }
 .modal.large .button.secondary,
 .modal.medium .button.secondary,
@@ -460,15 +460,15 @@ img.tex {
 #TemplateClassificationEditModal .button.normal.primary {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
 }
 #TemplateClassificationEditModal .button.normal.primary:hover,
 #TemplateClassificationEditModal .button.normal.primary:active {
   color: #dfdfdf;
   background-image: none;
-  background-color: #4b92bc;
-  border-color: #4b92bc;
+  background-color: #4082ca;
+  border-color: #4082ca;
 }
 #TemplateClassificationEditModal .button.normal.secondary {
   color: #dfdfdf;
@@ -558,7 +558,7 @@ blockquote.block {
 .navbox .navbox-footer {
   border: 2px solid #262626;
   color: #c5c5c5;
-  background-color: #2e5f7d;
+  background-color: #265588;
   background-clip: padding-box;
 }
 .navbox .navbox-title a,
@@ -567,7 +567,7 @@ blockquote.block {
 }
 .navbox .navbox-collapsible .navbox-title,
 .navbox .navbox-collapsible .navbox-footer {
-  background-color: #39769b;
+  background-color: #2f69a8;
 }
 #DisassemblyT .header-top {
   background: #2F3136;
@@ -583,15 +583,15 @@ blockquote.block {
 .tabberlive ul.tabbernav li.tabberactive a {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
 }
 .tabberlive ul.tabbernav li.tabberactive a:hover,
 .tabberlive ul.tabbernav li.tabberactive a:active {
   color: #dfdfdf;
   background-image: none;
-  background-color: #4b92bc;
-  border-color: #4b92bc;
+  background-color: #4082ca;
+  border-color: #4082ca;
 }
 .tabberlive ul.tabbernav li a {
   background-color: #2e2e2e;
@@ -793,8 +793,8 @@ input[type="button"],
 button {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
 }
 a.wikia-button:hover,
 .wikia-single-button a:hover,
@@ -812,8 +812,8 @@ input[type="button"]:active,
 button:active {
   color: #dfdfdf;
   background-image: none;
-  background-color: #4b92bc;
-  border-color: #4b92bc;
+  background-color: #4082ca;
+  border-color: #4082ca;
 }
 a.wikia-button.secondary,
 .wikia-single-button a.secondary,
@@ -902,7 +902,7 @@ button.secondary:active {
   fill: #c5c5c5 !important;
 }
 .zoomButton .highcharts-button-box {
-  fill: #39769b;
+  fill: #2f69a8;
 }
 .zoomButton text {
   fill: #dfdfdf !important;
@@ -929,15 +929,15 @@ button.secondary:active {
 #rs-exchange-data {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
 }
 #rs-exchange-data:hover,
 #rs-exchange-data:active {
   color: #dfdfdf;
   background-image: none;
-  background-color: #4b92bc;
-  border-color: #4b92bc;
+  background-color: #4082ca;
+  border-color: #4082ca;
 }
 #gemw_guide {
   color: #c5c5c5 !important;
@@ -1048,13 +1048,13 @@ table.alternating-rows tr:nth-child(even) {
   background-color: #36393E;
 }
 #UserProfileMasthead .masthead-info hgroup {
-  background-color: #2e5f7d;
+  background-color: #265588;
   color: #c5c5c5;
-  background-image: -webkit-linear-gradient(90deg, #2e5f7d, #356e90);
-  background-image: -moz-linear-gradient(90deg, #2e5f7d, #356e90);
-  background-image: -ms-linear-gradient(90deg, #2e5f7d, #356e90);
-  background-image: -o-linear-gradient(90deg, #2e5f7d, #356e90);
-  background-image: linear-gradient(0deg, #2e5f7d, #356e90);
+  background-image: -webkit-linear-gradient(90deg, #265588, #2c619c);
+  background-image: -moz-linear-gradient(90deg, #265588, #2c619c);
+  background-image: -ms-linear-gradient(90deg, #265588, #2c619c);
+  background-image: -o-linear-gradient(90deg, #265588, #2c619c);
+  background-image: linear-gradient(0deg, #265588, #2c619c);
 }
 #UserProfileMasthead .masthead-info-lower:before {
   border-color: #36393E #36393E transparent transparent;
@@ -1078,7 +1078,7 @@ table.alternating-rows tr:nth-child(even) {
   color: #c5c5c5;
 }
 .discussiontable th {
-  background-color: #39769b;
+  background-color: #2f69a8;
 }
 .discussiontable th a {
   color: #dfdfdf !important;
@@ -1145,11 +1145,11 @@ table.alternating-rows tr:nth-child(even) {
   background: #36393E;
 }
 .community-page-card-module .community-page-card-module-header {
-  background-color: #39769b;
+  background-color: #2f69a8;
   color: #c5c5c5;
 }
 .community-page-card-module .community-page-card-module-header-icon {
-  fill: #39769b;
+  fill: #2f69a8;
 }
 .community-page-card-module .community-page-card-module-full-list-link {
   color: #5799c1;
@@ -1332,15 +1332,15 @@ div#viewingnew-warning {
 #EditPage .cke_button a {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
 }
 #EditPage .cke_button a:hover,
 #EditPage .cke_button a:active {
   color: #dfdfdf;
   background-image: none;
-  background-color: #4b92bc;
-  border-color: #4b92bc;
+  background-color: #4082ca;
+  border-color: #4082ca;
 }
 #EditPage .cke_button a:hover {
   background-image: none;
@@ -1434,15 +1434,15 @@ div#viewingnew-warning {
 .oo-ui-toolbar-bar .oo-ui-toolbar-actions .ve-ui-toolbar-saveButton .oo-ui-buttonElement-button {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
 }
 .oo-ui-toolbar-bar .oo-ui-toolbar-actions .ve-ui-toolbar-saveButton .oo-ui-buttonElement-button:hover,
 .oo-ui-toolbar-bar .oo-ui-toolbar-actions .ve-ui-toolbar-saveButton .oo-ui-buttonElement-button:active {
   color: #dfdfdf;
   background-image: none;
-  background-color: #4b92bc;
-  border-color: #4b92bc;
+  background-color: #4082ca;
+  border-color: #4082ca;
 }
 .oo-ui-toolbar-bar .oo-ui-toolbar-actions .ve-ui-toolbar-cancelButton .oo-ui-buttonElement-button {
   color: #dfdfdf;
@@ -1654,15 +1654,15 @@ div#viewingnew-warning {
 .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-buttonElement-button {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
 }
 .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-buttonElement-button:hover,
 .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-buttonElement-button:active {
   color: #dfdfdf;
   background-image: none;
-  background-color: #4b92bc;
-  border-color: #4b92bc;
+  background-color: #4082ca;
+  border-color: #4082ca;
 }
 .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-buttonElement-button.secondary {
   color: #dfdfdf;
@@ -1729,8 +1729,8 @@ div#viewingnew-warning {
 #ca-viewsource {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
   border-right-color: #dfdfdf;
 }
 #ca-edit:hover,
@@ -1743,8 +1743,8 @@ div#viewingnew-warning {
 #ca-viewsource:active {
   color: #dfdfdf;
   background-image: none;
-  background-color: #4b92bc;
-  border-color: #4b92bc;
+  background-color: #4082ca;
+  border-color: #4082ca;
 }
 #ca-edit:hover,
 #ca-ve-edit:hover,
@@ -1765,8 +1765,8 @@ div#viewingnew-warning {
 #ca-viewsource + div.wds-dropdown .wds-button {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
   border-left-color: #dfdfdf;
 }
 #ca-edit + div.wds-dropdown .wds-button:hover,
@@ -1779,8 +1779,8 @@ div#viewingnew-warning {
 #ca-viewsource + div.wds-dropdown .wds-button:active {
   color: #dfdfdf;
   background-image: none;
-  background-color: #4b92bc;
-  border-color: #4b92bc;
+  background-color: #4082ca;
+  border-color: #4082ca;
 }
 #ca-edit + div.wds-dropdown .wds-button:hover,
 #ca-ve-edit + div.wds-dropdown .wds-button:hover,
@@ -1878,15 +1878,15 @@ div#viewingnew-warning {
 #page-header-add-new-photo {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
 }
 #page-header-add-new-photo:hover,
 #page-header-add-new-photo:active {
   color: #dfdfdf;
   background-image: none;
-  background-color: #4b92bc;
-  border-color: #4b92bc;
+  background-color: #4082ca;
+  border-color: #4082ca;
 }
 #page-header-add-new-photo img {
   -webkit-filter: brightness(85%);
@@ -1904,8 +1904,8 @@ div#viewingnew-warning {
 .wikia-menu-button .drop {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
 }
 .wikia-menu-button .codepage-publish-button:hover,
 .wikia-menu-button .drop:hover,
@@ -1913,8 +1913,8 @@ div#viewingnew-warning {
 .wikia-menu-button .drop:active {
   color: #dfdfdf;
   background-image: none;
-  background-color: #4b92bc;
-  border-color: #4b92bc;
+  background-color: #4082ca;
+  border-color: #4082ca;
 }
 .wikia-menu-button img.chevron {
   border-top-color: #c5c5c5;
@@ -1978,14 +1978,14 @@ div#viewingnew-warning {
   background-color: #4d4d4d;
 }
 .wds-community-header {
-  background-color: #2e5f7d;
+  background-color: #265588;
 }
 .wds-community-header::before {
-  background-image: -webkit-linear-gradient(-180deg, rgba(46, 95, 125, 0.5) 0px, rgba(46, 95, 125, 0.5) 200px, #2e5f7d 430px);
-  background-image: -moz-linear-gradient(-180deg, rgba(46, 95, 125, 0.5) 0px, rgba(46, 95, 125, 0.5) 200px, #2e5f7d 430px);
-  background-image: -ms-linear-gradient(-180deg, rgba(46, 95, 125, 0.5) 0px, rgba(46, 95, 125, 0.5) 200px, #2e5f7d 430px);
-  background-image: -o-linear-gradient(-180deg, rgba(46, 95, 125, 0.5) 0px, rgba(46, 95, 125, 0.5) 200px, #2e5f7d 430px);
-  background-image: linear-gradient(270deg, rgba(46, 95, 125, 0.5) 0px, rgba(46, 95, 125, 0.5) 200px, #2e5f7d 430px);
+  background-image: -webkit-linear-gradient(-180deg, rgba(38, 85, 136, 0.5) 0px, rgba(38, 85, 136, 0.5) 200px, #265588 430px);
+  background-image: -moz-linear-gradient(-180deg, rgba(38, 85, 136, 0.5) 0px, rgba(38, 85, 136, 0.5) 200px, #265588 430px);
+  background-image: -ms-linear-gradient(-180deg, rgba(38, 85, 136, 0.5) 0px, rgba(38, 85, 136, 0.5) 200px, #265588 430px);
+  background-image: -o-linear-gradient(-180deg, rgba(38, 85, 136, 0.5) 0px, rgba(38, 85, 136, 0.5) 200px, #265588 430px);
+  background-image: linear-gradient(270deg, rgba(38, 85, 136, 0.5) 0px, rgba(38, 85, 136, 0.5) 200px, #265588 430px);
 }
 .wds-community-header .wds-community-header__sitename a,
 .wds-community-header .wds-community-header__counter,
@@ -2100,15 +2100,15 @@ div#viewingnew-warning {
 #globalNavigation .wds-global-navigation__account-menu #global-navigation-anon-sign-in {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
 }
 #globalNavigation .wds-global-navigation__account-menu #global-navigation-anon-sign-in:hover,
 #globalNavigation .wds-global-navigation__account-menu #global-navigation-anon-sign-in:active {
   color: #dfdfdf;
   background-image: none;
-  background-color: #4b92bc;
-  border-color: #4b92bc;
+  background-color: #4082ca;
+  border-color: #4082ca;
 }
 #globalNavigation .wds-global-navigation__account-menu #global-navigation-anon-register {
   color: #dfdfdf;
@@ -2154,15 +2154,15 @@ div#viewingnew-warning {
 #globalNavigation .wds-global-navigation__search .wds-global-navigation__search-submit {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
 }
 #globalNavigation .wds-global-navigation__search .wds-global-navigation__search-submit:hover,
 #globalNavigation .wds-global-navigation__search .wds-global-navigation__search-submit:active {
   color: #dfdfdf;
   background-image: none;
-  background-color: #4b92bc;
-  border-color: #4b92bc;
+  background-color: #4082ca;
+  border-color: #4082ca;
 }
 #globalNavigation .wds-global-navigation__search .wds-global-navigation__search-suggestions .wds-is-selected a {
   color: #5799c1;
@@ -2248,15 +2248,15 @@ div#viewingnew-warning {
 .CategorySelect.articlePage div.toolbar #CategorySelectSave {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
 }
 .CategorySelect.articlePage div.toolbar #CategorySelectSave:hover,
 .CategorySelect.articlePage div.toolbar #CategorySelectSave:active {
   color: #dfdfdf;
   background-image: none;
-  background-color: #4b92bc;
-  border-color: #4b92bc;
+  background-color: #4082ca;
+  border-color: #4082ca;
 }
 .CategorySelect.articlePage .category.new {
   border-color: #656b75;
@@ -2442,15 +2442,15 @@ div#viewingnew-warning {
 #EditPage #mw-scribunto-console input {
   color: #dfdfdf;
   background-image: none;
-  background-color: #39769b;
-  border-color: #39769b;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
 }
 #EditPage #mw-scribunto-console input:hover,
 #EditPage #mw-scribunto-console input:active {
   color: #dfdfdf;
   background-image: none;
-  background-color: #4b92bc;
-  border-color: #4b92bc;
+  background-color: #4082ca;
+  border-color: #4082ca;
 }
 body.background-dynamic.skin-oasis {
   background-color: #232323;
