@@ -28,6 +28,20 @@ table.wikitable > * > tr > th {
   background-color: #2F3136;
   border: solid 1px #52555a;
 }
+table.article-table {
+  background-color: #36393E;
+  color: #c5c5c5;
+  border: none;
+}
+table.article-table > tr > td,
+table.article-table > * > tr > td {
+  border-bottom: solid 1px #52555a;
+}
+table.article-table > tr > th,
+table.article-table > * > tr > th {
+  background-color: #2F3136;
+  border-bottom: solid 1px #52555a;
+}
 .lighttable .highlight-over,
 #pengLocations .highlight-over {
   background-color: #006d13;

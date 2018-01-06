@@ -26,6 +26,21 @@ table.wikitable {
     }
 }
 
+table.article-table  {
+    .table-wikitable;
+    
+    > tr > td, 
+    > * > tr > td {
+        border-bottom: solid 1px @table-border;
+    }
+    
+    > tr > th, 
+    > * > tr > th {
+        background-color: @table-header;
+        border-bottom: solid 1px @table-border;
+    }
+}
+
 // --------------------
 //      Lighttable
 // --------------------
@@ -64,16 +79,6 @@ table.jquery-tablesorter2 th.headerSort .chevron {
 // ====================================
 //      Darken colored table cells
 // ====================================
-// table.wikitable tr[style*="background"] > td {
-   // background: rgba(0, 0, 0, 0.6);
-// }
-
-// table.wikitable tr > td[style*="background"] {
-    // &/*:not([style*="background:#F0F0F0"])*/ {
-        // background-image: @table-colored-bg-overlay !important;
-    // }
-// }
-
 table.wikitable tr[style*="background"] td {
     color: #000;
     
