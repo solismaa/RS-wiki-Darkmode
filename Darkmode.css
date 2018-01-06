@@ -1195,6 +1195,12 @@ table.alternating-rows tr:nth-child(even) {
 .UploadPhotos .options {
   background-color: #2e2e2e;
 }
+.userhelpinfo,
+.introheader,
+.admininfo {
+  color: #c5c5c5 !important;
+  background-color: #1d1d1d !important;
+}
 div.mw-warning-with-logexcerpt,
 .WikiaArticle .noarticletext,
 .WikiaArticle fieldset,
