@@ -521,6 +521,13 @@ table.wikipedia {
 .messagebox.fimg {
   background-color: #1d1d1d !important;
 }
+.editpage-intro {
+  border-color: #52555a;
+}
+.editpage-intro > .editpage-intro-wrapper > div {
+  background-color: #1d1d1d;
+  color: #c5c5c5;
+}
 table.archive {
   background-color: #36393E !important;
   border: solid 1px #52555a !important;

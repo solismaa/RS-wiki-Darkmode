@@ -35,3 +35,16 @@ table.wikipedia {
 .messagebox.fimg {
     background-color: @messasgeboxes !important;
 }
+
+// =================================
+//      Edit page intro wrapper
+// =================================
+// Eample: protected pages, [[http://runescape.wikia.com/wiki/Template:Clear?action=edit]]
+.editpage-intro {
+    border-color: @table-border;
+    
+    & > .editpage-intro-wrapper > div {
+        background-color: @messasgeboxes;
+        color: @main-text;
+    }
+}
