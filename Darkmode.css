@@ -672,44 +672,52 @@ blockquote.block {
 .transcript {
   background-color: #2e2e2e;
 }
-.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
-table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
-table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
-table.navbox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
-table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
-image a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
-.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):link,
-table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):link,
-table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):link,
-table.navbox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):link,
-table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):link,
-image a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):link,
-.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):visited,
-table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):visited,
-table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):visited,
-table.navbox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):visited,
-table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):visited,
-image a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):visited {
+.WikiaPage a,
+.WikiaPage a:visited {
   color: #01c023;
 }
-.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new,
-table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new,
-table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new,
-table.navbox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new,
-table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new,
-image a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new,
-.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:link,
-table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:link,
-table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:link,
-table.navbox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:link,
-table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:link,
-image a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:link,
-.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:visited,
-table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:visited,
-table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:visited,
-table.navbox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:visited,
-table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:visited,
-image a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:visited {
+.WikiaPage a.new,
+.WikiaPage a.new:visited {
+  color: #ba0000;
+}
+table.wikitable a,
+table.wikitable a:visited {
+  color: #01c023;
+}
+table.wikitable a.new,
+table.wikitable a.new:visited {
+  color: #ba0000;
+}
+table.prettytable a,
+table.prettytable a:visited {
+  color: #01c023;
+}
+table.prettytable a.new,
+table.prettytable a.new:visited {
+  color: #ba0000;
+}
+table.navbox a,
+table.navbox a:visited {
+  color: #01c023;
+}
+table.navbox a.new,
+table.navbox a.new:visited {
+  color: #ba0000;
+}
+table.messagebox a,
+table.messagebox a:visited {
+  color: #01c023;
+}
+table.messagebox a.new,
+table.messagebox a.new:visited {
+  color: #ba0000;
+}
+image a,
+image a:visited {
+  color: #01c023;
+}
+image a.new,
+image a.new:visited {
   color: #ba0000;
 }
 .WikiaArticle pre {
@@ -811,6 +819,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 .button,
+a.button,
 button {
   color: #dfdfdf;
   background-image: none;
@@ -823,6 +832,7 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
 .button:hover,
+a.button:hover,
 button:hover,
 a.wikia-button:active,
 .wikia-single-button a:active,
@@ -830,6 +840,7 @@ input[type="submit"]:active,
 input[type="reset"]:active,
 input[type="button"]:active,
 .button:active,
+a.button:active,
 button:active {
   color: #dfdfdf;
   background-image: none;
@@ -842,6 +853,7 @@ input[type="submit"].secondary,
 input[type="reset"].secondary,
 input[type="button"].secondary,
 .button.secondary,
+a.button.secondary,
 button.secondary {
   color: #dfdfdf;
   background-image: none;
@@ -854,6 +866,7 @@ input[type="submit"].secondary:hover,
 input[type="reset"].secondary:hover,
 input[type="button"].secondary:hover,
 .button.secondary:hover,
+a.button.secondary:hover,
 button.secondary:hover,
 a.wikia-button.secondary:active,
 .wikia-single-button a.secondary:active,
@@ -861,6 +874,7 @@ input[type="submit"].secondary:active,
 input[type="reset"].secondary:active,
 input[type="button"].secondary:active,
 .button.secondary:active,
+a.button.secondary:active,
 button.secondary:active {
   color: #dfdfdf;
   background-image: none;

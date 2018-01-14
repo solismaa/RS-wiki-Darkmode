@@ -1,31 +1,58 @@
 // ===============
 //      Links
 // ===============
-.WikiaPage a,
-table.wikitable a,
-table.prettytable a,
-table.navbox a,
-table.messagebox a,
-image a {
-    &:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]) {
+.link-styling() {
+    // ----------------------
+    //      Normal links
+    // ----------------------
+    &,
+    &:visited {
+        color: @links;
+    }
+    
+    // ------------------
+    //      Redlinks
+    // ------------------
+    &.new {
+        &,
+        &:visited {
+            color: @redlinks;
+        }
+    }
+}
+
+// .WikiaPage a,
+// table.wikitable a,
+// table.prettytable a,
+// table.navbox a,
+// table.messagebox a,
+// image a {
+    //&:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]) {
         // ----------------------
         //      Normal links
         // ----------------------
-        &,
-        &:link,
-        &:visited {
-            color: @links;
-        }
+        //&,
+        // &:link,
+        // &:visited {
+            // color: @links;
+        // }
         
         // ------------------
         //      Redlinks
         // ------------------
-        &.new {
-            &,
-            &:link,
-            &:visited {
-                color: @redlinks;
-            }
-        }
-    }
-}
+        // &.new {
+            // &,
+            // &:link,
+            // &:visited {
+                // color: @redlinks;
+            // }
+        // }
+    //}
+// }
+
+.WikiaPage a {.link-styling;}
+table.wikitable a {.link-styling;}
+table.prettytable a {.link-styling;}
+table.navbox a {.link-styling;}
+table.messagebox a {.link-styling;}
+image a {.link-styling;}
