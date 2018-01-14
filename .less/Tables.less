@@ -76,21 +76,16 @@ table.jquery-tablesorter2 th.headerSort .chevron {
     background: darken(@table-data, 3%);
 } 
 
-// ====================================
-//      Darken colored table cells
-// ====================================
-table.wikitable tr[style*="background"] td {
-    color: #000;
-    
-    a {
-        color: darken(@links, 5%);
-    }
-}
-
+// ============================================
+//      Darken text on colored table cells
+// ============================================
 table.wikitable {
+    tr[style*="background"] td,
+    tr[bgcolor] td,
     td[style*="background"],
+    td[bgcolor],
     th[style*="background"] {
-        color: #000;
+        color: #3a3a3a;
     
         a {
             color: darken(@links, 5%);

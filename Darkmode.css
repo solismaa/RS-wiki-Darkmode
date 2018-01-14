@@ -61,17 +61,17 @@ table.jquery-tablesorter2 th.headerSort .chevron:first-child {
 .table-na {
   background: #2f3136;
 }
-table.wikitable tr[style*="background"] td {
-  color: #000;
-}
-table.wikitable tr[style*="background"] td a {
-  color: #01a71e;
-}
+table.wikitable tr[style*="background"] td,
+table.wikitable tr[bgcolor] td,
 table.wikitable td[style*="background"],
+table.wikitable td[bgcolor],
 table.wikitable th[style*="background"] {
-  color: #000;
+  color: #3a3a3a;
 }
+table.wikitable tr[style*="background"] td a,
+table.wikitable tr[bgcolor] td a,
 table.wikitable td[style*="background"] a,
+table.wikitable td[bgcolor] a,
 table.wikitable th[style*="background"] a {
   color: #01a71e;
 }
