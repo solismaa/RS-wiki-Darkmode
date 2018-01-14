@@ -1012,6 +1012,14 @@ table.calc-extra-info {
 table.alternating-rows tr:nth-child(even) {
   background-color: #2F3136;
 }
+.status-active {
+  background-color: #006d13;
+  color: #c5c5c5;
+}
+.status-inactive {
+  background-color: #58120b;
+  color: #c5c5c5;
+}
 .mp-color {
   background-color: #36393E;
   color: #c5c5c5;

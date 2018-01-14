@@ -8,19 +8,19 @@
 // applies to a variety of templates used by a variety of scripts
 .sg-red,
 .nocell {
-    background: darken(#861c10, 10%);
+    background: @red-bg;
     color: @main-text;
 }
 
 .sg-yellow,
 .maybecell {
-    background: darken(#f3f0b0, 60%);
+    background: @yellow-bg;
     color: @main-text;
 }
 
 .sg-green,
 .yescell {
-    background: @highlight-table-on;
+    background: @green-bg;
     color: @main-text;
 }
 
@@ -87,4 +87,17 @@ table.calc-extra-info {
 // Example: [[Experience/Table]]
 table.alternating-rows tr:nth-child(even) {
     background-color: @table-header;
+}
+
+// =========================
+//      Minigame status
+// =========================
+.status-active {
+    background-color: @green-lighter-bg;
+    color: @main-text;
+}
+
+.status-inactive {
+    background-color: @red-bg;
+    color: @main-text;
 }
