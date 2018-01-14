@@ -980,12 +980,12 @@ button.secondary:active {
   background: #1e5400;
   color: #c5c5c5;
 }
-.sg-green a,
-.yescell a {
-  color: #01c023 !important;
-}
 .sg-yellow a,
 .maybecell a {
+  color: #29fe4f !important;
+}
+.sg-red a,
+.nocell a {
   color: #01f32c !important;
 }
 .coins-pos {
