@@ -2489,7 +2489,8 @@ div#viewingnew-warning {
 #EditPage #mw-scribunto-console .mw-scribunto-input {
   color: #01c023;
 }
-#EditPage #mw-scribunto-console .mw-scribunto-normalOutput {
+#EditPage #mw-scribunto-console .mw-scribunto-normalOutput,
+#EditPage #mw-scribunto-console .mw-scribunto-print {
   background: none;
   color: #c5c5c5;
 }

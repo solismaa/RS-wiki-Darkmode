@@ -64,7 +64,7 @@
     color: #14dc1c;
 }
 
-// indent image 
+// Dotted indent guide 
 .ace-solarized-light .ace_indent-guide {
     filter: brightness(60%);
 }
@@ -111,12 +111,13 @@
             color: darken(@main-text, 10%);
         }
         
-        // Output
+        // Output area
         .mw-scribunto-input {
             color: @links;
         }
         
-        .mw-scribunto-normalOutput {
+        .mw-scribunto-normalOutput,
+        .mw-scribunto-print {
             background: none;
             color: @main-text;
         }
@@ -125,7 +126,7 @@
             background: none;
         }
         
-        // Text input
+        // Text input area
         #mw-scribunto-input {
             .text-input-styling;
         }
