@@ -46,9 +46,17 @@ table.article-table > * > tr > th {
 #pengLocations .highlight-over {
   background-color: #006d13;
 }
+.lighttable .highlight-over a,
+#pengLocations .highlight-over a {
+  color: #01c023;
+}
 .lighttable .highlight-on,
 #pengLocations .highlight-on {
   background-color: #1e5400;
+}
+.lighttable .highlight-on a,
+#pengLocations .highlight-on a {
+  color: #01c023;
 }
 table.jquery-tablesorter.sortable th.headerSort .chevron,
 table.jquery-tablesorter2 th.headerSort .chevron {
@@ -673,60 +681,62 @@ blockquote.block {
   background-color: #2e2e2e;
 }
 .WikiaPage a,
-.WikiaPage a:visited {
+.WikiaPage a:visited,
+.WikiaPage a:active {
   color: #01c023;
 }
 .WikiaPage a.new,
-.WikiaPage a.new:visited {
-  color: #ba0000;
+.WikiaPage a.new:visited,
+.WikiaPage a.new:active {
+  color: #ba0000 !important;
 }
 table.wikitable a,
-table.wikitable a:visited {
+table.prettytable a,
+table.navbox a,
+table.messagebox a,
+table.wikitable a:visited,
+table.prettytable a:visited,
+table.navbox a:visited,
+table.messagebox a:visited,
+table.wikitable a:active,
+table.prettytable a:active,
+table.navbox a:active,
+table.messagebox a:active {
   color: #01c023;
 }
 table.wikitable a.new,
-table.wikitable a.new:visited {
-  color: #ba0000;
-}
-table.prettytable a,
-table.prettytable a:visited {
-  color: #01c023;
-}
 table.prettytable a.new,
-table.prettytable a.new:visited {
-  color: #ba0000;
-}
-table.navbox a,
-table.navbox a:visited {
-  color: #01c023;
-}
 table.navbox a.new,
-table.navbox a.new:visited {
-  color: #ba0000;
-}
-table.messagebox a,
-table.messagebox a:visited {
-  color: #01c023;
-}
 table.messagebox a.new,
-table.messagebox a.new:visited {
-  color: #ba0000;
+table.wikitable a.new:visited,
+table.prettytable a.new:visited,
+table.navbox a.new:visited,
+table.messagebox a.new:visited,
+table.wikitable a.new:active,
+table.prettytable a.new:active,
+table.navbox a.new:active,
+table.messagebox a.new:active {
+  color: #ba0000 !important;
 }
 image a,
-image a:visited {
+image a:visited,
+image a:active {
   color: #01c023;
 }
 image a.new,
-image a.new:visited {
-  color: #ba0000;
+image a.new:visited,
+image a.new:active {
+  color: #ba0000 !important;
 }
 .modal a,
-.modal a:visited {
+.modal a:visited,
+.modal a:active {
   color: #01c023;
 }
 .modal a.new,
-.modal a.new:visited {
-  color: #ba0000;
+.modal a.new:visited,
+.modal a.new:active {
+  color: #ba0000 !important;
 }
 .WikiaArticle pre {
   border: solid 1px #4a4a4a;

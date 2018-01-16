@@ -6,7 +6,8 @@
     //      Normal links
     // ----------------------
     &,
-    &:visited {
+    &:visited,
+    &:active {
         color: @links;
     }
     
@@ -15,8 +16,9 @@
     // ------------------
     &.new {
         &,
-        &:visited {
-            color: @redlinks;
+        &:visited,
+        &:active {
+            color: @redlinks !important;
         }
     }
 }
@@ -51,9 +53,9 @@
 // }
 
 .WikiaPage a {.link-styling;}
-table.wikitable a {.link-styling;}
-table.prettytable a {.link-styling;}
-table.navbox a {.link-styling;}
+table.wikitable a,
+table.prettytable a,
+table.navbox a,
 table.messagebox a {.link-styling;}
 image a {.link-styling;}
 .modal a {.link-styling;}
