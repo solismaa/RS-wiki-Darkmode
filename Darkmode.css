@@ -839,7 +839,7 @@ input[type="reset"]:not(.wds-button),
 input[type="button"]:not(.wds-button),
 .button:not(.wds-button),
 a.button:not(.wds-button),
-button {
+button:not(.wds-button) {
   color: #dfdfdf;
   background-image: none;
   background-color: #2f69a8;
@@ -853,7 +853,7 @@ input[type="reset"]:not(.wds-button):hover,
 input[type="button"]:not(.wds-button):hover,
 .button:not(.wds-button):hover,
 a.button:not(.wds-button):hover,
-button:hover,
+button:not(.wds-button):hover,
 a.wikia-button:active,
 .wikia-single-button a:active,
 .wikia-menu-button:active,
@@ -862,7 +862,7 @@ input[type="reset"]:not(.wds-button):active,
 input[type="button"]:not(.wds-button):active,
 .button:not(.wds-button):active,
 a.button:not(.wds-button):active,
-button:active {
+button:not(.wds-button):active {
   color: #dfdfdf;
   background-image: none;
   background-color: #4082ca;
@@ -876,7 +876,7 @@ input[type="reset"]:not(.wds-button).secondary,
 input[type="button"]:not(.wds-button).secondary,
 .button:not(.wds-button).secondary,
 a.button:not(.wds-button).secondary,
-button.secondary {
+button:not(.wds-button).secondary {
   color: #dfdfdf;
   background-image: none;
   border-color: #656b75;
@@ -890,7 +890,7 @@ input[type="reset"]:not(.wds-button).secondary:hover,
 input[type="button"]:not(.wds-button).secondary:hover,
 .button:not(.wds-button).secondary:hover,
 a.button:not(.wds-button).secondary:hover,
-button.secondary:hover,
+button:not(.wds-button).secondary:hover,
 a.wikia-button.secondary:active,
 .wikia-single-button a.secondary:active,
 .wikia-menu-button.secondary:active,
@@ -899,7 +899,7 @@ input[type="reset"]:not(.wds-button).secondary:active,
 input[type="button"]:not(.wds-button).secondary:active,
 .button:not(.wds-button).secondary:active,
 a.button:not(.wds-button).secondary:active,
-button.secondary:active {
+button:not(.wds-button).secondary:active {
   color: #dfdfdf;
   background-image: none;
   border-color: #4e5259;
