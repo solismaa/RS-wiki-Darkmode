@@ -291,14 +291,6 @@
         .wds-global-navigation__account-menu-dropdown-caption {
             color: @main-text;
         }
-        
-        #global-navigation-anon-sign-in {
-            .button-styling;
-        }
-        
-        #global-navigation-anon-register {
-            .button-styling("cancel");
-        }
     }
     
     .wds-global-navigation__start-a-wiki a:hover{
@@ -348,14 +340,17 @@
         .dropdown-styling;
     }
     
-    // Logout button
+    // Account login/logout
     .wds-sign-out__button {
-        color: @main-text;
-        
-        &:hover {
-            color: @links;
-            background-color: lighten(@table-header, 5%);
-        }
+        .button-styling;
+    }
+
+    #global-navigation-anon-sign-in {
+        .button-styling;
+    }
+    
+    #global-navigation-anon-register {
+        .button-styling("cancel");
     }
     
     // Notifications

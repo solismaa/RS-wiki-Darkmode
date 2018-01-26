@@ -833,11 +833,12 @@ textarea::-webkit-scrollbar-thumb {
 }
 a.wikia-button,
 .wikia-single-button a,
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-.button,
-a.button,
+.wikia-menu-button,
+input[type="submit"]:not(.wds-button),
+input[type="reset"]:not(.wds-button),
+input[type="button"]:not(.wds-button),
+.button:not(.wds-button),
+a.button:not(.wds-button),
 button {
   color: #dfdfdf;
   background-image: none;
@@ -846,19 +847,21 @@ button {
 }
 a.wikia-button:hover,
 .wikia-single-button a:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-.button:hover,
-a.button:hover,
+.wikia-menu-button:hover,
+input[type="submit"]:not(.wds-button):hover,
+input[type="reset"]:not(.wds-button):hover,
+input[type="button"]:not(.wds-button):hover,
+.button:not(.wds-button):hover,
+a.button:not(.wds-button):hover,
 button:hover,
 a.wikia-button:active,
 .wikia-single-button a:active,
-input[type="submit"]:active,
-input[type="reset"]:active,
-input[type="button"]:active,
-.button:active,
-a.button:active,
+.wikia-menu-button:active,
+input[type="submit"]:not(.wds-button):active,
+input[type="reset"]:not(.wds-button):active,
+input[type="button"]:not(.wds-button):active,
+.button:not(.wds-button):active,
+a.button:not(.wds-button):active,
 button:active {
   color: #dfdfdf;
   background-image: none;
@@ -867,11 +870,12 @@ button:active {
 }
 a.wikia-button.secondary,
 .wikia-single-button a.secondary,
-input[type="submit"].secondary,
-input[type="reset"].secondary,
-input[type="button"].secondary,
-.button.secondary,
-a.button.secondary,
+.wikia-menu-button.secondary,
+input[type="submit"]:not(.wds-button).secondary,
+input[type="reset"]:not(.wds-button).secondary,
+input[type="button"]:not(.wds-button).secondary,
+.button:not(.wds-button).secondary,
+a.button:not(.wds-button).secondary,
 button.secondary {
   color: #dfdfdf;
   background-image: none;
@@ -880,19 +884,21 @@ button.secondary {
 }
 a.wikia-button.secondary:hover,
 .wikia-single-button a.secondary:hover,
-input[type="submit"].secondary:hover,
-input[type="reset"].secondary:hover,
-input[type="button"].secondary:hover,
-.button.secondary:hover,
-a.button.secondary:hover,
+.wikia-menu-button.secondary:hover,
+input[type="submit"]:not(.wds-button).secondary:hover,
+input[type="reset"]:not(.wds-button).secondary:hover,
+input[type="button"]:not(.wds-button).secondary:hover,
+.button:not(.wds-button).secondary:hover,
+a.button:not(.wds-button).secondary:hover,
 button.secondary:hover,
 a.wikia-button.secondary:active,
 .wikia-single-button a.secondary:active,
-input[type="submit"].secondary:active,
-input[type="reset"].secondary:active,
-input[type="button"].secondary:active,
-.button.secondary:active,
-a.button.secondary:active,
+.wikia-menu-button.secondary:active,
+input[type="submit"]:not(.wds-button).secondary:active,
+input[type="reset"]:not(.wds-button).secondary:active,
+input[type="button"]:not(.wds-button).secondary:active,
+.button:not(.wds-button).secondary:active,
+a.button:not(.wds-button).secondary:active,
 button.secondary:active {
   color: #dfdfdf;
   background-image: none;
@@ -2208,32 +2214,6 @@ div#viewingnew-warning {
 #globalNavigation .wds-global-navigation__account-menu .wds-global-navigation__account-menu-dropdown-caption {
   color: #c5c5c5;
 }
-#globalNavigation .wds-global-navigation__account-menu #global-navigation-anon-sign-in {
-  color: #dfdfdf;
-  background-image: none;
-  background-color: #2f69a8;
-  border-color: #2f69a8;
-}
-#globalNavigation .wds-global-navigation__account-menu #global-navigation-anon-sign-in:hover,
-#globalNavigation .wds-global-navigation__account-menu #global-navigation-anon-sign-in:active {
-  color: #dfdfdf;
-  background-image: none;
-  background-color: #4082ca;
-  border-color: #4082ca;
-}
-#globalNavigation .wds-global-navigation__account-menu #global-navigation-anon-register {
-  color: #dfdfdf;
-  background-image: none;
-  border-color: #656b75;
-  background-color: #656b75;
-}
-#globalNavigation .wds-global-navigation__account-menu #global-navigation-anon-register:hover,
-#globalNavigation .wds-global-navigation__account-menu #global-navigation-anon-register:active {
-  color: #dfdfdf;
-  background-image: none;
-  border-color: #4e5259;
-  background-color: #4e5259;
-}
 #globalNavigation .wds-global-navigation__start-a-wiki a:hover {
   color: #01c023;
 }
@@ -2301,11 +2281,43 @@ div#viewingnew-warning {
   background: none;
 }
 #globalNavigation .wds-sign-out__button {
-  color: #c5c5c5;
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
 }
-#globalNavigation .wds-sign-out__button:hover {
-  color: #01c023;
-  background-color: #3b3d44;
+#globalNavigation .wds-sign-out__button:hover,
+#globalNavigation .wds-sign-out__button:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+#globalNavigation #global-navigation-anon-sign-in {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+#globalNavigation #global-navigation-anon-sign-in:hover,
+#globalNavigation #global-navigation-anon-sign-in:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+#globalNavigation #global-navigation-anon-register {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #656b75;
+  background-color: #656b75;
+}
+#globalNavigation #global-navigation-anon-register:hover,
+#globalNavigation #global-navigation-anon-register:active {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #4e5259;
+  background-color: #4e5259;
 }
 #globalNavigation .wds-notifications__dropdown-content {
   color: #c5c5c5;
