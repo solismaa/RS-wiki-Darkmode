@@ -168,10 +168,6 @@
         color: lighten(@main-text, 10%);
     }
     
-    #DisplayClockJS {
-        color: lighten(@main-text, 10%) !important;
-    }
-    
     .wds-button.wds-is-secondary {
         color: lighten(@main-text, 10%);
         border-color: lighten(@main-text, 10%);
@@ -208,6 +204,11 @@
             }
         }
     }
+}
+
+// http://dev.wikia.com/wiki/UTCClock
+#DisplayClockJS {
+    color: lighten(@main-text, 10%) !important;
 }
 
 // =======================

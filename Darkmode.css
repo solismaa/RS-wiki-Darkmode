@@ -269,7 +269,7 @@ img.tex {
 }
 #WikiaPhotoGalleryEditor .preview::-webkit-scrollbar,
 #WikiaPhotoGallerySearchResults::-webkit-scrollbar {
-  width: 12px;
+  width: 13px;
 }
 #WikiaPhotoGalleryEditor .preview::-webkit-scrollbar-track,
 #WikiaPhotoGallerySearchResults::-webkit-scrollbar-track {
@@ -763,7 +763,7 @@ textarea {
   border: solid 1px #52555a;
 }
 textarea::-webkit-scrollbar {
-  width: 12px;
+  width: 13px;
 }
 textarea::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -804,7 +804,7 @@ textarea::-webkit-scrollbar-thumb {
   box-shadow: 0 3px 6px 0 #2F3136;
 }
 .WikiaDropdown .dropdown::-webkit-scrollbar {
-  width: 12px;
+  width: 13px;
 }
 .WikiaDropdown .dropdown::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -1088,7 +1088,7 @@ table.alternating-rows tr:nth-child(even) {
   color: #01c023;
 }
 .timeline-Viewport::-webkit-scrollbar {
-  width: 12px;
+  width: 13px;
 }
 .timeline-Viewport::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -1455,13 +1455,45 @@ div#viewingnew-warning {
 #EditPage #wpTextbox0 {
   background-color: #a9a9a9 !important;
 }
+#EditPage #wpTextbox0::-webkit-scrollbar {
+  width: 13px;
+}
+#EditPage #wpTextbox0::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #808080;
+  border: solid 1px #7a7a7a;
+}
+#EditPage #wpTextbox0::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #333333;
+}
 #EditPage #wpTextbox1 {
   color: black;
+  background-color: #a9a9a9;
 }
-#EditPage #wpTextbox1::-webkit-scrollbar,
-#EditPage #wpTextbox1::-webkit-scrollbar-track,
+#EditPage #wpTextbox1::-webkit-scrollbar {
+  width: 13px;
+}
+#EditPage #wpTextbox1::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #808080;
+  border: solid 1px #7a7a7a;
+}
 #EditPage #wpTextbox1::-webkit-scrollbar-thumb {
-  all: unset;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #333333;
 }
 #EditPage .loading-background,
 #EditPage .loading-message,
@@ -1479,7 +1511,7 @@ div#viewingnew-warning {
   border-color: #52555a;
 }
 #EditPageDialog.preview .modalContent .ArticlePreview::-webkit-scrollbar {
-  width: 12px;
+  width: 13px;
 }
 #EditPageDialog.preview .modalContent .ArticlePreview::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -1782,7 +1814,7 @@ div#viewingnew-warning {
 }
 .oo-ui-panelLayout-scrollable::-webkit-scrollbar,
 .oo-ui-selectWidget::-webkit-scrollbar {
-  width: 12px;
+  width: 13px;
 }
 .oo-ui-panelLayout-scrollable::-webkit-scrollbar-track,
 .oo-ui-selectWidget::-webkit-scrollbar-track {
@@ -2038,7 +2070,7 @@ div#viewingnew-warning {
   background: none;
 }
 #PageHeader .page-header__languages .wds-dropdown__content ul::-webkit-scrollbar {
-  width: 12px;
+  width: 13px;
 }
 #PageHeader .page-header__languages .wds-dropdown__content ul::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -2077,7 +2109,7 @@ div#viewingnew-warning {
   background: none;
 }
 #PageHeader .page-header__categories-dropdown .page-header__categories-dropdown-content ul::-webkit-scrollbar {
-  width: 12px;
+  width: 13px;
 }
 #PageHeader .page-header__categories-dropdown .page-header__categories-dropdown-content ul::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -2108,9 +2140,6 @@ div#viewingnew-warning {
 .wds-community-header .wds-community-header__counter,
 .wds-community-header .wds-tabs__tab-label {
   color: #dfdfdf;
-}
-.wds-community-header #DisplayClockJS {
-  color: #dfdfdf !important;
 }
 .wds-community-header .wds-button.wds-is-secondary {
   color: #dfdfdf;
@@ -2159,6 +2188,9 @@ div#viewingnew-warning {
 .wds-community-header .wds-dropdown__content .wds-list.wds-is-linked li:hover > a {
   color: #01c023;
   background-color: #3b3d44;
+}
+#DisplayClockJS {
+  color: #dfdfdf !important;
 }
 #globalNavigation {
   -webkit-box-shadow: 0 1px 0 0 #0c0c0c;
@@ -2493,7 +2525,7 @@ div#viewingnew-warning {
 }
 .ace_scrollbar::-webkit-scrollbar,
 .ace_scrollbar-h::-webkit-scrollbar {
-  width: 12px;
+  width: 13px;
 }
 .ace_scrollbar::-webkit-scrollbar-track,
 .ace_scrollbar-h::-webkit-scrollbar-track {
