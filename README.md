@@ -10,4 +10,4 @@ This is a dark theme for the [Runescape wiki](http://runescape.wikia.com/wiki/Ru
   * or, add it [manually](https://raw.githubusercontent.com/CephHunter/RS-wiki-DarkMode/master/Darkmode.css) into the editor.
 
 ## Updating
-If a recent change by Wikia broke the style, chances are that I already fixed it. Make sure to reinstall from [userstyles.org](https://userstyles.org/styles/150266/runescape-wiki-darkmode) or [GitHub](https://raw.githubusercontent.com/CephHunter/RS-wiki-DarkMode/master/Darkmode.css) before opening an issue. Note that only Stylish for Firefox performs automatic style updates.
+If a recent change by Wikia broke the style, chances are that I already fixed it. Make sure to reinstall from [userstyles.org](https://userstyles.org/styles/150266/runescape-wiki-darkmode) or [GitHub](https://raw.githubusercontent.com/CephHunter/RS-wiki-DarkMode/master/Darkmode.css) before opening an issue. Note that only Stylus performs automatic style updates.
