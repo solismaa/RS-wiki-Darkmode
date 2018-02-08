@@ -680,6 +680,10 @@ blockquote.block {
 .transcript {
   background-color: #2e2e2e;
 }
+td.famtreeleaf {
+  background-color: #3d3d3d;
+  border: 1px solid #52555a;
+}
 .WikiaPage a,
 .WikiaPage a:visited,
 .WikiaPage a:active {
