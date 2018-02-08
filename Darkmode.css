@@ -2557,6 +2557,12 @@ div#viewingnew-warning {
   background-color: #333333;
   outline-color: #52555a;
 }
+table.property-page-results .header-title {
+  color: #c5c5c5;
+}
+table.property-page-results .value-row:hover {
+  background-color: #333333;
+}
 #theme-solarized-light {
   background-color: #2e2e2e;
   color: #b8b8b8;
