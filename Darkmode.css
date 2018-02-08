@@ -1258,6 +1258,46 @@ table.alternating-rows tr:nth-child(even) {
   color: #c5c5c5 !important;
   background-color: #1d1d1d !important;
 }
+table.smwb-factbox,
+table.smwb-ifactbox {
+  border-collapse: collapse;
+}
+table.smwb-factbox tr.smwb-title td,
+table.smwb-ifactbox tr.smwb-title td,
+table.smwb-factbox tr.smwb-center td,
+table.smwb-ifactbox tr.smwb-center td {
+  background-color: #2F3136;
+  border: solid 1px #52555a;
+}
+table.smwb-factbox tr.smwb-propvalue th,
+table.smwb-ifactbox tr.smwb-propvalue th,
+table.smwb-factbox tr.smwb-ipropvalue th,
+table.smwb-ifactbox tr.smwb-ipropvalue th {
+  background-color: #2F3136;
+  border: solid 1px #52555a;
+}
+table.smwb-factbox tr.smwb-propvalue td,
+table.smwb-ifactbox tr.smwb-propvalue td,
+table.smwb-factbox tr.smwb-ipropvalue td,
+table.smwb-ifactbox tr.smwb-ipropvalue td {
+  border: solid 1px #52555a;
+  background-color: #36393E;
+}
+.qtip-bootstrap {
+  background-color: #36393E;
+  color: #c5c5c5;
+  border: 1px solid #52555a;
+}
+.qtip-bootstrap a {
+  color: #01c023;
+}
+.qtip-bootstrap .qtip-titlebar {
+  background-color: #2F3136;
+  border-bottom-color: #52555a;
+}
+.qtip-bootstrap .qtip .qtip-tip canvas {
+  background-color: #52555a;
+}
 div.mw-warning-with-logexcerpt,
 .WikiaArticle .noarticletext,
 .WikiaArticle fieldset,

@@ -281,3 +281,50 @@
     color: @main-text !important;
     background-color: @messasgeboxes !important;
 }
+
+// ============================
+//      [[Special:Browse]]
+// ============================
+table.smwb-factbox,
+table.smwb-ifactbox {
+    border-collapse: collapse;
+
+    tr.smwb-title,
+    tr.smwb-center {
+        td {
+            .table-header();
+        }
+    }
+
+    tr.smwb-propvalue,
+    tr.smwb-ipropvalue {
+        th {
+            .table-header();
+        }
+
+        td {
+            .table-data();
+            background-color: @table-data;
+        }
+    }
+}
+
+// info popup
+.qtip-bootstrap {
+    background-color: @table-data;
+    color: @main-text;
+    border: 1px solid @table-border;
+
+    a {
+        color: @links;
+    }
+
+    .qtip-titlebar {
+        background-color: @table-header;
+        border-bottom-color: @table-border;
+    }
+
+    .qtip .qtip-tip canvas {
+        background-color: @table-border;
+    }
+}
