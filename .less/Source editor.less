@@ -47,6 +47,10 @@
         .preview_icon {
             border-color: @table-border;
         }
+
+        p {
+            color: darken(@main-text, 10%);
+        }
     }
     
     .diff-link {
@@ -101,6 +105,7 @@
         }
     }
     
+    // Module titles
     .module h3 {
         background-color: @main-page-bg;
         .gradient(linear; @main-page-bg 0%,  @gradient-light-color 100%; 0deg);
@@ -111,9 +116,8 @@
         }
     }
     
+    // "Add features and media" module
     .cke_button a {
-        // background-color: @table-header;
-        // border-color: @table-header;
         .button-styling;
         
         &:hover{
@@ -125,6 +129,7 @@
         }
     }
     
+    // "Categories" module
     .CategorySelect {
         .input {
             .placeholder({color: darken(@main-text, 15%)});
@@ -140,6 +145,26 @@
                     background-color: darken(#e6e6e6, 50%);
                 }
             }
+        }
+    }
+
+    // "Templates" module
+    .module_templates {
+        #temp-preload {
+            color: @main-text;
+        }
+        
+        a {
+            color: @links;
+        }
+    }
+
+    // "License" module
+    .module_license p {
+        color: darken(@main-text, 10%);
+
+        a {
+            color: @links;
         }
     }
     

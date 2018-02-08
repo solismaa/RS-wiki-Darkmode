@@ -1336,6 +1336,9 @@ div#viewingnew-warning {
 #EditPage .preview_box .preview_icon {
   border-color: #52555a;
 }
+#EditPage .preview_box p {
+  color: #acacac;
+}
 #EditPage .diff-link {
   color: #01c023;
 }
@@ -1451,6 +1454,18 @@ div#viewingnew-warning {
 }
 #EditPage .CategorySelect .categories .category:hover {
   background-color: #676767;
+}
+#EditPage .module_templates #temp-preload {
+  color: #c5c5c5;
+}
+#EditPage .module_templates a {
+  color: #01c023;
+}
+#EditPage .module_license p {
+  color: #acacac;
+}
+#EditPage .module_license p a {
+  color: #01c023;
 }
 #EditPage #wpTextbox0 {
   background-color: #a9a9a9 !important;
