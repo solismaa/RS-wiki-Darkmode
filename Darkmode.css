@@ -684,6 +684,10 @@ td.famtreeleaf {
   background-color: #3d3d3d;
   border: 1px solid #52555a;
 }
+#alphabetical-header {
+  background-color: #1d1d1d !important;
+  border-color: #2a2a2a !important;
+}
 .WikiaPage a,
 .WikiaPage a:visited,
 .WikiaPage a:active {
