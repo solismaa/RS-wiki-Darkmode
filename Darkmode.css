@@ -2,12 +2,12 @@
 =================================
      Runescape wiki darkmode
 =================================
-Version: 1.5.2
-Release date: 7-feb-2018
+Version: 1.6
+Release date: 9-feb-2018
 GitHub: https://github.com/CephHunter/RS-wiki-DarkMode
 
 
-If on firefox, add "@-moz-document domain("runescape.wikia.com") { }" around code
+If on stylish for firefox, add "@-moz-document domain("runescape.wikia.com") { }" around code
 */
 .WikiaArticle .infobox {
   background-color: #36393E;
