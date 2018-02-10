@@ -248,7 +248,9 @@
     }
 }
 
-// Page footer "Customize" button popup
+// ----------------------------------------------
+//      Page footer "Customize" button popup
+// ----------------------------------------------
 #MyToolsConfigurationWrapper {
     section {
         a {
@@ -316,6 +318,17 @@
     .box-shadow(none);
 }
 
+// ----------------------------
+//      Add new page popup
+// ----------------------------
+.accent {
+    color: @main-text;
+}
+
+#CreatePageDialog input {
+    .text-input-styling();
+}
+
 // ==================================
 //      Choose Template type box
 // ==================================
@@ -354,4 +367,40 @@
     .button.normal.secondary {
         .button-styling("cancel");
     }
+}
+
+// ==================================
+//      Keyboard shortcuts popup
+// ==================================
+// Found under the dropdown next to the total page count in the page header
+#blackout_GlobalShortcutsSearch #GlobalShortcutsSearch {
+    // Search input
+    #global_shortcuts_search_field {
+        .text-input-styling();
+        .placeholder({
+            color: darken(@main-text, 15%)
+        });
+
+        background-blend-mode: exclusion;
+    }
+
+    .global-shortcuts-field-wrapper {
+        border-bottom-color: @table-border;
+    }
+
+    // Seatch results
+    .autocomplete-suggestions {
+        background-color: @documentation-bg;
+        border-color: @table-border;
+
+        .autocomplete-group strong {
+            border-bottom-color: @table-border;
+        }
+
+        .autocomplete-selected {
+            background-color: lighten(@documentation-bg, 10%);
+        }
+    }
+
+
 }

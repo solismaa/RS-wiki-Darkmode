@@ -458,6 +458,14 @@ img.tex {
   -moz-box-shadow: none;
   box-shadow: none;
 }
+.accent {
+  color: #c5c5c5;
+}
+#CreatePageDialog input {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+}
 #TemplateClassificationEditModal header,
 #TemplateClassificationEditModal footer {
   background-color: #2F3136;
@@ -507,6 +515,40 @@ img.tex {
   background-image: none;
   border-color: #4e5259;
   background-color: #4e5259;
+}
+#blackout_GlobalShortcutsSearch #GlobalShortcutsSearch #global_shortcuts_search_field {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+  background-blend-mode: exclusion;
+}
+#blackout_GlobalShortcutsSearch #GlobalShortcutsSearch #global_shortcuts_search_field::-webkit-input-placeholder {
+  color: #9f9f9f;
+}
+#blackout_GlobalShortcutsSearch #GlobalShortcutsSearch #global_shortcuts_search_field:-moz-placeholder {
+  color: #9f9f9f;
+}
+#blackout_GlobalShortcutsSearch #GlobalShortcutsSearch #global_shortcuts_search_field::-moz-placeholder {
+  color: #9f9f9f;
+}
+#blackout_GlobalShortcutsSearch #GlobalShortcutsSearch #global_shortcuts_search_field:-ms-input-placeholder {
+  color: #9f9f9f;
+}
+#blackout_GlobalShortcutsSearch #GlobalShortcutsSearch #global_shortcuts_search_field::-ms-input-placeholder {
+  color: #9f9f9f;
+}
+#blackout_GlobalShortcutsSearch #GlobalShortcutsSearch .global-shortcuts-field-wrapper {
+  border-bottom-color: #52555a;
+}
+#blackout_GlobalShortcutsSearch #GlobalShortcutsSearch .autocomplete-suggestions {
+  background-color: #2e2e2e;
+  border-color: #52555a;
+}
+#blackout_GlobalShortcutsSearch #GlobalShortcutsSearch .autocomplete-suggestions .autocomplete-group strong {
+  border-bottom-color: #52555a;
+}
+#blackout_GlobalShortcutsSearch #GlobalShortcutsSearch .autocomplete-suggestions .autocomplete-selected {
+  background-color: #474747;
 }
 table.wikipedia {
   background: #1d1d1d !important;
