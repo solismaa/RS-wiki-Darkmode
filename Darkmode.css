@@ -2894,5 +2894,12 @@ body .ui-autocomplete .ui-menu-item a:hover {
 .WikiaBarWrapper .tools-menu > li {
   border-top-color: #52555a;
 }
+#WikiaTopAds,
+#WikiaAdInContentPlaceHolder,
+#top-right-boxad-wrapper,
+#mixed-content-footer .mcf-content,
+#BOTTOM_LEADERBOARD {
+  display: none !important;
+}
 
 /*# sourceMappingURL=Darkmode.css.map */
