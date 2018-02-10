@@ -151,6 +151,9 @@ img.tex {
 .js-tooltip-wrapper .js-tooltip-text {
   background-color: #2e2e2e;
 }
+.js-tooltip-wrapper a {
+  color: #e0960b;
+}
 .popover.top .arrow,
 .popover.wikiaBar .arrow,
 .popover.wikiaBarMessage .arrow {
