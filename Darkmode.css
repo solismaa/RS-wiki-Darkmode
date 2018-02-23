@@ -2,8 +2,8 @@
 =================================
      Runescape wiki darkmode
 =================================
-Version: 1.6
-Release date: 9-feb-2018
+Version: 1.7
+Release date: 23-feb-2018
 GitHub: https://github.com/CephHunter/RS-wiki-DarkMode
 
 
@@ -48,7 +48,7 @@ table.article-table > * > tr > th {
 }
 .lighttable .highlight-over a,
 #pengLocations .highlight-over a {
-  color: #e0960b;
+  color: #6bbaea;
 }
 .lighttable .highlight-on,
 #pengLocations .highlight-on {
@@ -56,7 +56,7 @@ table.article-table > * > tr > th {
 }
 .lighttable .highlight-on a,
 #pengLocations .highlight-on a {
-  color: #e0960b;
+  color: #6bbaea;
 }
 table.jquery-tablesorter.sortable th.headerSort .chevron,
 table.jquery-tablesorter2 th.headerSort .chevron {
@@ -81,7 +81,7 @@ table.wikitable tr[bgcolor] td a,
 table.wikitable td[style*="background"] a,
 table.wikitable td[bgcolor] a,
 table.wikitable th[style*="background"] a {
-  color: #c8860a;
+  color: #55b0e7;
 }
 .article-thumb,
 .gifresize,
@@ -117,7 +117,7 @@ img.tex {
   background: #36393E;
 }
 .rsw-tooltip a {
-  color: #e0960b;
+  color: #6bbaea;
 }
 #rsw-config {
   border-color: #2f69a8;
@@ -152,7 +152,7 @@ img.tex {
   background-color: #2e2e2e;
 }
 .js-tooltip-wrapper a {
-  color: #e0960b;
+  color: #6bbaea;
 }
 .popover.top .arrow,
 .popover.wikiaBar .arrow,
@@ -203,10 +203,10 @@ img.tex {
   color: #c5c5c5;
 }
 .modalWrapper a {
-  color: #e0960b;
+  color: #6bbaea;
 }
 .modalWrapper h1 {
-  color: #e0960b;
+  color: #6bbaea;
 }
 .modalWrapper .WikiaPhotoGalleryPreviewItemMenu,
 .modalWrapper .WikiaPhotoGalleryPreviewItemMenu a {
@@ -268,7 +268,7 @@ img.tex {
   border-right-color: #c5c5c5 !important;
 }
 .WikiaLightbox a {
-  color: #e0960b;
+  color: #6bbaea;
 }
 #WikiaPhotoGalleryEditor .preview::-webkit-scrollbar,
 #WikiaPhotoGallerySearchResults::-webkit-scrollbar {
@@ -384,7 +384,7 @@ img.tex {
   background-color: #4e5259;
 }
 #MyToolsConfigurationWrapper section a {
-  color: #e0960b;
+  color: #6bbaea;
 }
 #MyToolsConfigurationWrapper section .search-box {
   border-color: #52555a;
@@ -426,7 +426,7 @@ img.tex {
   color: #c5c5c5;
 }
 #MyToolsConfigurationWrapper section .autocomplete li > a:hover {
-  color: #e0960b;
+  color: #6bbaea;
   background-color: #3b3d44;
 }
 #MyToolsConfigurationWrapper section .autocomplete ul::before,
@@ -434,7 +434,7 @@ img.tex {
   background: none;
 }
 #MyToolsConfigurationWrapper section .autocomplete .selected {
-  color: #e0960b;
+  color: #6bbaea;
   background-color: #3b3d44;
 }
 #MyToolsConfigurationWrapper section .options-list {
@@ -485,7 +485,7 @@ img.tex {
   color: #acacac;
 }
 #TemplateClassificationEditModal section a {
-  color: #e0960b;
+  color: #6bbaea;
 }
 #TemplateClassificationEditModal section .tc-type-name {
   color: #c5c5c5;
@@ -736,7 +736,7 @@ td.famtreeleaf {
 .WikiaPage a,
 .WikiaPage a:visited,
 .WikiaPage a:active {
-  color: #e0960b;
+  color: #6bbaea;
 }
 .WikiaPage a.new,
 .WikiaPage a.new:visited,
@@ -755,7 +755,7 @@ table.wikitable a:active,
 table.prettytable a:active,
 table.navbox a:active,
 table.messagebox a:active {
-  color: #e0960b;
+  color: #6bbaea;
 }
 table.wikitable a.new,
 table.prettytable a.new,
@@ -774,7 +774,7 @@ table.messagebox a.new:active {
 image a,
 image a:visited,
 image a:active {
-  color: #e0960b;
+  color: #6bbaea;
 }
 image a.new,
 image a.new:visited,
@@ -784,7 +784,7 @@ image a.new:active {
 .modal a,
 .modal a:visited,
 .modal a:active {
-  color: #e0960b;
+  color: #6bbaea;
 }
 .modal a.new,
 .modal a.new:visited,
@@ -794,7 +794,7 @@ image a.new:active {
 .documentation a,
 .documentation a:visited,
 .documentation a:active {
-  color: #e0960b;
+  color: #6bbaea;
 }
 .documentation a.new,
 .documentation a.new:visited,
@@ -993,7 +993,7 @@ button:not(.wds-button).secondary:active {
   background: #2F3136;
 }
 #GEchartpopup a {
-  color: #e0960b;
+  color: #6bbaea;
 }
 .highcharts-legend-box {
   fill: #2F3136;
@@ -1083,11 +1083,11 @@ button:not(.wds-button).secondary:active {
 }
 .sg-yellow a,
 .maybecell a {
-  color: #f7c05a !important;
+  color: #98cff0 !important;
 }
 .sg-red a,
 .nocell a {
-  color: #f5ae29 !important;
+  color: #81c4ed !important;
 }
 .coins-pos {
   color: #5799c1;
@@ -1148,7 +1148,7 @@ table.alternating-rows tr:nth-child(even) {
   background-color: #52555a !important;
 }
 #mp-recent a {
-  color: #e0960b;
+  color: #6bbaea;
 }
 .timeline-Viewport::-webkit-scrollbar {
   width: 13px;
@@ -1171,13 +1171,13 @@ table.alternating-rows tr:nth-child(even) {
 .timeline-Viewport .customisable,
 .timeline-Viewport .customisable:link,
 .timeline-Viewport .customisable:visited {
-  color: #e0960b;
+  color: #6bbaea;
 }
 .WikiaUserPagesHeader {
   background: #2b2b2b;
 }
 #UserProfileMasthead a {
-  color: #e0960b;
+  color: #6bbaea;
 }
 #UserProfileMasthead .masthead-info {
   background-color: #36393E;
@@ -1253,7 +1253,7 @@ table.alternating-rows tr:nth-child(even) {
   background-color: #333333;
 }
 .Search .WikiaSearch .search-tabs .selected a {
-  color: #e0960b;
+  color: #6bbaea;
 }
 .Search .WikiaSearch .search-tabs li a:hover {
   background-color: #3a3a3a;
@@ -1287,7 +1287,7 @@ table.alternating-rows tr:nth-child(even) {
   fill: #2f69a8;
 }
 .community-page-card-module .community-page-card-module-full-list-link {
-  color: #e0960b;
+  color: #6bbaea;
 }
 .community-page-todo-list-module-content .portal-link a {
   background: #36393E;
@@ -1348,7 +1348,7 @@ table.smwb-ifactbox tr.smwb-ipropvalue td {
   border: 1px solid #52555a;
 }
 .qtip-bootstrap a {
-  color: #e0960b;
+  color: #6bbaea;
 }
 .qtip-bootstrap .qtip-titlebar {
   background-color: #2F3136;
@@ -1408,7 +1408,7 @@ div#viewingnew-warning {
 }
 #EditPageHeader a,
 #EditPageHeader > h1 > a {
-  color: #e0960b;
+  color: #6bbaea;
 }
 #EditPage .EditPageToolbar {
   background-color: #262626;
@@ -1443,7 +1443,7 @@ div#viewingnew-warning {
   color: #acacac;
 }
 #EditPage .diff-link {
-  color: #e0960b;
+  color: #6bbaea;
 }
 #EditPage .wpMinoredit,
 #EditPage .wpSummaryFields,
@@ -1562,13 +1562,13 @@ div#viewingnew-warning {
   color: #c5c5c5;
 }
 #EditPage .module_templates a {
-  color: #e0960b;
+  color: #6bbaea;
 }
 #EditPage .module_license p {
   color: #acacac;
 }
 #EditPage .module_license p a {
-  color: #e0960b;
+  color: #6bbaea;
 }
 #EditPage #wpTextbox0 {
   background-color: #a9a9a9 !important;
@@ -1708,7 +1708,7 @@ div#viewingnew-warning {
   color: #c5c5c5;
 }
 .oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled .oo-ui-toolGroup-tools li > a:hover {
-  color: #e0960b;
+  color: #6bbaea;
   background-color: #3b3d44;
 }
 .oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled .oo-ui-toolGroup-tools ul::before,
@@ -1719,7 +1719,7 @@ div#viewingnew-warning {
   color: #c5c5c5;
 }
 .oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled .oo-ui-toolGroup-tools > span:hover {
-  color: #e0960b;
+  color: #6bbaea;
   background-color: #3b3d44;
 }
 .oo-ui-toolbar-bar .oo-ui-toolGroup.oo-ui-widget-enabled:hover {
@@ -2045,7 +2045,7 @@ div#viewingnew-warning {
 #ca-ve-edit + div.wds-dropdown .wds-dropdown__content li > a:hover,
 #ca-addsection + div.wds-dropdown .wds-dropdown__content li > a:hover,
 #ca-viewsource + div.wds-dropdown .wds-dropdown__content li > a:hover {
-  color: #e0960b;
+  color: #6bbaea;
   background-color: #3b3d44;
 }
 #ca-edit + div.wds-dropdown .wds-dropdown__content ul::before,
@@ -2100,7 +2100,7 @@ div#viewingnew-warning {
 #ca-addsection ~ .WikiaMenuElement #ca-edit:hover,
 #ca-addsection ~ .WikiaMenuElement #ca-ve-edit:hover,
 #ca-addsection ~ .WikiaMenuElement #ca-addsection:hover {
-  color: #e0960b;
+  color: #6bbaea;
   background-color: #3b3d44;
 }
 #page-header-add-new-photo {
@@ -2180,7 +2180,7 @@ div#viewingnew-warning {
   color: #c5c5c5;
 }
 #PageHeader .page-header__languages .wds-dropdown__content li > a:hover {
-  color: #e0960b;
+  color: #6bbaea;
   background-color: #3b3d44;
 }
 #PageHeader .page-header__languages .wds-dropdown__content ul::before,
@@ -2219,7 +2219,7 @@ div#viewingnew-warning {
   color: #c5c5c5;
 }
 #PageHeader .page-header__categories-dropdown .page-header__categories-dropdown-content li > a:hover {
-  color: #e0960b;
+  color: #6bbaea;
   background-color: #3b3d44;
 }
 #PageHeader .page-header__categories-dropdown .page-header__categories-dropdown-content ul::before,
@@ -2289,7 +2289,7 @@ div#viewingnew-warning {
 .wds-community-header .wds-dropdown__content .wds-list.wds-is-linked li > a:hover,
 .wds-community-header .wds-dropdown__content .wds-dropdown-level-2 .wds-dropdown-level-2__content li > a:hover,
 .wds-community-header .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2 .wds-dropdown-level-2__content li > a:hover {
-  color: #e0960b;
+  color: #6bbaea;
   background-color: #3b3d44;
 }
 .wds-community-header .wds-dropdown__content ul::before,
@@ -2304,7 +2304,7 @@ div#viewingnew-warning {
 }
 .wds-community-header .wds-dropdown__content li:hover > a,
 .wds-community-header .wds-dropdown__content .wds-list.wds-is-linked li:hover > a {
-  color: #e0960b;
+  color: #6bbaea;
   background-color: #3b3d44;
 }
 #DisplayClockJS {
@@ -2365,7 +2365,7 @@ div#viewingnew-warning {
   color: #c5c5c5;
 }
 #globalNavigation .wds-global-navigation__start-a-wiki a:hover {
-  color: #e0960b;
+  color: #6bbaea;
 }
 #globalNavigation .wds-global-navigation__search .wds-global-navigation__search-label {
   background-color: #262626;
@@ -2406,7 +2406,7 @@ div#viewingnew-warning {
   border-color: #4082ca;
 }
 #globalNavigation .wds-global-navigation__search .wds-global-navigation__search-suggestions .wds-is-selected a {
-  color: #e0960b;
+  color: #6bbaea;
   background-color: #3b3d44;
 }
 #globalNavigation .wds-dropdown::before {
@@ -2423,7 +2423,7 @@ div#viewingnew-warning {
   color: #c5c5c5;
 }
 #globalNavigation .wds-dropdown__content li > a:hover {
-  color: #e0960b;
+  color: #6bbaea;
   background-color: #3b3d44;
 }
 #globalNavigation .wds-dropdown__content ul::before,
@@ -2494,7 +2494,7 @@ div#viewingnew-warning {
   color: #c5c5c5;
 }
 #globalNavigation #GlobalNavigationWallNotifications li > a:hover {
-  color: #e0960b;
+  color: #6bbaea;
   background-color: #3b3d44;
 }
 #globalNavigation #GlobalNavigationWallNotifications ul::before,
@@ -2704,7 +2704,7 @@ table.property-page-results .value-row:hover {
   color: #acacac;
 }
 #EditPage #mw-scribunto-console .mw-scribunto-input {
-  color: #e0960b;
+  color: #6bbaea;
 }
 #EditPage #mw-scribunto-console .mw-scribunto-normalOutput,
 #EditPage #mw-scribunto-console .mw-scribunto-print {
@@ -2802,7 +2802,7 @@ body {
   background: #2F3136;
 }
 #WikiaRail a {
-  color: #e0960b;
+  color: #6bbaea;
 }
 #WikiaRail .edit-info-time,
 #WikiaRail .rail-sticky-module .premium-recirculation-rail .content {
@@ -2875,7 +2875,7 @@ body .ui-autocomplete li > a {
   color: #c5c5c5;
 }
 body .ui-autocomplete li > a:hover {
-  color: #e0960b;
+  color: #6bbaea;
   background-color: #3b3d44;
 }
 body .ui-autocomplete ul::before,
@@ -2883,7 +2883,7 @@ body .ui-autocomplete ul::after {
   background: none;
 }
 body .ui-autocomplete .ui-menu-item a:hover {
-  color: #e0960b;
+  color: #6bbaea;
   background-color: #3b3d44;
 }
 .WikiaBarWrapper .tools-menu {
@@ -2894,7 +2894,7 @@ body .ui-autocomplete .ui-menu-item a:hover {
   color: #c5c5c5;
 }
 .WikiaBarWrapper .tools-menu li > a:hover {
-  color: #e0960b;
+  color: #6bbaea;
   background-color: #3b3d44;
 }
 .WikiaBarWrapper .tools-menu ul::before,
