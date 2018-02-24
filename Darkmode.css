@@ -1744,6 +1744,17 @@ div#viewingnew-warning {
 .oo-ui-indicatorElement-indicator {
   filter: invert(85%);
 }
+.ve-ce-tableCellNode {
+  border-color: #52555a;
+}
+.ve-ce-tableCellNode-header {
+  background-color: #2F3136;
+}
+.ve-ce-branchNode-blockSlugWrapper-unfocused:hover,
+.ve-ce-branchNode-blockSlugWrapper-former-unfocused {
+  background-color: #333333;
+  outline-color: #52555a;
+}
 .oo-ui-popupWidget-popup {
   background-color: #2F3136;
   border-color: #52555a;
@@ -1929,6 +1940,35 @@ div#viewingnew-warning {
 }
 .oo-ui-window-content-ready .oo-ui-buttonElement-button .oo-ui-labelElement-label {
   color: #dfdfdf !important;
+}
+.oo-ui-processDialog-actions-primary .oo-ui-actionWidget.oo-ui-buttonElement-framed .oo-ui-buttonElement-button {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+.oo-ui-processDialog-actions-primary .oo-ui-actionWidget.oo-ui-buttonElement-framed .oo-ui-buttonElement-button:hover,
+.oo-ui-processDialog-actions-primary .oo-ui-actionWidget.oo-ui-buttonElement-framed .oo-ui-buttonElement-button:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+.oo-ui-buttonElement-framed .secondary.oo-ui-buttonElement-button,
+button.secondary {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #656b75;
+  background-color: #656b75;
+}
+.oo-ui-buttonElement-framed .secondary.oo-ui-buttonElement-button:hover,
+button.secondary:hover,
+.oo-ui-buttonElement-framed .secondary.oo-ui-buttonElement-button:active,
+button.secondary:active {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #4e5259;
+  background-color: #4e5259;
 }
 .oo-ui-panelLayout-scrollable::-webkit-scrollbar,
 .oo-ui-selectWidget::-webkit-scrollbar {

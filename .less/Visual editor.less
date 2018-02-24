@@ -92,6 +92,22 @@
     filter: invert(85%);
 }
 
+// Visual editor temporary inserted tables
+.ve-ce-tableCellNode {
+    border-color: @table-border;
+}
+
+.ve-ce-tableCellNode-header {
+    background-color: @table-header;
+}
+
+// Hover ober empty line
+.ve-ce-branchNode-blockSlugWrapper-unfocused:hover, 
+.ve-ce-branchNode-blockSlugWrapper-former-unfocused {
+    background-color: lighten(@main-page-bg, 5%);
+    outline-color: @table-border;
+}
+
 // =======================================
 //      Small on page tooltips/popups
 // =======================================
@@ -274,11 +290,19 @@
     border-left-color: @table-border;
 }
 
-// ==================================
-//      Discard/continue buttons
-// ==================================
+// =================
+//      Buttons
+// =================
 .oo-ui-window-content-ready .oo-ui-buttonElement-button .oo-ui-labelElement-label {
     color: lighten(@main-text, 10%) !important;
+}
+
+.oo-ui-processDialog-actions-primary .oo-ui-actionWidget.oo-ui-buttonElement-framed .oo-ui-buttonElement-button {
+    .button-styling;
+}
+
+.oo-ui-buttonElement-framed .secondary.oo-ui-buttonElement-button, button.secondary {
+    .button-styling("cancel");
 }
 
 // ====================
