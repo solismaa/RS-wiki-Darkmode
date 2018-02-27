@@ -2676,10 +2676,10 @@ table.property-page-results .value-row:hover {
 }
 .ace-solarized-light .ace_marker-layer .ace_active-line,
 .ace-solarized-light .ace_gutter-active-line {
-  background-color: #474747;
+  background-color: #3e3e3e;
 }
 .ace-solarized-light .ace_marker-layer .ace_selection {
-  background-color: rgba(173, 173, 173, 0.2);
+  background-color: rgba(129, 129, 129, 0.2);
 }
 .ace-solarized-light .ace_cursor {
   color: #c5c5c5;
