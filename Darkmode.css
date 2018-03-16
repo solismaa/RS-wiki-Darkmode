@@ -734,6 +734,9 @@ td.famtreeleaf {
   background-color: #1d1d1d !important;
   border-color: #2a2a2a !important;
 }
+.mmgtable-details {
+  border-color: #52555a !important;
+}
 .WikiaPage a,
 .WikiaPage a:visited,
 .WikiaPage a:active {
