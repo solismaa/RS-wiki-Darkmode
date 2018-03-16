@@ -622,6 +622,7 @@ blockquote.block {
 .navbox .navbox-list,
 .navbox .navbox-group {
   border: 2px solid #262626;
+  border-top: 0;
 }
 .navbox .navbox-subgroup .navbox-title,
 .navbox .navbox-subgroup .navbox-group {
