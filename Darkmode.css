@@ -705,6 +705,10 @@ blockquote.block {
 #DisassemblyT .header-top {
   background: #2F3136;
 }
+#DisassemblyT th[colspan="2"] {
+  background: #2F3136 !important;
+  color: #c5c5c5;
+}
 .documentation {
   background-color: #2e2e2e;
   color: #c5c5c5;
