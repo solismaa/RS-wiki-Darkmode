@@ -124,7 +124,7 @@
 // ===================
 //      Blackouts
 // ===================
-// Modal blackout
+// Modal blackouts
 .blackout {
     background-color: @main-page-bg;
 }
@@ -132,6 +132,12 @@
 // File namespace -> appears on these pages -> next page
 .wikiaThrobber {
     background-color: @table-data;
+}
+
+// Edit exchange data blackout
+.ui-widget-overlay {
+    background: @main-page-bg;
+    opacity: 0.65;
 }
 
 // =======================
@@ -403,4 +409,50 @@
     }
 
 
+}
+
+// ==================================
+//      Edit excahnge data popup
+// ==================================
+// Found under [[Module:Exchange/<ITEM NAME>]]
+.ui-dialog {
+    .box-shadow(0 10px 60px 0 grey);
+}
+
+.ui-widget-content {
+    background: @main-page-bg;
+    color: @main-text;
+    border-color: @table-border;
+}
+
+.ui-widget-header {
+    color: @main-text;
+    background: @table-header;
+    border: none;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+    background: @table-header;
+
+    button.ui-button {
+        .button-styling();
+    }
+
+    button.ui-button:first-of-type {
+        .button-styling("cancel");
+    }
+}
+
+// Close image
+.ui-icon-closethick {
+    filter: invert(85%);
+}
+
+.ui-state-hover .ui-icon-closethick {
+    filter: invert(100%) brightness(130%);
+}
+
+.ui-dialog .ui-dialog-titlebar-close.ui-state-hover {
+    background: lighten(@main-page-bg, 30%);
+    border-color: @table-border;
 }

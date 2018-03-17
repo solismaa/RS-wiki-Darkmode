@@ -198,6 +198,10 @@ img.tex {
 .wikiaThrobber {
   background-color: #36393E;
 }
+.ui-widget-overlay {
+  background: #262626;
+  opacity: 0.65;
+}
 .modalWrapper {
   background-color: #262626;
   color: #c5c5c5;
@@ -550,6 +554,60 @@ img.tex {
 #blackout_GlobalShortcutsSearch #GlobalShortcutsSearch .autocomplete-suggestions .autocomplete-selected {
   background-color: #474747;
 }
+.ui-dialog {
+  -webkit-box-shadow: 0 10px 60px 0 grey;
+  -moz-box-shadow: 0 10px 60px 0 grey;
+  box-shadow: 0 10px 60px 0 grey;
+}
+.ui-widget-content {
+  background: #262626;
+  color: #c5c5c5;
+  border-color: #52555a;
+}
+.ui-widget-header {
+  color: #c5c5c5;
+  background: #2F3136;
+  border: none;
+}
+.ui-dialog .ui-dialog-buttonpane {
+  background: #2F3136;
+}
+.ui-dialog .ui-dialog-buttonpane button.ui-button {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+.ui-dialog .ui-dialog-buttonpane button.ui-button:hover,
+.ui-dialog .ui-dialog-buttonpane button.ui-button:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+.ui-dialog .ui-dialog-buttonpane button.ui-button:first-of-type {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #656b75;
+  background-color: #656b75;
+}
+.ui-dialog .ui-dialog-buttonpane button.ui-button:first-of-type:hover,
+.ui-dialog .ui-dialog-buttonpane button.ui-button:first-of-type:active {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #4e5259;
+  background-color: #4e5259;
+}
+.ui-icon-closethick {
+  filter: invert(85%);
+}
+.ui-state-hover .ui-icon-closethick {
+  filter: invert(100%) brightness(130%);
+}
+.ui-dialog .ui-dialog-titlebar-close.ui-state-hover {
+  background: #727272;
+  border-color: #52555a;
+}
 table.wikipedia {
   background: #1d1d1d !important;
   border: none !important;
@@ -819,7 +877,8 @@ hr {
   border-color: #52555a;
 }
 .WikiaPage input:not([type="submit"]):not([type=button]):not([type="reset"]),
-.modalWrapper input:not([type="submit"]):not([type=button]):not([type="reset"]) {
+.modalWrapper input:not([type="submit"]):not([type=button]):not([type="reset"]),
+.ui-dialog input:not([type="submit"]):not([type=button]):not([type="reset"]) {
   background-color: #3e3e3e;
   color: #c5c5c5;
   border: solid 1px #52555a;
@@ -848,7 +907,8 @@ textarea::-webkit-scrollbar-thumb {
   background-color: #4d4d4d;
 }
 .WikiaPage select,
-.modalWrapper select {
+.modalWrapper select,
+.ui-dialog select {
   background-color: #3e3e3e;
   color: #c5c5c5;
   border: solid 1px #52555a;
