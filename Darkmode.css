@@ -1425,6 +1425,36 @@ table.smwb-ifactbox tr.smwb-ipropvalue td {
 .qtip-bootstrap .qtip .qtip-tip canvas {
   background-color: #52555a;
 }
+.autocomplete-suggestions {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+}
+#other_options tr:nth-child(even) {
+  background: #3c3f45 !important;
+}
+#other_options tr:nth-child(odd) {
+  background: #303337 !important;
+}
+.smw-ask-actions .smw-ask-action-btn-lblue,
+a.smw-ask-action-btn-lblue:visited {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+.smw-ask-actions .smw-ask-action-btn-lblue:hover,
+a.smw-ask-action-btn-lblue:visited:hover,
+.smw-ask-actions .smw-ask-action-btn-lblue:active,
+a.smw-ask-action-btn-lblue:visited:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+.smw-column-header {
+  color: #c5c5c5;
+}
 div.mw-warning-with-logexcerpt,
 .WikiaArticle .noarticletext,
 .WikiaArticle fieldset,
@@ -3019,5 +3049,3 @@ body .ui-autocomplete .ui-menu-item a:hover {
 #BOTTOM_LEADERBOARD {
   display: none !important;
 }
-
-/*# sourceMappingURL=Darkmode.css.map */

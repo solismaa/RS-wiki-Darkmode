@@ -328,3 +328,27 @@ table.smwb-ifactbox {
         background-color: @table-border;
     }
 }
+
+// =========================
+//      [[Special:Ask]]
+// =========================
+.autocomplete-suggestions {
+    .text-input-styling();
+}
+
+#other_options tr:nth-child(even) {
+    background: lighten(@table-data, 2.5%) !important;
+}
+
+#other_options tr:nth-child(odd) {
+    background: darken(@table-data, 2.5%) !important;
+}
+
+.smw-ask-actions .smw-ask-action-btn-lblue, a.smw-ask-action-btn-lblue:visited {
+    .button-styling();
+}
+
+// If formatted as category
+.smw-column-header {
+    color: @main-text;
+}
