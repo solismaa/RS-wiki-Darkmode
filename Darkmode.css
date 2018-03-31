@@ -759,10 +759,10 @@ blockquote.block {
   border: solid 1px #52555a;
 }
 #modal .cioPos {
-  color: #5799c1;
+  color: #5e9ec4;
 }
 #modal .cioNeg {
-  color: #c02614;
+  color: #d72b16;
 }
 #modal #cioTotals {
   background-color: #1e5400;
@@ -1150,19 +1150,11 @@ button:not(.wds-button).secondary:active {
   background: #1e5400;
   color: #c5c5c5;
 }
-.sg-yellow a,
-.maybecell a {
-  color: #98cff0 !important;
-}
-.sg-red a,
-.nocell a {
-  color: #81c4ed !important;
-}
 .coins-pos {
-  color: #5799c1;
+  color: #5e9ec4;
 }
 .coins-neg {
-  color: #c02614;
+  color: #d72b16;
 }
 table.calc-extra-info {
   background-color: #2F3136 !important;
@@ -1331,7 +1323,7 @@ table.alternating-rows tr:nth-child(even) {
   color: #06df2e;
 }
 .mw-plusminus-neg {
-  color: #c02614;
+  color: #d72b16;
 }
 .mw-tag-markers,
 .mw-tag-markers a {
