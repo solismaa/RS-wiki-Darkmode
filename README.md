@@ -1,6 +1,9 @@
 # RS-wiki-DarkMode
 This is a dark theme for the [Runescape wiki](http://runescape.wikia.com/wiki/RuneScape_Wiki).
 
+# Preview
+![preview](Images/Preview.png)
+
 ## Installing
 #### You can use one of the following recommended browser extensions:
 * Stylus - get the addon for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) and [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/).
