@@ -3,6 +3,7 @@ This is a dark theme for the [Runescape wiki](http://runescape.wikia.com/wiki/Ru
 
 # Preview
 ![preview](Images/Preview.png)
+More images: https://imgur.com/a/Ka7sp
 
 ## Installing
 #### You can use one of the following recommended browser extensions:
