@@ -1,4 +1,6 @@
+.vscode/
 .crunch
 *.css.map
 ImagesExtra/
 ToDo.txt
+node_modules/
