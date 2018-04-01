@@ -1,4 +1,4 @@
-# Filetype
+## Filetype
 The final stylesheet [Darkmode.css](./../Darkmode.css) is generated with use of the Less CSS preprocessor.  
 Taken from http://lesscss.org/ :
 
@@ -6,14 +6,14 @@ Taken from http://lesscss.org/ :
 
 For more information about less, head over to http://lesscss.org/
 
-# Filetree
+## Filetree
 [Darkmode.css](Darkmode.css) is the output of the Less preprocessor. Any changes made here will be overwritten later again when the result is compiled, so direct changes made to this file are futile.  
 [Darkmode.less](Darkmode.less) is the main file where everything starts, all other `.less` files are imports to `Darkmode.less`. The main file should contain all used main colors in a variable so they can be easily changed if necessary. If you add to any of the less files please add a comment describing what your css applies to.  
 [Mixins.less](Mixins.less) and [Standard wikia mixins.less](Standard%20wikia%20mixins.less) contain a bunch of usefull  mixins to make cross browse support or styling similar elements easier.
 
-# Getting started
+## Getting started
 There are multiple methodes you can use to compile less files into css files, I will list two here:
-## Using Node.js
+### Using Node.js
 If you don't have Node already installed, download it from here https://nodejs.org/en/download/  
 Now you have two options:
 * Always use the command line to compile 
@@ -25,7 +25,7 @@ Now you have two options:
   * You only have to do the above two lines once. [More info about installing gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
   * Run the gulp function with `gulp autoCompile`. Now everytime you save any of the .less files Darkmode.css will automaticly update. You only have to run this command once until you terminate it with `ctrl + c`
 
-## Using Crunch
+### Using Crunch
 If you don't like using the terminal there is another option for you.  
 * Download [Crunch 2](https://getcrunch.co/) and install it.
 * Open the program and add the folder of the repository
@@ -33,9 +33,9 @@ If you don't like using the terminal there is another option for you.
 * Click on the big orange button  
    ![](./../Images/OrangeButton.png)
 * click on the cog next to Source and disable `Sourcemap`  
-   ![](./../Images/cog.png)
+   ![](./../Images/Cog.png)
 * Now doubleclick on all the files listed under `LESS`
 * If `Darkmode.css` appears in the wrong place (inside the `.less` folder instead of outside), then click on chain to the left of `Darkmode.css` and navigate to the correct place  
-   ![](./../Images/chain.png)
+   ![](./../Images/Chain.png)
 
 Now you are all set to go. If you want to compile your less files intoan output simply press save or click on the ![Crunch](./../Images/Crunch.png) button. You can also use another program such as visual studio code, atom, sublime or notepad++ to edit the .less files, Crunch will watch for filechages and automaticly compile when you save if Crunch is open in the background.
