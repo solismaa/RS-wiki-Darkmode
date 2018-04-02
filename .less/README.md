@@ -19,11 +19,11 @@ Now you have two options:
 * Always use the command line to compile 
   * Use `npm install -g less` to install the compiler. You only have to do this once.
   * Then in the root directory of the repository use `lessc ./.less/Darkmode.less Darkmode.css` to turn the .less files into the final .css file
-* Use Gulp to automate compilation on save
-  * Install the `gulp` command with `npm install --global gulp-cli`
-  * Install `gulp` in the root of the repository with `npm install --save-dev gulp@next`
-  * You only have to do the above two lines once. [More info about installing gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
-  * Run the gulp function with `gulp autoCompile`. Now everytime you save any of the .less files Darkmode.css will automaticly update. You only have to run this command once until you terminate it with `ctrl + c`
+* Use Grunt to automate compilation on save
+  * Install the `grunt` command with `npm install -g grunt-cli`
+  * Install all dependencies in the root of the repository with `npm install`
+  * You only have to do the above two lines once. [More info about installing grunt](https://gruntjs.com/getting-started)
+  * Run the grunt autocompile function by typing `grunt` in the console. Now everytime you save any of the .less files Darkmode.css will automaticly update. You only have to run this command once until you terminate it with `ctrl + c`
 
 ### Using Crunch
 If you don't like using the terminal there is another option for you.  
