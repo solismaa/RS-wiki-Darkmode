@@ -19,11 +19,11 @@ Now you have two options:
 * Always use the command line to compile 
   * Use `npm install -g less` to install the compiler. You only have to do this once.
   * Then in the root directory of the repository use `lessc ./.less/Darkmode.less Darkmode.css` to turn the .less files into the final .css file
-* Use Grunt to automate compilation on save
-  * Install the `grunt` command with `npm install -g grunt-cli`
+* Use Gulp to automate compilation on save
+  * Install the `gulp` command with `npm install -g gulp-cli`
   * Install all dependencies in the root of the repository with `npm install`
-  * You only have to do the above two lines once. [More info about installing grunt](https://gruntjs.com/getting-started)
-  * Run the grunt autocompile function by typing `grunt` in the console. Now everytime you save any of the .less files Darkmode.css will automaticly update. You only have to run this command once until you terminate it with `ctrl + c`
+  * You only have to do the above two lines once. [More info about installing gulp](https://github.com/gulpjs/gulp/blob/v3.9.1/docs/getting-started.md)
+  * Now typing `gulp` in the console. Now everytime you save any of the .less files Darkmode.css will automaticly update and changes will be visible in the browser. You only have to run this command once until you terminate it with `ctrl + c`
 
 ### Using Crunch
 If you don't like using the terminal there is another option for you.  
@@ -38,4 +38,4 @@ If you don't like using the terminal there is another option for you.
 * If `Darkmode.css` appears in the wrong place (inside the `.less` folder instead of outside), then click on chain to the left of `Darkmode.css` and navigate to the correct place  
    ![](./../Images/Chain.png)
 
-Now you are all set to go. If you want to compile your less files intoan output simply press save or click on the ![Crunch](./../Images/Crunch.png) button. You can also use another program such as visual studio code, atom, sublime or notepad++ to edit the .less files, Crunch will watch for filechages and automaticly compile when you save if Crunch is open in the background.
+Now you are all set to go. If you want to compile your less files intoan output simply press save or click on the ![Crunch](./../Images/Crunch.png) button. You can also use another program such as visual studio code, atom, sublime or notepad++ to edit the .less files, Crunch will watch for filechages and automaticly compile when you save if Crunch is open in the background. To see the effect of your changes you can use stylus(recommended) or stylish to inject the css into the browser.
