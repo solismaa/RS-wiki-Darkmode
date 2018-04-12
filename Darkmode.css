@@ -800,14 +800,14 @@ td.famtreeleaf {
 .mmgtable-details {
   border-color: #52555a !important;
 }
-.WikiaPage a,
-.WikiaPage a:visited,
-.WikiaPage a:active {
+a,
+a:visited,
+a:active {
   color: #6bbaea;
 }
-.WikiaPage a.new,
-.WikiaPage a.new:visited,
-.WikiaPage a.new:active {
+a.new,
+a.new:visited,
+a.new:active {
   color: #ba0000 !important;
 }
 table.wikitable a,
