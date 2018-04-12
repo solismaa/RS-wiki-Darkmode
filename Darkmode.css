@@ -1270,34 +1270,49 @@ table.alternating-rows tr:nth-child(even) {
   border: solid 1px #52555a;
   border-bottom: solid 1px transparent;
 }
-.discussiontable {
+.discussiontable,
+.discussiontable.noresults {
   color: #c5c5c5;
 }
-.discussiontable th {
-  background-color: #2f69a8;
+.forumcolumnheader,
+.discussiontable .topic,
+.discussiontable.noresults .topic,
+.discussiontable .edited,
+.discussiontable.noresults .edited,
+.discussiontable .edited-by,
+.discussiontable.noresults .edited-by,
+.discussiontable .yg-archive,
+.discussiontable.noresults .yg-archive {
+  background-color: #1c1c1c;
+  color: #c5c5c5;
 }
-.discussiontable th a {
-  color: #dfdfdf !important;
+.discussiontable th,
+.forumactiveheader,
+.forumarchiveheader,
+.forumoldarchives {
+  color: #dfdfdf;
+  background-color: #265588;
+}
+.discussiontable th a,
+.forumactiveheader a,
+.forumarchiveheader a,
+.forumoldarchives a {
+  color: #dfdfdf;
 }
 .discussiontable.noresults th {
-  background-color: #5a5a5a;
+  color: #c5c5c5;
+  background-color: #121212;
 }
 .discussiontable.noresults th a {
-  color: #c5c5c5 !important;
-}
-.discussiontable.noresults .topic,
-.discussiontable.noresults .edited,
-.discussiontable.noresults .edited-by,
-.discussiontable.noresults .yg-archive {
-  background-color: #4d4d4d;
   color: #c5c5c5;
 }
-.discussiontable .topic,
-.discussiontable .edited,
-.discussiontable .edited-by,
-.discussiontable .yg-archive {
-  background-color: #4d4d4d;
-  color: #c5c5c5;
+.forumsearchbox {
+  background-color: #36393E !important;
+  border: solid 1px #52555a;
+}
+.forumlist.archive {
+  background-color: transparent !important;
+  border: none !important;
 }
 .Search .result-count {
   color: #c5c5c5;

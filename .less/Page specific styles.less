@@ -110,44 +110,56 @@
 
 // ==========================================
 //      [[RuneScape:Active discussions]]
+//      [[Forum:Yew Grove]]
 // ==========================================
-.discussiontable {
+.discussiontable,
+.discussiontable.noresults {
     color: @main-text;
-    
-    th {
-        background-color: @theme-blue-lighter;
-        
-        a {
-            color: lighten(@main-text, 10%) !important;
-        }
-    }
-    
-    &.noresults {
-        th {
-            background-color: darken(#e6e6e6, 55%);
-        
-            a {
-                color: lighten(@main-text, 0%) !important;
-            }
-        }
-       
-        .topic,
-        .edited,
-        .edited-by,
-        .yg-archive {
-            background-color: darken(#e6e6e6, 60%);
-            color: @main-text;
-        }
-    }
-    
+
     .topic,
     .edited,
     .edited-by,
     .yg-archive {
-        background-color: darken(#e6e6e6, 60%);
-        color: @main-text;
+        &:extend(.forumcolumnheader);
     }
+
+}
+
+.forumcolumnheader {
+    background-color: darken(@main-page-bg, 4%);
+    color: @main-text;
+}
+
+.discussiontable th,
+.forumactiveheader, 
+.forumarchiveheader, 
+.forumoldarchives {
+    color: lighten(@main-text, 10%);
+    background-color: @theme-blue;
     
+    a {
+        color: lighten(@main-text, 10%);
+    }
+}
+
+.discussiontable.noresults th {
+    color: @main-text;
+    background-color: darken(@main-page-bg, 8%);
+
+    a {
+        color: lighten(@main-text, 0%);
+    }
+}
+
+.forumsearchbox {
+    background-color: @table-data !important;
+    border: solid 1px @table-border;
+}
+
+// Overwrite {{Archive list}} styling
+.forumlist.archive {
+    background-color: transparent !important;
+    border: none !important;
 }
 
 
