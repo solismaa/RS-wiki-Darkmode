@@ -878,6 +878,10 @@ image a.new:active {
   background-color: #3d3d3d;
   color: #c5c5c5;
 }
+.WikiaArticle fieldset {
+  border-color: #52555a;
+  background-color: #2e2e2e;
+}
 hr {
   border-color: #52555a;
 }
@@ -1465,7 +1469,6 @@ a.smw-ask-action-btn-lblue:visited:active {
 }
 div.mw-warning-with-logexcerpt,
 .WikiaArticle .noarticletext,
-.WikiaArticle fieldset,
 #sp-contributions-footer {
   background-color: #36393E;
   border-color: #36393E;

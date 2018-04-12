@@ -26,14 +26,11 @@ gulp.task('serve', ['less'], function() {
             cookies: {stripDomain: false}
         },
         plugins: ['bs-rewrite-rules'],
-        serveStatic: [{
-            route: "/wiki",
-            dir: "./"
-        }],
+        serveStatic: ["."],
         rewriteRules: [
             {
                 match: "</body>",
-                replace: '<link rel="stylesheet" type="text/css" href="Darkmode.css"></body>'
+                replace: '<link rel="stylesheet" type="text/css" href="/Darkmode.css"></body>'
             },
             {
                 match: "<head>",

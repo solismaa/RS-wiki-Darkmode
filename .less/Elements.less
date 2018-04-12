@@ -2,22 +2,21 @@
 //      HTML tags
 // ===================
 .WikiaArticle  {
-    // ---------------
-    //      <pre>
-    // ---------------
     pre {
         border: solid 1px lighten(@pre-tag-bg, 5%);
         background-color: @pre-tag-bg;
         color: @main-text;
     }
     
-    // ----------------
-    //      <code>
-    // ----------------
     code {
         border: solid 1px lighten(@code-tag-bg, 5%);
         background-color: @code-tag-bg;
         color: @main-text;
+    }
+
+    fieldset {
+        border-color: @table-border;
+        background-color: lighten(@main-page-bg, 3%);
     }
 }
 
