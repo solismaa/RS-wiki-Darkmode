@@ -1475,7 +1475,10 @@ div.mw-warning-with-logexcerpt,
 }
 table.diff,
 td.diff-otitle,
-td.diff-ntitle {
+td.diff-ntitle,
+td.diff-deletedline,
+td.diff-addedline,
+.EditPageEditor #diff {
   background-color: #2e2e2e;
   color: #c5c5c5;
 }
@@ -1485,10 +1488,8 @@ td.diff-context,
   border-color: #36393E;
   color: #c5c5c5;
 }
-td.diff-deletedline,
-td.diff-addedline {
-  color: #c5c5c5;
-  background-color: #2e2e2e;
+.EditPageEditor #diff {
+  border-color: #52555a;
 }
 div#viewingold-warning,
 div#viewingnew-warning {

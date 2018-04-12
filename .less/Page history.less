@@ -19,7 +19,10 @@ div.mw-warning-with-logexcerpt,
 // ===============
 table.diff, 
 td.diff-otitle, 
-td.diff-ntitle {
+td.diff-ntitle,
+td.diff-deletedline, 
+td.diff-addedline,
+.EditPageEditor #diff {
     background-color: lighten(@main-page-bg, 3%);
     color: @main-text;
 }
@@ -31,10 +34,9 @@ td.diff-context,
     color: @main-text;
 }
 
-td.diff-deletedline, 
-td.diff-addedline {
-    color: @main-text;
-    background-color: lighten(@main-page-bg, 3%);
+// When undoing something
+.EditPageEditor #diff {
+    border-color: @table-border;
 }
 
 // ==========================================
