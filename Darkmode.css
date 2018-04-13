@@ -1259,6 +1259,9 @@ table.alternating-rows tr:nth-child(even) {
   background-image: -o-linear-gradient(90deg, #265588, #2c619c);
   background-image: linear-gradient(0deg, #265588, #2c619c);
 }
+#UserProfileMasthead .masthead-info .tag {
+  background: #4887cc;
+}
 #UserProfileMasthead .masthead-info-lower:before {
   border-color: #36393E #36393E transparent transparent;
 }

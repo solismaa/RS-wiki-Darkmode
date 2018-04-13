@@ -22,7 +22,7 @@ gulp.task('less', function() {
 gulp.task('serve', ['less'], function() {
     browserSync.init({
         proxy: {
-            target: "http://cephhunter.wikia.com",
+            target: "http://runescape.wikia.com",
             cookies: {stripDomain: false}
         },
         plugins: ['bs-rewrite-rules'],
