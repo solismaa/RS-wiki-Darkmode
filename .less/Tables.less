@@ -100,3 +100,27 @@ table.wikitable {
         }
     }
 }
+
+// ==========================
+//      Mediawiki tables
+// ==========================
+table.TablePager {
+    .table-wikitable;
+    
+    > tr > td, 
+    > * > tr > td {
+        .table-data;
+        color: @main-text;
+        background-color: @table-data;
+    }
+
+    tr:hover td {
+        background-color: lighten(@table-data, 5%);
+    }
+    
+    > tr > th, 
+    > * > tr > th {
+        .table-header;
+        color: @main-text;
+    }
+}

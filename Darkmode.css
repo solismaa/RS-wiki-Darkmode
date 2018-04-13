@@ -84,6 +84,26 @@ table.wikitable td[bgcolor] a,
 table.wikitable th[style*="background"] a {
   color: #1e8dd1;
 }
+table.TablePager {
+  background-color: #36393E;
+  color: #c5c5c5;
+  border: none;
+}
+table.TablePager > tr > td,
+table.TablePager > * > tr > td {
+  border: solid 1px #52555a;
+  color: #c5c5c5;
+  background-color: #36393E;
+}
+table.TablePager tr:hover td {
+  background-color: #42464c;
+}
+table.TablePager > tr > th,
+table.TablePager > * > tr > th {
+  background-color: #2F3136;
+  border: solid 1px #52555a;
+  color: #c5c5c5;
+}
 .article-thumb,
 .gifresize,
 .extimage,
