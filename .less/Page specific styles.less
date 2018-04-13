@@ -364,3 +364,184 @@ table.smwb-ifactbox {
 .smw-column-header {
     color: @main-text;
 }
+
+// ====================================
+//      [[Special:AdminDashboard]]
+// ====================================
+// ----------------
+//      Header
+// ----------------
+.AdminDashboardHeader {
+    background: @table-header;
+    border-color: @table-border;
+    box-shadow: inset 0 -4px 2px 0 lighten(@table-header, 5%);
+
+    h1 a {
+        color: @links;
+    }
+}
+
+.AdminDashboardTabs .tab {
+    color: @main-text;
+    background: @table-header;
+    border: solid 1px @table-border;
+    border-bottom: 0;
+
+    &.active {
+        background: @main-page-bg;
+    }
+}
+
+// -------------------------
+//      General content
+// -------------------------
+.AdminDashboard .admin-dashboard-content .control-section {
+    header {
+        background-color: lighten(@main-page-bg, 5%);
+        .gradient(linear; lighten(@main-page-bg, 5%), lighten(@main-page-bg, 10%); 0deg);
+        color: @main-text;
+        border-color: @table-border;
+
+        h1 {
+            color: @main-text;
+        }
+    }
+
+    .controls {
+        background: lighten(@main-page-bg, 2%);
+
+        .control .representation {
+            background-image: none;
+            background-color: @theme-blue-lighter;
+            border-color: @theme-blue-lighter;
+        }
+
+        .control:hover .representation {
+            background-image: none;
+            background-color: lighten(@theme-blue-lighter, 10%);
+            border-color: lighten(@theme-blue-lighter, 10%);
+        }
+    }
+}
+
+.WikiaArticle {
+    box-shadow: none;
+    border: none;
+}
+
+// --------------------------
+//      Advanced content
+// --------------------------
+.AdminDashboardGeneralHeader {
+    background-color: lighten(@main-page-bg, 5%);
+    .gradient(linear; lighten(@main-page-bg, 5%), lighten(@main-page-bg, 10%); 0deg);
+    color: @main-text;
+    border-color: @table-border;
+    box-shadow: 0 2px 2px 0 darken(@main-page-bg, 5%);
+}
+
+.AdminDashboard .AdminDashboardGeneralHeader h2 {
+    border: none;
+}
+
+// ------------------
+//      Siderail
+// ------------------
+.AdminDashboardRail h1 {
+    color: @main-text;
+}
+
+// Progress widget
+#FounderProgressWidget .preview {
+    background: @table-header;
+    border-color: @table-border;
+
+    .founder-progress-bar {
+        filter: invert(0.8);
+    }
+
+    header {
+        background: darken(@table-header, 5%);
+
+        h1 {
+            color: @main-text;
+        }
+
+        &:after {
+            border-right-color: darken(@table-header, 5%);
+        }
+        
+    }
+
+    .activities .activity,
+    .activities .activity.active {
+        border-color: @table-border;
+
+        .label {
+            background-color: lighten(@main-page-bg, 5%);
+            .gradient(linear; lighten(@main-page-bg, 5%), lighten(@main-page-bg, 10%); 0deg);
+            color: @main-text;
+            border-color: @table-border;
+        }
+
+        .description {
+            background: darken(@table-header, 2%);
+    
+            &:before {
+                border-top-color: lighten(@table-header, 5%);
+            }
+        }
+    }
+
+    .activities .activity .label .chevron {
+        border-top-color: @main-text;
+    }
+
+    .activities .activity.active .label .chevron {
+        border-bottom-color: @main-text;
+    }
+}
+
+// Quick stats
+.QuickStatsWidget .WikiaDataTable {
+    background: @table-header;
+    border-color: @table-border;
+
+    tbody tr,
+    tbody tr td {
+        border-color: @table-border;
+    }
+
+    th:first-child, 
+    td:first-child {
+        color: @main-text;
+    }
+
+    td:nth-child(2),
+    .highlight-top,
+    .totals td:nth-child(2) {
+        background-color: darken(@table-header, 5%);
+        .gradient(linear; darken(@table-header, 3%), darken(@table-header, 5%); 90deg);
+        color: darken(@main-text, 5%);
+    }
+
+    .totals td {
+        background: lighten(@table-header, 3%);
+        color: @main-text;
+        border-top: solid 1px @table-border;
+        border-bottom: solid 1px @table-border;
+    }
+
+    .totals td:first-child .pointer {
+        background: lighten(@table-header, 12%);
+        color: lighten(@main-text, 5%);
+
+        &:before {
+            border-left-color: lighten(@table-header, 12%);;
+        }
+    }
+
+    .highlight-bottom {
+        .gradient(linear; lighten(@table-header, 3%), darken(@table-header, 5%) 25%, transparent; 0deg);
+    }
+}
