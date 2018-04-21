@@ -132,7 +132,7 @@ table.TablePager > * > tr > th {
 }
 img.tex {
   -webkit-filter: invert(0.85);
-  filter: invert(0.85);
+          filter: invert(0.85);
 }
 .rsw-tooltip {
   background: #36393E;
@@ -281,7 +281,8 @@ img.tex {
 .LightboxModal .LightboxHeader .more-info-button::before,
 .LightboxModal .LightboxHeader .share-button::before,
 .LightboxModal .LightboxHeader .close::before {
-  filter: invert(85%);
+  -webkit-filter: invert(85%);
+          filter: invert(85%);
 }
 .LightboxModal .LightboxCarousel {
   border-top-color: #52555a !important;
@@ -302,8 +303,7 @@ img.tex {
 #WikiaPhotoGalleryEditor .preview::-webkit-scrollbar-track,
 #WikiaPhotoGallerySearchResults::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #333333;
   border: solid 1px #383838;
@@ -312,8 +312,7 @@ img.tex {
 #WikiaPhotoGallerySearchResults::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
 }
 .modal.large > header,
@@ -344,7 +343,8 @@ img.tex {
 .modal.large > footer .close,
 .modal.medium > footer .close,
 .modal.small > footer .close {
-  filter: invert(85%);
+  -webkit-filter: invert(85%);
+          filter: invert(85%);
 }
 .modal.large section,
 .modal.medium section,
@@ -419,14 +419,10 @@ img.tex {
   color: #c5c5c5;
   border: solid 1px #52555a;
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 #MyToolsConfigurationWrapper section .popular-tools-group {
-  background-image: -webkit-linear-gradient(90deg, #333333, #404040);
-  background-image: -moz-linear-gradient(90deg, #333333, #404040);
-  background-image: -ms-linear-gradient(90deg, #333333, #404040);
-  background-image: -o-linear-gradient(90deg, #333333, #404040);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#333333), to(#404040));
   background-image: linear-gradient(0deg, #333333, #404040);
   color: #c5c5c5;
   border-color: #52555a;
@@ -444,8 +440,7 @@ img.tex {
   background-color: #2F3136;
   border-color: #52555a;
   -webkit-box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
 }
 #MyToolsConfigurationWrapper section .autocomplete li > a {
   color: #c5c5c5;
@@ -480,8 +475,7 @@ img.tex {
   color: #c5c5c5;
   border: solid 1px #52555a;
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 .accent {
   color: #c5c5c5;
@@ -506,7 +500,8 @@ img.tex {
 }
 #TemplateClassificationEditModal header .close,
 #TemplateClassificationEditModal footer .close {
-  filter: invert(85%);
+  -webkit-filter: invert(85%);
+          filter: invert(85%);
 }
 #TemplateClassificationEditModal section {
   background-color: #262626;
@@ -553,16 +548,13 @@ img.tex {
 #blackout_GlobalShortcutsSearch #GlobalShortcutsSearch #global_shortcuts_search_field::-webkit-input-placeholder {
   color: #9f9f9f;
 }
-#blackout_GlobalShortcutsSearch #GlobalShortcutsSearch #global_shortcuts_search_field:-moz-placeholder {
-  color: #9f9f9f;
-}
-#blackout_GlobalShortcutsSearch #GlobalShortcutsSearch #global_shortcuts_search_field::-moz-placeholder {
-  color: #9f9f9f;
-}
 #blackout_GlobalShortcutsSearch #GlobalShortcutsSearch #global_shortcuts_search_field:-ms-input-placeholder {
   color: #9f9f9f;
 }
 #blackout_GlobalShortcutsSearch #GlobalShortcutsSearch #global_shortcuts_search_field::-ms-input-placeholder {
+  color: #9f9f9f;
+}
+#blackout_GlobalShortcutsSearch #GlobalShortcutsSearch #global_shortcuts_search_field::placeholder {
   color: #9f9f9f;
 }
 #blackout_GlobalShortcutsSearch #GlobalShortcutsSearch .global-shortcuts-field-wrapper {
@@ -580,8 +572,7 @@ img.tex {
 }
 .ui-dialog {
   -webkit-box-shadow: 0 10px 60px 0 grey;
-  -moz-box-shadow: 0 10px 60px 0 grey;
-  box-shadow: 0 10px 60px 0 grey;
+          box-shadow: 0 10px 60px 0 grey;
 }
 .ui-widget-content {
   background: #262626;
@@ -623,10 +614,12 @@ img.tex {
   background-color: #4e5259;
 }
 .ui-icon-closethick {
-  filter: invert(85%);
+  -webkit-filter: invert(85%);
+          filter: invert(85%);
 }
 .ui-state-hover .ui-icon-closethick {
-  filter: invert(100%) brightness(130%);
+  -webkit-filter: invert(100%) brightness(130%);
+          filter: invert(100%) brightness(130%);
 }
 .ui-dialog .ui-dialog-titlebar-close.ui-state-hover {
   background: #727272;
@@ -925,8 +918,7 @@ textarea::-webkit-scrollbar {
 }
 textarea::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #333333;
   border: solid 1px #383838;
@@ -934,8 +926,7 @@ textarea::-webkit-scrollbar-track {
 textarea::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
 }
 .WikiaPage select,
@@ -959,16 +950,14 @@ textarea::-webkit-scrollbar-thumb {
   background-color: #2F3136;
   border-color: #52555a;
   -webkit-box-shadow: 0 3px 6px 0 #2F3136;
-  -moz-box-shadow: 0 3px 6px 0 #2F3136;
-  box-shadow: 0 3px 6px 0 #2F3136;
+          box-shadow: 0 3px 6px 0 #2F3136;
 }
 .WikiaDropdown .dropdown::-webkit-scrollbar {
   width: 13px;
 }
 .WikiaDropdown .dropdown::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #333333;
   border: solid 1px #383838;
@@ -976,8 +965,7 @@ textarea::-webkit-scrollbar-thumb {
 .WikiaDropdown .dropdown::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
 }
 .WikiaDropdown .dropdown .toolbar {
@@ -1243,8 +1231,7 @@ table.alternating-rows tr:nth-child(even) {
 }
 .timeline-Viewport::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #333333;
   border: solid 1px #383838;
@@ -1252,8 +1239,7 @@ table.alternating-rows tr:nth-child(even) {
 .timeline-Viewport::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
 }
 .timeline-Viewport .customisable,
@@ -1273,10 +1259,7 @@ table.alternating-rows tr:nth-child(even) {
 #UserProfileMasthead .masthead-info hgroup {
   background-color: #265588;
   color: #c5c5c5;
-  background-image: -webkit-linear-gradient(90deg, #265588, #2c619c);
-  background-image: -moz-linear-gradient(90deg, #265588, #2c619c);
-  background-image: -ms-linear-gradient(90deg, #265588, #2c619c);
-  background-image: -o-linear-gradient(90deg, #265588, #2c619c);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#265588), to(#2c619c));
   background-image: linear-gradient(0deg, #265588, #2c619c);
 }
 #UserProfileMasthead .masthead-info .tag {
@@ -1353,7 +1336,7 @@ table.alternating-rows tr:nth-child(even) {
 }
 .Search .SearchInput .sprite {
   -webkit-filter: brightness(85%);
-  filter: brightness(85%);
+          filter: brightness(85%);
 }
 .Search .WikiaSearch .search-tabs .selected {
   background-color: #333333;
@@ -1496,7 +1479,8 @@ a.smw-ask-action-btn-lblue:visited:active {
 .AdminDashboardHeader {
   background: #2F3136;
   border-color: #52555a;
-  box-shadow: inset 0 -4px 2px 0 #3b3d44;
+  -webkit-box-shadow: inset 0 -4px 2px 0 #3b3d44;
+          box-shadow: inset 0 -4px 2px 0 #3b3d44;
 }
 .AdminDashboardHeader h1 a {
   color: #6bbaea;
@@ -1512,10 +1496,7 @@ a.smw-ask-action-btn-lblue:visited:active {
 }
 .AdminDashboard .admin-dashboard-content .control-section header {
   background-color: #333333;
-  background-image: -webkit-linear-gradient(90deg, #333333, #404040);
-  background-image: -moz-linear-gradient(90deg, #333333, #404040);
-  background-image: -ms-linear-gradient(90deg, #333333, #404040);
-  background-image: -o-linear-gradient(90deg, #333333, #404040);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#333333), to(#404040));
   background-image: linear-gradient(0deg, #333333, #404040);
   color: #c5c5c5;
   border-color: #52555a;
@@ -1537,19 +1518,18 @@ a.smw-ask-action-btn-lblue:visited:active {
   border-color: #4082ca;
 }
 .WikiaArticle {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border: none;
 }
 .AdminDashboardGeneralHeader {
   background-color: #333333;
-  background-image: -webkit-linear-gradient(90deg, #333333, #404040);
-  background-image: -moz-linear-gradient(90deg, #333333, #404040);
-  background-image: -ms-linear-gradient(90deg, #333333, #404040);
-  background-image: -o-linear-gradient(90deg, #333333, #404040);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#333333), to(#404040));
   background-image: linear-gradient(0deg, #333333, #404040);
   color: #c5c5c5;
   border-color: #52555a;
-  box-shadow: 0 2px 2px 0 #191919;
+  -webkit-box-shadow: 0 2px 2px 0 #191919;
+          box-shadow: 0 2px 2px 0 #191919;
 }
 .AdminDashboard .AdminDashboardGeneralHeader h2 {
   border: none;
@@ -1562,7 +1542,8 @@ a.smw-ask-action-btn-lblue:visited:active {
   border-color: #52555a;
 }
 #FounderProgressWidget .preview .founder-progress-bar {
-  filter: invert(0.8);
+  -webkit-filter: invert(0.8);
+          filter: invert(0.8);
 }
 #FounderProgressWidget .preview header {
   background: #232528;
@@ -1580,10 +1561,7 @@ a.smw-ask-action-btn-lblue:visited:active {
 #FounderProgressWidget .preview .activities .activity .label,
 #FounderProgressWidget .preview .activities .activity.active .label {
   background-color: #333333;
-  background-image: -webkit-linear-gradient(90deg, #333333, #404040);
-  background-image: -moz-linear-gradient(90deg, #333333, #404040);
-  background-image: -ms-linear-gradient(90deg, #333333, #404040);
-  background-image: -o-linear-gradient(90deg, #333333, #404040);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#333333), to(#404040));
   background-image: linear-gradient(0deg, #333333, #404040);
   color: #c5c5c5;
   border-color: #52555a;
@@ -1618,10 +1596,7 @@ a.smw-ask-action-btn-lblue:visited:active {
 .QuickStatsWidget .WikiaDataTable .highlight-top,
 .QuickStatsWidget .WikiaDataTable .totals td:nth-child(2) {
   background-color: #232528;
-  background-image: -webkit-linear-gradient(0deg, #282a2e, #232528);
-  background-image: -moz-linear-gradient(0deg, #282a2e, #232528);
-  background-image: -ms-linear-gradient(0deg, #282a2e, #232528);
-  background-image: -o-linear-gradient(0deg, #282a2e, #232528);
+  background-image: -webkit-gradient(linear, left top, right top, from(#282a2e), to(#232528));
   background-image: linear-gradient(90deg, #282a2e, #232528);
   color: #b8b8b8;
 }
@@ -1639,10 +1614,7 @@ a.smw-ask-action-btn-lblue:visited:active {
   border-left-color: #4b4f57;
 }
 .QuickStatsWidget .WikiaDataTable .highlight-bottom {
-  background-image: -webkit-linear-gradient(90deg, #36383e, #232528 25%, transparent);
-  background-image: -moz-linear-gradient(90deg, #36383e, #232528 25%, transparent);
-  background-image: -ms-linear-gradient(90deg, #36383e, #232528 25%, transparent);
-  background-image: -o-linear-gradient(90deg, #36383e, #232528 25%, transparent);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#36383e), color-stop(25%, #232528), to(transparent));
   background-image: linear-gradient(0deg, #36383e, #232528 25%, transparent);
 }
 div.mw-warning-with-logexcerpt,
@@ -1687,8 +1659,7 @@ div#viewingnew-warning {
   background-color: #383838;
   border-color: #52555a;
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 #EditPageHeader,
 #EditPageHeader h2 {
@@ -1700,14 +1671,10 @@ div#viewingnew-warning {
 }
 #EditPage .EditPageToolbar {
   background-color: #262626;
-  background-image: -webkit-linear-gradient(90deg, #262626 0%, #383838 50%);
-  background-image: -moz-linear-gradient(90deg, #262626 0%, #383838 50%);
-  background-image: -ms-linear-gradient(90deg, #262626 0%, #383838 50%);
-  background-image: -o-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#262626), color-stop(50%, #383838));
   background-image: linear-gradient(0deg, #262626 0%, #383838 50%);
   -webkit-box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.3);
   border-color: #52555a;
 }
 #EditPage .EditPageToolbar .cke_toolbar_expand a,
@@ -1746,16 +1713,13 @@ div#viewingnew-warning {
 #EditPage #wpSummary::-webkit-input-placeholder {
   color: #9f9f9f;
 }
-#EditPage #wpSummary:-moz-placeholder {
-  color: #9f9f9f;
-}
-#EditPage #wpSummary::-moz-placeholder {
-  color: #9f9f9f;
-}
 #EditPage #wpSummary:-ms-input-placeholder {
   color: #9f9f9f;
 }
 #EditPage #wpSummary::-ms-input-placeholder {
+  color: #9f9f9f;
+}
+#EditPage #wpSummary::placeholder {
   color: #9f9f9f;
 }
 #EditPage #EditPageEditorWrapper,
@@ -1765,15 +1729,11 @@ div#viewingnew-warning {
 #EditPage #EditPageRail {
   background-color: #262626;
   -webkit-box-shadow: -2px 2px 2px #383838, -1px 0 0 #383838;
-  -moz-box-shadow: -2px 2px 2px #383838, -1px 0 0 #383838;
-  box-shadow: -2px 2px 2px #383838, -1px 0 0 #383838;
+          box-shadow: -2px 2px 2px #383838, -1px 0 0 #383838;
 }
 #EditPage .module_content {
   background-color: #262626;
-  background-image: -webkit-linear-gradient(90deg, #262626 0%, #383838 50%);
-  background-image: -moz-linear-gradient(90deg, #262626 0%, #383838 50%);
-  background-image: -ms-linear-gradient(90deg, #262626 0%, #383838 50%);
-  background-image: -o-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#262626), color-stop(50%, #383838));
   background-image: linear-gradient(0deg, #262626 0%, #383838 50%);
 }
 #EditPage.editpage-sourcewidemode-on .module_content,
@@ -1791,15 +1751,13 @@ div#viewingnew-warning {
 }
 #EditPage .module h3 {
   background-color: #262626;
-  background-image: -webkit-linear-gradient(90deg, #262626 0%, #383838 100%);
-  background-image: -moz-linear-gradient(90deg, #262626 0%, #383838 100%);
-  background-image: -ms-linear-gradient(90deg, #262626 0%, #383838 100%);
-  background-image: -o-linear-gradient(90deg, #262626 0%, #383838 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#262626), to(#383838));
   background-image: linear-gradient(0deg, #262626 0%, #383838 100%);
   color: #c5c5c5;
 }
 #EditPage .module h3 img {
-  filter: invert(85%);
+  -webkit-filter: invert(85%);
+          filter: invert(85%);
 }
 #EditPage .cke_button a {
   color: #dfdfdf;
@@ -1823,16 +1781,13 @@ div#viewingnew-warning {
 #EditPage .CategorySelect .input::-webkit-input-placeholder {
   color: #9f9f9f;
 }
-#EditPage .CategorySelect .input:-moz-placeholder {
-  color: #9f9f9f;
-}
-#EditPage .CategorySelect .input::-moz-placeholder {
-  color: #9f9f9f;
-}
 #EditPage .CategorySelect .input:-ms-input-placeholder {
   color: #9f9f9f;
 }
 #EditPage .CategorySelect .input::-ms-input-placeholder {
+  color: #9f9f9f;
+}
+#EditPage .CategorySelect .input::placeholder {
   color: #9f9f9f;
 }
 #EditPage .CategorySelect .categories {
@@ -1866,8 +1821,7 @@ div#viewingnew-warning {
 }
 #EditPage #wpTextbox0::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #808080;
   border: solid 1px #7a7a7a;
@@ -1875,8 +1829,7 @@ div#viewingnew-warning {
 #EditPage #wpTextbox0::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #333333;
 }
 #EditPage #wpTextbox1 {
@@ -1888,8 +1841,7 @@ div#viewingnew-warning {
 }
 #EditPage #wpTextbox1::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #808080;
   border: solid 1px #7a7a7a;
@@ -1897,8 +1849,7 @@ div#viewingnew-warning {
 #EditPage #wpTextbox1::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #333333;
 }
 #EditPage .loading-background,
@@ -1921,8 +1872,7 @@ div#viewingnew-warning {
 }
 #EditPageDialog.preview .modalContent .ArticlePreview::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #333333;
   border: solid 1px #383838;
@@ -1930,8 +1880,7 @@ div#viewingnew-warning {
 #EditPageDialog.preview .modalContent .ArticlePreview::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
 }
 .ve-init-mw-viewPageTarget-toolbar {
@@ -1939,10 +1888,7 @@ div#viewingnew-warning {
 }
 .oo-ui-toolbar-bar {
   background-color: #262626;
-  background-image: -webkit-linear-gradient(90deg, #262626 0%, #383838 50%);
-  background-image: -moz-linear-gradient(90deg, #262626 0%, #383838 50%);
-  background-image: -ms-linear-gradient(90deg, #262626 0%, #383838 50%);
-  background-image: -o-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#262626), color-stop(50%, #383838));
   background-image: linear-gradient(0deg, #262626 0%, #383838 50%);
   color: #c5c5c5;
   border-bottom-color: #52555a;
@@ -1982,10 +1928,7 @@ div#viewingnew-warning {
 .oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled {
   background-color: #2F3136;
   border-color: #52555a;
-  background-image: -webkit-linear-gradient(90deg, #2F3136, #474a51);
-  background-image: -moz-linear-gradient(90deg, #2F3136, #474a51);
-  background-image: -ms-linear-gradient(90deg, #2F3136, #474a51);
-  background-image: -o-linear-gradient(90deg, #2F3136, #474a51);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#2F3136), to(#474a51));
   background-image: linear-gradient(0deg, #2F3136, #474a51);
 }
 .oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled .oo-ui-toolGroup-tools {
@@ -2019,18 +1962,17 @@ div#viewingnew-warning {
 .oo-ui-toolbar-bar .oo-ui-toolGroup.oo-ui-widget-enabled .oo-ui-tool-active.oo-ui-widget-enabled {
   background-color: #2F3136;
   border-color: #52555a;
-  background-image: -webkit-linear-gradient(90deg, #383b41, #50545c);
-  background-image: -moz-linear-gradient(90deg, #383b41, #50545c);
-  background-image: -ms-linear-gradient(90deg, #383b41, #50545c);
-  background-image: -o-linear-gradient(90deg, #383b41, #50545c);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#383b41), to(#50545c));
   background-image: linear-gradient(0deg, #383b41, #50545c);
 }
 .oo-ui-indicator-alert {
-  filter: invert(1);
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 .oo-ui-iconElement-icon,
 .oo-ui-indicatorElement-indicator {
-  filter: invert(85%);
+  -webkit-filter: invert(85%);
+          filter: invert(85%);
 }
 .ve-ce-tableCellNode {
   border-color: #52555a;
@@ -2059,19 +2001,10 @@ div#viewingnew-warning {
   color: #c5c5c5;
   border: solid 1px #52555a;
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 .oo-ui-popupWidget-popup input::-webkit-input-placeholder,
 .oo-ui-popupWidget-popup textarea::-webkit-input-placeholder {
-  color: #9f9f9f;
-}
-.oo-ui-popupWidget-popup input:-moz-placeholder,
-.oo-ui-popupWidget-popup textarea:-moz-placeholder {
-  color: #9f9f9f;
-}
-.oo-ui-popupWidget-popup input::-moz-placeholder,
-.oo-ui-popupWidget-popup textarea::-moz-placeholder {
   color: #9f9f9f;
 }
 .oo-ui-popupWidget-popup input:-ms-input-placeholder,
@@ -2082,14 +2015,17 @@ div#viewingnew-warning {
 .oo-ui-popupWidget-popup textarea::-ms-input-placeholder {
   color: #9f9f9f;
 }
+.oo-ui-popupWidget-popup input::placeholder,
+.oo-ui-popupWidget-popup textarea::placeholder {
+  color: #9f9f9f;
+}
 .oo-ui-popupWidget-popup input:focus,
 .oo-ui-popupWidget-popup textarea:focus {
   background-color: #3e3e3e !important;
   color: #c5c5c5 !important;
   border: solid 1px #52555a !important;
   -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  box-shadow: none !important;
+          box-shadow: none !important;
 }
 .oo-ui-popupWidget-anchored .oo-ui-popupWidget-anchor::before {
   border-bottom-color: #52555a;
@@ -2109,8 +2045,7 @@ div#viewingnew-warning {
 }
 .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body {
   -webkit-box-shadow: 0 0 0.33em #52555a;
-  -moz-box-shadow: 0 0 0.33em #52555a;
-  box-shadow: 0 0 0.33em #52555a;
+          box-shadow: 0 0 0.33em #52555a;
   background-color: #262626;
 }
 .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-bookletLayout-outlinePanel {
@@ -2134,19 +2069,10 @@ div#viewingnew-warning {
   color: #c5c5c5;
   border: solid 1px #52555a;
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body input::-webkit-input-placeholder,
 .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body textarea::-webkit-input-placeholder {
-  color: #9f9f9f;
-}
-.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body input:-moz-placeholder,
-.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body textarea:-moz-placeholder {
-  color: #9f9f9f;
-}
-.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body input::-moz-placeholder,
-.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body textarea::-moz-placeholder {
   color: #9f9f9f;
 }
 .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body input:-ms-input-placeholder,
@@ -2155,6 +2081,10 @@ div#viewingnew-warning {
 }
 .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body input::-ms-input-placeholder,
 .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body textarea::-ms-input-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body input::placeholder,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body textarea::placeholder {
   color: #9f9f9f;
 }
 .oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .ve-ui-mwTemplateDialog-filter {
@@ -2265,8 +2195,7 @@ button.secondary:active {
 .oo-ui-panelLayout-scrollable::-webkit-scrollbar-track,
 .oo-ui-selectWidget::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #333333;
   border: solid 1px #383838;
@@ -2275,8 +2204,7 @@ button.secondary:active {
 .oo-ui-selectWidget::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
 }
 #ca-edit,
@@ -2313,7 +2241,7 @@ button.secondary:active {
 #ca-addsection img,
 #ca-viewsource img {
   -webkit-filter: brightness(85%);
-  filter: brightness(85%);
+          filter: brightness(85%);
 }
 #ca-edit + div.wds-dropdown .wds-button,
 #ca-ve-edit + div.wds-dropdown .wds-button,
@@ -2386,7 +2314,6 @@ button.secondary:active {
 #ca-viewsource + div.wds-dropdown .wds-dropdown__content ul::after {
   background: none;
 }
-#prevent-edit-button-styling,
 #ca-edit + .wds-dropdown #ca-edit,
 #ca-edit + .wds-dropdown #ca-ve-edit,
 #ca-edit + .wds-dropdown #ca-addsection,
@@ -2409,7 +2336,6 @@ button.secondary:active {
   background: none;
   border: none;
 }
-#prevent-edit-button-styling:hover,
 #ca-edit + .wds-dropdown #ca-edit:hover,
 #ca-edit + .wds-dropdown #ca-ve-edit:hover,
 #ca-edit + .wds-dropdown #ca-addsection:hover,
@@ -2446,7 +2372,7 @@ button.secondary:active {
 }
 #page-header-add-new-photo img {
   -webkit-filter: brightness(85%);
-  filter: brightness(85%);
+          filter: brightness(85%);
 }
 .wds-button.wds-is-secondary,
 .WikiaPage .page-header .wds-button.wds-is-secondary {
@@ -2520,8 +2446,7 @@ button.secondary:active {
 }
 #PageHeader .page-header__languages .wds-dropdown__content ul::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #333333;
   border: solid 1px #383838;
@@ -2529,8 +2454,7 @@ button.secondary:active {
 #PageHeader .page-header__languages .wds-dropdown__content ul::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
 }
 #PageHeader .page-header__categories-dropdown::before {
@@ -2559,8 +2483,7 @@ button.secondary:active {
 }
 #PageHeader .page-header__categories-dropdown .page-header__categories-dropdown-content ul::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #333333;
   border: solid 1px #383838;
@@ -2568,18 +2491,13 @@ button.secondary:active {
 #PageHeader .page-header__categories-dropdown .page-header__categories-dropdown-content ul::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
 }
 .wds-community-header {
   background-color: #265588;
 }
 .wds-community-header::before {
-  background-image: -webkit-linear-gradient(-180deg, rgba(38, 85, 136, 0.5) 0px, rgba(38, 85, 136, 0.5) 200px, #265588 430px);
-  background-image: -moz-linear-gradient(-180deg, rgba(38, 85, 136, 0.5) 0px, rgba(38, 85, 136, 0.5) 200px, #265588 430px);
-  background-image: -ms-linear-gradient(-180deg, rgba(38, 85, 136, 0.5) 0px, rgba(38, 85, 136, 0.5) 200px, #265588 430px);
-  background-image: -o-linear-gradient(-180deg, rgba(38, 85, 136, 0.5) 0px, rgba(38, 85, 136, 0.5) 200px, #265588 430px);
   background-image: linear-gradient(270deg, rgba(38, 85, 136, 0.5) 0px, rgba(38, 85, 136, 0.5) 200px, #265588 430px);
 }
 .wds-community-header .wds-community-header__sitename a,
@@ -2640,8 +2558,7 @@ button.secondary:active {
 }
 #globalNavigation {
   -webkit-box-shadow: 0 1px 0 0 #0c0c0c;
-  -moz-box-shadow: 0 1px 0 0 #0c0c0c;
-  box-shadow: 0 1px 0 0 #0c0c0c;
+          box-shadow: 0 1px 0 0 #0c0c0c;
 }
 #globalNavigation,
 #globalNavigation .wds-global-navigation__account-menu,
@@ -2708,16 +2625,13 @@ button.secondary:active {
 #globalNavigation .wds-global-navigation__search .wds-global-navigation__search-input::-webkit-input-placeholder {
   color: #9f9f9f;
 }
-#globalNavigation .wds-global-navigation__search .wds-global-navigation__search-input:-moz-placeholder {
-  color: #9f9f9f;
-}
-#globalNavigation .wds-global-navigation__search .wds-global-navigation__search-input::-moz-placeholder {
-  color: #9f9f9f;
-}
 #globalNavigation .wds-global-navigation__search .wds-global-navigation__search-input:-ms-input-placeholder {
   color: #9f9f9f;
 }
 #globalNavigation .wds-global-navigation__search .wds-global-navigation__search-input::-ms-input-placeholder {
+  color: #9f9f9f;
+}
+#globalNavigation .wds-global-navigation__search .wds-global-navigation__search-input::placeholder {
   color: #9f9f9f;
 }
 #globalNavigation .wds-global-navigation__search .wds-global-navigation__search-submit {
@@ -2982,8 +2896,7 @@ table.property-page-results .value-row:hover {
 .ace_scrollbar::-webkit-scrollbar-track,
 .ace_scrollbar-h::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #333333;
   border: solid 1px #383838;
@@ -2992,8 +2905,7 @@ table.property-page-results .value-row:hover {
 .ace_scrollbar-h::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
 }
 .ace-solarized-light .ace_storage,
@@ -3001,7 +2913,8 @@ table.property-page-results .value-row:hover {
   color: #14dc1c;
 }
 .ace-solarized-light .ace_indent-guide {
-  filter: brightness(60%);
+  -webkit-filter: brightness(60%);
+          filter: brightness(60%);
 }
 .ace-solarized-light .ace_entity.ace_name.ace_function,
 .ace-solarized-light .ace_entity.ace_name.ace_tag,
@@ -3080,22 +2993,14 @@ body.background-dynamic.skin-oasis .background-image-gradient {
   background: none;
 }
 body.background-dynamic.skin-oasis .background-image-gradient::before {
-  left: -webkit-calc(50% - 532px);
   left: calc(50% - 532px);
-  background: rgba(0, 0, 0, 0);
-  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #262626 100%);
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #262626 100%);
-  background: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #262626 100%);
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #262626 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(#262626));
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), #262626);
 }
 body.background-dynamic.skin-oasis .background-image-gradient::after {
-  right: -webkit-calc(50% - 532px);
   right: calc(50% - 532px);
-  background: #262626;
-  background: -moz-linear-gradient(left, #262626 0%, rgba(0, 0, 0, 0) 100%);
-  background: -webkit-linear-gradient(left, #262626 0%, rgba(0, 0, 0, 0) 100%);
-  background: -ms-linear-gradient(left, #262626 0%, rgba(0, 0, 0, 0) 100%);
-  background: linear-gradient(to right, #262626 0%, rgba(0, 0, 0, 0) 100%);
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), to(#262626));
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0), #262626);
 }
 body.background-dynamic.skin-oasis .background-image-gradient::before,
 body.background-dynamic.skin-oasis .background-image-gradient::after,
@@ -3196,8 +3101,7 @@ body .ui-autocomplete {
   background-color: #2F3136;
   border-color: #52555a;
   -webkit-box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
 }
 body .ui-autocomplete li > a {
   color: #c5c5c5;

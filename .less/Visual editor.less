@@ -7,7 +7,7 @@
 
 .oo-ui-toolbar-bar {
     background-color: @main-page-bg;
-    .gradient(linear; @main-page-bg 0%, @gradient-light-color 50%; 0deg);
+    background-image: linear-gradient( 0deg, @main-page-bg 0%, @gradient-light-color 50% );
     color: @main-text;
     border-bottom-color: @table-border;
     
@@ -38,7 +38,7 @@
     .oo-ui-popupToolGroup-active.oo-ui-widget-enabled {
         background-color: @table-header;
         border-color: @table-border;
-        .gradient(linear; @table-header, lighten(@table-header, 10%); 0deg);
+        background-image: linear-gradient( 0deg, @table-header, lighten(@table-header, 10%) );
         
         .oo-ui-toolGroup-tools {
             .dropdown-styling;
@@ -73,7 +73,7 @@
         .oo-ui-tool-active.oo-ui-widget-enabled {
             background-color: @table-header;
             border-color: @table-border;
-            .gradient(linear; lighten(@table-header, 4%), lighten(@table-header, 14%); 0deg);
+            background-image: linear-gradient( 0deg, lighten(@table-header, 4%), lighten(@table-header, 14%) );
         }
     }
 }
@@ -133,12 +133,12 @@
     input,
     textarea {
         .text-input-styling;
-        .box-shadow(none);
-        .placeholder({color: darken(@main-text, 15%)});
+        box-shadow: none;
+        &::placeholder {color: darken(@main-text, 15%)};
         
         &:focus {
             .text-input-styling !important;
-            .box-shadow(none) !important;
+            box-shadow: none !important;
         }
     }
 }
@@ -174,7 +174,7 @@
             }
 
             .oo-ui-window-body {
-                .box-shadow(0 0 0.33em @table-border);
+                box-shadow: 0 0 0.33em @table-border;
                 background-color: @main-page-bg;
                 
                 // -------------------------------
@@ -207,8 +207,8 @@
                 input,
                 textarea {
                     .text-input-styling;
-                    .box-shadow(none);
-                    .placeholder({color: darken(@main-text, 15%)});
+                    box-shadow: none;
+                    &::placeholder {color: darken(@main-text, 15%)};
                 }
                 
                 // Filter

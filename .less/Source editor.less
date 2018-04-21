@@ -3,7 +3,7 @@
 #EditPageHeader {
     background-color: @gradient-light-color;
     border-color: @table-border;
-    .box-shadow(none);
+    box-shadow: none;
     
     &,
     h2 {
@@ -22,8 +22,8 @@
     // ========================================
     .EditPageToolbar {
         background-color: @main-page-bg;
-        .gradient(linear; @main-page-bg 0%, @gradient-light-color 50%; 0deg);
-        .box-shadow(0 4px 2px 0 rgba(0, 0, 0, 0.3));
+        background-image: linear-gradient( 0deg, @main-page-bg 0%, @gradient-light-color 50% );
+        box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.3);
         border-color: @table-border;
         
         .cke_toolbar_expand a,
@@ -65,7 +65,7 @@
     
     #wpSummary {
         .text-input-styling;
-        .placeholder({color: darken(@main-text, 15%)});
+        &::placeholder {color: darken(@main-text, 15%)};
     }
     
     #EditPageEditorWrapper,
@@ -78,12 +78,12 @@
     // =================
     #EditPageRail {
         background-color: @main-page-bg;
-        .box-shadow(~"-2px 2px 2px @{gradient-light-color}, -1px 0 0 @{gradient-light-color}");
+        box-shadow: ~"-2px 2px 2px @{gradient-light-color}, -1px 0 0 @{gradient-light-color}";
     }
     
     .module_content {
         background-color: @main-page-bg;
-        .gradient(linear; @main-page-bg 0%,  @gradient-light-color 50%; 0deg);
+        background-image: linear-gradient( 0deg, @main-page-bg 0%,  @gradient-light-color 50% );
     }
     
     &.editpage-sourcewidemode-on {
@@ -108,7 +108,7 @@
     // Module titles
     .module h3 {
         background-color: @main-page-bg;
-        .gradient(linear; @main-page-bg 0%,  @gradient-light-color 100%; 0deg);
+        background-image: linear-gradient( 0deg, @main-page-bg 0%,  @gradient-light-color 100% );
         color: @main-text;
         
         img {
@@ -132,7 +132,7 @@
     // "Categories" module
     .CategorySelect {
         .input {
-            .placeholder({color: darken(@main-text, 15%)});
+            &::placeholder {color: darken(@main-text, 15%)};
         }
         
         .categories {

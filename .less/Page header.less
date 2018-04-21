@@ -14,7 +14,7 @@
 
     // Pencil image
     img {
-        .filter(brightness(85%));
+        filter: brightness(85%);
     }
     
     // Dropdown button
@@ -44,18 +44,14 @@
 #ca-addsection {
     & + .wds-dropdown &,
     & ~ .WikiaMenuElement & {
-        &:extend(#prevent-edit-button-styling all);
-    }
-}
-
-#prevent-edit-button-styling {
-    color: @main-text;
-    background: none;
-    border: none;
-    
-    &:hover {
-        color: @links;
-        background-color: lighten(@table-header, 5%);
+        color: @main-text;
+        background: none;
+        border: none;
+        
+        &:hover {
+            color: @links;
+            background-color: lighten(@table-header, 5%);
+        }
     }
 }
 
@@ -64,7 +60,7 @@
     .button-styling;
     
     img {
-        .filter(brightness(85%));
+        filter: brightness(85%);
     }
 }
 
@@ -156,7 +152,7 @@
     background-color: @theme-blue;
     
     &::before {
-        .gradient(linear; fadeout(@theme-blue, 50%) 0px, fadeout(@theme-blue, 50%) 200px, @theme-blue 430px; 270deg);
+        background-image: linear-gradient( 270deg, fadeout(@theme-blue, 50%) 0px, fadeout(@theme-blue, 50%) 200px, @theme-blue 430px );
     }
     
     // --------------------
@@ -218,7 +214,7 @@
     // --------------------------
     //      Background color
     // --------------------------
-    .box-shadow(0 1px 0 0 darken(@main-page-bg, 10%));
+    box-shadow: 0 1px 0 0 darken(@main-page-bg, 10%);
     
     &,
     .wds-global-navigation__account-menu, 
@@ -314,9 +310,9 @@
             background-color: @main-page-bg;
             color: @main-text;
             
-            .placeholder({
+            &::placeholder {
                 color: darken(@main-text, 15%)
-            });
+            };
         }
         
         .wds-global-navigation__search-submit {

@@ -2,7 +2,9 @@ var gulp = require('gulp');
 var less = require('gulp-less');
 var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync').create();
+var postcss = require('gulp-postcss');
 var cssVip = require("gulp-css-vip");
+var autoprefixer = require('autoprefixer');
 var sessionID = [0];
 try {
     sessionID = require("./sessionID.json");
@@ -14,6 +16,7 @@ gulp.task('less', function() {
     return gulp.src('./.less/darkmode.less')
         .pipe(plumber())
         .pipe(less())
+        .pipe(postcss([ autoprefixer() ]))
         // .pipe(cssVip())
         .pipe(gulp.dest('./'))
         .pipe(browserSync.stream());
@@ -34,7 +37,7 @@ gulp.task('serve', ['less'], function() {
             },
             {
                 match: "<head>",
-                replace: "<head>" + injectCookies()
+                replace:  Cookies() + "<head>"
             }
         ]
     });
@@ -44,9 +47,8 @@ gulp.task('serve', ['less'], function() {
 
 gulp.task('default', ['serve']);
 
-function injectCookies() {
+function Cookies() {
     var res = '<script>'
-            + 'document.cookie = "access_token=0; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";' // Delete old cookie
             + 'document.cookie = "access_token=' + sessionID[0] + '";'
             + 'document.cookie = "euCookiePolicy=1"'
             + '</script>';

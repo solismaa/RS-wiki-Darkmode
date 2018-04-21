@@ -5,14 +5,20 @@
   "main": "gruntfile.js",
   "dependencies": {},
   "devDependencies": {
+    "autoprefixer": "^8.3.0",
     "browser-sync": "^2.23.6",
     "bs-rewrite-rules": "^2.1.2",
     "gulp": "^3.9.1",
     "gulp-css-vip": "^1.0.2",
     "gulp-less": "^3.5.0",
-    "gulp-plumber": "^1.2.0"
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1"
   },
   "scripts": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CephHunter/RS-wiki-DarkMode.git"

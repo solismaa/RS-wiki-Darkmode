@@ -79,7 +79,7 @@
         hgroup {
             background-color: @theme-blue;
             color: @main-text;
-            .gradient(linear; @theme-blue, lighten(@theme-blue, 5%); 0deg);
+            background-image: linear-gradient( 0deg, @theme-blue, lighten(@theme-blue, 5%) );
         }
 
         .tag {
@@ -181,7 +181,7 @@
     
     // Search button image
     .sprite {
-        .filter(brightness(85%)); 
+        filter: brightness(85%); 
     }
 }
 
@@ -402,7 +402,7 @@ table.smwb-ifactbox {
 .AdminDashboard .admin-dashboard-content .control-section {
     header {
         background-color: lighten(@main-page-bg, 5%);
-        .gradient(linear; lighten(@main-page-bg, 5%), lighten(@main-page-bg, 10%); 0deg);
+        background-image: linear-gradient( 0deg, lighten(@main-page-bg, 5%), lighten(@main-page-bg, 10%) );
         color: @main-text;
         border-color: @table-border;
 
@@ -438,7 +438,7 @@ table.smwb-ifactbox {
 // --------------------------
 .AdminDashboardGeneralHeader {
     background-color: lighten(@main-page-bg, 5%);
-    .gradient(linear; lighten(@main-page-bg, 5%), lighten(@main-page-bg, 10%); 0deg);
+    background-image: linear-gradient( 0deg, lighten(@main-page-bg, 5%), lighten(@main-page-bg, 10%) );
     color: @main-text;
     border-color: @table-border;
     box-shadow: 0 2px 2px 0 darken(@main-page-bg, 5%);
@@ -483,7 +483,7 @@ table.smwb-ifactbox {
 
         .label {
             background-color: lighten(@main-page-bg, 5%);
-            .gradient(linear; lighten(@main-page-bg, 5%), lighten(@main-page-bg, 10%); 0deg);
+            background-image: linear-gradient( 0deg, lighten(@main-page-bg, 5%), lighten(@main-page-bg, 10%) );
             color: @main-text;
             border-color: @table-border;
         }
@@ -525,7 +525,7 @@ table.smwb-ifactbox {
     .highlight-top,
     .totals td:nth-child(2) {
         background-color: darken(@table-header, 5%);
-        .gradient(linear; darken(@table-header, 3%), darken(@table-header, 5%); 90deg);
+        background-image: linear-gradient( 90deg, darken(@table-header, 3%), darken(@table-header, 5%) );
         color: darken(@main-text, 5%);
     }
 
@@ -546,6 +546,6 @@ table.smwb-ifactbox {
     }
 
     .highlight-bottom {
-        .gradient(linear; lighten(@table-header, 3%), darken(@table-header, 5%) 25%, transparent; 0deg);
+        background-image: linear-gradient( 0deg, lighten(@table-header, 3%), darken(@table-header, 5%) 25%, transparent );
     }
 }
