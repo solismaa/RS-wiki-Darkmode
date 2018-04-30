@@ -3,7 +3,6 @@ var less = require('gulp-less');
 var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync').create();
 var postcss = require('gulp-postcss');
-var cssVip = require("gulp-css-vip");
 var autoprefixer = require('autoprefixer');
 var sessionID = [0];
 try {
@@ -17,7 +16,6 @@ gulp.task('less', function() {
         .pipe(plumber())
         .pipe(less())
         .pipe(postcss([ autoprefixer() ]))
-        // .pipe(cssVip())
         .pipe(gulp.dest('./'))
         .pipe(browserSync.stream());
 });
@@ -37,7 +35,7 @@ gulp.task('serve', ['less'], function() {
             },
             {
                 match: "<head>",
-                replace:  Cookies() + "<head>"
+                replace: "<head>" + Cookies()
             }
         ]
     });
