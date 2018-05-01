@@ -4,6 +4,7 @@ var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync').create();
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
+var cleanCSS = require('gulp-clean-css');
 var sessionID = [0];
 try {
     sessionID = require("./sessionID.json");
@@ -17,6 +18,8 @@ gulp.task('less', function() {
         .pipe(less())
         .pipe(postcss([ autoprefixer() ]))
         .pipe(gulp.dest('./'))
+        .pipe(cleanCSS({level: 1}))
+        .pipe(gulp.dest('minified'))
         .pipe(browserSync.stream());
 });
 
