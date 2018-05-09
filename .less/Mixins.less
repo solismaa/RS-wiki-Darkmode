@@ -138,6 +138,10 @@
             background-color: lighten(@scroll-bar-main-color, 10%);
             //border: solid 1px lighten(@scroll-bar-main-color, 12%);
         }
+
+        &::-webkit-scrollbar-corner {
+            background-color: transparent;
+        }
     }
 
     & when (@style = "style-2") {
@@ -158,12 +162,17 @@
             background-color: @scroll-bar-main-color;
             //border: solid 1px lighten(@scroll-bar-main-color, 12%);
         }
+
+        &::-webkit-scrollbar-corner {
+            background-color: transparent;
+        }
     }
     
     & when (@style = "default") {
         &::-webkit-scrollbar,
         &::-webkit-scrollbar-track,
-        &::-webkit-scrollbar-thumb {
+        &::-webkit-scrollbar-thumb,
+        &::-webkit-scrollbar-corner {
             all: unset;
         }
     }

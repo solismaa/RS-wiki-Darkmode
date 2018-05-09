@@ -130,10 +130,6 @@ table.TablePager > * > tr > th {
   color: #c5c5c5;
   border: solid 1px #52555a;
 }
-img.tex {
-  -webkit-filter: invert(0.85);
-          filter: invert(0.85);
-}
 .rsw-tooltip {
   background: #36393E;
 }
@@ -312,6 +308,10 @@ img.tex {
   border-radius: 10px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
+}
+#WikiaPhotoGalleryEditor .preview::-webkit-scrollbar-corner,
+#WikiaPhotoGallerySearchResults::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
 .modal.large > header,
 .modal.medium > header,
@@ -920,6 +920,9 @@ textarea::-webkit-scrollbar-thumb {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
 }
+textarea::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
 .WikiaPage select,
 .modalWrapper select,
 .ui-dialog select {
@@ -955,6 +958,9 @@ textarea::-webkit-scrollbar-thumb {
   border-radius: 10px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
+}
+.WikiaDropdown .dropdown::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
 .WikiaDropdown .dropdown .toolbar {
   background-color: #282a2e;
@@ -1039,6 +1045,32 @@ button:not(.wds-button).secondary:active {
   background-image: none;
   border-color: #4e5259;
   background-color: #4e5259;
+}
+img.tex {
+  -webkit-filter: invert(0.85);
+          filter: invert(0.85);
+}
+#MathJax_Zoom {
+  background-color: #2F3136;
+  border-color: #52555a;
+  box-shadow: 5px 5px 15px #0c0c0c;
+}
+#MathJax_Zoom::-webkit-scrollbar {
+  width: 13px;
+}
+#MathJax_Zoom::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #333333;
+  border: solid 1px #383838;
+}
+#MathJax_Zoom::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #4d4d4d;
+}
+#MathJax_Zoom::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
 .GEChartBox {
   background: #2F3136;
@@ -1227,6 +1259,9 @@ table.alternating-rows tr:nth-child(even) {
   border-radius: 10px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
+}
+.timeline-Viewport::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
 .timeline-Viewport .customisable,
 .timeline-Viewport .customisable:link,
@@ -1801,6 +1836,9 @@ div#viewingnew-warning {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #333333;
 }
+#EditPage #wpTextbox0::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
 #EditPage #wpTextbox1 {
   color: black;
   background-color: #a9a9a9;
@@ -1818,6 +1856,9 @@ div#viewingnew-warning {
   border-radius: 10px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #333333;
+}
+#EditPage #wpTextbox1::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
 #EditPage .loading-background,
 #EditPage .loading-message,
@@ -1847,6 +1888,9 @@ div#viewingnew-warning {
   border-radius: 10px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
+}
+#EditPageDialog.preview .modalContent .ArticlePreview::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
 .ve-init-mw-viewPageTarget-toolbar {
   border-top-color: #52555a;
@@ -2163,6 +2207,10 @@ button.secondary:active {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
 }
+.oo-ui-panelLayout-scrollable::-webkit-scrollbar-corner,
+.oo-ui-selectWidget::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
 #ca-edit,
 #ca-ve-edit,
 #ca-addsection,
@@ -2411,6 +2459,9 @@ button.secondary:active {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
 }
+#PageHeader .page-header__languages .wds-dropdown__content ul::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
 #PageHeader .page-header__categories-dropdown::before {
   border-bottom-color: #52555a;
 }
@@ -2445,6 +2496,9 @@ button.secondary:active {
   border-radius: 10px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
+}
+#PageHeader .page-header__categories-dropdown .page-header__categories-dropdown-content ul::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
 .wds-community-header {
   background-color: #265588;
@@ -2856,6 +2910,10 @@ table.property-page-results .value-row:hover {
   border-radius: 10px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #4d4d4d;
+}
+.ace_scrollbar::-webkit-scrollbar-corner,
+.ace_scrollbar-h::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
 .ace-solarized-light .ace_storage,
 #theme-solarized-light .kw0 {

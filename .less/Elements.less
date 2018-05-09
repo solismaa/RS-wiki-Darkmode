@@ -7,7 +7,7 @@
         background-color: @pre-tag-bg;
         color: @main-text;
     }
-    
+
     code {
         border: solid 1px lighten(@code-tag-bg, 5%);
         background-color: @code-tag-bg;
@@ -63,33 +63,33 @@ textarea {
     .selected-items {
         background-color: @input-fields;
         border-color: @table-border;
-        
+
         .arrow {
             border-top-color: @main-text;
         }
-        
+
         &:hover {
             background-color: lighten(@input-fields, 5%);
         }
     }
-    
+
     .dropdown {
         background-color: @table-header;
         border-color: @table-border;
         box-shadow: 0 3px 6px 0 @table-header;
-        
+
         .scroll-bar-styling;
-        
+
         .toolbar {
             background-color: darken(@table-header, 3%);
             border-bottom-color: @table-border;
         }
-        
+
         .dropdown-item {
             &:hover {
                 background-color: lighten(@table-header, 5%);
             }
-            
+
             &.selected {
                 background-color: lighten(@table-header, 2%);
             }
@@ -100,18 +100,32 @@ textarea {
 // =================
 //      Buttons
 // =================
-a.wikia-button, 
+a.wikia-button,
 .wikia-single-button a,
 .wikia-menu-button,
-input[type="submit"]:not(.wds-button), 
-input[type="reset"]:not(.wds-button), 
-input[type="button"]:not(.wds-button), 
+input[type="submit"]:not(.wds-button),
+input[type="reset"]:not(.wds-button),
+input[type="button"]:not(.wds-button),
 .button:not(.wds-button),
 a.button:not(.wds-button),
 button:not(.wds-button) {
     .button-styling;
-    
+
     &.secondary {
         .button-styling("cancel");
     }
+}
+
+// ======================
+//      Tex formulas
+// ======================
+img.tex {
+    filter: invert(0.85);
+}
+
+#MathJax_Zoom {
+    background-color: @table-header;
+    border-color: @table-border;
+    box-shadow: 5px 5px 15px darken(@main-page-bg, 10%);
+    .scroll-bar-styling();
 }
