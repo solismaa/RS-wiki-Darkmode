@@ -1,40 +1,37 @@
 // ===================
 //      HTML tags
 // ===================
-.WikiaArticle  {
-    pre {
-        border: solid 1px lighten(@pre-tag-bg, 5%);
-        background-color: @pre-tag-bg;
-        color: @main-text;
-    }
+pre {
+    border: solid 1px lighten(@pre-tag-bg, 5%);
+    background-color: @pre-tag-bg;
+    color: @theme-text;
+}
 
-    code {
-        border: solid 1px lighten(@code-tag-bg, 5%);
-        background-color: @code-tag-bg;
-        color: @main-text;
-    }
+code {
+    border: solid 1px lighten(@code-tag-bg, 5%);
+    background-color: @code-tag-bg;
+    color: @theme-text;
+}
 
-    fieldset {
-        border-color: @table-border;
-        background-color: darken(@main-page-bg, 3%);
-    }
+fieldset {
+    border-color: @theme-borders;
+    background-color: @fieldset-tag-bg;
 }
 
 hr {
-    border-color: @table-border;
+    border-color: @theme-borders;
 }
 
 // ======================
 //      Input fields
 // ======================
-
 // ---------------------------
 //      Text input fields
 // ---------------------------
 .WikiaPage,
 .modalWrapper,
 .ui-dialog {
-    input:not([type="submit"]):not([type=button]):not([type="reset"]) {
+    input:not([type="submit"]):not([type=button]):not([type="reset"]):not([type="checkbox"]) {
         .text-input-styling;
     }
 }
@@ -58,14 +55,14 @@ textarea {
 // -----------------------------
 //      Dropdown checkboxes
 // -----------------------------
-// Example: [[Special:RecentChanges]]
+// Example: [[Special:Recentchanges]]
 .WikiaDropdown {
     .selected-items {
         background-color: @input-fields;
-        border-color: @table-border;
+        border-color: @theme-borders;
 
         .arrow {
-            border-top-color: @main-text;
+            border-top-color: @theme-text;
         }
 
         &:hover {
@@ -74,24 +71,23 @@ textarea {
     }
 
     .dropdown {
-        background-color: @table-header;
-        border-color: @table-border;
-        box-shadow: 0 3px 6px 0 @table-header;
+        background-color: @theme-grey-2-darker;
+        border-color: @theme-borders;
+        box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.5);
 
         .scroll-bar-styling;
 
         .toolbar {
-            background-color: darken(@table-header, 3%);
-            border-bottom-color: @table-border;
+            background-color: darken(@theme-grey-2-darker, 3%);
+            border-bottom-color: @theme-borders;
         }
 
-        .dropdown-item {
-            &:hover {
-                background-color: lighten(@table-header, 5%);
-            }
 
-            &.selected {
-                background-color: lighten(@table-header, 2%);
+        li {
+            background-color: @theme-grey-2-darker;
+
+            &:hover {
+                background-color: lighten(@theme-grey-2-darker, 5%);
             }
         }
     }
@@ -100,15 +96,14 @@ textarea {
 // =================
 //      Buttons
 // =================
-a.wikia-button,
+.wikia-button,
 .wikia-single-button a,
 .wikia-menu-button,
-input[type="submit"]:not(.wds-button),
-input[type="reset"]:not(.wds-button),
-input[type="button"]:not(.wds-button),
-.button:not(.wds-button),
-a.button:not(.wds-button),
-button:not(.wds-button) {
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button,
+button {
     .button-styling;
 
     &.secondary {
@@ -124,8 +119,8 @@ img.tex {
 }
 
 #MathJax_Zoom {
-    background-color: @table-header;
-    border-color: @table-border;
-    box-shadow: 5px 5px 15px darken(@main-page-bg, 10%);
+    background-color: @theme-grey-2-darker;
+    border-color: @theme-borders;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
     .scroll-bar-styling();
 }

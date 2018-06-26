@@ -1,7 +1,7 @@
 .vscode/
-.crunch
 *.css.map
+*.dev.*
 ImagesExtra/
 ToDo.txt
 node_modules/
-sessionID.json
+desktop.ini

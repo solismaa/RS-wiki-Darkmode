@@ -6,43 +6,44 @@
 // -----------------------
 //      Preview pages
 // -----------------------
-#theme-solarized-light {
+.source-lua,
+.source-css,
+.source-javascript {
     background-color: @code-editor-bg;
-    color: darken(@main-text, 5%);
+    color: darken(@theme-text, 5%);
 }
 
 // -------------------
 //      Edit page
 // -------------------
-.ace-solarized-light {
+.editpage-editarea {
     background-color: @code-editor-bg;
-    color: darken(@main-text, 5%);
-    
-    // Row count sidebar
-    .ace_gutter {
-        background-color: lighten(@code-editor-bg, 5%);
-        color: @main-text;
-    }
-    
-    // Active line highlight
-    .ace_marker-layer .ace_active-line,
-    .ace_gutter-active-line {
-        background-color: lighten(@code-editor-bg, 6.5%);
-    }
-    
-    // Selection highlight
-    .ace_marker-layer .ace_selection {
-        background-color: fade(lighten(@code-editor-bg, 32.5%), 20%);
-    }
-    
-    // Cursor
-    .ace_cursor {
-        color: @main-text;
-    }
+    color: darken(@theme-text, 5%);
+}
+
+// Row count sidebar
+.ace_gutter {
+    background-color: lighten(@code-editor-bg, 5%);
+    color: @theme-text;
+}
+
+// Active line highlight
+.ace_marker-layer .ace_active-line,
+.ace_gutter-active-line {
+    background-color: lighten(@code-editor-bg, 6.5%);
+}
+
+// Selection highlight
+.ace_marker-layer .ace_selection {
+    background-color: fade(lighten(@code-editor-bg, 32.5%), 20%);
+}
+
+.ace_cursor {
+    color: @theme-text;
 }
 
 .EditPageEditor .editpage-editarea {
-    border-color: @table-border;
+    border-color: @theme-borders;
 }
 
 // Scrollbar styling
@@ -54,38 +55,34 @@
 // ---------------------------
 //      code highlighting
 // ---------------------------
-// .ace-solarized-light for edit page
-// #theme-solarized-light for previews
-
 // variables and function declaration highlights
-.ace-solarized-light .ace_storage,  // js
-#theme-solarized-light .kw0         // js
-{
+.ace_storage,
+.kw0 {
     color: #14dc1c;
 }
 
-// Dotted indent guide 
-.ace-solarized-light .ace_indent-guide {
+// Dotted indent guide
+.ace_indent-guide {
     filter: brightness(60%);
 }
 
 // function/variable call highlight
-.ace-solarized-light .ace_entity.ace_name.ace_function,
-.ace-solarized-light .ace_entity.ace_name.ace_tag,
-.ace-solarized-light .ace_support.ace_function,
-.ace-solarized-light .ace_variable,
-.ace-solarized-light .ace_variable.ace_language,
-#theme-solarized-light .me1,
-#theme-solarized-light .kw3 {
+.ace_entity.ace_name.ace_function,
+.ace_entity.ace_name.ace_tag,
+.ace_support.ace_function,
+.ace_variable,
+.ace_variable.ace_language,
+.me1,
+.kw3 {
     color: lighten(#268BD2, 10%);
 }
 
 // keywords
-.ace-solarized-light .ace_keyword, 
-.ace-solarized-light .ace_meta, 
-.ace-solarized-light .ace_support.ace_class, 
-.ace-solarized-light .ace_support.ace_type,
-#theme-solarized-light .kw1 {
+.ace_keyword,
+.ace_meta,
+.ace_support.ace_class,
+.ace_support.ace_type,
+.kw1 {
     color: #c9e411;
 }
 
@@ -96,45 +93,36 @@
 // ------------------------
 //      Module console
 // ------------------------
-#EditPage {
-    #mw-scribunto-console {
-        color: @main-text;
-        
-        &,
-        .mw-scribunto-console-fieldset {
-            background-color: @table-data;
-        }
-        
-        legend,
-        .mw-scribunto-message {
-            background: none;
-            color: darken(@main-text, 10%);
-        }
-        
-        // Output area
-        .mw-scribunto-input {
-            color: @links;
-        }
-        
-        .mw-scribunto-normalOutput,
-        .mw-scribunto-print {
-            background: none;
-            color: @main-text;
-        }
-        
-        .mw-scribunto-error {
-            background: none;
-        }
-        
-        // Text input area
-        #mw-scribunto-input {
-            .text-input-styling;
-        }
-        
-        // Clear button
-        input {
-            background-image: none;
-            .button-styling;
-        }
+#mw-scribunto-console {
+    color: @theme-text;
+
+    &,
+    .mw-scribunto-console-fieldset {
+        background-color: @edit-area-sidebar-bg;
     }
+}
+
+.mw-scribunto-message {
+    background: none;
+    color: darken(@theme-text, 10%);
+}
+
+// Output area
+.mw-scribunto-input {
+    color: @theme-links;
+}
+
+.mw-scribunto-normalOutput,
+.mw-scribunto-print {
+    background: none;
+    color: @theme-text;
+}
+
+.mw-scribunto-error {
+    background: none;
+}
+
+// Text input area
+#mw-scribunto-input {
+    .text-input-styling;
 }

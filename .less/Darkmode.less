@@ -1,35 +1,86 @@
 // ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 //      COLORS
 // ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-@body-color:            #232323;
-@main-page-bg:          #262626;
-@main-text:             #c5c5c5;
-@table-data:            #36393E;
-@table-header:          #2F3136;
-@table-border:          #52555a;
-@categories:            #1d1d1d;
-@messasgeboxes:         @categories;
-@links:                 #6bbaea; //#e0960b; //#de6a14; //#01c023; //#5799c1;
-@redlinks:              #ba0000;
-@input-fields:          #3e3e3e;
-@highlight-table-hover: #006d13;
-@highlight-table-on:    #1e5400;
-@coins-positive:        lighten(#5799c1, 2%); //#01c023;
-@coins-negative:        lighten(#c02614, 5%);
-@documentation-bg:      lighten(@main-page-bg, 3%);
-@code-editor-bg:        @documentation-bg;
-@code-tag-bg:           lighten(@main-page-bg, 9%);
-@pre-tag-bg:            lighten(@main-page-bg, 9%);
-@edit-area-bg:          #a9a9a9;
-@theme-blue:            #265588; //darken(#438ab5, 15%);
-@theme-blue-lighter:    lighten(@theme-blue, 8%);
-@scroll-bar-main-color: hsl(0, 0%, 20%);
-@red-bg:                darken(#861c10, 10%);
-@yellow-bg:             darken(#f3f0b0, 60%);
-@green-bg:              #1e5400;
-@green-lighter-bg:      #006d13;
-@positive-change:       #06df2e; 
- 
+// =======================
+//      Primay colors
+// =======================
+@theme-text          : #c5c5c5;
+@theme-borders       : #52555a;
+@theme-links         : #6bbaea;
+@theme-redlinks      : #ba0000;
+@theme-green         : #1e5400;
+@theme-green-lighter : lighten(@theme-green, 2.5%);
+@theme-grey          : #262626;
+@theme-grey-darker   : darken(@theme-grey, 3.5%);
+@theme-gray-lighter  : lighten(@theme-grey, 3%);
+@theme-gray-lighter-2: lighten(@theme-grey, 9%);
+@theme-grey-2        : lighten(@theme-grey, 8%);
+@theme-grey-2-darker : darken(@theme-grey-2, 3%);
+@theme-gray-2-lighter: lighten(@theme-grey-2, 20%);
+@theme-blue          : #265588;
+@theme-blue-lighter  : lighten(@theme-blue, 8%);
+
+// ==========================
+//      Secondary colors
+// ==========================
+//----- general -----//
+@main-page-bg           : @theme-grey;
+@homepage-module-bg     : @theme-grey-2;
+@body-color             : darken(@theme-grey, 1%);
+@pageheader-bg          : @theme-blue;
+@fandomheader-bg        : @main-page-bg;
+@table-data             : @theme-grey-2;
+@table-header           : @theme-grey-2-darker;
+@highlight-table-on     : @theme-green;
+@highlight-table-hover  : @theme-green-lighter;
+@documentation-bg       : @theme-gray-lighter;
+@categories             : @theme-grey-darker;
+@messageboxes           : @theme-grey-darker;
+@edit-area-bg           : #a9a9a9;
+@edit-area-sidebar-bg   : lighten(@main-page-bg, 7%);
+@edit-area-sidebar-shade: @main-page-bg;
+@rail-module-bg         : @theme-grey-2-darker;
+@dropdown-bg            : @theme-grey-2-darker;
+@dropdown-hover-item    : lighten(@dropdown-bg, 5%);
+@popup-bg               : @theme-grey;
+@popup-header-bg        : lighten(@popup-bg, 5%);
+@tooltip-bg             : @theme-gray-lighter;
+@button-accept-bg       : @theme-blue-lighter;
+@button-cancel-bg       : lighten(@theme-grey-2, 15%);
+
+//----- scrollbar -----//
+@theme-scroll-bar     : hsl(0, 0%, 20%);
+@scroll-bar-main-color: @theme-scroll-bar;
+
+@scroll-bar-1-track: hsl(0, 0%, 15%);
+@scroll-bar-1-thumb: hsl(0, 0%, 25%);
+@scroll-bar-2-track: hsl(0, 0%, 50%);
+@scroll-bar-2-thumb: hsl(0, 0%, 20%);
+
+//----- basic htlm elements -----//
+@input-fields   : @theme-gray-lighter-2;
+@code-editor-bg : @documentation-bg;
+@pre-tag-bg     : @theme-gray-lighter-2;
+@code-tag-bg    : @theme-gray-lighter-2;
+@fieldset-tag-bg: @theme-grey-darker;
+
+//----- text -----//
+@positive-change: #06df2e;
+@negative-change: lighten(#c02614, 5%);
+@button-text    : lighten(@theme-text, 10%);
+@placeholder    : darken(@theme-text, 15%);
+
+//----- templates -----//
+@coins-positive   : lighten(#5799c1, 2%);
+@coins-negative   : lighten(#c02614, 5%);
+@red-bg           : darken(#861c10, 10%);
+@yellow-bg        : darken(#f3f0b0, 60%);
+@green-bg         : #1e5400;
+@green-lighter-bg : #006d13;
+@navbox-title-bg  : @theme-blue;
+@navbox-title-2-bg: @theme-blue-lighter;
+@navbox-group-bg  : @theme-grey-2-darker;
+
 // ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 //      Imports
 // ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
@@ -39,7 +90,6 @@
 @import "Popups.less";
 @import "Messageboxes.less";
 @import "Templates.less";
-@import "Links.less";
 @import "Elements.less";
 @import "GEcharts.less";
 @import "Custom classes.less";
@@ -61,36 +111,36 @@
 // =========================================
 body.background-dynamic.skin-oasis {
     background-color: @body-color;
-    
+
     &::before {
         margin-left: -1282px;
     }
-    
+
     &::after {
         margin-right: -1282px;
         background-position: -710px 0;
     }
-    
+
     &::before,
     &::after {
         background-image: url('https://i.imgur.com/7qET5bp.jpg');
         width: 790px;
         height: 844px;
     }
-    
+
     .background-image-gradient {
         background: none;
-        
+
         &::before {
             left: calc(~"50% - 532px");
             background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), @main-page-bg);
         }
-        
+
         &::after {
             right: calc(~"50% - 532px");
             background-image: linear-gradient(270deg, rgba(0, 0, 0, 0), @main-page-bg);
         }
-        
+
         &::before,
         &::after,
         & {
@@ -102,31 +152,44 @@ body.background-dynamic.skin-oasis {
 // ===================
 //      Wikiapage
 // ===================
-
 // -----------------------------------
 //      Background and text color
 // -----------------------------------
 .WikiaPage {
-    border: 1px solid @table-border;
-    
+    border-color: @theme-borders;
+
     .WikiaPageBackground {
         background-color: @main-page-bg;
     }
-    
+
     // Page title text color
     .page-header__title {
-        color: @main-text;
+        color: @theme-text;
     }
+}
+
+.WikiaArticle {
+    box-shadow: none;
+    border: none;
 }
 
 // Text color
 body {
-    color: @main-text;
+    color: @theme-text;
+}
+
+// links
+a {
+    color: @theme-links;
+
+    &.new {
+        color: @theme-redlinks;
+    }
 }
 
 // Section separation line color
 .WikiaArticle h2 {
-    border-bottom: solid 1px @table-border;
+    border-bottom-color: @theme-borders;
 }
 
 // --------------------------
@@ -146,52 +209,48 @@ body {
 // ------------------
 //      Wikirail
 // ------------------
-#WikiaRail {
+.WikiaRail {
     .rail-module,
     .module {
-        background: @table-header;
+        background: @rail-module-bg;
     }
-    
-    a {
-        color: @links;
-    }
-    
+
     .edit-info-time,
     .rail-sticky-module .premium-recirculation-rail .content {
-        color: @main-text;
+        color: @theme-text;
     }
-    
+
     #wikia-recent-activity {
         h2.has-icon {
-            border-bottom-color: @table-border;
-            
+            border-bottom-color: @theme-borders;
+
             svg {
-                fill: darken(@main-text, 15%);
+                fill: darken(@theme-text, 15%);
             }
         }
-        
+
         .community-page-rail-module {
-            border-top-color: @table-border;
-            
+            border-top-color: @theme-borders;
+
             .wds-avatar {
-                border-color: @table-border;
+                border-color: @theme-borders;
             }
         }
     }
-    
+
     // js "Enter test mode" button
     .content-review-module-test-mode-enable {
         .button-styling("cancel");
     }
-    
+
     // Discord invite button
     #rsw-discord .wds-button {
         color: #fff;
     }
-    
+
     // Trending fandom articles
     #WikiaAdInContentPlaceHolder svg {
-        fill: darken(@main-text, 15%);
+        fill: darken(@theme-text, 15%);
     }
 }
 
@@ -199,47 +258,50 @@ body {
 //      Page navigator
 // ------------------------
 // Example used on the bottom of [[Special:Search]]
-.wikia-paginator ul {
-    .paginator-page.active {
-        color: @main-text !important;
-    }
-    
-    .paginator-prev,
-    .paginator-next {
-        .button-styling("cancel");
-    }
-    
-    .paginator-prev::after {
-        border-right-color: lighten(@main-text, 10%);
-    }
-    
-    .paginator-next::after {
-        border-left-color: lighten(@main-text, 10%);
-    }
+.paginator-page.active {
+    color: @theme-text;
+}
+
+.paginator-prev::after {
+    border-right-color: lighten(@theme-text, 10%);
+}
+
+.paginator-next::after {
+    border-left-color: lighten(@theme-text, 10%);
 }
 
 // -------------------------------
 //      Autocomplete dropdown
 // -------------------------------
-body .ui-autocomplete {
+.ui-autocomplete {
     .dropdown-styling;
-    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
-    
-    .ui-menu-item a:hover {
-        color: @links;
-        background-color: lighten(@table-header, 5%);
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.5);
+
+    .ui-state-hover {
+        color: @theme-links;
+        background-color: @dropdown-hover-item;
     }
 }
 
 // ---------------------
 //      Page footer
 // ---------------------
-.WikiaBarWrapper .tools-menu {
-    .dropdown-styling;
-    
-    > li {
-        border-top-color: @table-border;
+.WikiaBarWrapper  {
+    a {
+        color: #fff;
     }
+
+    .tools-menu {
+        .dropdown-styling;
+
+        > li {
+            border-top-color: @theme-borders;
+        }
+    }
+}
+
+.wds-global-footer__link {
+    color: #c5ced9;
 }
 
 // ===================
@@ -251,5 +313,5 @@ body .ui-autocomplete {
 #mixed-content-footer .mcf-content,  // Page footer
 #BOTTOM_LEADERBOARD     // Page footer
 {
-    display: none !important;
+    display: none;
 }

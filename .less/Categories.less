@@ -2,28 +2,20 @@
 //      Categories on wiki articles
 // =====================================
 .CategorySelect.articlePage {
-    // Add categories save cancel toolbar
+    // Save-cancel toolbar
     div.toolbar {
         background-color: lighten(@categories, 2%);
-        border-top-color: @table-border;
-        
-        #CategorySelectCancel {
-            .button-styling("cancel");
-        }
-        
-        #CategorySelectSave {
-            .button-styling;
-        }
+        border-top-color: @theme-borders;
     }
     
     // Newly added category (before saving)
     .category.new {
-        border-color: lighten(@table-data, 20%);
-        color: lighten(@main-text, 10%);
+        border-color: @theme-gray-2-lighter;
+        color: @button-text;
         
         &,
         ul.toolbar {
-            background-color: lighten(@table-data, 20%);
+            background-color: @theme-gray-2-lighter;
         }
     }
 }
@@ -44,16 +36,16 @@
 //      Files
 // ---------------
 .WikiaArticle li.gallerybox {
-    border-color: @table-border;
-    background-color: @table-header;
+    border-color: @theme-borders;
+    background-color: @theme-grey-2-darker;
     
     div.thumb {
-        background: @table-data;
-        border-color: @table-data; 
+        background: @theme-grey-2;
+        border-color: @theme-grey-2; 
     }
 }
 
 // Sound
 .ogg-player-options {
-    border-color: @table-border;
+    border-color: @theme-borders;
 }

@@ -9,19 +9,19 @@
 .sg-red,
 .nocell {
     background: @red-bg;
-    color: @main-text;
+    color: @theme-text;
 }
 
 .sg-yellow,
 .maybecell {
     background: @yellow-bg;
-    color: @main-text;
+    color: @theme-text;
 }
 
 .sg-green,
 .yescell {
     background: @green-bg;
-    color: @main-text;
+    color: @theme-text;
 }
 
 // ===============
@@ -35,33 +35,19 @@
     color: @coins-negative;
 }
 
-// ====================================
-//      Calculator extra info cell
-// ====================================
-// Example: [[Calculator:Herblore]]
-table.calc-extra-info {
-    background-color: @table-header !important;
-    border: solid 1px @table-border !important;
-}
-
 // ================================
 //      Big navigation buttons
 // ================================
 // Example: [[Treasure Trails#Types of clues]]
 .portal-link {
-    &,
-    &.file,
-    &.article,
-    &.template {
         a {
-            background-color: @table-data;
-            color: @main-text !important;
+            background-color: @theme-grey-2;
+            color: @theme-text;
         }
-    }
-    
+
     a:hover {
-        background-color: lighten(@table-data, 20%);
-        color: lighten(@main-text, 20%) !important;
+        background-color: @theme-gray-2-lighter;
+        color: @button-text;
     }
 }
 
@@ -78,10 +64,26 @@ table.alternating-rows tr:nth-child(even) {
 // =========================
 .status-active {
     background-color: @green-lighter-bg;
-    color: @main-text;
+    color: @theme-text;
 }
 
 .status-inactive {
     background-color: @red-bg;
-    color: @main-text;
+    color: @theme-text;
+}
+
+// ================================
+//      Table attribute values
+// ================================
+// Example: {{Eq infotable}} {{InfoHeader}}
+.attribute-value {
+    .table-header;
+}
+
+.attribute-total {
+    td,
+    th,
+    .attribute-value {
+        .table-header;
+    }
 }

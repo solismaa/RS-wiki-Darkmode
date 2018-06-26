@@ -1,26 +1,23 @@
 // ===================
 //      Main page
 // ===================
-.mp-color-common() {
-    background-color: @table-data;
-    color: @main-text;
-}
-
 .mp-color {
-    .mp-color-common;
-    
+    background-color: @homepage-module-bg;
+    color: @theme-text;
+
     // buttons
-    .mp-endrow .mp-endbox { 
-        background-color: @table-header;
+    .mp-endrow .mp-endbox {
+        background-color: darken(@homepage-module-bg, 4%);
     }
 }
 
 .mp-color2 {
-    .mp-color-common;
-    
+    background-color: @homepage-module-bg;
+    color: @theme-text;
+
     // buttons
-    .mp-endrow .mp-endbox2 { 
-        background-color: @table-header;
+    .mp-endrow .mp-endbox2 {
+        background-color: darken(@homepage-module-bg, 4%);
     }
 }
 
@@ -32,32 +29,30 @@
 // Pol show results table header
 #mp-poll-prev-results {
     th {
-        background-color: @table-header;
+        background-color: darken(@homepage-module-bg, 4%);
     }
-    
+
     .hover {
-        border-color: @table-border !important;
-        
+        border-color: @theme-borders;
+
         > div {
-            background-color: @table-border !important;
+            background-color: @theme-borders;
         }
     }
 }
 
 #mp-recent a {
-    color: @links;
+    color: @theme-links;
 }
 
 // Twitter feed
 .timeline-Viewport {
     // Scrollbar
     .scroll-bar-styling;
-    
+
     // links
-    .customisable, 
-    .customisable:link, 
-    .customisable:visited {
-        color: @links;
+    .customisable {
+        color: @theme-links;
     }
 }
 
@@ -69,44 +64,42 @@
 }
 
 #UserProfileMasthead {
-    a {
-        color: @links;
-    }
-    
     .masthead-info {
-        background-color: @table-data;
-        
+        background-color: lighten(@main-page-bg, 7%);
+
+        // username
         hgroup {
             background-color: @theme-blue;
-            color: @main-text;
+            color: @theme-text;
             background-image: linear-gradient( 0deg, @theme-blue, lighten(@theme-blue, 5%) );
         }
 
+        // usertags
         .tag {
             background: lighten(@theme-blue, 20%);
         }
     }
-    
+
     .masthead-info-lower:before {
-        border-color: @table-data @table-data transparent transparent;
+        border-color: lighten(@main-page-bg, 7%) lighten(@main-page-bg, 7%) transparent transparent;
     }
-    
+
     .contributions-details a {
-        color: @main-text;
+        color: @theme-text;
     }
-    
+
     .masthead-avatar .avatar {
-        border-color: @table-border;
+        border-color: @theme-borders;
     }
 }
 
 .tabs {
-    border-bottom: solid 1px @table-border;
-    
+    border-bottom: solid 1px @theme-borders;
+
     .selected a {
         background: @main-page-bg;
-        color: @main-text;
-        border: solid 1px @table-border;
+        color: @theme-text;
+        border: solid 1px @theme-borders;
         border-bottom: solid 1px transparent;
     }
 }
@@ -115,85 +108,68 @@
 //      [[RuneScape:Active discussions]]
 //      [[Forum:Yew Grove]]
 // ==========================================
-.discussiontable,
-.discussiontable.noresults {
-    color: @main-text;
-
-    .topic,
-    .edited,
-    .edited-by,
-    .yg-archive {
-        &:extend(.forumcolumnheader);
-    }
-
-}
-
-.forumcolumnheader {
+.forumcolumnheader,
+.discussiontable tr:nth-child(2) th {
     background-color: darken(@main-page-bg, 4%);
-    color: @main-text;
+    color: @theme-text;
 }
 
-.discussiontable th,
-.forumactiveheader, 
-.forumarchiveheader, 
+.discussiontable tr:nth-child(1) th,
+.forumactiveheader,
+.forumarchiveheader,
 .forumoldarchives {
-    color: lighten(@main-text, 10%);
+    color: lighten(@theme-text, 10%);
     background-color: @theme-blue;
-    
+
     a {
-        color: lighten(@main-text, 10%);
+        color: lighten(@theme-text, 10%);
     }
 }
 
-.discussiontable.noresults th {
-    color: @main-text;
+.discussiontable.noresults tr:nth-child(1) th {
+    color: @theme-text;
     background-color: darken(@main-page-bg, 8%);
 
     a {
-        color: lighten(@main-text, 0%);
+        color: @theme-text;
     }
 }
 
 .forumsearchbox {
-    background-color: @table-data !important;
-    border: solid 1px @table-border;
+    .table-infobox;
 }
 
 // Overwrite {{Archive list}} styling
 .forumlist.archive {
-    background-color: transparent !important;
-    border: none !important;
+    background-color: transparent;
+    border: none;
 }
-
 
 // ============================
 //      [[Special:Search]]
 // ============================
 .Search .result-count {
-    color: @main-text;
+    color: @theme-text;
 }
 
 // Advanced search
 .Search .SearchInput {
-    background-color: @table-data;
-    border-color: @table-data;
-    
+    // background-color: lighten(@main-page-bg, 2%);
+    background-color: @theme-grey-darker;
+    border-color: @theme-borders;
+
     // Search button image
     .sprite {
-        filter: brightness(85%); 
+        filter: brightness(85%);
     }
 }
 
-// Namespace selection
-.Search .WikiaSearch .search-tabs {
+// Articles/files/users/everything selection
+.search-tabs {
     .selected {
         background-color: lighten(@main-page-bg, 5%);
-        
-        a {
-            color: @links;
-        }
     }
-    
+
     li a:hover {
         background-color: lighten(@main-page-bg, 8%);
     }
@@ -208,25 +184,25 @@
 }
 
 .mw-plusminus-neg {
-    color: @coins-negative;
+    color: @negative-change;
 }
 
 // makes (abusefilter) tags stand out more
 .mw-tag-markers,
 .mw-tag-markers a {
-    color: red !important;
+    color: red;
 }
 
 // remove certain styles from tags
 .mw-tag-marker-visualeditor a,
 .mw-tag-marker-visualeditor-needcheck a {
-    color: #e49f10 !important;
+    color: #e49f10;
 }
 
 .recentchangestext {
     .speedy-delete,
     .speedy-move {
-        color: #cb1c00 !important;
+        color: #cb1c00;
     }
 }
 
@@ -235,55 +211,49 @@
 // ==============================
 // Start here
 .community-page-card-module {
-    background: @table-data;
-    
+    background: lighten(@main-page-bg, 6%);
+
     .community-page-card-module-header {
         background-color: @theme-blue-lighter;
-        color: @main-text;
+        color: @theme-text;
     }
-    
+
     .community-page-card-module-header-icon {
         fill: @theme-blue-lighter;
     }
-    
-    .community-page-card-module-full-list-link {
-        color: @links;
-    }
-}
 
-// From the community
-.community-page-todo-list-module-content .portal-link a {
-    background: @table-data;
-    color: @main-text !important;
-    
-    &:hover {
-        color: white !important;
+    .community-page-card-module-full-list-link {
+        color: @theme-links;
     }
 }
 
 // Side rail
 .community-page-rail {
-    background: @table-data;
-    
+    background: lighten(@main-page-bg, 6%);
+
     .community-page-module-box {
-        background-color: @table-header;
+        background-color: lighten(@main-page-bg, 3%);
     }
-    
+
     .community-page-module-section-title {
-        color: @main-text;
+        color: @theme-text;
     }
 }
 
 // ============================
 //      [[Special:Images]]
 // ============================
-.WikiaPage .page-header__counter {
-    color: @main-text;
+.page-header__counter {
+    color: @theme-text;
 }
 
 // Add photo popup
 .UploadPhotos .options {
-    background-color: lighten(@main-page-bg, 3%);
+    background-color: @popup-bg;
+}
+
+.wikia-gallery-item {
+    border-bottom-color: @theme-borders;
 }
 
 // ===============================================
@@ -293,13 +263,18 @@
 .userhelpinfo,
 .introheader,
 .admininfo {
-    color: @main-text !important;
-    background-color: @messasgeboxes !important;
+    color: @theme-text;
+    background-color: @messageboxes;
 }
 
 // ============================
 //      [[Special:Browse]]
 // ============================
+// searchbox outline
+.browse-input-resp .mw-ui-input:focus {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
 table.smwb-factbox,
 table.smwb-ifactbox {
     border-collapse: collapse;
@@ -324,48 +299,28 @@ table.smwb-ifactbox {
     }
 }
 
-// info popup
-.qtip-bootstrap {
-    background-color: @table-data;
-    color: @main-text;
-    border: 1px solid @table-border;
-
-    a {
-        color: @links;
-    }
-
-    .qtip-titlebar {
-        background-color: @table-header;
-        border-bottom-color: @table-border;
-    }
-
-    .qtip .qtip-tip canvas {
-        background-color: @table-border;
-    }
-}
-
 // =========================
 //      [[Special:Ask]]
 // =========================
-.autocomplete-suggestions {
-    .text-input-styling();
-}
+// .autocomplete-suggestions {
+//     .text-input-styling();
+// }
 
 #other_options tr:nth-child(even) {
-    background: lighten(@table-data, 2.5%) !important;
+    background: lighten(@fieldset-tag-bg, 5%);
 }
 
 #other_options tr:nth-child(odd) {
-    background: darken(@table-data, 2.5%) !important;
+    background: lighten(@fieldset-tag-bg, 10%);
 }
 
-.smw-ask-actions .smw-ask-action-btn-lblue, a.smw-ask-action-btn-lblue:visited {
+.smw-ask-action-btn-lblue {
     .button-styling();
 }
 
 // If formatted as category
 .smw-column-header {
-    color: @main-text;
+    color: @theme-text;
 }
 
 // ====================================
@@ -375,19 +330,19 @@ table.smwb-ifactbox {
 //      Header
 // ----------------
 .AdminDashboardHeader {
-    background: @table-header;
-    border-color: @table-border;
-    box-shadow: inset 0 -4px 2px 0 lighten(@table-header, 5%);
+    background: lighten(@main-page-bg, 5%);
+    border-color: @theme-borders;
+    box-shadow: inset 0 -4px 2px 0 lighten(@main-page-bg, 10%);
 
     h1 a {
-        color: @links;
+        color: @theme-links;
     }
 }
 
 .AdminDashboardTabs .tab {
-    color: @main-text;
-    background: @table-header;
-    border: solid 1px @table-border;
+    color: @theme-text;
+    background: lighten(@main-page-bg, 5%);
+    border: solid 1px @theme-borders;
     border-bottom: 0;
 
     &.active {
@@ -398,15 +353,15 @@ table.smwb-ifactbox {
 // -------------------------
 //      General content
 // -------------------------
-.AdminDashboard .admin-dashboard-content .control-section {
+.AdminDashboard .control-section {
     header {
         background-color: lighten(@main-page-bg, 5%);
         background-image: linear-gradient( 0deg, lighten(@main-page-bg, 5%), lighten(@main-page-bg, 10%) );
-        color: @main-text;
-        border-color: @table-border;
+        color: @theme-text;
+        border-color: @theme-borders;
 
         h1 {
-            color: @main-text;
+            color: @theme-text;
         }
     }
 
@@ -415,21 +370,16 @@ table.smwb-ifactbox {
 
         .control .representation {
             background-image: none;
-            background-color: @theme-blue-lighter;
-            border-color: @theme-blue-lighter;
+            background-color: @button-accept-bg;
+            border-color: @button-accept-bg;
         }
 
         .control:hover .representation {
             background-image: none;
-            background-color: lighten(@theme-blue-lighter, 10%);
-            border-color: lighten(@theme-blue-lighter, 10%);
+            background-color: lighten(@button-accept-bg, 10%);
+            border-color: lighten(@button-accept-bg, 10%);
         }
     }
-}
-
-.WikiaArticle {
-    box-shadow: none;
-    border: none;
 }
 
 // --------------------------
@@ -438,8 +388,8 @@ table.smwb-ifactbox {
 .AdminDashboardGeneralHeader {
     background-color: lighten(@main-page-bg, 5%);
     background-image: linear-gradient( 0deg, lighten(@main-page-bg, 5%), lighten(@main-page-bg, 10%) );
-    color: @main-text;
-    border-color: @table-border;
+    color: @theme-text;
+    border-color: @theme-borders;
     box-shadow: 0 2px 2px 0 darken(@main-page-bg, 5%);
 }
 
@@ -451,100 +401,102 @@ table.smwb-ifactbox {
 //      Siderail
 // ------------------
 .AdminDashboardRail h1 {
-    color: @main-text;
+    color: @theme-text;
 }
 
 // Progress widget
 #FounderProgressWidget .preview {
-    background: @table-header;
-    border-color: @table-border;
+    background: @rail-module-bg;
+    border-color: @theme-borders;
 
     .founder-progress-bar {
         filter: invert(0.8);
     }
 
     header {
-        background: darken(@table-header, 5%);
+        background: darken(@rail-module-bg, 5%);
 
         h1 {
-            color: @main-text;
+            color: @theme-text;
         }
 
         &:after {
-            border-right-color: darken(@table-header, 5%);
+            border-right-color: darken(@rail-module-bg, 5%);
         }
-        
+
     }
 
     .activities .activity,
     .activities .activity.active {
-        border-color: @table-border;
+        border-color: @theme-borders;
 
         .label {
-            background-color: lighten(@main-page-bg, 5%);
-            background-image: linear-gradient( 0deg, lighten(@main-page-bg, 5%), lighten(@main-page-bg, 10%) );
-            color: @main-text;
-            border-color: @table-border;
+            background-color: lighten(@rail-module-bg, 3%);
+            background-image: linear-gradient( 0deg, lighten(@rail-module-bg, 3%), lighten(@rail-module-bg, 6%) );
+            color: @theme-text;
+            border-color: @theme-borders;
         }
 
         .description {
-            background: darken(@table-header, 2%);
-    
+            background: darken(@rail-module-bg, 2%);
+
             &:before {
-                border-top-color: lighten(@table-header, 5%);
+                border-top-color: lighten(@rail-module-bg, 3%);
             }
         }
     }
 
     .activities .activity .label .chevron {
-        border-top-color: @main-text;
+        border-top-color: @theme-text;
+        border-bottom-color: transparent;
     }
 
     .activities .activity.active .label .chevron {
-        border-bottom-color: @main-text;
+        border-top-color: transparent;
+        border-bottom-color: @theme-text;
     }
 }
 
 // Quick stats
 .QuickStatsWidget .WikiaDataTable {
-    background: @table-header;
-    border-color: @table-border;
+    background: lighten(@rail-module-bg, 3%);
+    border-color: @theme-borders;
 
     tbody tr,
     tbody tr td {
-        border-color: @table-border;
+        border-color: @theme-borders;
     }
 
-    th:first-child, 
-    td:first-child {
-        color: @main-text;
+    th,
+    td {
+        color: @theme-text;
     }
 
     td:nth-child(2),
     .highlight-top,
     .totals td:nth-child(2) {
-        background-color: darken(@table-header, 5%);
-        background-image: linear-gradient( 90deg, darken(@table-header, 3%), darken(@table-header, 5%) );
-        color: darken(@main-text, 5%);
+        background-color: darken(@rail-module-bg, 5%);
+        background-image: linear-gradient( 90deg, darken(@rail-module-bg, 3%), darken(@rail-module-bg, 5%) );
+        color: darken(@theme-text, 5%);
     }
 
     .totals td {
-        background: lighten(@table-header, 3%);
-        color: @main-text;
-        border-top: solid 1px @table-border;
-        border-bottom: solid 1px @table-border;
+        background: lighten(@rail-module-bg, 3%);
+        color: @theme-text;
+        border-top: solid 1px @theme-borders;
+        border-bottom: solid 1px @theme-borders;
     }
 
     .totals td:first-child .pointer {
-        background: lighten(@table-header, 12%);
-        color: lighten(@main-text, 5%);
+        background: lighten(@rail-module-bg, 12%);
+        color: lighten(@theme-text, 5%);
 
         &:before {
-            border-left-color: lighten(@table-header, 12%);;
+            border-left-color: lighten(@rail-module-bg, 12%);;
         }
     }
 
     .highlight-bottom {
-        background-image: linear-gradient( 0deg, lighten(@table-header, 3%), darken(@table-header, 5%) 25%, transparent );
+        background-image: linear-gradient( 0deg, lighten(@rail-module-bg, 3%), darken(@rail-module-bg, 5%) 25%, transparent );
     }
 }

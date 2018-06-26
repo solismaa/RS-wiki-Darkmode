@@ -2,55 +2,62 @@
 //      Filters
 // =================
 //Search filter options
-div.mw-warning-with-logexcerpt, 
-.WikiaArticle .noarticletext, 
-#sp-contributions-footer {
-    background-color: @table-data;
-    border-color: @table-data;
-}
+// div.mw-warning-with-logexcerpt,
+// .WikiaArticle .noarticletext,
+// #sp-contributions-footer {
+//     background-color: @table-data;
+//     border-color: @table-data;
+// }
 
-.WikiaArticle #pagehistory li.selected {
-    background-color: @table-data;
+#pagehistory .selected {
+    background-color: lighten(@main-page-bg, 5%);
 }
 
 // ===============
 //      Diffs
 // ===============
-table.diff, 
-td.diff-otitle, 
+table.diff,
+td.diff-otitle,
 td.diff-ntitle,
-td.diff-deletedline, 
+td.diff-deletedline,
 td.diff-addedline,
 .EditPageEditor #diff {
     background-color: lighten(@main-page-bg, 3%);
-    color: @main-text;
+    color: @theme-text;
 }
 
-td.diff-context, 
-.ArticlePreview.modalContent td.diff-context {
-    background: @table-data;
-    border-color: @table-data;
-    color: @main-text;
+td.diff-context {
+    background: lighten(@main-page-bg, 7%);
+    border-color: lighten(@main-page-bg, 7%);
+    color: @theme-text;
 }
 
 // When undoing something
 .EditPageEditor #diff {
-    border-color: @table-border;
+    border-color: @theme-borders;
 }
 
 // ==========================================
 //      Viewing old/new revision warning
 // ==========================================
-div#viewingold-warning, 
-div#viewingnew-warning {
+#viewingold-warning,
+#viewingnew-warning {
     .table-infobox;
 }
 
 // =============================
 //      Revision navigation
 // =============================
-#mw-revision-info, 
-#mw-revision-info-current, 
+#mw-revision-info,
+#mw-revision-info-current,
 #mw-revision-nav {
-    color: @main-text;
+    color: @theme-text;
+}
+
+// =========================
+//      Create new page
+// =========================
+.noarticletext {
+    background-color: @messageboxes;
+    border-color: @theme-borders;
 }

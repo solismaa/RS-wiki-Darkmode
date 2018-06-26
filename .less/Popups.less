@@ -5,45 +5,47 @@
 //      References
 // --------------------
 .rsw-tooltip {
-    background: @table-data;
-    
+    background: @tooltip-bg ;
+
     a {
-        color: @links;
+        color: @theme-links;
     }
 }
 
-// Referances settings popup
+//----- References settings popup -----//
 #rsw-config {
     border-color: @theme-blue-lighter;
+    box-shadow: 0 10px 60px 0px darken(@popup-bg, 20%);
 
     #rsw-config-header {
-        background-color: @table-header;
-        color: @main-text;
-        border-bottom-color: @table-border;
+        background-color: @popup-header-bg;
+        color: @theme-text;
+        border-bottom-color: @theme-borders;
     }
-    
+
     #rsw-config-footer {
-        background-color: @table-header;
-        color: @main-text;
-        border-top-color: @table-border;
+        background-color: @popup-header-bg;
+        color: @theme-text;
+        border-top-color: @theme-borders;
     }
-    
+
     #rsw-config-body {
-        background-color: @main-page-bg;
-        color: @main-text;
-        
+        background-color: @popup-bg;
+        color: @theme-text;
+
         #rsw-config-delay input {
             .text-input-styling;
         }
-        
+
         #rsw-config-note {
-            border-bottom-color: @table-border;
+            border-bottom-color: @theme-borders;
         }
     }
 }
 
+// popup blackout
 #rsw-config-background {
-    background-color: @main-page-bg;
+    background-color: @popup-bg;
 }
 
 // ---------------------------
@@ -53,71 +55,92 @@
 .js-tooltip-wrapper {
     &,
     .js-tooltip-text {
-        background-color: lighten(@main-page-bg, 3%);
+        background-color: @tooltip-bg;
     }
-    
+
     a {
-        color: @links;
+        color: @theme-links;
     }
 }
 
 // =====================================
 //      Wikia-Tooltips and popovers
 // =====================================
-// popover example: edit page preview buttons hover-over tooltip
+// popover example: source editor page -> hover over preview buttons
 .popover {
     &.top,
     &.wikiaBar,
     &.wikiaBarMessage {
         .arrow {
-            border-top-color: @table-header;
+            border-top-color: @tooltip-bg;
         }
     }
-    
+
     &.right .arrow {
-        border-right-color: @table-header;
+        border-right-color: @tooltip-bg;
     }
-    
+
     &.bottom .arrow{
-        border-bottom-color: @table-header;
+        border-bottom-color: @tooltip-bg;
     }
-    
+
     &.left .arrow {
-        border-left-color: @table-header;
+        border-left-color: @tooltip-bg;
     }
-    
+
     .popover-inner {
-        border-color: @table-border;
-        background-color: @table-header;
-        
+        border-color: @theme-borders;
+        background-color: @tooltip-bg;
+        box-shadow: 0 0 15px 0 #000;
+
         .popover-content {
-            background-color: @table-header;
-            color: @main-text;
+            background-color: @tooltip-bg;
+            color: @theme-text;
         }
     }
 }
 
-// tooltip example: edit page preview device select tooltip
+// tooltip example: source editor page -> preview -> hover over ? next to device select
 .tooltip {
     &.top .tooltip-arrow {
-        border-top-color: @table-header;
+        border-top-color: @tooltip-bg;
     }
-    
+
     &.right .tooltip-arrow {
-        border-right-color: @table-header;
+        border-right-color: @tooltip-bg;
     }
-    
+
     &.bottom .tooltip-arrow {
-        border-bottom-color: @table-header;
+        border-bottom-color: @tooltip-bg;
     }
-    
+
     &.left .tooltip-arrow {
-        border-left-color: @table-header;
+        border-left-color: @tooltip-bg;
     }
-    
+
     .tooltip-inner {
-        border-color: @table-border;
-        background-color: @table-header;
+        border-color: @theme-borders;
+        background-color: @tooltip-bg;
+        box-shadow: 0 0 15px 0 #000;
+    }
+}
+
+// ======================
+//      smw tooltips
+// ======================
+// example [[RuneScape:Semantic_MediaWiki_cheatsheet/examples]]
+.qtip-bootstrap {
+    background-color: @tooltip-bg;
+    color: @theme-text;
+    border: 1px solid @theme-borders;
+
+    .qtip-titlebar {
+        background-color: darken(@tooltip-bg, 3%);
+        border-bottom-color: @theme-borders;
+    }
+
+    .qtip .qtip-tip canvas {
+        background-color: @theme-borders;
     }
 }
 
@@ -129,9 +152,9 @@
     background-color: @main-page-bg;
 }
 
-// File namespace -> appears on these pages -> next page
+// File namespace -> appears on these pages -> next page (appears only during loading of next items)
 .wikiaThrobber {
-    background-color: @table-data;
+    background-color: lighten(@main-page-bg, 3%);
 }
 
 // Edit exchange data blackout
@@ -143,177 +166,171 @@
 // =======================
 //      Image gallery
 // =======================
-.modalWrapper {
-    background-color: @main-page-bg;
-    color: @main-text;
-    
-    a {
-        color: @links;
-    }
-    
-    h1 {
-        color: @links;
-    }
-    
-    .WikiaPhotoGalleryPreviewItemMenu {
-        &,
-        a {
-            .button-styling("no-hover");
-        }
-    }
-    
-    .accent {
-        border-color: @theme-blue-lighter;
+//----- View image popup -----//
+// Header and footer
+.LightboxHeader,
+.LightboxCarousel {
+    background-color: @popup-header-bg;
+    box-shadow: none;
+}
+
+// Header
+.LightboxHeader  {
+    border-bottom-color: @theme-borders;
+
+    .wikia-button::before {
+        filter: invert(85%);
     }
 }
 
-.LightboxModal {
-    .WikiaLightbox {
-        .LightboxHeader,
-        .LightboxCarousel {
-            background-color: @table-data;
-        }   
-    }
-    
-    .LightboxHeader  {
-        border-bottom-color: @table-border !important;
-    
-        .more-info-button,
-        .share-button,
-        .close {
-            .button-styling;
-            
-            &::before {
-                filter: invert(85%);
-            }
-        }
-    }
-    
-    .LightboxCarousel {
-        border-top-color: @table-border !important;
-    
-        .carousel-arrow {
-            &.next::after {
-                border-left-color: @main-text !important;
-            }
-            
-            &.previous::after {
-                border-right-color: @main-text !important;
-            }
-        }
-    }
-}
+// Footer
+.LightboxCarousel {
+    border-top-color: @theme-borders;
 
-.WikiaLightbox a {
-    color: @links;
+    .carousel-arrow {
+        &.next::after {
+            border-left-color: @theme-text;
+        }
+
+        &.previous::after {
+            border-right-color: @theme-text;
+        }
+    }
 }
 
 // ------------------------
 //      Gallery editor
 // ------------------------
-#WikiaPhotoGalleryEditor .preview,
+#WikiaPhotoGalleryEditorPreview {
+    .scroll-bar-styling;
+
+    // border when hovering over an image
+    .accent {
+        border-color: @button-accept-bg;
+    }
+
+    // Modify/delete buttons
+    .color1 {
+        background-color: @button-accept-bg;
+
+        a {
+            color: @button-text;
+        }
+    }
+
+    // Background when dragging an image around
+    .WikiaPhotoGalleryPreviewDDPlaceholder {
+        background-color: lighten(@popup-bg, 5%);
+    }
+}
+
 #WikiaPhotoGallerySearchResults {
     .scroll-bar-styling;
+    border-color: @theme-borders;
+
+    .accent {
+        border-color: @button-accept-bg;
+    }
 }
 
 // =====================
 //      Modal popup
 // =====================
-// Example large: Show diffs pop up
+// Example: galery popup
+.modalWrapper {
+    background-color: @popup-bg;
+    color: @theme-text;
+    box-shadow: 0 0 15px 0 #000;
+    border-color: @theme-blue-lighter;
+
+    & > h1 {
+        color: @theme-links;
+    }
+
+    h1 {
+        border-color: @theme-borders;
+    }
+}
+
+// Example large: Show diffs pop up [https://dev.wikia.com/wiki/LastEdited]
 // Example small: Page footer "Customize" button popup
 .modal.large,
 .modal.medium,
 .modal.small {
     > header,
     > footer {
-        background-color: @table-header;
-        
+        background-color: @popup-header-bg;
+
         &,
         h3 {
-            color: @main-text;
+            color: @theme-text;
         }
-        
+
         .close {
             filter: invert(85%);
         }
     }
 
     section {
-        background-color: @main-page-bg;
-        color: @main-text;
-    }
-    
-    .button.primary,
-    .button.normal.primary {
-        .button-styling;
-    }
-    
-    .button.secondary,
-    .button.normal.secondary {
-        .button-styling("cancel");
+        background-color: @popup-bg;
+        color: @theme-text;
     }
 }
 
-// ----------------------------------------------
-//      Page footer "Customize" button popup
-// ----------------------------------------------
+// ------------------------------------------------------
+//      Page footer toolbar "Customize" button popup
+// ------------------------------------------------------
 #MyToolsConfigurationWrapper {
-    section {
-        a {
-            color: @links;
+    .search-box {
+        border-color: @theme-borders;
+
+        input.search {
+            .text-input-styling;
+            box-shadow: none;
         }
-        
-        .search-box {
-            border-color: @table-border;
-            
-            input.search {
-                .text-input-styling;
-                box-shadow: none;
+    }
+
+    .popular-tools-group {
+        background-image: linear-gradient( 0deg, lighten(@popup-bg, 2%), lighten(@popup-bg, 6%) 98%, @popup-bg);
+        color: @theme-text;
+        border-color: @theme-borders;
+
+        .popular-toggle {
+            color: @theme-text;
+
+            .icon-hide {
+                border-bottom-color: @theme-text;
+            }
+
+            .icon-show {
+                border-top-color: @theme-text;
             }
         }
-        
-        .popular-tools-group {
-            background-image: linear-gradient( 0deg, lighten(@main-page-bg, 5%), lighten(@main-page-bg, 10%) );
-            color: @main-text;
-            border-color: @table-border;
-            
-            .popular-toggle {
-                color: @main-text;
-                
-                .icon-hide {
-                    border-bottom-color: @main-text;
-                }
-                
-                .icon-show {
-                    border-top-color: @main-text;
-                }
-            }
+    }
+
+    .autocomplete {
+        .dropdown-styling;
+        box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
+
+        .selected {
+            color: @theme-links;
+            background-color: @dropdown-hover-item;
         }
-        
-        .autocomplete {
-            .dropdown-styling;
-            box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
-            
-            .selected {
-                color: @links;
-                background-color: lighten(@table-header, 5%);
+    }
+
+    .options-list {
+        border-color: @theme-borders;
+
+        li {
+            border-bottom-color: @theme-borders;
+
+            .tree-visual {
+                background-color: darken(@theme-borders, 5%);
             }
-        }
-        
-        .options-list {
-            border-color: @table-border;
-            
-            li {
-                border-bottom-color: @table-border;
-                
-                .tree-visual {
-                    background-color: darken(@table-border, 5%);
-                }
-                
-                &:hover {
-                    color: @main-text;
-                    background-color: lighten(@table-header, 5%);
-                }
+
+            &:hover {
+                color: @theme-text;
+                background-color: lighten(@popup-bg, 5%);
             }
         }
     }
@@ -327,8 +344,8 @@
 // ----------------------------
 //      Add new page popup
 // ----------------------------
-.accent {
-    color: @main-text;
+#CreatePageModalDialog .accent {
+    color: @theme-text;
 }
 
 #CreatePageDialog input {
@@ -342,105 +359,70 @@
 // ==================================
 //      Choose Template type box
 // ==================================
-#TemplateClassificationEditModal {
-    header,
-    footer {
-        background-color: @table-header;
-        
-        &,
-        h3 {
-            color: @main-text;
-        }
-        
-        .close {
-            filter: invert(85%);
-        }
-    }
-    
-    section {
-        background-color: @main-page-bg;
-        color: darken(@main-text, 10%);
-        
-        a {
-            color: @links;
-        }
-        
-        .tc-type-name {
-            color: @main-text;
-        }
-    }
-    
-    .button.normal.primary {
-        .button-styling;
-    }
-    
-    .button.normal.secondary {
-        .button-styling("cancel");
-    }
+//Example: create new template page
+#TemplateClassificationEditModal .tc-type-name {
+    color: @theme-text;
 }
 
 // ==================================
 //      Keyboard shortcuts popup
 // ==================================
 // Found under the dropdown next to the total page count in the page header
-#blackout_GlobalShortcutsSearch #GlobalShortcutsSearch {
+#GlobalShortcutsSearch {
     // Search input
     #global_shortcuts_search_field {
-        .text-input-styling();
-        &::placeholder {
-            color: darken(@main-text, 15%)
-        };
+        // Inverted to get the background image to show properly
+        background-color: 255 - @input-fields;
+        color: 255 - @theme-text;
+        border: solid 1px (255 - @theme-borders);
+        filter:invert(100);
 
-        background-blend-mode: exclusion;
+        &::placeholder {
+            color: 255 - @placeholder;
+        }
     }
 
     .global-shortcuts-field-wrapper {
-        border-bottom-color: @table-border;
+        border-bottom-color: @theme-borders;
     }
 
-    // Seatch results
+    // Search results
     .autocomplete-suggestions {
-        background-color: @documentation-bg;
-        border-color: @table-border;
+        background-color: lighten(@popup-bg, 2%);
+        border-color: @theme-borders;
 
         .autocomplete-group strong {
-            border-bottom-color: @table-border;
+            border-bottom-color: @theme-borders;
         }
 
         .autocomplete-selected {
-            background-color: lighten(@documentation-bg, 10%);
+            background-color: lighten(@popup-bg, 7%);
         }
     }
-
-
 }
 
 // ==================================
-//      Edit excahnge data popup
+//      Edit exchange data popup
 // ==================================
 // Found under [[Module:Exchange/<ITEM NAME>]]
 .ui-dialog {
-    box-shadow: 0 10px 60px 0 grey;
+    box-shadow: 0 10px 60px 0 rgb(0, 0, 0);
 }
 
 .ui-widget-content {
-    background: @main-page-bg;
-    color: @main-text;
-    border-color: @table-border;
+    background: @popup-bg;
+    color: @theme-text;
+    border-color: @theme-borders;
 }
 
 .ui-widget-header {
-    color: @main-text;
-    background: @table-header;
+    color: @theme-text;
+    background: @popup-header-bg;
     border: none;
 }
 
 .ui-dialog .ui-dialog-buttonpane {
-    background: @table-header;
-
-    button.ui-button {
-        .button-styling();
-    }
+    background: @popup-header-bg;
 
     button.ui-button:first-of-type {
         .button-styling("cancel");
@@ -458,5 +440,5 @@
 
 .ui-dialog .ui-dialog-titlebar-close.ui-state-hover {
     background: lighten(@main-page-bg, 30%);
-    border-color: @table-border;
+    border-color: @theme-borders;
 }

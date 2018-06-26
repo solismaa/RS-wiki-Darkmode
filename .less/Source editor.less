@@ -1,213 +1,187 @@
-@gradient-light-color: lighten(@main-page-bg, 7%);
-
-#EditPageHeader {
-    background-color: @gradient-light-color;
-    border-color: @table-border;
+.EditPageHeader {
+    background-color: @edit-area-sidebar-bg;
+    border-color: @theme-borders;
     box-shadow: none;
-    
+
     &,
     h2 {
-        color: @main-text;
-    }
-    
-    a,
-    & > h1 > a {
-        color: @links;
+        color: @theme-text;
     }
 }
 
-#EditPage {
-    // ========================================
-    //      Toolbar at the top of the page
-    // ========================================
-    .EditPageToolbar {
-        background-color: @main-page-bg;
-        background-image: linear-gradient( 0deg, @main-page-bg 0%, @gradient-light-color 50% );
-        box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.3);
-        border-color: @table-border;
-        
-        .cke_toolbar_expand a,
-        .diff-link {
-            color: @main-text;
-        }
+#EditPageMain,
+.EditPage {
+    background-color: @edit-area-sidebar-bg;
+}
+
+// =============================================
+//      Toolbar at the top left of the page
+// =============================================
+.EditPageToolbar {
+    background-color: @edit-area-sidebar-bg;
+    background-image: linear-gradient( 0deg, @edit-area-sidebar-shade 0%, @edit-area-sidebar-bg 50% );
+    box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.3);
+    border-color: @theme-borders;
+
+    // "+ more" button
+    .cke_toolbar_expand a {
+        color: @theme-text;
     }
-    
-    .preview_box {
-        border-color: @table-border;
-    
-        h3.preview-header {
-            color: @main-text;
-            background: none;
-        }
-        
-        svg {
-            fill: @main-text;
-        }
-        
-        .preview_icon {
-            border-color: @table-border;
-        }
+}
+
+// ======================================================
+//      Main actions: edit summary, preview and save
+// ======================================================
+.preview_box {
+    border-color: @theme-borders;
+
+    // remove default header styling
+    h3.preview-header {
+        color: @theme-text;
+        background: none;
+    }
+
+    // preview buttons
+    svg {
+        fill: @theme-text;
+    }
+
+    .preview_icon {
+        border-color: @theme-borders;
 
         p {
-            color: darken(@main-text, 10%);
+            color: darken(@theme-text, 10%);
         }
-    }
-    
-    .diff-link {
-        color: @links;
-    }
-    
-    .wpMinoredit,
-    .wpSummaryFields,
-    .scribunto_ignore_errors {
-        color: @main-text;
-    }
-    
-    #wpSummary {
-        .text-input-styling;
-        &::placeholder {color: darken(@main-text, 15%)};
-    }
-    
-    #EditPageEditorWrapper,
-    #EditPageMain {
-        background-color: @gradient-light-color;
-    }
-    
-    // =================
-    //      Sidebar
-    // =================
-    #EditPageRail {
-        background-color: @main-page-bg;
-        box-shadow: ~"-2px 2px 2px @{gradient-light-color}, -1px 0 0 @{gradient-light-color}";
-    }
-    
-    .module_content {
-        background-color: @main-page-bg;
-        background-image: linear-gradient( 0deg, @main-page-bg 0%,  @gradient-light-color 50% );
-    }
-    
-    &.editpage-sourcewidemode-on {
-        .module_content,
-        #EditPageRail {
-            background: none;
-        }
-        
-        .arrow {
-            border-right-color: @main-text;
-        }
-    }
-    
-    .editpage-widemode-trigger {
-        border-left-color: @table-border;
-        
-        .arrow {
-            border-left-color: @main-text;
-        }
-    }
-    
-    // Module titles
-    .module h3 {
-        background-color: @main-page-bg;
-        background-image: linear-gradient( 0deg, @main-page-bg 0%,  @gradient-light-color 100% );
-        color: @main-text;
-        
-        img {
-            filter: invert(85%);
-        }
-    }
-    
-    // "Add features and media" module
-    .cke_button a {
-        .button-styling;
-        
-        &:hover{
-            background-image: none;
-        }
-        
-        span {
-            color: @main-text;
-        }
-    }
-    
-    // "Categories" module
-    .CategorySelect {
-        .input {
-            &::placeholder {color: darken(@main-text, 15%)};
-        }
-        
-        .categories {
-            .text-input-styling;
-            
-            .category {
-                color: @main-text;
-                
-                &:hover {
-                    background-color: darken(#e6e6e6, 50%);
-                }
-            }
-        }
-    }
-
-    // "Templates" module
-    .module_templates {
-        #temp-preload {
-            color: @main-text;
-        }
-        
-        a {
-            color: @links;
-        }
-    }
-
-    // "License" module
-    .module_license p {
-        color: darken(@main-text, 10%);
-
-        a {
-            color: @links;
-        }
-    }
-    
-    // ===================
-    //      Text area
-    // ===================
-    #wpTextbox0 {
-        background-color: @edit-area-bg !important;
-        .scroll-bar-styling("style-2");
-    }
-    
-    #wpTextbox1 {
-        color: black;
-        background-color: @edit-area-bg;
-        .scroll-bar-styling("style-2");
-    }
-    
-    .loading-background,
-    .loading-message,
-    .loading-throbber {
-        background-color: @edit-area-bg;
     }
 }
 
-// ==============================
-//      Wiki whortcuts popup
-// ==============================
-#EditPageEditTools #editpage-specialchars {
-    border-color: @table-border !important;
+// =================
+//      Sidebar
+// =================
+.EditPageRail {
+    background-color: @edit-area-sidebar-bg;
+    box-shadow: ~"-2px 2px 2px @{edit-area-sidebar-shade}, -1px 0 0 @{edit-area-sidebar-shade}";
 }
 
-// =========================
-//      Add photo popup
-// =========================
-.modalContent .ImageUploadRight {
-    background-color: lighten(@main-page-bg, 3%);
-    border-bottom-color: @table-border;
+.editpage-sourcewidemode-on .EditPageRail {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.editpage-sourcewidemode-on .arrow {
+    border-right-color: @theme-text;
+}
+
+.editpage-widemode-trigger {
+    border-left-color: @theme-borders;
+
+    .arrow {
+        border-left-color: @theme-text;
+    }
+}
+
+// Module tiles
+.module_content {
+    background-color: @edit-area-sidebar-bg;
+    background-image: linear-gradient( 0deg, @edit-area-sidebar-shade 0%,  @edit-area-sidebar-bg 50% );
+    color: @theme-text;
+}
+
+.editpage-sourcewidemode-on .module_content {
+    background-color: transparent;
+    background-image: none;
+    color: @theme-text;
+}
+
+.module h3 {
+    background-color: @edit-area-sidebar-shade;
+    background-image: linear-gradient( 0deg, @edit-area-sidebar-shade 0%,  @edit-area-sidebar-bg 100% );
+    color: @theme-text;
+
+    .chevron.collapse {
+        border-bottom-color: @theme-text;
+    }
+
+    .chevron.expand{
+        border-top-color: @theme-text;
+    }
+}
+
+// "Add features and media" module
+.cke_button a {
+    .button-styling;
+
+    .cke_label {
+        color: @theme-text;
+    }
+}
+
+// "Categories" module
+.EditPage .CategorySelect .categories {
+    .text-input-styling;
+
+    .category {
+        color: @theme-text;
+
+        &.ui-sortable-helper,
+        &:hover {
+            background-color: lighten(@input-fields, 10%);
+        }
+    }
+}
+
+// "License" module
+.module_license p {
+    color: darken(@theme-text, 10%);
+}
+
+// ===================
+//      Text area
+// ===================
+// bg layer
+#wpTextbox0 {
+    background-color: @edit-area-bg;
+    .scroll-bar-styling("style-2");
+}
+
+// text-layer
+#wpTextbox1 {
+    color: black;
+    background-color: @edit-area-bg;
+    .scroll-bar-styling("style-2");
+}
+
+.loading-background,
+.loading-message,
+.loading-throbber {
+    background-color: @edit-area-bg;
+}
+
+// ==================================
+//      Wikitext shortcuts popup
+// ==================================
+#editpage-specialchars {
+    border-color: @theme-borders;
 }
 
 // ===============================
-//      Articel preview popup
+//      Article preview popup
 // ===============================
 #EditPageDialog.preview .modalContent .ArticlePreview {
-    border-color: @table-border;
+    border-color: @theme-borders;
     .scroll-bar-styling;
+}
+
+// =============================
+//      Edit category popup
+// =============================
+.WikiaForm .input-group {
+    & [type='text'],
+    & [type='url'],
+    & [type='password'],
+    & [type='email'],
+    & textarea {
+        .text-input-styling;
+        box-shadow: none;
+    }
 }

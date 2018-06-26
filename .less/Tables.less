@@ -12,54 +12,29 @@
 // -----------------------
 //      Default table
 // -----------------------
-table.wikitable {
+table.wikitable,
+table.article-table {
     .table-wikitable;
-    
-    > tr > td, 
-    > * > tr > td {
+
+    td {
         .table-data;
     }
-    
-    > tr > th, 
-    > * > tr > th {
-        .table-header;
-    }
-}
 
-table.article-table  {
-    .table-wikitable;
-    
-    > tr > td, 
-    > * > tr > td {
-        border-bottom: solid 1px @table-border;
-    }
-    
-    > tr > th, 
-    > * > tr > th {
-        background-color: @table-header;
-        border-bottom: solid 1px @table-border;
+    th {
+        .table-header;
     }
 }
 
 // --------------------
 //      Lighttable
 // --------------------
-.lighttable,
-#pengLocations {    
+.lighttable {
     .highlight-over {
-        background-color: @highlight-table-hover; 
-        
-        a {
-            color: @links;
-        }
+        background-color: @highlight-table-hover;
     }
-    
+
     .highlight-on {
         background-color: @highlight-table-on;
-
-        a {
-            color: @links;
-        }
     }
 }
 
@@ -69,11 +44,11 @@ table.article-table  {
 table.jquery-tablesorter.sortable th.headerSort .chevron,
 table.jquery-tablesorter2 th.headerSort .chevron {
     & {
-        border-color: @main-text transparent transparent;
+        border-color: @theme-text transparent transparent;
     }
-    
+
     &:first-child {
-        border-color: transparent transparent @main-text;
+        border-color: transparent transparent @theme-text;
     }
 }
 
@@ -82,7 +57,7 @@ table.jquery-tablesorter2 th.headerSort .chevron {
 // -------------------
 .table-na {
     background: darken(@table-data, 3%);
-} 
+}
 
 // ============================================
 //      Darken text on colored table cells
@@ -94,9 +69,9 @@ table.wikitable {
     td[bgcolor],
     th[style*="background"] {
         color: #3a3a3a;
-    
+
         a {
-            color: darken(@links, 20%);
+            color: #438ab5;
         }
     }
 }
@@ -106,21 +81,26 @@ table.wikitable {
 // ==========================
 table.TablePager {
     .table-wikitable;
-    
-    > tr > td, 
-    > * > tr > td {
+
+    td {
         .table-data;
-        color: @main-text;
+        color: @theme-text;
         background-color: @table-data;
     }
 
     tr:hover td {
         background-color: lighten(@table-data, 5%);
     }
-    
-    > tr > th, 
-    > * > tr > th {
+
+    th {
         .table-header;
-        color: @main-text;
+        color: @theme-text;
     }
+}
+
+// ==========================
+//      Undefined tables
+// ==========================
+table {
+    border-color: @theme-borders;
 }
