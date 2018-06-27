@@ -3,7 +3,7 @@
 *     Runescape wiki darkmode
 * =================================
 * Version:      2.0.0
-* Release date: 27-June-2018
+* Release date: 28-June-2018
 * homepageURL:  https://github.com/CephHunter/RS-wiki-DarkMode#readme
 * supportURL:   https://github.com/CephHunter/RS-wiki-DarkMode/issues
 * author:       CephHunter
@@ -14,7 +14,7 @@
 table.TablePager,
 table.article-table,
 table.wikitable {
-  background-color: #3a3a3a!important;
+  background-color: #323232!important;
   color: #c5c5c5!important;
   border: none!important
 }
@@ -82,7 +82,7 @@ table.smwb-ifactbox tr.smwb-ipropvalue th,
 table.smwb-ifactbox tr.smwb-propvalue th,
 table.smwb-ifactbox tr.smwb-title td,
 table.wikitable th {
-  background-color: #333!important;
+  background-color: #2b2b2b!important;
   border-color: #52555a!important
 }
 .lighttable .highlight-over {
@@ -109,7 +109,7 @@ table.jquery-tablesorter2 th.headerSort .chevron:first-child {
 .navbox .navbox-subgroup .navbox-title,
 .table-na,
 .ui-dialog .ui-dialog-buttonpane {
-  background: #333!important
+  background: #2b2b2b!important
 }
 table.wikitable td[bgcolor],
 table.wikitable td[style*=background],
@@ -127,15 +127,15 @@ table.wikitable tr[style*=background] td a {
 }
 table.TablePager td {
   color: #c5c5c5!important;
-  background-color: #3a3a3a!important
+  background-color: #323232!important
 }
 .tabberlive ul.tabbernav li a:hover,
 table.TablePager tr:hover td {
-  background-color: #474747!important
+  background-color: #3f3f3f!important
 }
 .ve-spinner .content,
 table.TablePager th {
-  background-color: #333!important;
+  background-color: #2b2b2b!important;
   color: #c5c5c5!important
 }
 #viewingnew-warning,
@@ -150,7 +150,7 @@ table.TablePager th {
 .questdetails,
 .shortcut,
 td.famtreeleaf {
-  background-color: #3a3a3a!important;
+  background-color: #323232!important;
   color: #c5c5c5!important;
   border: 1px solid #52555a!important
 }
@@ -175,7 +175,7 @@ td.famtreeleaf {
 #FounderProgressWidget .preview .activities .activity .description,
 #FounderProgressWidget .preview .activities .activity.active .description,
 .rsw-tooltip {
-  background: #2e2e2e!important
+  background: #262626!important
 }
 #GEchartpopup a,
 #mp-recent a,
@@ -193,12 +193,12 @@ td.famtreeleaf {
   box-shadow: 0 10px 60px 0 #000!important
 }
 #rsw-config #rsw-config-header {
-  background-color: #333!important;
+  background-color: #2b2b2b!important;
   color: #c5c5c5!important;
   border-bottom-color: #52555a!important
 }
 #rsw-config #rsw-config-footer {
-  background-color: #333!important;
+  background-color: #2b2b2b!important;
   color: #c5c5c5!important;
   border-top-color: #52555a!important
 }
@@ -217,7 +217,7 @@ td.famtreeleaf {
 .wds-global-navigation__start-a-wiki,
 .wds-global-navigation__user-menu,
 .wds-global-navigation__wikis-menu {
-  background-color: #262626!important;
+  background-color: #1e1e1e!important;
   color: #c5c5c5!important
 }
 #CreatePageDialog input,
@@ -243,7 +243,7 @@ td.famtreeleaf {
 .ui-dialog input:not([type=submit]):not([type=button]):not([type=reset]):not([type=checkbox]),
 .ui-dialog select,
 textarea {
-  background-color: #3d3d3d!important;
+  background-color: #353535!important;
   color: #c5c5c5!important;
   border: 1px solid #52555a!important;
   box-shadow: none!important
@@ -283,40 +283,38 @@ textarea {
 .navbox,
 .navbox .navbox-subgroup,
 .wds-global-navigation__search-label {
-  background-color: #262626!important
+  background-color: #1e1e1e!important
 }
 .community-page-rail .community-page-module-box,
 .js-tooltip-wrapper,
 .js-tooltip-wrapper .js-tooltip-text,
-.popover .popover-inner,
-.qtip-bootstrap,
 .tabberlive div.tabbertab,
-.tooltip .tooltip-inner,
 .transcript,
 .wikiaThrobber {
-  background-color: #2e2e2e!important
+  background-color: #262626!important
 }
 .popover.top .arrow,
 .popover.wikiaBar .arrow,
 .popover.wikiaBarMessage .arrow,
 .tooltip.top .tooltip-arrow {
-  border-top-color: #2e2e2e!important
+  border-top-color: #262626!important
 }
 .popover.right .arrow,
 .tooltip.right .tooltip-arrow {
-  border-right-color: #2e2e2e!important
+  border-right-color: #262626!important
 }
 .popover.bottom .arrow,
 .tooltip.bottom .tooltip-arrow {
-  border-bottom-color: #2e2e2e!important
+  border-bottom-color: #262626!important
 }
 .popover.left .arrow,
 .tooltip.left .tooltip-arrow {
-  border-left-color: #2e2e2e!important
+  border-left-color: #262626!important
 }
 .popover .popover-inner,
 .tooltip .tooltip-inner {
   border-color: #52555a!important;
+  background-color: #262626!important;
   box-shadow: 0 0 15px 0 #000!important
 }
 .EditPageEditor #diff,
@@ -328,15 +326,22 @@ td.diff-addedline,
 td.diff-deletedline,
 td.diff-ntitle,
 td.diff-otitle {
-  background-color: #2e2e2e!important;
+  background-color: #262626!important;
   color: #c5c5c5!important
 }
+.Search .SearchInput,
+.mw-warning-with-logexcerpt,
+.noarticletext {
+  background-color: #151515!important;
+  border-color: #52555a!important
+}
 .qtip-bootstrap {
+  background-color: #262626!important;
   color: #c5c5c5!important;
   border: 1px solid #52555a!important
 }
 .qtip-bootstrap .qtip-titlebar {
-  background-color: #262626!important;
+  background-color: #1e1e1e!important;
   border-bottom-color: #52555a!important
 }
 #mp-poll-prev-results .hover>div,
@@ -345,12 +350,12 @@ td.diff-otitle {
   background-color: #52555a!important
 }
 .ui-widget-overlay {
-  background: #262626!important;
+  background: #1e1e1e!important;
   opacity: .65!important
 }
 .LightboxCarousel,
 .LightboxHeader {
-  background-color: #333!important;
+  background-color: #2b2b2b!important;
   box-shadow: none!important
 }
 .LightboxHeader .wikia-button::before,
@@ -451,7 +456,7 @@ td.diff-otitle {
 .ve-spinner .loading,
 table.alternating-rows tr:nth-child(even),
 table.property-page-results .value-row:hover {
-  background-color: #333!important
+  background-color: #2b2b2b!important
 }
 #WikiaPhotoGallerySearchResults::-webkit-scrollbar {
   width: 13px!important
@@ -472,7 +477,7 @@ table.property-page-results .value-row:hover {
   background-color: transparent!important
 }
 .modalWrapper {
-  background-color: #262626!important;
+  background-color: #1e1e1e!important;
   color: #c5c5c5!important;
   box-shadow: 0 0 15px 0 #000!important
 }
@@ -539,7 +544,7 @@ table.property-page-results .value-row:hover {
   color: #9f9f9f!important
 }
 #MyToolsConfigurationWrapper .popular-tools-group {
-  background-image: linear-gradient(0deg,#2b2b2b,#353535 98%,#262626)!important;
+  background-image: linear-gradient(0deg,#232323,#2d2d2d 98%,#1e1e1e)!important;
   color: #c5c5c5!important;
   border-color: #52555a!important
 }
@@ -553,7 +558,7 @@ table.property-page-results .value-row:hover {
   border-top-color: #c5c5c5!important
 }
 #MyToolsConfigurationWrapper .autocomplete {
-  background-color: #333!important;
+  background-color: #2b2b2b!important;
   border-color: #52555a!important;
   box-shadow: 3px 3px 6px 0 rgba(0,0,0,.3)!important
 }
@@ -584,7 +589,7 @@ table.property-page-results .value-row:hover {
 .oo-ui-popupToolGroup .oo-ui-toolGroup-tools li>a:hover,
 .oo-ui-popupToolGroup .oo-ui-toolGroup-tools>span:hover {
   color: #6bbaea!important;
-  background-color: #404040!important
+  background-color: #383838!important
 }
 #MyToolsConfigurationWrapper .autocomplete ul::after,
 #MyToolsConfigurationWrapper .autocomplete ul::before,
@@ -607,7 +612,7 @@ table.property-page-results .value-row:hover {
 }
 #MyToolsConfigurationWrapper .options-list li:hover {
   color: #c5c5c5!important;
-  background-color: #333!important
+  background-color: #2b2b2b!important
 }
 #MyToolsRenameItem .input-box::-webkit-input-placeholder {
   color: #9f9f9f!important
@@ -634,10 +639,10 @@ table.property-page-results .value-row:hover {
   color: #9f9f9f!important
 }
 #CreatePageModalDialog .create-page-dialog__proposals {
-  background: #212121!important
+  background: #191919!important
 }
 #GlobalShortcutsSearch #global_shortcuts_search_field {
-  background-color: #c2c2c2!important;
+  background-color: #cacaca!important;
   color: #3a3a3a!important;
   border: 1px solid #adaaa5!important;
   -webkit-filter: invert(100)!important;
@@ -657,28 +662,26 @@ table.property-page-results .value-row:hover {
 }
 #GlobalShortcutsSearch .autocomplete-suggestions,
 .ve-ui-mwTemplateDialog-filter {
-  background-color: #2b2b2b!important;
+  background-color: #232323!important;
   border-color: #52555a!important
 }
 #EditPageMain,
 #GlobalShortcutsSearch .autocomplete-suggestions .autocomplete-selected,
 #UserProfileMasthead .masthead-info,
-#mw-scribunto-console,
-#mw-scribunto-console .mw-scribunto-console-fieldset,
 .EditPage {
-  background-color: #383838!important
+  background-color: #303030!important
 }
 .ui-dialog {
   box-shadow: 0 10px 60px 0 #000!important
 }
 .ui-widget-content {
-  background: #262626!important;
+  background: #1e1e1e!important;
   color: #c5c5c5!important;
   border-color: #52555a!important
 }
 .ui-widget-header {
   color: #c5c5c5!important;
-  background: #333!important;
+  background: #2b2b2b!important;
   border: none!important
 }
 #CategorySelectAdd,
@@ -696,33 +699,33 @@ input[type=reset].secondary,
 input[type=submit].secondary {
   color: #dfdfdf!important;
   background-image: none!important;
-  border-color: #616161!important;
-  background-color: #616161!important
+  border-color: #595959!important;
+  background-color: #595959!important
 }
 .ui-dialog .ui-dialog-buttonpane button.ui-button:first-of-type.active,
 .ui-dialog .ui-dialog-buttonpane button.ui-button:first-of-type:active,
 .ui-dialog .ui-dialog-buttonpane button.ui-button:first-of-type:hover {
   color: #dfdfdf!important;
   background-image: none!important;
-  border-color: #474747!important;
-  background-color: #474747!important
+  border-color: #3f3f3f!important;
+  background-color: #3f3f3f!important
 }
 .ui-state-hover .ui-icon-closethick {
   -webkit-filter: invert(100%) brightness(130%)!important;
   filter: invert(100%) brightness(130%)!important
 }
 .ui-dialog .ui-dialog-titlebar-close.ui-state-hover {
-  background: #727272!important;
+  background: #6a6a6a!important;
   border-color: #52555a!important
 }
 table.wikipedia {
-  background: #1d1d1d!important;
+  background: #151515!important;
   border: none!important
 }
 .forumheader,
 .messagebox,
 .official {
-  background-color: #1d1d1d!important
+  background-color: #151515!important
 }
 .messagebox {
   border-left-color: #90c2dd!important
@@ -794,16 +797,16 @@ table.wikipedia {
   color: #3a799d!important
 }
 .editpage-intro > .editpage-intro-wrapper > div {
-  background-color: #1d1d1d!important;
+  background-color: #151515!important;
   color: #c5c5c5!important
 }
 .editpage-intro .expand {
-  background-color: #373737!important;
+  background-color: #2f2f2f!important;
   border: 1px solid #52555a!important;
   color: #c5c5c5!important
 }
 table.archive {
-  background-color: #3a3a3a!important;
+  background-color: #323232!important;
   border: 1px solid #52555a!important
 }
 .questreq ul {
@@ -813,25 +816,25 @@ table.archive {
 .mp-color .mp-endrow .mp-endbox,
 .mp-color2 .mp-endrow .mp-endbox2,
 blockquote.block {
-  background-color: #303030!important
+  background-color: #282828!important
 }
 #FounderProgressWidget .preview header,
 #GEchartpopup,
 #GEchartpopup .GEChartBox,
 .AdminDashboardTabs .tab.active,
 .blockquote-mark::before {
-  background: #262626!important
+  background: #1e1e1e!important
 }
 .blockquote-mark::after {
-  color: #303030!important
+  color: #282828!important
 }
 .navbox .navbox-group,
 .navbox .navbox-list {
-  border-color: #262626!important
+  border-color: #1e1e1e!important
 }
 .navbox .navbox-footer,
 .navbox .navbox-title {
-  border-color: #262626!important;
+  border-color: #1e1e1e!important;
   color: #c5c5c5!important;
   background-color: #265588!important
 }
@@ -861,7 +864,7 @@ input[type=submit] {
 }
 #alphabetical-header,
 fieldset {
-  background-color: #1d1d1d!important
+  background-color: #151515!important
 }
 #ca-addsection+div.wds-dropdown .wds-button.active,
 #ca-addsection+div.wds-dropdown .wds-button:active,
@@ -946,7 +949,7 @@ table.smwb-factbox tr.smwb-propvalue td,
 table.smwb-ifactbox tr.smwb-ipropvalue td,
 table.smwb-ifactbox tr.smwb-propvalue td {
   border-color: #52555a!important;
-  background-color: #3a3a3a!important
+  background-color: #323232!important
 }
 #modal #cioItem::-webkit-input-placeholder {
   color: #9f9f9f!important
@@ -1004,15 +1007,15 @@ pre {
 .wds-global-navigation__notifications-menu:hover,
 .wds-global-navigation__user-menu:hover,
 .wds-global-navigation__wikis-menu:hover {
-  background-color: #404040!important
+  background-color: #383838!important
 }
 #alphabetical-header {
-  border-color: #2a2a2a!important
+  border-color: #222!important
 }
 code,
 pre {
-  border: 1px solid #4a4a4a!important;
-  background-color: #3d3d3d!important
+  border: 1px solid #424242!important;
+  background-color: #353535!important
 }
 fieldset {
   border-color: #52555a!important
@@ -1088,17 +1091,17 @@ textarea::-webkit-scrollbar-corner {
   color: #9f9f9f!important
 }
 .WikiaDropdown .selected-items {
-  background-color: #3d3d3d!important;
+  background-color: #353535!important;
   border-color: #52555a!important
 }
 #MathJax_Zoom,
 .WikiaDropdown .dropdown,
 .ui-autocomplete {
-  background-color: #333!important;
+  background-color: #2b2b2b!important;
   border-color: #52555a!important
 }
 .WikiaDropdown .selected-items:hover {
-  background-color: #4a4a4a!important
+  background-color: #424242!important
 }
 .WikiaDropdown .dropdown,
 .ui-autocomplete {
@@ -1123,7 +1126,7 @@ textarea::-webkit-scrollbar-corner {
   background-color: transparent!important
 }
 .WikiaDropdown .dropdown .toolbar {
-  background-color: #2b2b2b!important;
+  background-color: #232323!important;
   border-bottom-color: #52555a!important
 }
 #CategorySelectAdd.active,
@@ -1164,8 +1167,8 @@ input[type=submit].secondary:active,
 input[type=submit].secondary:hover {
   color: #dfdfdf!important;
   background-image: none!important;
-  border-color: #474747!important;
-  background-color: #474747!important
+  border-color: #3f3f3f!important;
+  background-color: #3f3f3f!important
 }
 img.tex {
   -webkit-filter: invert(.85)!important;
@@ -1195,7 +1198,7 @@ img.tex {
 .highcharts-background,
 .highcharts-legend-box,
 .highcharts-plot-background {
-  fill: #333!important
+  fill: #2b2b2b!important
 }
 .highcharts-axis-line,
 .highcharts-grid-line,
@@ -1215,7 +1218,7 @@ img.tex {
 #GEchartpopup .highcharts-background,
 #GEchartpopup .highcharts-legend-box,
 #GEchartpopup .highcharts-plot-background {
-  fill: #262626!important
+  fill: #1e1e1e!important
 }
 #averagepopup::-webkit-input-placeholder,
 #extraItempopup::-webkit-input-placeholder,
@@ -1255,36 +1258,36 @@ img.tex {
   fill: #acacac!important
 }
 .highcharts-scrollbar-track {
-  fill: #4c4c4c!important;
-  stroke: #4c4c4c!important
+  fill: #444!important;
+  stroke: #444!important
 }
 .highcharts-scrollbar-button {
-  fill: #666!important;
-  stroke: #666!important
+  fill: #5e5e5e!important;
+  stroke: #5e5e5e!important
 }
 .highcharts-scrollbar-thumb {
-  fill: #7f7f7f!important;
-  stroke: #7f7f7f!important
+  fill: #777!important;
+  stroke: #777!important
 }
 .highcharts-scrollbar-rifles {
   stroke: #dfdfdf!important;
   stroke-width: 2px!important
 }
 #GEchartpopup .highcharts-scrollbar-track {
-  fill: #404040!important;
-  stroke: #404040!important
+  fill: #383838!important;
+  stroke: #383838!important
 }
 #GEchartpopup .highcharts-scrollbar-button {
-  fill: #595959!important;
-  stroke: #595959!important
+  fill: #515151!important;
+  stroke: #515151!important
 }
 #GEchartpopup .highcharts-scrollbar-thumb {
-  fill: #727272!important;
-  stroke: #727272!important
+  fill: #6a6a6a!important;
+  stroke: #6a6a6a!important
 }
 #gemw_guide {
   border: none!important;
-  background: #1d1d1d!important
+  background: #151515!important
 }
 .nocell,
 .sg-red {
@@ -1305,11 +1308,11 @@ img.tex {
 .mp-color,
 .mp-color2,
 .portal-link a {
-  background-color: #3a3a3a!important;
+  background-color: #323232!important;
   color: #c5c5c5!important
 }
 .portal-link a:hover {
-  background-color: #6d6d6d!important;
+  background-color: #656565!important;
   color: #dfdfdf!important
 }
 .status-active {
@@ -1324,7 +1327,7 @@ img.tex {
 .CategorySelect.articlePage,
 .WikiaArticleInterlang,
 .article-categories {
-  background: #1d1d1d!important
+  background: #151515!important
 }
 .timeline-Viewport::-webkit-scrollbar {
   width: 13px!important
@@ -1347,7 +1350,7 @@ img.tex {
 .AdminDashboard .control-section .controls,
 .WikiaUserPagesHeader,
 .oo-ui-bookletLayout-outlinePanel .oo-ui-outlineControlsWidget {
-  background: #2b2b2b!important
+  background: #232323!important
 }
 #UserProfileMasthead .masthead-info hgroup {
   background-color: #265588!important;
@@ -1358,20 +1361,20 @@ img.tex {
   background: #4887cc!important
 }
 #UserProfileMasthead .masthead-info-lower:before {
-  border-color: #383838 #383838 transparent transparent!important
+  border-color: #303030 #303030 transparent transparent!important
 }
 .tabs {
   border-bottom: 1px solid #52555a!important
 }
 .tabs .selected a {
-  background: #262626!important;
+  background: #1e1e1e!important;
   color: #c5c5c5!important;
   border: 1px solid #52555a!important;
   border-bottom: 1px solid transparent!important
 }
 .discussiontable tr:nth-child(2) th,
 .forumcolumnheader {
-  background-color: #1c1c1c!important;
+  background-color: #141414!important;
   color: #c5c5c5!important
 }
 .discussiontable tr:nth-child(1) th,
@@ -1383,16 +1386,11 @@ img.tex {
 }
 .discussiontable.noresults tr:nth-child(1) th {
   color: #c5c5c5!important;
-  background-color: #121212!important
+  background-color: #0a0a0a!important
 }
 .forumlist.archive {
   background-color: transparent!important;
   border: none!important
-}
-.Search .SearchInput,
-.noarticletext {
-  background-color: #1d1d1d!important;
-  border-color: #52555a!important
 }
 #ca-addsection img,
 #ca-edit img,
@@ -1406,7 +1404,7 @@ img.tex {
 .oo-ui-optionWidget-highlighted,
 .search-tabs li a:hover,
 .ve-ui-mwMediaResultWidget .oo-ui-labelElement-label {
-  background-color: #3a3a3a!important
+  background-color: #323232!important
 }
 .mw-tag-markers,
 .mw-tag-markers a {
@@ -1422,7 +1420,7 @@ img.tex {
 }
 .community-page-card-module,
 .community-page-rail {
-  background: #353535!important
+  background: #2d2d2d!important
 }
 .community-page-card-module .community-page-card-module-header {
   background-color: #2f69a8!important;
@@ -1432,7 +1430,7 @@ img.tex {
 .introheader,
 .userhelpinfo {
   color: #c5c5c5!important;
-  background-color: #1d1d1d!important
+  background-color: #151515!important
 }
 .browse-input-resp .mw-ui-input:focus {
   box-shadow: inset 0 0 0 1px rgba(0,0,0,.2)!important
@@ -1442,25 +1440,25 @@ table.smwb-ifactbox {
   border-collapse: collapse!important
 }
 #other_options tr:nth-child(even) {
-  background: #2a2a2a!important
+  background: #222!important
 }
 #other_options tr:nth-child(odd) {
-  background: #373737!important
+  background: #2f2f2f!important
 }
 .AdminDashboardHeader {
-  background: #333!important;
+  background: #2b2b2b!important;
   border-color: #52555a!important;
-  box-shadow: inset 0 -4px 2px 0 #404040!important
+  box-shadow: inset 0 -4px 2px 0 #383838!important
 }
 .AdminDashboard .control-section header,
 .AdminDashboardGeneralHeader {
-  background-image: linear-gradient(0deg,#333,#404040)!important;
-  color: #c5c5c5!important;
-  background-color: #333!important
+  background-color: #2b2b2b!important;
+  background-image: linear-gradient(0deg,#2b2b2b,#383838)!important;
+  color: #c5c5c5!important
 }
 .AdminDashboardTabs .tab {
   color: #c5c5c5!important;
-  background: #333!important;
+  background: #2b2b2b!important;
   border: 1px solid #52555a!important;
   border-bottom: 0!important
 }
@@ -1479,25 +1477,25 @@ table.smwb-ifactbox {
 }
 .AdminDashboardGeneralHeader {
   border-color: #52555a!important;
-  box-shadow: 0 2px 2px 0 #191919!important
+  box-shadow: 0 2px 2px 0 #111!important
 }
 .EditPageHeader,
 .EditPageRail,
 .EditPageToolbar,
 .module_content {
-  background-color: #383838!important
+  background-color: #303030!important
 }
 .EditPageToolbar,
 .module_content,
 .oo-ui-toolbar-bar {
-  background-image: linear-gradient(0deg,#262626 0,#383838 50%)!important
+  background-image: linear-gradient(0deg,#1e1e1e 0,#303030 50%)!important
 }
 .AdminDashboard .AdminDashboardGeneralHeader h2,
 .wikia-menu-button {
   border: none!important
 }
 #FounderProgressWidget .preview {
-  background: #333!important;
+  background: #2b2b2b!important;
   border-color: #52555a!important
 }
 #FounderProgressWidget .preview .founder-progress-bar {
@@ -1505,18 +1503,18 @@ table.smwb-ifactbox {
   filter: invert(.8)!important
 }
 #FounderProgressWidget .preview header:after {
-  border-right-color: #262626!important
+  border-right-color: #1e1e1e!important
 }
 #FounderProgressWidget .preview .activities .activity .label,
 #FounderProgressWidget .preview .activities .activity.active .label {
-  background-color: #3a3a3a!important;
-  background-image: linear-gradient(0deg,#3a3a3a,#424242)!important;
+  background-color: #323232!important;
+  background-image: linear-gradient(0deg,#323232,#3a3a3a)!important;
   color: #c5c5c5!important;
   border-color: #52555a!important
 }
 #FounderProgressWidget .preview .activities .activity .description:before,
 #FounderProgressWidget .preview .activities .activity.active .description:before {
-  border-top-color: #3a3a3a!important
+  border-top-color: #323232!important
 }
 #FounderProgressWidget .preview .activities .activity .label .chevron {
   border-top-color: #c5c5c5!important;
@@ -1527,28 +1525,28 @@ table.smwb-ifactbox {
   border-bottom-color: #c5c5c5!important
 }
 .QuickStatsWidget .WikiaDataTable {
-  background: #3a3a3a!important;
+  background: #323232!important;
   border-color: #52555a!important
 }
 .QuickStatsWidget .WikiaDataTable .highlight-top,
 .QuickStatsWidget .WikiaDataTable .totals td:nth-child(2),
 .QuickStatsWidget .WikiaDataTable td:nth-child(2) {
-  background-color: #262626!important;
-  background-image: linear-gradient(90deg,#2b2b2b,#262626)!important;
+  background-color: #1e1e1e!important;
+  background-image: linear-gradient(90deg,#232323,#1e1e1e)!important;
   color: #b8b8b8!important
 }
 .QuickStatsWidget .WikiaDataTable .totals td {
-  background: #3a3a3a!important;
+  background: #323232!important;
   color: #c5c5c5!important;
   border-top: 1px solid #52555a!important;
   border-bottom: 1px solid #52555a!important
 }
 .QuickStatsWidget .WikiaDataTable .totals td:first-child .pointer {
-  background: #515151!important;
+  background: #494949!important;
   color: #d2d2d2!important
 }
 .QuickStatsWidget .WikiaDataTable .totals td:first-child .pointer:before {
-  border-left-color: #515151!important
+  border-left-color: #494949!important
 }
 .EditPageHeader,
 .EditPageToolbar,
@@ -1556,11 +1554,11 @@ table.smwb-ifactbox {
   border-color: #52555a!important
 }
 .QuickStatsWidget .WikiaDataTable .highlight-bottom {
-  background-image: linear-gradient(0deg,#3a3a3a,#262626 25%,transparent)!important
+  background-image: linear-gradient(0deg,#323232,#1e1e1e 25%,transparent)!important
 }
 td.diff-context {
-  background: #383838!important;
-  border-color: #383838!important;
+  background: #303030!important;
+  border-color: #303030!important;
   color: #c5c5c5!important
 }
 .EditPageHeader {
@@ -1589,7 +1587,7 @@ td.diff-context {
   color: #c5c5c5!important
 }
 .EditPageRail {
-  box-shadow: -2px 2px 2px #262626,-1px 0 0 #262626!important
+  box-shadow: -2px 2px 2px #1e1e1e,-1px 0 0 #1e1e1e!important
 }
 .editpage-sourcewidemode-on .EditPageRail {
   background-color: transparent!important;
@@ -1610,8 +1608,8 @@ td.diff-context {
   background-image: none!important
 }
 .module h3 {
-  background-color: #262626!important;
-  background-image: linear-gradient(0deg,#262626 0,#383838 100%)!important
+  background-color: #1e1e1e!important;
+  background-image: linear-gradient(0deg,#1e1e1e 0,#303030 100%)!important
 }
 .EditPage .CategorySelect .categories::-webkit-input-placeholder {
   color: #9f9f9f!important
@@ -1627,7 +1625,7 @@ td.diff-context {
 }
 .EditPage .CategorySelect .categories .category.ui-sortable-helper,
 .EditPage .CategorySelect .categories .category:hover {
-  background-color: #565656!important
+  background-color: #4e4e4e!important
 }
 #wpTextbox0::-webkit-scrollbar {
   width: 13px!important
@@ -1713,7 +1711,7 @@ td.diff-context {
   color: #9f9f9f!important
 }
 .oo-ui-toolbar-bar {
-  background-color: #383838!important
+  background-color: #303030!important
 }
 .oo-ui-tool.oo-ui-widget-enabled:hover,
 .ve-ui-wikiaUploadButtonWidget {
@@ -1721,9 +1719,9 @@ td.diff-context {
 }
 .oo-ui-popupToolGroup-active.oo-ui-widget-enabled,
 .oo-ui-tool-active.oo-ui-widget-enabled {
-  background-color: #454545!important;
+  background-color: #3d3d3d!important;
   border-color: #52555a!important;
-  background-image: linear-gradient(0deg,#424242,#5c5c5c)!important
+  background-image: linear-gradient(0deg,#3a3a3a,#545454)!important
 }
 .oo-ui-iconElement-icon,
 .oo-ui-indicator-down {
@@ -1744,11 +1742,11 @@ td.diff-context {
 .transcript>ul ul li:hover,
 .ve-ce-branchNode-blockSlugWrapper-former-unfocused,
 .ve-ce-branchNode-blockSlugWrapper-unfocused:hover {
-  background-color: #333!important;
+  background-color: #2b2b2b!important;
   outline-color: #52555a!important
 }
 .oo-ui-popupWidget-popup {
-  background-color: #2e2e2e!important;
+  background-color: #262626!important;
   border-color: #52555a!important
 }
 #PageHeader .page-header__categories-dropdown::after,
@@ -1759,7 +1757,7 @@ td.diff-context {
 #ca-viewsource+div.wds-dropdown::after,
 .oo-ui-popupWidget-anchored .oo-ui-popupWidget-anchor::after,
 .wds-dropdown::after {
-  border-bottom-color: #333!important
+  border-bottom-color: #2b2b2b!important
 }
 .oo-ui-pendingElement-pending input,
 .oo-ui-pendingElement-pending textarea {
@@ -1767,23 +1765,23 @@ td.diff-context {
   filter: invert(70%)!important
 }
 .oo-ui-menuSelectWidget {
-  background: #333!important;
+  background: #2b2b2b!important;
   border-color: #52555a!important;
   box-shadow: 3px 3px 6px 0 rgba(0,0,0,.3)!important
 }
 .oo-ui-menuSectionOptionWidget {
-  background: #333!important
+  background: #2b2b2b!important
 }
 .oo-ui-windowManager-modal > .oo-ui-dialog {
-  background-color: rgba(38,38,38,.5)!important
+  background-color: rgba(30,30,30,.5)!important
 }
 .oo-ui-window-frame {
-  background-color: #262626!important;
+  background-color: #1e1e1e!important;
   border-color: #52555a!important
 }
 .oo-ui-optionWidget-pressed,
 .oo-ui-optionWidget-selected {
-  background: #1e1e1e!important;
+  background: #161616!important;
   text-shadow: none!important
 }
 .oo-ui-inputWidget input::-webkit-input-placeholder {
@@ -1799,7 +1797,7 @@ td.diff-context {
   color: #9f9f9f!important
 }
 .ve-ui-mwMediaResultWidget-thumbnail {
-  border-color: #3a3a3a!important
+  border-color: #323232!important
 }
 .oo-ui-outlineSelectWidget::-webkit-scrollbar,
 .oo-ui-panelLayout-scrollable::-webkit-scrollbar,
@@ -1815,11 +1813,6 @@ td.diff-context {
   border-radius: 10px!important;
   background-color: #262626!important;
   border: 1px solid #2b2b2b!important
-}
-#PageHeader .page-header__languages .wds-dropdown__content li>a:hover,
-.wikia-menu-button ul li a:hover {
-  color: #6bbaea!important;
-  background-color: #404040!important
 }
 .oo-ui-outlineSelectWidget::-webkit-scrollbar-thumb,
 .oo-ui-panelLayout-scrollable::-webkit-scrollbar-thumb,
@@ -1904,11 +1897,19 @@ td.diff-context {
 .wikia-menu-button ul li {
   border-top: 1px solid #52555a!important
 }
+.wikia-menu-button ul li a:hover {
+  background-color: #383838!important;
+  color: #6bbaea!important
+}
 .wikia-menu-button ul li:first-child {
   border-top: none!important
 }
 .wikia-menu-button ul li:hover {
   background-color: transparent!important
+}
+#PageHeader .page-header__languages .wds-dropdown__content li > a:hover {
+  color: #6bbaea!important;
+  background-color: #383838!important
 }
 #PageHeader .page-header__languages .wds-dropdown__content ul::after,
 #PageHeader .page-header__languages .wds-dropdown__content ul::before {
@@ -1942,7 +1943,7 @@ td.diff-context {
 .wds-dropdown__content li:hover>a,
 .wds-dropdown__content li>a:hover {
   color: #6bbaea!important;
-  background-color: #404040!important
+  background-color: #383838!important
 }
 #GlobalNavigationWallNotifications ul::after,
 #GlobalNavigationWallNotifications ul::before,
@@ -1957,7 +1958,9 @@ td.diff-context {
 .wds-dropdown__content .wds-dropdown-level-2__content ul::before,
 .wds-dropdown__content ul::after,
 .wds-dropdown__content ul::before,
-body.background-dynamic.skin-oasis .background-image-gradient {
+body.background-dynamic.skin-oasis .background-image-gradient,
+body.background-dynamic.skin-oasis .background-image-gradient::after,
+body.background-dynamic.skin-oasis .background-image-gradient::before {
   background: 0 0!important
 }
 #PageHeader .page-header__categories-dropdown .page-header__categories-dropdown-content ul::-webkit-scrollbar {
@@ -1989,16 +1992,15 @@ body.background-dynamic.skin-oasis .background-image-gradient {
   border-color: #dfdfdf!important
 }
 #globalNavigation {
-  box-shadow: 0 1px 0 0 #0c0c0c!important
+  box-shadow: 0 1px 0 0 #040404!important
 }
 .wds-global-navigation__user-menu {
-  color: #404040!important
+  color: #383838!important
 }
 .wds-global-navigation__user-menu:hover {
-  color: #8c8c8c!important
+  color: #848484!important
 }
 #GlobalNavigationWallNotifications li>a,
-#mw-scribunto-console,
 .WikiaBarWrapper .tools-menu li>a,
 .WikiaPage .page-header__title,
 .WikiaRail .edit-info-time,
@@ -2065,27 +2067,27 @@ table.property-page-results .header-title {
 #GlobalNavigationWallNotifications .notification {
   border: none!important;
   color: #c5c5c5!important;
-  background: #333!important
+  background: #2b2b2b!important
 }
 .CategorySelect.articlePage div.toolbar {
-  background-color: #222!important;
+  background-color: #1a1a1a!important;
   border-top-color: #52555a!important
 }
 .CategorySelect.articlePage .category.new {
-  border-color: #6d6d6d!important;
+  border-color: #656565!important;
   color: #dfdfdf!important
 }
 .CategorySelect.articlePage .category.new,
 .CategorySelect.articlePage .category.new ul.toolbar {
-  background-color: #6d6d6d!important
+  background-color: #656565!important
 }
 .WikiaArticle li.gallerybox {
   border-color: #52555a!important;
-  background-color: #333!important
+  background-color: #2b2b2b!important
 }
 .WikiaArticle li.gallerybox div.thumb {
-  background: #3a3a3a!important;
-  border-color: #3a3a3a!important
+  background: #323232!important;
+  border-color: #323232!important
 }
 .ns-120 .mw-content-text > ul li b:first-child,
 .ns-120 .mw-content-text > ul ul li b:first-child,
@@ -2109,21 +2111,25 @@ table.property-page-results .header-title {
 .transcript > ul ul li:hover li:hover li:hover li:hover,
 .transcript > ul ul li:hover li:hover li:hover li:hover li:hover li:hover,
 .transcript > ul ul li:hover li:hover li:hover li:hover li:hover li:hover li:hover li:hover {
-  background-color: #292929!important
+  background-color: #212121!important
 }
 .editpage-editarea,
 .source-css,
 .source-javascript,
 .source-lua {
-  background-color: #2e2e2e!important;
+  background-color: #262626!important;
   color: #b8b8b8!important
 }
-.ace_gutter-active-line,
 .ace_marker-layer .ace_active-line {
-  background-color: #3e3e3e!important
+  background-color: #262626!important;
+  border-top: 2px solid #363636!important;
+  border-bottom: 2px solid #363636!important
+}
+.ace_gutter-active-line {
+  background-color: #3a3a3a!important
 }
 .ace_marker-layer .ace_selection {
-  background-color: rgba(129,129,129,.2)!important
+  background-color: rgba(121,121,121,.2)!important
 }
 .ace_scrollbar-h::-webkit-scrollbar,
 .ace_scrollbar::-webkit-scrollbar {
@@ -2171,6 +2177,11 @@ table.property-page-results .header-title {
 .kw1 {
   color: #c9e411!important
 }
+#mw-scribunto-console,
+.mw-scribunto-console-fieldset {
+  color: #c5c5c5!important;
+  background-color: #303030!important
+}
 .mw-scribunto-message {
   background: 0 0!important;
   color: #acacac!important
@@ -2193,7 +2204,7 @@ table.property-page-results .header-title {
   color: #9f9f9f!important
 }
 body.background-dynamic.skin-oasis {
-  background-color: #232323!important
+  background-color: #1b1b1b!important
 }
 body.background-dynamic.skin-oasis::before {
   margin-left: -1282px!important
@@ -2206,20 +2217,8 @@ body.background-dynamic.skin-oasis::after,
 body.background-dynamic.skin-oasis::before {
   background-image: url(https://i.imgur.com/7qET5bp.jpg)!important;
   width: 790px!important;
-  height: 844px!important
-}
-body.background-dynamic.skin-oasis .background-image-gradient::before {
-  left: calc(50% - 532px)!important;
-  background-image: linear-gradient(90deg,rgba(0,0,0,0),#262626)!important
-}
-body.background-dynamic.skin-oasis .background-image-gradient::after {
-  right: calc(50% - 532px)!important;
-  background-image: linear-gradient(270deg,rgba(0,0,0,0),#262626)!important
-}
-body.background-dynamic.skin-oasis .background-image-gradient,
-body.background-dynamic.skin-oasis .background-image-gradient::after,
-body.background-dynamic.skin-oasis .background-image-gradient::before {
-  height: 834px!important
+  height: 844px!important;
+  box-shadow: inset 0 0 30px 20px #1b1b1b!important
 }
 .WikiaArticle {
   box-shadow: none!important;

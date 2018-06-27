@@ -10,7 +10,7 @@
 @theme-redlinks      : #ba0000;
 @theme-green         : #1e5400;
 @theme-green-lighter : lighten(@theme-green, 2.5%);
-@theme-grey          : #262626;
+@theme-grey          : #1e1e1e;//#262626;
 @theme-grey-darker   : darken(@theme-grey, 3.5%);
 @theme-gray-lighter  : lighten(@theme-grey, 3%);
 @theme-gray-lighter-2: lighten(@theme-grey, 9%);
@@ -126,25 +126,27 @@ body.background-dynamic.skin-oasis {
         background-image: url('https://i.imgur.com/7qET5bp.jpg');
         width: 790px;
         height: 844px;
+        box-shadow: inset 0 0 30px 20px @body-color;
     }
 
     .background-image-gradient {
-        background: none;
+        // background: none;
 
-        &::before {
-            left: calc(~"50% - 532px");
-            background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), @main-page-bg);
-        }
+        // &::before {
+        //     left: calc(~"50% - 532px");
+        //     // background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), @main-page-bg);
+        // }
 
-        &::after {
-            right: calc(~"50% - 532px");
-            background-image: linear-gradient(270deg, rgba(0, 0, 0, 0), @main-page-bg);
-        }
+        // &::after {
+        //     right: calc(~"50% - 532px");
+        //     // background-image: linear-gradient(270deg, rgba(0, 0, 0, 0), @main-page-bg);
+        // }
 
         &::before,
         &::after,
         & {
-            height: 834px;
+            // height: 834px;
+            background: none;
         }
     }
 }
