@@ -6,7 +6,6 @@
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^8.3.0",
-    "bs-rewrite-rules": "^2.1.2",
     "gulp": "^3.9.1",
     "gulp-bump": "^3.1.1",
     "gulp-clean-css": "^3.9.3",
