@@ -972,17 +972,6 @@ table.smwb-ifactbox tr.smwb-propvalue td {
 .mw-plusminus-neg {
   color: #d72b16!important
 }
-#gemw_guide,
-.maybecell,
-.nocell,
-.sg-green,
-.sg-red,
-.sg-yellow,
-.yescell,
-code,
-pre {
-  color: #c5c5c5!important
-}
 .infobox-monster .offensive-header {
   background-color: #58120b!important
 }
@@ -1015,7 +1004,8 @@ pre {
 code,
 pre {
   border: 1px solid #424242!important;
-  background-color: #353535!important
+  background-color: #353535!important;
+  color: #c5c5c5!important
 }
 fieldset {
   border-color: #52555a!important
@@ -1170,6 +1160,15 @@ input[type=submit].secondary:hover {
   border-color: #3f3f3f!important;
   background-color: #3f3f3f!important
 }
+#gemw_guide,
+.maybecell,
+.nocell,
+.sg-green,
+.sg-red,
+.sg-yellow,
+.yescell {
+  color: #c5c5c5!important
+}
 img.tex {
   -webkit-filter: invert(.85)!important;
   filter: invert(.85)!important
@@ -1214,6 +1213,11 @@ img.tex {
 .wds-global-navigation__logo-image.wds-is-wds-company-logo-fandom>g>path:last-of-type,
 .wds-global-navigation__logo-image.wds-is-wds-company-logo-powered-by-wikia>path {
   fill: #c5c5c5!important
+}
+.infobox-switch .hidden td[data-attr-param=graph],
+.oo-ui-menuSectionOptionWidget {
+  background: #2b2b2b!important;
+  color: #c5c5c5!important
 }
 #GEchartpopup .highcharts-background,
 #GEchartpopup .highcharts-legend-box,
@@ -1580,7 +1584,6 @@ td.diff-context {
 .editpage-sourcewidemode-on .module_content,
 .module h3,
 .module_content,
-.oo-ui-menuSectionOptionWidget,
 .oo-ui-toolbar-bar,
 .wds-dropdown__content .wds-dropdown-level-2__content li>a,
 .wds-dropdown__content li>a {
@@ -1768,9 +1771,6 @@ td.diff-context {
   background: #2b2b2b!important;
   border-color: #52555a!important;
   box-shadow: 3px 3px 6px 0 rgba(0,0,0,.3)!important
-}
-.oo-ui-menuSectionOptionWidget {
-  background: #2b2b2b!important
 }
 .oo-ui-windowManager-modal > .oo-ui-dialog {
   background-color: rgba(30,30,30,.5)!important
