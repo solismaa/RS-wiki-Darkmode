@@ -1,15 +1,18 @@
-/**
-* =================================
-*     Runescape wiki darkmode
-* =================================
-* Version:      2.0.0
-* Release date: 29-June-2018
-* homepageURL:  https://github.com/CephHunter/RS-wiki-DarkMode#readme
-* supportURL:   https://github.com/CephHunter/RS-wiki-DarkMode/issues
-* author:       CephHunter
-* License:      CC-BY-SA-4.0
-*/
-@-moz-document domain('runescape.wikia.com') {
+// ==UserScript==
+// @name          Runescape wiki DarkMode
+// @namespace     https://github.com/CephHunter
+// @description	  A dark theme for the Runescape wiki
+// @author        CephHunter
+// @homepage      https://github.com/CephHunter/RS-wiki-DarkMode#readme
+// @supportURL    https://github.com/CephHunter/RS-wiki-DarkMode/issues
+// @include       http://runescape.wikia.com/*
+// @include       https://runescape.wikia.com/*
+// @include       http://*.runescape.wikia.com/*
+// @include       https://*.runescape.wikia.com/*
+// @run-at        document-start
+// @version       2.0.0
+// ==/UserScript==
+(function() {var css = `
 .WikiaArticle .infobox,
 table.TablePager,
 table.article-table,
@@ -2243,5 +2246,23 @@ a.new {
 #mixed-content-footer .mcf-content,
 #top-right-boxad-wrapper {
   display: none!important
+}`;
+if (typeof GM_addStyle != "undefined") {
+    GM_addStyle(css);
+} else if (typeof PRO_addStyle != "undefined") {
+    PRO_addStyle(css);
+} else if (typeof addStyle != "undefined") {
+    addStyle(css);
+} else {
+    var node = document.createElement("style");
+    node.type = "text/css";
+    node.appendChild(document.createTextNode(css));
+    var heads = document.getElementsByTagName("head");
+    if (heads.length > 0) {
+        heads[0].appendChild(node);
+    } else {
+        // no head yet, stick it whereever
+        document.documentElement.appendChild(node);
+    }
 }
-}
+})();

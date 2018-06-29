@@ -15,7 +15,9 @@ var fs = require('fs');
 var runSequence = require('run-sequence');
 var open = require("open");
 
-// For development
+/**
+ * For development
+ */
 gulp.task('default', ['dev'], function() {
     gulp.watch(".less/*.less", ['dev']);
     open("Darkmode.dev.user.css", "chrome");
@@ -28,7 +30,7 @@ gulp.task('dev', function() {
         `/* ==UserStyle==
         @name           dev Wiki darkmode
         @description    Developer stylesheet for the RuneScape Wiki darkmode
-        @namespace      runescape.wikia.com
+        @namespace      https://github.com/CephHunter
         @version        ${pkg.version}
         @homepageURL    ${pkg.homepage}
         @supportURL     ${pkg.bugs.url}
@@ -51,13 +53,23 @@ gulp.task('dev', function() {
         .pipe(gulp.dest('./'));
 })
 
-// Generate the final cleaned up css and minified files
+/**
+ * Generate the final cleaned up css and minified files
+ */
 gulp.task('clean', function() {
     var pkg = JSON.parse(fs.readFileSync('./package.json'));
+
+    var finalCSS = gulp.src('.less/darkmode.less')
+        .pipe(plumber())
+        .pipe(less())
+        .pipe(postcss([ autoprefixer(), safeImportant()]))
+        .pipe(cleanCSS({level: {2: {all: true}}, format: 'beautify'}))
+
+    //----- Final css file -----//
     var d = new Date();
     var months = ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
-    var footerMsg = "\n}";
-    var headerMsg = 
+    var cssFooterMsg = "\n}";
+    var cssHeaderMsg = 
         `/**
         * =================================
         *     Runescape wiki darkmode
@@ -72,21 +84,66 @@ gulp.task('clean', function() {
         @-moz-document domain('runescape.wikia.com') {
         `.replace(/^\s*/gm, "");
 
-    return gulp.src('.less/darkmode.less')
-        .pipe(plumber())
-        .pipe(less())
-        .pipe(postcss([ autoprefixer(), safeImportant()]))
-        .pipe(cleanCSS({level: {2: {all: true}}, format: 'beautify'}))
-        .pipe(header(headerMsg))
-        .pipe(footer(footerMsg))
+    finalCSS.pipe(rename('Darkmode.css'))
+        .pipe(header(cssHeaderMsg))
+        .pipe(footer(cssFooterMsg))
         .pipe(gulp.dest('./'))
-        .pipe(rename('Darkmode.min.css'))
+
+    //----- Minified css file -----//
+    finalCSS.pipe(rename('Darkmode.min.css'))
         .pipe(cleanCSS({level: 0}))
         .pipe(gulp.dest('./'));
 
+    //----- User js file -----//
+    var userjsHeaderMsg = 
+        `// ==UserScript==
+        // @name          Runescape wiki DarkMode
+        // @namespace     https://github.com/CephHunter
+        // @description	  ${pkg.description}
+        // @author        ${pkg.author}
+        // @homepage      ${pkg.homepage}
+        // @supportURL    ${pkg.bugs.url}
+        // @include       http://runescape.wikia.com/*
+        // @include       https://runescape.wikia.com/*
+        // @include       http://*.runescape.wikia.com/*
+        // @include       https://*.runescape.wikia.com/*
+        // @run-at        document-start
+        // @version       ${pkg.version}
+        // ==/UserScript==
+        (function() {var css = \`
+        `.replace(/^\s*/gm, "");
+
+    var userjsFooterMsg = 
+        `\`;
+        §if (typeof GM_addStyle != "undefined") {
+        §    GM_addStyle(css);
+        §} else if (typeof PRO_addStyle != "undefined") {
+        §    PRO_addStyle(css);
+        §} else if (typeof addStyle != "undefined") {
+        §    addStyle(css);
+        §} else {
+        §    var node = document.createElement("style");
+        §    node.type = "text/css";
+        §    node.appendChild(document.createTextNode(css));
+        §    var heads = document.getElementsByTagName("head");
+        §    if (heads.length > 0) {
+        §        heads[0].appendChild(node);
+        §    } else {
+        §        // no head yet, stick it whereever
+        §        document.documentElement.appendChild(node);
+        §    }
+        §}
+        §})();`.replace(/^\s*§/gm, "");
+
+    finalCSS.pipe(rename('Darkmode.user.js'))
+        .pipe(header(userjsHeaderMsg))
+        .pipe(footer(userjsFooterMsg))
+        .pipe(gulp.dest('./'));
 });
 
-// Bump version number
+/**
+ * Bump version number
+ */
 gulp.task('_patch', function() {
     return gulp.src('package.json')
         .pipe(bump({type: 'patch'}))
