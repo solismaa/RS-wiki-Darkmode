@@ -16,11 +16,11 @@ More images: https://imgur.com/a/Ka7sp
 
 ### Installing as a userscript
 #### Step 1: ScriptManager
-* ![firefox](images/firefox.png) [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/)
-* ![chrome](images/chrome.png) [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
-* ![opera](images/opera.png) [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
-* ![safari](images/safari.png) [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
-* ![edge](images/msedge.png) [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+* ![firefox](Images/firefox.png) [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/)
+* ![chrome](Images/chrome.png) [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+* ![opera](Images/opera.png) [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+* ![safari](Images/safari.png) [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+* ![edge](Images/msedge.png) [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
 #### Step 2: UserScript
 * [install](https://raw.githubusercontent.com/CephHunter/RS-wiki-DarkMode/master/Darkmode.user.js) from *Github.com*
 * [install](https://userstyles.org/styles/userjs/150266/runescape-wiki-darkmode.user.js) from *userstyles.org*
@@ -33,8 +33,8 @@ You can create an account under the "My account" dropdown at the top of any page
 #### Step 2: Installing the style
 * Go to https://runescape.wikia.com/wiki/Special:MyPage/common.css
 * Click on create page
-* Add `@import "https://cdn.rawgit.com/CephHunter/RS-wiki-DarkMode/d23a90c3/Darkmode.min.css";` to the top of the page and save.
-* If you want to update to the latest version replace `d23a90c3` with the latest commit hash found [here](https://github.com/CephHunter/RS-wiki-DarkMode/commits/master/Darkmode.min.css).
+* Add `@import "https://cdn.rawgit.com/CephHunter/RS-wiki-DarkMode/b0499bf/Darkmode.min.css";` to the top of the page and save.
+* If you want to update to the latest version replace `b0499bf` with the latest commit hash found [here](https://github.com/CephHunter/RS-wiki-DarkMode/commits/master/Darkmode.min.css).
 
 ### Updating
 If a recent change by Wikia broke the style, chances are that I already fixed it. Make sure to reinstall from [userstyles.org](https://userstyles.org/styles/150266/runescape-wiki-darkmode) or [GitHub](https://raw.githubusercontent.com/CephHunter/RS-wiki-DarkMode/master/Darkmode.css) before opening an issue. 
