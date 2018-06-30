@@ -500,3 +500,28 @@ table.smwb-ifactbox {
         background-image: linear-gradient( 0deg, lighten(@rail-module-bg, 3%), darken(@rail-module-bg, 5%) 25%, transparent );
     }
 }
+
+// ==============================
+//      [[Special:Insights]]     
+// ==============================
+.insights-list-header {
+    background-color: @table-header;
+    border-color: @theme-borders;
+}
+
+.insights-list-cell,
+.insights-header-sorting {
+    border-color: @theme-borders;
+}
+
+.insights-container-nav {
+    .insights-nav-item:hover,
+    .insights-nav-item.active {
+        background-color: lighten(@main-page-bg, -5%);
+    }
+
+    .insights-nav-item {
+        border-color: @theme-borders;
+    }
+}
+

@@ -135,7 +135,7 @@ gulp.task('clean', function() {
         §}
         §})();`.replace(/^\s*§/gm, "");
 
-    finalCSS.pipe(rename('Darkmode.user.js'))
+    return finalCSS.pipe(rename('Darkmode.user.js'))
         .pipe(header(userjsHeaderMsg))
         .pipe(footer(userjsFooterMsg))
         .pipe(gulp.dest('./'));

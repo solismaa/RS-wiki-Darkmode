@@ -37,6 +37,9 @@ table.wikitable {
 .WikiaPage,
 .WikiaRail #wikia-recent-activity .community-page-rail-module .wds-avatar,
 .editpage-intro,
+.insights-container-nav .insights-nav-item,
+.insights-header-sorting,
+.insights-list-cell,
 .mmgtable-details,
 .modalWrapper h1,
 .ogg-player-options,
@@ -71,6 +74,7 @@ table.wikitable td {
 .attribute-total th,
 .attribute-value,
 .infobox-bonuses th,
+.insights-list-header,
 .oo-ui-popupToolGroup .oo-ui-toolGroup-tools,
 .wds-dropdown__content,
 .wds-dropdown__content .wds-dropdown-level-2__content,
@@ -1562,6 +1566,10 @@ table.smwb-ifactbox {
 }
 .QuickStatsWidget .WikiaDataTable .highlight-bottom {
   background-image: linear-gradient(0deg,#323232,#1e1e1e 25%,transparent)!important
+}
+.insights-container-nav .insights-nav-item.active,
+.insights-container-nav .insights-nav-item:hover {
+  background-color: #111!important
 }
 td.diff-context {
   background: #303030!important;
