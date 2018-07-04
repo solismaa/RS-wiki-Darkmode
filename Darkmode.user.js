@@ -10,7 +10,7 @@
 // @include       http://*.runescape.wikia.com/*
 // @include       https://*.runescape.wikia.com/*
 // @run-at        document-start
-// @version       2.0.0
+// @version       2.0.1
 // ==/UserScript==
 (function() {var css = `
 .WikiaArticle .infobox,
@@ -336,9 +336,12 @@ td.diff-otitle {
   background-color: #262626!important;
   color: #c5c5c5!important
 }
+#sp-contributions-footer,
 .Search .SearchInput,
+.WikiaArticle .noarticletext,
 .mw-warning-with-logexcerpt,
-.noarticletext {
+.noarticletext,
+div.mw-warning-with-logexcerpt {
   background-color: #151515!important;
   border-color: #52555a!important
 }
