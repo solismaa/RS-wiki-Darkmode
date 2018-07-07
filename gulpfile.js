@@ -70,19 +70,19 @@ gulp.task('clean', function() {
     var months = ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
     var cssFooterMsg = "\n}";
     var cssHeaderMsg = 
-        `/**
-        * =================================
-        *     Runescape wiki darkmode
-        * =================================
-        * Version:      ${pkg.version}
-        * Release date: ${d.getDate()}-${months[d.getMonth()]}-${d.getFullYear()}
-        * homepageURL:  ${pkg.homepage}
-        * supportURL:   ${pkg.bugs.url}
-        * author:       ${pkg.author}
-        * License:      ${pkg.license}
-        */
-        @-moz-document domain('runescape.wikia.com') {
-        `.replace(/^\s*/gm, "");
+        `@-moz-document domain('runescape.wikia.com') {
+        §/*
+        § * =================================
+        § *     Runescape wiki darkmode
+        § * =================================
+        § * Version:      ${pkg.version}
+        § * Release date: ${d.getDate()}-${months[d.getMonth()]}-${d.getFullYear()}
+        § * homepageURL:  ${pkg.homepage}
+        § * supportURL:   ${pkg.bugs.url}
+        § * author:       ${pkg.author}
+        § * License:      ${pkg.license}
+        § */
+        §`.replace(/^\s*§/gm, "");
 
     finalCSS.pipe(rename('Darkmode.css'))
         .pipe(header(cssHeaderMsg))

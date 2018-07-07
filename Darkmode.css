@@ -1,15 +1,15 @@
-/**
-* =================================
-*     Runescape wiki darkmode
-* =================================
-* Version:      2.0.1
-* Release date: 4-July-2018
-* homepageURL:  https://github.com/CephHunter/RS-wiki-DarkMode#readme
-* supportURL:   https://github.com/CephHunter/RS-wiki-DarkMode/issues
-* author:       CephHunter
-* License:      CC-BY-SA-4.0
-*/
 @-moz-document domain('runescape.wikia.com') {
+/*
+ * =================================
+ *     Runescape wiki darkmode
+ * =================================
+ * Version:      2.0.1
+ * Release date: 4-July-2018
+ * homepageURL:  https://github.com/CephHunter/RS-wiki-DarkMode#readme
+ * supportURL:   https://github.com/CephHunter/RS-wiki-DarkMode/issues
+ * author:       CephHunter
+ * License:      CC-BY-SA-4.0
+ */
 .WikiaArticle .infobox,
 table.TablePager,
 table.article-table,
