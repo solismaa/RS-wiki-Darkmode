@@ -9,11 +9,9 @@ More images: https://imgur.com/a/Ka7sp
 ### Installing as userstyle:
 #### Step 1: StyleManager
 * Stylus - get the addon for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) and [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/).
-* Stylish - get the addon for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/), [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe), [Opera](https://addons.opera.com/en/extensions/details/stylish/) and [Safari](http://sobolev.us/stylish/).
 #### Step 2: UserStyle
-* Install from [userstyles.org](https://userstyles.org/styles/150266/runescape-wiki-darkmode).
-* or, add it [manually](https://raw.githubusercontent.com/CephHunter/RS-wiki-DarkMode/master/Darkmode.css) into the editor.
-
+* Install from [Github](https://raw.githubusercontent.com/CephHunter/RS-wiki-DarkMode/master/Darkmode.user.css).
+* Install from [Usercss.org](https://openusercss.org/theme/5b416bc66368470b00f15797).
 ### Installing as a userscript
 #### Step 1: ScriptManager
 * ![firefox](Images/firefox.png) [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/)
@@ -37,7 +35,7 @@ You can create an account under the "My account" dropdown at the top of any page
 * If you want to update to the latest version replace `b0499bf` with the latest commit hash found [here](https://github.com/CephHunter/RS-wiki-DarkMode/commits/master/Darkmode.min.css).
 
 ### Updating
-If a recent change by Wikia broke the style, chances are that I already fixed it. Make sure to reinstall from [userstyles.org](https://userstyles.org/styles/150266/runescape-wiki-darkmode) or [GitHub](https://raw.githubusercontent.com/CephHunter/RS-wiki-DarkMode/master/Darkmode.css) before opening an issue. 
+If a recent change by Wikia broke the style, chances are that I already fixed it. Make sure to reinstall from [Usercss.org](https://openusercss.org/theme/5b416bc66368470b00f15797) or [GitHub](https://raw.githubusercontent.com/CephHunter/RS-wiki-DarkMode/master/Darkmode.user.css) before opening an issue. 
 
 ## Contributing/reporting issues
 Help is always appreciated, the Runescape wiki site is huge and always changing and I may not always notice when stuff gets broken. So if you find any problems you can always [open an issue on github](https://github.com/CephHunter/RS-wiki-DarkMode/issues) or leave a message on [this Runescape wiki talkpage](http://runescape.wikia.com/wiki/User_talk:CephHunter/Dark_mode_issues) or message me on Discord `@ceph hunter#6854`, I frequently hang out in the [Runscape wiki Discord](http://runescape.wikia.com/wiki/RuneScape:Off-site/Discord).

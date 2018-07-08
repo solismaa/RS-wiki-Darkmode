@@ -70,21 +70,20 @@ gulp.task('clean', function() {
     var months = ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
     var cssFooterMsg = "\n}";
     var cssHeaderMsg = 
-        `@-moz-document domain('runescape.wikia.com') {
-        §/*
-        § * =================================
-        § *     Runescape wiki darkmode
-        § * =================================
-        § * Version:      ${pkg.version}
-        § * Release date: ${d.getDate()}-${months[d.getMonth()]}-${d.getFullYear()}
-        § * homepageURL:  ${pkg.homepage}
-        § * supportURL:   ${pkg.bugs.url}
-        § * author:       ${pkg.author}
-        § * License:      ${pkg.license}
-        § */
-        §`.replace(/^\s*§/gm, "");
+        `/* ==UserStyle==
+        @name           RunescapeWiki darkmode
+        @description    ${pkg.description}
+        @namespace      https://github.com/CephHunter
+        @version        ${pkg.version}
+        @homepageURL    ${pkg.homepage}
+        @supportURL     ${pkg.bugs.url}
+        @author         ${pkg.author}
+        @license        ${pkg.license}
+        ==/UserStyle== */
+        @-moz-document domain('runescape.wikia.com') {
+        `.replace(/^\s*/gm, "");
 
-    finalCSS.pipe(rename('Darkmode.css'))
+    finalCSS.pipe(rename('Darkmode.user.css'))
         .pipe(header(cssHeaderMsg))
         .pipe(footer(cssFooterMsg))
         .pipe(gulp.dest('./'))
