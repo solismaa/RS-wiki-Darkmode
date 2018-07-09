@@ -22,4 +22,4 @@ For more information about less, head over to http://lesscss.org/
 ### After setup
 Typing `gulp` in the console. A browser window will popup to install the developers userstyle and if the style is already installed there will be an option for `live reload` (requires stylus extension). Now everytime you save any of the .less files, Darkmode.dev.user.css will automaticly update and changes will be visible in the browser. You only have to run this command once until you terminate it with `ctrl + c`
 
-When you are content with your changes, run `gulp clean` in the command line, this will generate the final `Darkmode.css` and `Darkmode.min.css`. After this commit your changes and create a pull request.
+When you are content with your changes, run `gulp clean` in the command line, this will generate the final `Darkmode.user.css`, `Darkmode.min.css` and `Darkmode.user.js`. After this commit your changes and create a pull request.
