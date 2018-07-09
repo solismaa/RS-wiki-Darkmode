@@ -6,7 +6,7 @@ This is a dark theme for the [Runescape wiki](http://runescape.wikia.com/wiki/Ru
 More images: https://imgur.com/a/Ka7sp
 
 ## Installing
-### Installing as userstyle:
+### Installing as a userstyle:
 #### Step 1: StyleManager
 * Stylus - get the addon for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) and [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/).
 #### Step 2: UserStyle
