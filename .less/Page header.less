@@ -242,40 +242,39 @@
 .wds-global-navigation__account-menu,
 .wds-global-navigation__notifications-menu {
     &:hover {
-        background-color: lighten(@fandomheader-bg, 10%);
+        color: lighten(@theme-text, 15%);
     }
 }
 
 // --------------------
 //      Text color
 // --------------------
-// fandom logo
-.wds-global-navigation__logo-image.wds-is-wds-company-logo-fandom > g > path:last-of-type,
-.wds-global-navigation__logo-image.wds-is-wds-company-logo-powered-by-wikia > path {
+//----- fandom logo -----//
+#wds-company-logo-fandom-white > g > path:last-child {
     fill: @theme-text;
 }
 
-// notification icons
-.wds-global-navigation__notifications-menu {
-    path {
-        fill: darken(@theme-text, 10%);
-    }
+//----- notification icons -----//
+.wds-global-navigation__notifications-dropdown .wds-icon-small path {
+    fill: darken(@theme-text, 10%);
 }
 
-// When logged in
-.wds-global-navigation__user-menu {
-    .wds-dropdown__toggle-chevron {
-        fill: darken(@theme-text, 10%);
-    }
-
-    color: lighten(@fandomheader-bg, 10%);
-
-    &:hover {
-        color: lighten(@fandomheader-bg, 40%);
-    }
+.wds-global-navigation__notifications-dropdown:hover .wds-icon-small path {
+    fill: darken(@theme-text, -5%);
 }
 
-// When not logged in
+//----- When logged in -----//
+.wds-global-navigation__user-menu .wds-avatar__image {
+    border-color: lighten(@fandomheader-bg, 10%);
+    fill: lighten(@fandomheader-bg, 10%);
+}
+
+.wds-global-navigation__user-menu:hover .wds-avatar__image {
+    border-color: lighten(@fandomheader-bg, 40%);
+    fill: lighten(@fandomheader-bg, 40%);
+}
+
+//----- When not logged in -----//
 .wds-global-navigation__account-menu {
     color: @theme-text;
 
@@ -286,6 +285,11 @@
     .wds-global-navigation__account-menu-dropdown-caption {
         color: @theme-text;
     }
+}
+
+//----- Dropdown chevrons -----//
+.wds-global-navigation-wrapper .wds-dropdown__toggle-chevron {
+    fill: #ff6a64;
 }
 
 // -------------------
@@ -319,7 +323,7 @@
     }
 }
 
-.wds-global-navigation__search-input-wrapper.wds-is-active {
+.wds-global-navigation__search-input-wrapper {
     border-bottom-color: @theme-borders;
 }
 

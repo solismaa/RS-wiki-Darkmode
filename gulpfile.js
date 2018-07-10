@@ -13,7 +13,8 @@ var header = require('gulp-header');
 var footer = require('gulp-footer');
 var fs = require('fs');
 var runSequence = require('run-sequence');
-var open = require("open");
+var open = require('open');
+var lec = require('gulp-line-ending-corrector');
 
 /**
  * For development
@@ -64,6 +65,7 @@ gulp.task('clean', function() {
         .pipe(less())
         .pipe(postcss([ autoprefixer(), safeImportant()]))
         .pipe(cleanCSS({level: {2: {all: true}}, format: 'beautify'}))
+        .pipe(lec({eolc: 'LF'}));
 
     //----- Final css file -----//
     var d = new Date();

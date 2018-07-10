@@ -10,7 +10,7 @@
 // @include       http://*.runescape.wikia.com/*
 // @include       https://*.runescape.wikia.com/*
 // @run-at        document-start
-// @version       2.0.1
+// @version       2.0.2
 // ==/UserScript==
 (function() {var css = `
 .WikiaArticle .infobox,
@@ -1000,12 +1000,7 @@ table.smwb-ifactbox tr.smwb-propvalue td {
   background-color: #464646!important
 }
 .WikiaArticle .references>li:target,
-.WikiaDropdown .dropdown li:hover,
-.wds-global-navigation__account-menu:hover,
-.wds-global-navigation__link:hover,
-.wds-global-navigation__notifications-menu:hover,
-.wds-global-navigation__user-menu:hover,
-.wds-global-navigation__wikis-menu:hover {
+.WikiaDropdown .dropdown li:hover {
   background-color: #383838!important
 }
 #alphabetical-header {
@@ -1215,13 +1210,12 @@ img.tex {
 .highcharts-navigator-outline {
   stroke: #52555a!important
 }
+#wds-company-logo-fandom-white>g>path:last-child,
 .highcharts-axis-labels>text,
 .highcharts-axis-title,
 .highcharts-legend-item text,
 .highcharts-range-input text,
-.preview_box svg,
-.wds-global-navigation__logo-image.wds-is-wds-company-logo-fandom>g>path:last-of-type,
-.wds-global-navigation__logo-image.wds-is-wds-company-logo-powered-by-wikia>path {
+.preview_box svg {
   fill: #c5c5c5!important
 }
 .infobox-switch .hidden td[data-attr-param=graph],
@@ -1267,8 +1261,7 @@ img.tex {
   fill: #dfdfdf!important
 }
 .wds-global-navigation__account-menu path,
-.wds-global-navigation__notifications-menu path,
-.wds-global-navigation__user-menu .wds-dropdown__toggle-chevron {
+.wds-global-navigation__notifications-dropdown .wds-icon-small path {
   fill: #acacac!important
 }
 .highcharts-scrollbar-track {
@@ -2008,11 +2001,12 @@ body.background-dynamic.skin-oasis .background-image-gradient::before {
 #globalNavigation {
   box-shadow: 0 1px 0 0 #040404!important
 }
-.wds-global-navigation__user-menu {
-  color: #383838!important
-}
-.wds-global-navigation__user-menu:hover {
-  color: #848484!important
+.wds-global-navigation__account-menu:hover,
+.wds-global-navigation__link:hover,
+.wds-global-navigation__notifications-menu:hover,
+.wds-global-navigation__user-menu:hover,
+.wds-global-navigation__wikis-menu:hover {
+  color: #ebebeb!important
 }
 #GlobalNavigationWallNotifications li>a,
 .WikiaBarWrapper .tools-menu li>a,
@@ -2028,6 +2022,20 @@ body.background-dynamic.skin-oasis .background-image-gradient::before {
 body,
 table.property-page-results .header-title {
   color: #c5c5c5!important
+}
+.wds-global-navigation__notifications-dropdown:hover .wds-icon-small path {
+  fill: #d2d2d2!important
+}
+.wds-global-navigation__user-menu .wds-avatar__image {
+  border-color: #383838!important;
+  fill: #383838!important
+}
+.wds-global-navigation__user-menu:hover .wds-avatar__image {
+  border-color: #848484!important;
+  fill: #848484!important
+}
+.wds-global-navigation-wrapper .wds-dropdown__toggle-chevron {
+  fill: #ff6a64!important
 }
 .WikiaRail #WikiaAdInContentPlaceHolder svg,
 .WikiaRail #wikia-recent-activity h2.has-icon svg,
@@ -2060,7 +2068,7 @@ table.property-page-results .header-title {
 }
 .WikiaArticle h2,
 .WikiaRail #wikia-recent-activity h2.has-icon,
-.wds-global-navigation__search-input-wrapper.wds-is-active {
+.wds-global-navigation__search-input-wrapper {
   border-bottom-color: #52555a!important
 }
 #global-navigation-anon-sign-in.active,

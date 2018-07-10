@@ -1,6 +1,6 @@
 {
   "name": "runescape-wiki-darkmode",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A dark theme for the Runescape wiki",
   "main": "gulpfile.js",
   "dependencies": {},
@@ -12,6 +12,7 @@
     "gulp-footer": "^2.0.1",
     "gulp-header": "^2.0.5",
     "gulp-less": "^3.5.0",
+    "gulp-line-ending-corrector": "^1.0.2",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.3",
