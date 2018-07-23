@@ -33,7 +33,7 @@ You can create an account under the "My account" dropdown at the top of any page
 * Click on create page
 * Add `@import "https://cdn.rawgit.com/CephHunter/RS-wiki-DarkMode/b0499bf/Darkmode.min.css";` to the top of the page.
 * Replace `b0499bf` with the latest commit hash found [here](https://github.com/CephHunter/RS-wiki-DarkMode/commits/master/Darkmode.min.css) to make sure you have the latest version.
-* Save the page. It can take a few minutes before the changes are live and you may have to bypass the browser cache for pages you have resently visited. Instructions on how to bypass your browser cache can by found [here](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache#Bypassing_cache).
+* Save the page. It can take a few minutes before the changes are live and you may have to bypass the browser cache for pages you have recently visited. Instructions on how to bypass your browser cache can by found [here](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache#Bypassing_cache).
 
 ### Updating
 Stylus, Greasemonkey and Tampermonkey update the style automatically however this can take some time, if you want to force update you can do so by clicking again on the install links found above.
