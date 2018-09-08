@@ -872,6 +872,10 @@ input[type=submit] {
 fieldset {
   background-color: #151515!important
 }
+code,
+pre {
+  border: 1px solid #424242!important
+}
 #ca-addsection+div.wds-dropdown .wds-button.active,
 #ca-addsection+div.wds-dropdown .wds-button:active,
 #ca-addsection+div.wds-dropdown .wds-button:hover,
@@ -995,6 +999,11 @@ table.smwb-ifactbox tr.smwb-propvalue td {
 .infobox-monster .slayer-header {
   background-color: #464646!important
 }
+.WikiaDropdown .selected-items,
+code,
+pre {
+  background-color: #353535!important
+}
 .WikiaArticle .references>li:target,
 .WikiaDropdown .dropdown li:hover {
   background-color: #383838!important
@@ -1002,10 +1011,7 @@ table.smwb-ifactbox tr.smwb-propvalue td {
 #alphabetical-header {
   border-color: #222!important
 }
-code,
 pre {
-  border: 1px solid #424242!important;
-  background-color: #353535!important;
   color: #c5c5c5!important
 }
 fieldset {
@@ -1082,7 +1088,6 @@ textarea::-webkit-scrollbar-corner {
   color: #9f9f9f!important
 }
 .WikiaDropdown .selected-items {
-  background-color: #353535!important;
   border-color: #52555a!important
 }
 #MathJax_Zoom,
