@@ -197,7 +197,7 @@
         .dropdown-styling;
     }
 
-    li:hover > a {
+    li:hover > a:not(.wds-button) {
         color: @theme-links;
         background-color: @dropdown-hover-item;
     }
@@ -264,27 +264,38 @@
 }
 
 //----- When logged in -----//
-.wds-global-navigation__user-menu .wds-avatar__image {
+.wds-global-navigation__user-menu.wds-global-navigation__user-logged-in .wds-avatar__image {
     border-color: lighten(@fandomheader-bg, 10%);
     fill: lighten(@fandomheader-bg, 10%);
 }
 
-.wds-global-navigation__user-menu:hover .wds-avatar__image {
+.wds-global-navigation__user-menu:hover.wds-global-navigation__user-logged-in .wds-avatar__image {
     border-color: lighten(@fandomheader-bg, 40%);
     fill: lighten(@fandomheader-bg, 40%);
 }
 
 //----- When not logged in -----//
-.wds-global-navigation__account-menu {
+.wds-global-navigation__user-menu li {
     color: @theme-text;
+    border-color: @theme-borders;
 
-    path {
-        fill: darken(@theme-text, 10%);
-    }
+    .wds-button {
+        .button-styling();
 
-    .wds-global-navigation__account-menu-dropdown-caption {
-        color: @theme-text;
+        &.wds-is-secondary {
+            .button-styling("cancel");
+        }
     }
+}
+
+.wds-global-navigation__user-menu .wds-avatar__image {
+    border-color: lighten(@fandomheader-bg, 30%);
+    fill: lighten(@fandomheader-bg, 30%);
+}
+
+.wds-global-navigation__user-menu:hover .wds-avatar__image {
+    border-color: lighten(@fandomheader-bg, 50%);
+    fill: lighten(@fandomheader-bg, 50%);
 }
 
 //----- Dropdown chevrons -----//
