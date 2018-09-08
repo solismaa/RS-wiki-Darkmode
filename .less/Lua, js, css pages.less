@@ -57,6 +57,65 @@
     .scroll-bar-styling;
 }
 
+//----- Search bar in editor -----//
+// Popup
+.ace_search {
+    background-color: darken(@code-editor-bg, 3%);
+    border-color: @theme-borders;
+}
+
+// Cancel button
+.ace_searchbtn_close {
+    filter: brightness(150%);
+
+    &:hover {
+        background: @button-cancel-bg;
+
+        &::before {
+            content: "\00D7";
+        }
+    }
+}
+
+// Searchbar
+.ace_search_form {
+    .text-input-styling();
+}
+
+// Previous/next buttons
+.ace_searchbtn {
+    background: lighten(@code-editor-bg, 20%);
+    border-color: lighten(@code-editor-bg, 10%);;
+
+    &.prev:before {
+        content: "▲";
+        color: @theme-text;
+    }
+
+    &.next:before {
+        content: "▼";
+        color: @theme-text;
+    }
+
+    &:hover {
+        background: lighten(@code-editor-bg, 30%);
+    }
+}
+
+// Search options
+.ace_search_options .ace_button {
+    color: @theme-text;
+    border-color: @theme-borders;
+
+    &:hover {
+        background-color: lighten(@code-editor-bg, 10%);
+    }
+
+    &.checked {
+        background-color: lighten(@code-editor-bg, 20%);
+    }
+}
+
 // ---------------------------
 //      code highlighting
 // ---------------------------
