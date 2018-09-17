@@ -66,14 +66,16 @@
 
 // Cancel button
 .ace_searchbtn_close {
-    filter: brightness(150%);
+    background: none;
+
+    &::before {
+        content: "✖";
+        color: @button-text;
+        font-size: 0.8em;
+    }
 
     &:hover {
         background: @button-cancel-bg;
-
-        &::before {
-            content: "\00D7";
-        }
     }
 }
 

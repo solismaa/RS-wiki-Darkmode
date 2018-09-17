@@ -10,7 +10,7 @@
 // @include       http://*.runescape.wikia.com/*
 // @include       https://*.runescape.wikia.com/*
 // @run-at        document-start
-// @version       2.0.3
+// @version       2.0.4
 // ==/UserScript==
 (function() {var css = `
 .WikiaArticle .infobox,
@@ -702,6 +702,7 @@ table.property-page-results .value-row:hover {
 .wikia-button.secondary,
 .wikia-menu-button.secondary,
 .wikia-single-button a.secondary,
+button.secondary,
 input[type=button].secondary,
 input[type=reset].secondary,
 input[type=submit].secondary {
@@ -858,6 +859,7 @@ blockquote.block {
 .wikia-menu-button .codepage-publish-button,
 .wikia-menu-button .drop,
 .wikia-single-button a,
+button,
 input[type=button],
 input[type=reset],
 input[type=submit] {
@@ -930,6 +932,9 @@ fieldset {
 .wikia-single-button a.active,
 .wikia-single-button a:active,
 .wikia-single-button a:hover,
+button.active,
+button:active,
+button:hover,
 input[type=button].active,
 input[type=button]:active,
 input[type=button]:hover,
@@ -1129,6 +1134,9 @@ textarea::-webkit-scrollbar-corner {
 .wikia-single-button a.secondary.active,
 .wikia-single-button a.secondary:active,
 .wikia-single-button a.secondary:hover,
+button.secondary.active,
+button.secondary:active,
+button.secondary:hover,
 input[type=button].secondary.active,
 input[type=button].secondary:active,
 input[type=button].secondary:hover,
@@ -1946,6 +1954,7 @@ table.property-page-results .header-title {
 #PageHeader .page-header__categories-dropdown .page-header__categories-dropdown-content ul::before,
 .WikiaBarWrapper .tools-menu ul::after,
 .WikiaBarWrapper .tools-menu ul::before,
+.ace_searchbtn_close,
 .mw-scribunto-error,
 .ui-autocomplete ul::after,
 .ui-autocomplete ul::before,
@@ -2211,12 +2220,10 @@ body.background-dynamic.skin-oasis .background-image-gradient::before {
 .ace_searchbtn_close:hover {
   background: #595959!important
 }
-.ace_searchbtn_close {
-  -webkit-filter: brightness(150%)!important;
-  filter: brightness(150%)!important
-}
-.ace_searchbtn_close:hover::before {
-  content: "\00D7"!important
+.ace_searchbtn_close::before {
+  content: "✖"!important;
+  color: #dfdfdf!important;
+  font-size: .8em!important
 }
 .ace_search_form::-webkit-input-placeholder {
   color: #9f9f9f!important
