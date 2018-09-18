@@ -222,21 +222,20 @@ a {
         color: @theme-text;
     }
 
-    #wikia-recent-activity {
-        h2.has-icon {
-            border-bottom-color: @theme-borders;
+    h2 {
+        border-bottom-color: @theme-borders;
+    }
 
-            svg {
-                fill: darken(@theme-text, 15%);
-            }
-        }
+    // Community rail
+    .wds-activity-icon {
+        fill: darken(@theme-text, 15%);
+    }
 
-        .community-page-rail-module {
-            border-top-color: @theme-borders;
+    .community-page-rail-module {
+        border-top-color: @theme-borders;
 
-            .wds-avatar {
-                border-color: @theme-borders;
-            }
+        .wds-avatar {
+            border-color: @theme-borders;
         }
     }
 

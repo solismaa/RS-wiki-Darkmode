@@ -10,7 +10,7 @@
 // @include       http://*.runescape.wikia.com/*
 // @include       https://*.runescape.wikia.com/*
 // @run-at        document-start
-// @version       2.0.4
+// @version       2.0.5
 // ==/UserScript==
 (function() {var css = `
 .WikiaArticle .infobox,
@@ -35,7 +35,7 @@ table.wikitable {
 .QuickStatsWidget .WikiaDataTable tbody tr,
 .QuickStatsWidget .WikiaDataTable tbody tr td,
 .WikiaPage,
-.WikiaRail #wikia-recent-activity .community-page-rail-module .wds-avatar,
+.WikiaRail .community-page-rail-module .wds-avatar,
 .editpage-intro,
 .insights-container-nav .insights-nav-item,
 .insights-header-sorting,
@@ -383,7 +383,7 @@ div.mw-warning-with-logexcerpt {
 }
 .LightboxCarousel,
 .WikiaBarWrapper .tools-menu>li,
-.WikiaRail #wikia-recent-activity .community-page-rail-module,
+.WikiaRail .community-page-rail-module,
 .ve-init-mw-viewPageTarget-toolbar {
   border-top-color: #52555a!important
 }
@@ -2079,7 +2079,7 @@ body.background-dynamic.skin-oasis .background-image-gradient::before {
   fill: #ff6a64!important
 }
 .WikiaRail #WikiaAdInContentPlaceHolder svg,
-.WikiaRail #wikia-recent-activity h2.has-icon svg,
+.WikiaRail .wds-activity-icon,
 .wds-global-navigation__search-label path {
   fill: #9f9f9f!important
 }
@@ -2108,7 +2108,7 @@ body.background-dynamic.skin-oasis .background-image-gradient::before {
   background-color: transparent!important
 }
 .WikiaArticle h2,
-.WikiaRail #wikia-recent-activity h2.has-icon,
+.WikiaRail h2,
 .wds-global-navigation__search-input-wrapper {
   border-bottom-color: #52555a!important
 }
