@@ -2,7 +2,7 @@
 @name           RunescapeWiki darkmode
 @description    A dark theme for the Runescape wiki
 @namespace      https://github.com/CephHunter
-@version        2.0.5
+@version        2.0.6
 @homepageURL    https://github.com/CephHunter/RS-wiki-DarkMode#readme
 @supportURL     https://github.com/CephHunter/RS-wiki-DarkMode/issues
 @author         CephHunter
@@ -38,6 +38,8 @@ table.wikitable {
 .insights-list-cell,
 .mmgtable-details,
 .modalWrapper h1,
+.mw_metadata td,
+.mw_metadata th,
 .ogg-player-options,
 .oo-ui-bookletLayout-outlinePanel,
 .oo-ui-widget-enabled:hover,

@@ -10,7 +10,7 @@
 // @include       http://*.runescape.wikia.com/*
 // @include       https://*.runescape.wikia.com/*
 // @run-at        document-start
-// @version       2.0.5
+// @version       2.0.6
 // ==/UserScript==
 (function() {var css = `
 .WikiaArticle .infobox,
@@ -42,6 +42,8 @@ table.wikitable {
 .insights-list-cell,
 .mmgtable-details,
 .modalWrapper h1,
+.mw_metadata td,
+.mw_metadata th,
 .ogg-player-options,
 .oo-ui-bookletLayout-outlinePanel,
 .oo-ui-widget-enabled:hover,
