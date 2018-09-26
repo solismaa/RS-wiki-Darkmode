@@ -1,5 +1,7 @@
+Currently under construction
+
 ## RS-wiki-DarkMode
-This is a dark theme for the [Runescape wiki](http://runescape.wikia.com/wiki/RuneScape_Wiki).
+This is a dark theme for the [Runescape wiki](https://runescape.wiki/).
 
 ## Preview
 ![preview](Images/Preview.png)
@@ -14,7 +16,6 @@ More images: https://imgur.com/a/Ka7sp
 
 #### Step 2: Install the UserStyle
 * Install from [Github](https://raw.githubusercontent.com/CephHunter/RS-wiki-DarkMode/master/Darkmode.user.css).
-* Install from [OpenUserCSS.org](https://openusercss.org/theme/5b416bc66368470b00f15797).
 ### Installing as a userscript
 #### Step 1: Get a scriptmanager
 * ![firefox](Images/firefox.png) [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/) or [Tampermonkey](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
