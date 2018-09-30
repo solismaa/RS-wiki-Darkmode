@@ -1,0 +1,89 @@
+// ===================
+//      sg-red
+//      sg-yellow
+//      sg-green
+// ===================
+// for skill calculators and interactive skill guides
+// includes modified link colour for accessibility
+// applies to a variety of templates used by a variety of scripts
+.sg-red,
+.nocell {
+    background: @red-bg;
+    color: @theme-text;
+}
+
+.sg-yellow,
+.maybecell {
+    background: @yellow-bg;
+    color: @theme-text;
+}
+
+.sg-green,
+.yescell {
+    background: @green-bg;
+    color: @theme-text;
+}
+
+// ===============
+//      Coins
+// ===============
+.coins-pos {
+    color: @coins-positive;
+}
+
+.coins-neg {
+    color: @coins-negative;
+}
+
+// ================================
+//      Big navigation buttons
+// ================================
+// Example: [[Treasure Trails#Types of clues]]
+.portal-link {
+        a {
+            background-color: @theme-grey-2;
+            color: @theme-text;
+        }
+
+    a:hover {
+        background-color: @theme-gray-2-lighter;
+        color: @button-text;
+    }
+}
+
+// ==========================
+//      Alternating rows
+// ==========================
+// Example: [[Experience/Table]]
+table.alternating-rows tr:nth-child(even) {
+    background-color: @table-header;
+}
+
+// =========================
+//      Minigame status
+// =========================
+.status-active {
+    background-color: @green-lighter-bg;
+    color: @theme-text;
+}
+
+.status-inactive {
+    background-color: @red-bg;
+    color: @theme-text;
+}
+
+// ================================
+//      Table attribute values
+// ================================
+// Example: {{Eq infotable}} {{InfoHeader}}
+.attribute-value {
+    .table-header;
+}
+
+.attribute-total {
+    td,
+    th,
+    .attribute-value {
+        .table-header;
+    }
+}

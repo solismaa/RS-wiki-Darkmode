@@ -1,0 +1,535 @@
+// ===================
+//      Main page
+// ===================
+.mp-color {
+    background-color: @homepage-module-bg;
+    color: @theme-text;
+
+    // buttons
+    .mp-endrow .mp-endbox {
+        background-color: darken(@homepage-module-bg, 4%);
+    }
+}
+
+.mp-color2 {
+    background-color: @homepage-module-bg;
+    color: @theme-text;
+
+    // buttons
+    .mp-endrow .mp-endbox2 {
+        background-color: darken(@homepage-module-bg, 4%);
+    }
+}
+
+// Footer
+#mp-footer {
+    background: @categories;
+}
+
+// Pol show results table header
+#mp-poll-prev-results {
+    th {
+        background-color: darken(@homepage-module-bg, 4%);
+    }
+
+    .hover {
+        border-color: @theme-borders;
+
+        > div {
+            background-color: @theme-borders;
+        }
+    }
+}
+
+#mp-recent a {
+    color: @theme-links;
+}
+
+// Twitter feed
+.timeline-Viewport {
+    // Scrollbar
+    .scroll-bar-styling;
+
+    // links
+    .customisable {
+        color: @theme-links;
+    }
+}
+
+// ====================
+//      User pages
+// ====================
+.WikiaUserPagesHeader {
+    background: lighten(@main-page-bg, 2%);
+}
+
+#UserProfileMasthead {
+    .masthead-info {
+        background-color: lighten(@main-page-bg, 7%);
+
+        // username
+        hgroup {
+            background-color: @theme-blue;
+            color: @theme-text;
+            background-image: linear-gradient( 0deg, @theme-blue, lighten(@theme-blue, 5%) );
+        }
+
+        // usertags
+        .tag {
+            background: lighten(@theme-blue, 20%);
+        }
+    }
+
+    .masthead-info-lower:before {
+        border-color: lighten(@main-page-bg, 7%) lighten(@main-page-bg, 7%) transparent transparent;
+    }
+
+    .contributions-details a {
+        color: @theme-text;
+    }
+
+    .masthead-avatar .avatar {
+        border-color: @theme-borders;
+    }
+}
+
+.tabs {
+    border-bottom: solid 1px @theme-borders;
+
+    .selected a {
+        background: @main-page-bg;
+        color: @theme-text;
+        border: solid 1px @theme-borders;
+        border-bottom: solid 1px transparent;
+    }
+}
+
+// Footer on contributions
+div.mw-warning-with-logexcerpt,
+.WikiaArticle .noarticletext,
+#sp-contributions-footer {
+    background-color: @fieldset-tag-bg;
+    border-color: @theme-borders;
+}
+
+// ==========================================
+//      [[RuneScape:Active discussions]]
+//      [[Forum:Yew Grove]]
+// ==========================================
+.forumcolumnheader,
+.discussiontable tr:nth-child(2) th {
+    background-color: darken(@main-page-bg, 4%);
+    color: @theme-text;
+}
+
+.discussiontable tr:nth-child(1) th,
+.forumactiveheader,
+.forumarchiveheader,
+.forumoldarchives {
+    color: lighten(@theme-text, 10%);
+    background-color: @theme-blue;
+
+    a {
+        color: lighten(@theme-text, 10%);
+    }
+}
+
+.discussiontable.noresults tr:nth-child(1) th {
+    color: @theme-text;
+    background-color: darken(@main-page-bg, 8%);
+
+    a {
+        color: @theme-text;
+    }
+}
+
+.forumsearchbox {
+    .table-infobox;
+}
+
+// Overwrite {{Archive list}} styling
+.forumlist.archive {
+    background-color: transparent;
+    border: none;
+}
+
+// ============================
+//      [[Special:Search]]
+// ============================
+.Search .result-count {
+    color: @theme-text;
+}
+
+// Advanced search
+.Search .SearchInput {
+    // background-color: lighten(@main-page-bg, 2%);
+    background-color: @theme-grey-darker;
+    border-color: @theme-borders;
+
+    // Search button image
+    .sprite {
+        filter: brightness(85%);
+    }
+}
+
+// Articles/files/users/everything selection
+.search-tabs {
+    .selected {
+        background-color: lighten(@main-page-bg, 5%);
+    }
+
+    li a:hover {
+        background-color: lighten(@main-page-bg, 8%);
+    }
+}
+
+// ====================================
+//      [[Special:Recent changes]]
+// ====================================
+// byte marker colours
+.mw-plusminus-pos {
+    color: @positive-change;
+}
+
+.mw-plusminus-neg {
+    color: @negative-change;
+}
+
+// makes (abusefilter) tags stand out more
+.mw-tag-markers,
+.mw-tag-markers a {
+    color: red;
+}
+
+// remove certain styles from tags
+.mw-tag-marker-visualeditor a,
+.mw-tag-marker-visualeditor-needcheck a {
+    color: #e49f10;
+}
+
+.recentchangestext {
+    .speedy-delete,
+    .speedy-move {
+        color: #cb1c00;
+    }
+}
+
+// ==============================
+//      [[Special:Community]]
+// ==============================
+// Start here
+.community-page-card-module {
+    background: lighten(@main-page-bg, 6%);
+
+    .community-page-card-module-header {
+        background-color: @theme-blue-lighter;
+        color: @theme-text;
+    }
+
+    .community-page-card-module-header-icon {
+        fill: @theme-blue-lighter;
+    }
+
+    .community-page-card-module-full-list-link {
+        color: @theme-links;
+    }
+}
+
+// Side rail
+.community-page-rail {
+    background: lighten(@main-page-bg, 6%);
+
+    .community-page-module-box {
+        background-color: lighten(@main-page-bg, 3%);
+    }
+
+    .community-page-module-section-title {
+        color: @theme-text;
+    }
+}
+
+// ============================
+//      [[Special:Images]]
+// ============================
+.page-header__counter {
+    color: @theme-text;
+}
+
+// Add photo popup
+.UploadPhotos .options {
+    background-color: @popup-bg;
+}
+
+.wikia-gallery-item {
+    border-bottom-color: @theme-borders;
+}
+
+// ===============================================
+//             [[Runscape:User help]]
+//      [[RuneScape:Administrative requests]]
+// ===============================================
+.userhelpinfo,
+.introheader,
+.admininfo {
+    color: @theme-text;
+    background-color: @messageboxes;
+}
+
+// ============================
+//      [[Special:Browse]]
+// ============================
+// searchbox outline
+.browse-input-resp .mw-ui-input:focus {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+table.smwb-factbox,
+table.smwb-ifactbox {
+    border-collapse: collapse;
+
+    tr.smwb-title,
+    tr.smwb-center {
+        td {
+            .table-header();
+        }
+    }
+
+    tr.smwb-propvalue,
+    tr.smwb-ipropvalue {
+        th {
+            .table-header();
+        }
+
+        td {
+            .table-data();
+            background-color: @table-data;
+        }
+    }
+}
+
+// =========================
+//      [[Special:Ask]]
+// =========================
+// .autocomplete-suggestions {
+//     .text-input-styling();
+// }
+
+#other_options tr:nth-child(even) {
+    background: lighten(@fieldset-tag-bg, 5%);
+}
+
+#other_options tr:nth-child(odd) {
+    background: lighten(@fieldset-tag-bg, 10%);
+}
+
+.smw-ask-action-btn-lblue {
+    .button-styling();
+}
+
+// If formatted as category
+.smw-column-header {
+    color: @theme-text;
+}
+
+// ====================================
+//      [[Special:AdminDashboard]]
+// ====================================
+// ----------------
+//      Header
+// ----------------
+.AdminDashboardHeader {
+    background: lighten(@main-page-bg, 5%);
+    border-color: @theme-borders;
+    box-shadow: inset 0 -4px 2px 0 lighten(@main-page-bg, 10%);
+
+    h1 a {
+        color: @theme-links;
+    }
+}
+
+.AdminDashboardTabs .tab {
+    color: @theme-text;
+    background: lighten(@main-page-bg, 5%);
+    border: solid 1px @theme-borders;
+    border-bottom: 0;
+
+    &.active {
+        background: @main-page-bg;
+    }
+}
+
+// -------------------------
+//      General content
+// -------------------------
+.AdminDashboard .control-section {
+    header {
+        background-color: lighten(@main-page-bg, 5%);
+        background-image: linear-gradient( 0deg, lighten(@main-page-bg, 5%), lighten(@main-page-bg, 10%) );
+        color: @theme-text;
+        border-color: @theme-borders;
+
+        h1 {
+            color: @theme-text;
+        }
+    }
+
+    .controls {
+        background: lighten(@main-page-bg, 2%);
+
+        .control .representation {
+            background-image: none;
+            background-color: @button-accept-bg;
+            border-color: @button-accept-bg;
+        }
+
+        .control:hover .representation {
+            background-image: none;
+            background-color: lighten(@button-accept-bg, 10%);
+            border-color: lighten(@button-accept-bg, 10%);
+        }
+    }
+}
+
+// --------------------------
+//      Advanced content
+// --------------------------
+.AdminDashboardGeneralHeader {
+    background-color: lighten(@main-page-bg, 5%);
+    background-image: linear-gradient( 0deg, lighten(@main-page-bg, 5%), lighten(@main-page-bg, 10%) );
+    color: @theme-text;
+    border-color: @theme-borders;
+    box-shadow: 0 2px 2px 0 darken(@main-page-bg, 5%);
+}
+
+.AdminDashboard .AdminDashboardGeneralHeader h2 {
+    border: none;
+}
+
+// ------------------
+//      Siderail
+// ------------------
+.AdminDashboardRail h1 {
+    color: @theme-text;
+}
+
+// Progress widget
+#FounderProgressWidget .preview {
+    background: @rail-module-bg;
+    border-color: @theme-borders;
+
+    .founder-progress-bar {
+        filter: invert(0.8);
+    }
+
+    header {
+        background: darken(@rail-module-bg, 5%);
+
+        h1 {
+            color: @theme-text;
+        }
+
+        &:after {
+            border-right-color: darken(@rail-module-bg, 5%);
+        }
+
+    }
+
+    .activities .activity,
+    .activities .activity.active {
+        border-color: @theme-borders;
+
+        .label {
+            background-color: lighten(@rail-module-bg, 3%);
+            background-image: linear-gradient( 0deg, lighten(@rail-module-bg, 3%), lighten(@rail-module-bg, 6%) );
+            color: @theme-text;
+            border-color: @theme-borders;
+        }
+
+        .description {
+            background: darken(@rail-module-bg, 2%);
+
+            &:before {
+                border-top-color: lighten(@rail-module-bg, 3%);
+            }
+        }
+    }
+
+    .activities .activity .label .chevron {
+        border-top-color: @theme-text;
+        border-bottom-color: transparent;
+    }
+
+    .activities .activity.active .label .chevron {
+        border-top-color: transparent;
+        border-bottom-color: @theme-text;
+    }
+}
+
+// Quick stats
+.QuickStatsWidget .WikiaDataTable {
+    background: lighten(@rail-module-bg, 3%);
+    border-color: @theme-borders;
+
+    tbody tr,
+    tbody tr td {
+        border-color: @theme-borders;
+    }
+
+    th,
+    td {
+        color: @theme-text;
+    }
+
+    td:nth-child(2),
+    .highlight-top,
+    .totals td:nth-child(2) {
+        background-color: darken(@rail-module-bg, 5%);
+        background-image: linear-gradient( 90deg, darken(@rail-module-bg, 3%), darken(@rail-module-bg, 5%) );
+        color: darken(@theme-text, 5%);
+    }
+
+    .totals td {
+        background: lighten(@rail-module-bg, 3%);
+        color: @theme-text;
+        border-top: solid 1px @theme-borders;
+        border-bottom: solid 1px @theme-borders;
+    }
+
+    .totals td:first-child .pointer {
+        background: lighten(@rail-module-bg, 12%);
+        color: lighten(@theme-text, 5%);
+
+        &:before {
+            border-left-color: lighten(@rail-module-bg, 12%);;
+        }
+    }
+
+    .highlight-bottom {
+        background-image: linear-gradient( 0deg, lighten(@rail-module-bg, 3%), darken(@rail-module-bg, 5%) 25%, transparent );
+    }
+}
+
+// ==============================
+//      [[Special:Insights]]     
+// ==============================
+.insights-list-header {
+    background-color: @table-header;
+    border-color: @theme-borders;
+}
+
+.insights-list-cell,
+.insights-header-sorting {
+    border-color: @theme-borders;
+}
+
+.insights-container-nav {
+    .insights-nav-item:hover,
+    .insights-nav-item.active {
+        background-color: lighten(@main-page-bg, -5%);
+    }
+
+    .insights-nav-item {
+        border-color: @theme-borders;
+    }
+}
+

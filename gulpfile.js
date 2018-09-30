@@ -1,6 +1,7 @@
 'use strict';
 var gulp = require('gulp');
 var less = require('gulp-less');
+var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
@@ -20,7 +21,8 @@ var lec = require('gulp-line-ending-corrector');
  * For development
  */
 gulp.task('default', ['dev'], function() {
-    gulp.watch(".less/*.less", ['dev']);
+    // gulp.watch(".less/*.less", ['dev']);
+    gulp.watch("src/*.scss", ['dev']);
     open("Darkmode.dev.user.css", "chrome");
 });
 
@@ -38,13 +40,13 @@ gulp.task('dev', function() {
         @author         ${pkg.author}
         @license        ${pkg.license}
         ==/UserStyle== */
-        @-moz-document domain('runescape.wikia.com') {
+        @-moz-document domain('runescape.wiki') {
         `.replace(/^\s*/gm, "");
 
-    return gulp.src('./.less/darkmode.less')
+    return gulp.src('./src/darkmode.scss')
         .pipe(plumber())
         .pipe(sourcemaps.init())
-        .pipe(less())
+        .pipe(sass().on('error', sass.logError))
         .pipe(postcss([ autoprefixer() ]))
         .pipe(sourcemaps.write())
         .pipe(postcss([ safeImportant() ]))     // safeImportant doesn't support sourcemaps, so placed after sourcemap write
@@ -60,9 +62,9 @@ gulp.task('dev', function() {
 gulp.task('clean', function() {
     var pkg = JSON.parse(fs.readFileSync('./package.json'));
 
-    var finalCSS = gulp.src('.less/darkmode.less')
+    var finalCSS = gulp.src('.src/darkmode.scss')
         .pipe(plumber())
-        .pipe(less())
+        .pipe(sass().on('error', sass.logError))
         .pipe(postcss([ autoprefixer(), safeImportant()]))
         .pipe(cleanCSS({level: {2: {all: true}}, format: 'beautify'}))
         .pipe(lec({eolc: 'LF'}));
@@ -82,7 +84,7 @@ gulp.task('clean', function() {
         @author         ${pkg.author}
         @license        ${pkg.license}
         ==/UserStyle== */
-        @-moz-document domain('runescape.wikia.com') {
+        @-moz-document domain('runescape.wiki') {
         `.replace(/^\s*/gm, "");
 
     finalCSS.pipe(rename('Darkmode.user.css'))
@@ -104,10 +106,7 @@ gulp.task('clean', function() {
         // @author        ${pkg.author}
         // @homepage      ${pkg.homepage}
         // @supportURL    ${pkg.bugs.url}
-        // @include       http://runescape.wikia.com/*
-        // @include       https://runescape.wikia.com/*
-        // @include       http://*.runescape.wikia.com/*
-        // @include       https://*.runescape.wikia.com/*
+        // @include       https://runescape.wiki/*
         // @run-at        document-start
         // @version       ${pkg.version}
         // ==/UserScript==

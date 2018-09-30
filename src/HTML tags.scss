@@ -1,0 +1,42 @@
+// ===================
+//      HTML tags
+// ===================
+pre {
+    border: solid 1px lighten($pre-tag-bg, 5%);
+    background-color: $pre-tag-bg;
+}
+
+code {
+    border: solid 1px lighten($code-tag-bg, 5%);
+    background-color: $code-tag-bg;
+}
+
+fieldset {
+    border-color: $theme-borders;
+    background-color: $fieldset-tag-bg;
+}
+
+hr {
+    border-color: $theme-borders;
+}
+
+select {
+    @include text-input-styling();
+}
+
+textarea {
+    @include text-input-styling();
+    @include scroll-bar-styling();
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $theme-text;
+    border-color: $theme-borders;
+}
+
+ul {
+    /* no important */
+    list-style-image: url("data:image/svg+xml,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='5' height='13'%3E %3Ccircle cx='2.5' cy='9.5' r='2.5' fill='#{$theme-text}'/%3E %3C/svg%3E");
+}
+
+

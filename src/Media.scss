@@ -1,0 +1,59 @@
+// ===============================
+//      Article image and gif
+// ===============================
+// .article-thumb,
+// .gifresize,
+// .extimage,
+// .WikiaArticle .thumbinner {
+//     .table-infobox;
+//     background-image: none;
+
+//     .caption,
+//     .thumbcaption {
+//         width: auto;
+//         color: $theme-text;
+//         border-top: solid 1px $theme-borders;
+//     }
+// }
+
+.gifresize,
+.thumbinner,
+.extimage, {
+    @include table-infobox();
+
+    .caption,
+    .thumbcaption {
+        width: auto;
+        color: $theme-text;
+        border-color: $theme-borders;
+        background: $table-data;
+        border: none;
+        border-top: solid 1px $theme-borders;
+    }
+}
+
+// =====================
+//      Musicplayer
+// =====================
+.musicplayer {
+    @include table-infobox();
+}
+
+// ======================
+//      Tex formulas
+// ======================
+.mwe-math-element img {
+    filter: invert(0.85);
+}
+
+// ===================
+//      Galleries
+// ===================
+.gallerybox .thumb {
+    background-color: $table-data;
+    border-color: $theme-borders;
+}
+
+.gallerytext {
+    color: darken($theme-text, 10%);
+}

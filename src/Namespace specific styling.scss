@@ -1,0 +1,54 @@
+// ====================
+//      Transcript
+// ====================
+.ns-120 .mw-content-text,
+.transcript {
+
+    > ul,
+    > ul ul {
+        li {
+            b:first-child {
+                // First bold word should always be the character
+                color: #01c023;
+            }
+        }
+
+        li:hover {
+            background-color: lighten($main-page-bg, 5%);
+            outline-color: $theme-borders;
+
+            // alternating colours
+            li:hover,
+            li:hover li:hover li:hover,
+            li:hover li:hover li:hover li:hover li:hover,
+            li:hover li:hover li:hover li:hover li:hover li:hover li:hover {
+                background-color: lighten($main-page-bg, 1%);
+            }
+
+            li:hover li:hover,
+            li:hover li:hover li:hover li:hover,
+            li:hover li:hover li:hover li:hover li:hover li:hover {
+                background-color: lighten($main-page-bg, 5%);
+            }
+        }
+    }
+}
+
+// quest actions for transcripts
+.quest-action:hover {
+    background-color: lighten($main-page-bg, 5%);
+    outline-color: $theme-borders;
+}
+
+// ==================
+//      Property
+// ==================
+table.property-page-results {
+    .header-title {
+        color: $theme-text;
+    }
+
+    .value-row:hover {
+        background-color: lighten($main-page-bg, 5%);
+    }
+}

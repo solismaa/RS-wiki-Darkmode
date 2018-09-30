@@ -1,0 +1,58 @@
+// ====================
+//      Text input
+// ====================
+input[type="search"],
+input[type="text"],
+input[type="number"],
+.mw-ui-input {
+    @include text-input-styling();
+}
+
+// =========================
+//      Dropdown select
+// =========================
+// Input bar
+.oo-ui-tagMultiselectWidget-handle {
+    @include text-input-styling();
+
+    .oo-ui-inputWidget-input {
+        border: none;
+    }
+}
+
+// Selected items
+.oo-ui-tagItemWidget {
+    @include button-styling("cancel");
+}
+
+// Dropdown list
+.oo-ui-menuSelectWidget {
+    @include dropdown-styling();
+}
+
+// =================
+//      Buttons
+// =================
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button,
+button {
+    @include button-styling();
+
+    &.secondary {
+        @include button-styling("cancel");
+    }
+}
+
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button {
+    @include button-styling();
+}
+
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button {
+    @include button-styling("cancel");
+}
+
+// .oo-ui-buttonElement-button .oo-ui-iconElement-icon {
+//     filter: invert(0.6);
+// }

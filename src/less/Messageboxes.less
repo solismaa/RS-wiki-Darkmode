@@ -1,0 +1,135 @@
+// ===================
+//      Wikipedia
+// ===================
+table.wikipedia {
+    background: @messageboxes;
+    border: none;
+}
+
+// ====================================
+//      Info and warn messageboxes
+// ====================================
+.messagebox,
+.official,
+.forumheader {
+    background-color: @messageboxes;
+}
+
+.messagebox {
+    border-left-color: #90c2dd;
+
+    &.obsolete {
+        border-color: #464646;
+
+        a {
+            color: #6c6c6c;
+        }
+    }
+
+    &.info {
+        border-color: #898989;
+
+        a {
+            color: #6c6c6c;
+        }
+    }
+
+    &.action {
+        border-color: #45697D;
+
+        a {
+            color: #3c5c6e;
+        }
+    }
+
+    &.file {
+        border-color: #617ebc;
+
+        a {
+            color: #556d97;
+        }
+    }
+
+    &.warn {
+        border-color: #861c10;
+
+        a {
+            color: #861c10;
+        }
+    }
+
+    &.disambig {
+        border-color: #898989;
+
+        a {
+            color: #6c6c6c;
+        }
+    }
+
+    &.safe {
+        border-color: #1b8408;
+
+        a {
+            color: #1b8408;
+        }
+    }
+
+    &.unsafe {
+        border-color: #997700;
+
+        a {
+            color: #997700;
+        }
+    }
+
+    &.easter {
+        border-color: #598014;
+
+        a {
+            color: #598014;
+        }
+    }
+
+    &.halloween {
+        border-color: #794080;
+
+        a {
+            color: #794080;
+        }
+    }
+
+    &.thanksgiving {
+        border-color: #a65800;
+
+        a {
+            color: #a65800;
+        }
+    }
+
+    &.christmas {
+        border-color: #428bb5;
+
+        a {
+            color: #3a799d;
+        }
+    }
+}
+
+// =================================
+//      Edit page intro wrapper
+// =================================
+// Eample: protected pages, [[http://runescape.wikia.com/wiki/Template:Clear?action=edit]]
+.editpage-intro {
+    border-color: @theme-borders;
+
+    & > .editpage-intro-wrapper > div {
+        background-color: @messageboxes;
+        color: @theme-text;
+    }
+
+    .expand {
+        background-color: lighten(@messageboxes, 10%);
+        border: 1px solid @theme-borders;
+        color: @theme-text;
+    }
+}
