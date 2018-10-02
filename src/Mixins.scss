@@ -43,7 +43,7 @@
             background-color: $button-accept-bg;
             border-color: $button-accept-bg;
         }
-    } @else if ($type = "cancel") {
+    } @else if ($type == "cancel") {
         color: $button-text;
         background-image: none;
         border-color: $button-cancel-bg;
@@ -95,23 +95,28 @@
     background-color: $dropdown-bg;
     border-color: $theme-borders;
 
-    li > a {
-        color: $theme-text;
-
-        &:hover {
-            color: $theme-links;
-            background-color: $dropdown-hover-item;
+    $parent: inspect(&);
+    @if (str-index($parent, "oo-ui") != null) {
+        .oo-ui-menuOptionWidget {
+            color: $theme-text;
+            
+            &.oo-ui-optionWidget-highlighted {
+                color: $theme-text;
+                // color: $theme-links;
+                background-color: $dropdown-hover-item;
+            }
+        }
+    } @else {
+        li > a {
+            color: $theme-text;
+    
+            &:hover {
+                color: $theme-links;
+                background-color: $dropdown-hover-item;
+            }
         }
     }
-
-    .oo-ui-menuOptionWidget {
-        color: $theme-text;
-
-        &.oo-ui-optionWidget-highlighted {
-            color: $theme-links;
-            background-color: $dropdown-hover-item;
-        }
-    }
+    
 
     // ul::before,
     // ul::after {
@@ -133,7 +138,7 @@
 //      Scroll bar
 // ====================
 @mixin scroll-bar-styling($style: "style-1") {
-    @if ($style = "style-1") {
+    @if ($style == "style-1") {
         &::-webkit-scrollbar {
             width: 13px;
         }
@@ -157,7 +162,7 @@
         }
     }
 
-    @else if ($style = "style-2") {
+    @else if ($style == "style-2") {
         &::-webkit-scrollbar {
             width: 13px;
         }
@@ -180,7 +185,7 @@
         }
     }
 
-    @else if ($style = "default") {
+    @else if ($style == "default") {
         &::-webkit-scrollbar,
         &::-webkit-scrollbar-track,
         &::-webkit-scrollbar-thumb,

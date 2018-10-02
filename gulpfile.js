@@ -1,35 +1,39 @@
 'use strict';
-var gulp = require('gulp');
-var less = require('gulp-less');
-var sass = require('gulp-sass');
-var plumber = require('gulp-plumber');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var cleanCSS = require('gulp-clean-css');
-var safeImportant = require('postcss-safe-important');
-var rename = require("gulp-rename");
-var sourcemaps = require('gulp-sourcemaps');
-var bump = require('gulp-bump');
-var header = require('gulp-header');
-var footer = require('gulp-footer');
-var fs = require('fs');
-var runSequence = require('run-sequence');
-var open = require('open');
-var lec = require('gulp-line-ending-corrector');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const plumber = require('gulp-plumber');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cleanCSS = require('gulp-clean-css');
+const safeImportant = require('postcss-safe-important');
+const rename = require("gulp-rename");
+const sourcemaps = require('gulp-sourcemaps');
+const bump = require('gulp-bump');
+const header = require('gulp-header');
+const footer = require('gulp-footer');
+const fs = require('fs');
+const open = require('opn');
+const lec = require('gulp-line-ending-corrector');
 
 /**
  * For development
  */
-gulp.task('default', ['dev'], function() {
-    // gulp.watch(".less/*.less", ['dev']);
-    gulp.watch("src/*.scss", ['dev']);
-    open("Darkmode.dev.user.css", "chrome");
-});
+function watchFiles(cb) {
+    gulp.watch("src/*.scss", dev);
 
-gulp.task('dev', function() {
-    var pkg = JSON.parse(fs.readFileSync('./package.json'));
-    var footerMsg = "\n}";
-    var headerMsg = 
+    fs.access("./browser.js", (err) => {
+        if (!err) {
+            let browser = require("./browser");
+            open("Darkmode.dev.user.css", {app: browser.browser()});
+        } 
+    })
+    cb();
+}
+
+function dev() {
+    const pkg = JSON.parse(fs.readFileSync('./package.json'));
+    const footerMsg = "\n}";
+    const headerMsg = 
         `/* ==UserStyle==
         @name           dev Wiki darkmode
         @description    Developer stylesheet for the RuneScape Wiki darkmode
@@ -47,22 +51,21 @@ gulp.task('dev', function() {
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
-        .pipe(postcss([ autoprefixer() ]))
+        .pipe(postcss([ autoprefixer(), safeImportant() ]))
         .pipe(sourcemaps.write())
-        .pipe(postcss([ safeImportant() ]))     // safeImportant doesn't support sourcemaps, so placed after sourcemap write
         .pipe(rename('Darkmode.dev.user.css'))
         .pipe(header(headerMsg))
         .pipe(footer(footerMsg))
         .pipe(gulp.dest('./'));
-})
+}
 
 /**
  * Generate the final cleaned up css and minified files
  */
-gulp.task('clean', function() {
-    var pkg = JSON.parse(fs.readFileSync('./package.json'));
+function clean() {
+    const pkg = JSON.parse(fs.readFileSync('./package.json'));
 
-    var finalCSS = gulp.src('.src/darkmode.scss')
+    const finalCSS = gulp.src('./src/darkmode.scss')
         .pipe(plumber())
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss([ autoprefixer(), safeImportant()]))
@@ -70,10 +73,8 @@ gulp.task('clean', function() {
         .pipe(lec({eolc: 'LF'}));
 
     //----- Final css file -----//
-    var d = new Date();
-    var months = ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
-    var cssFooterMsg = "\n}";
-    var cssHeaderMsg = 
+    const cssFooterMsg = "\n}";
+    const cssHeaderMsg = 
         `/* ==UserStyle==
         @name           RunescapeWiki darkmode
         @description    ${pkg.description}
@@ -98,7 +99,7 @@ gulp.task('clean', function() {
         .pipe(gulp.dest('./'));
 
     //----- User js file -----//
-    var userjsHeaderMsg = 
+    const userjsHeaderMsg = 
         `// ==UserScript==
         // @name          Runescape wiki DarkMode
         // @namespace     https://github.com/CephHunter
@@ -113,7 +114,7 @@ gulp.task('clean', function() {
         (function() {var css = \`
         `.replace(/^\s*/gm, "");
 
-    var userjsFooterMsg = 
+    const userjsFooterMsg = 
         `\`;
         §if (typeof GM_addStyle != "undefined") {
         §    GM_addStyle(css);
@@ -139,35 +140,44 @@ gulp.task('clean', function() {
         .pipe(header(userjsHeaderMsg))
         .pipe(footer(userjsFooterMsg))
         .pipe(gulp.dest('./'));
-});
+}
 
 /**
  * Bump version number
  */
-gulp.task('_patch', function() {
-    return gulp.src('package.json')
-        .pipe(bump({type: 'patch'}))
-        .pipe(gulp.dest('./'));
-})
-
-gulp.task('_minor', function() {
-    return gulp.src('package.json')
-        .pipe(bump({type: 'minor'}))
-        .pipe(gulp.dest('./'));
-})
-
-gulp.task('_major', function() {
+function _major() {
     return gulp.src('package.json')
         .pipe(bump({type: 'major'}))
         .pipe(gulp.dest('./'));
-})
+}
 
-gulp.task('patch', function(callback) {
-    runSequence('_patch', 'clean', callback);
-})
-gulp.task('minor', function(callback) {
-    runSequence('_minor', 'clean', callback);
-})
-gulp.task('major', function(callback) {
-    runSequence('_major', 'clean', callback);
-})
+function _minor() {
+    return gulp.src('package.json')
+        .pipe(bump({type: 'minor'}))
+        .pipe(gulp.dest('./'));
+}
+
+function _patch() {
+    return gulp.src('package.json')
+        .pipe(bump({type: 'patch'}))
+        .pipe(gulp.dest('./'));
+}
+
+function _alpha() {
+    return gulp.src('package.json')
+        .pipe(bump({type:'prerelease', preid:'alpha'}))
+        .pipe(gulp.dest('./'));
+}
+
+/**
+ * Export gulp functions
+ */
+module.exports = {
+    default: gulp.series(dev, watchFiles),
+    dev: dev,
+    clean: clean,
+    major: gulp.series(_major, gulp.parallel(dev, clean)),
+    minor: gulp.series(_minor, gulp.parallel(dev, clean)),
+    patch: gulp.series(_patch, gulp.parallel(dev, clean)),
+    alpha: gulp.series(_alpha, gulp.parallel(dev, clean))
+}

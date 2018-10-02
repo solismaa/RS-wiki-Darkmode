@@ -1,26 +1,24 @@
 {
   "name": "runescape-wiki-darkmode",
-  "version": "2.0.6",
+  "version": "3.0.0-alpha.0",
   "description": "A dark theme for the Runescape wiki",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^8.3.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-bump": "^3.1.1",
     "gulp-clean-css": "^3.9.3",
     "gulp-footer": "^2.0.1",
     "gulp-header": "^2.0.5",
-    "gulp-less": "^3.5.0",
     "gulp-line-ending-corrector": "^1.0.2",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.3",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
-    "open": "0.0.5",
-    "postcss-safe-important": "^1.1.0",
-    "run-sequence": "^2.2.1"
+    "opn": "^5.4.0",
+    "postcss-safe-important": "^1.1.0"
   },
   "scripts": {},
   "browserslist": [

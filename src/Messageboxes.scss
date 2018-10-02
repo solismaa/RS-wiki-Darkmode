@@ -115,21 +115,29 @@ table.wikipedia {
     }
 }
 
+// =========================
+//      Create new page
+// =========================
+.noarticletext {
+    background-color: $messageboxes;
+    border-color: $theme-borders;
+}
+
 // =================================
 //      Edit page intro wrapper
 // =================================
-// Eample: protected pages, [[http://runescape.wikia.com/wiki/Template:Clear?action=edit]]
-.editpage-intro {
-    border-color: $theme-borders;
+// Example: protected pages, [[http://runescape.wikia.com/wiki/Template:Clear?action=edit]]
+// .editpage-intro {
+//     border-color: $theme-borders;
 
-    & > .editpage-intro-wrapper > div {
-        background-color: $messageboxes;
-        color: $theme-text;
-    }
+//     & > .editpage-intro-wrapper > div {
+//         background-color: $messageboxes;
+//         color: $theme-text;
+//     }
 
-    .expand {
-        background-color: lighten($messageboxes, 10%);
-        border: 1px solid $theme-borders;
-        color: $theme-text;
-    }
-}
+//     .expand {
+//         background-color: lighten($messageboxes, 10%);
+//         border: 1px solid $theme-borders;
+//         color: $theme-text;
+//     }
+// }

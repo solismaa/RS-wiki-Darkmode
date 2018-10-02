@@ -30,7 +30,7 @@
         }
 
         // Content colors
-        @include dropdown-pointer-styling();
+        // @include dropdown-pointer-styling();
 
         .wds-dropdown__content {
             @include dropdown-styling();
@@ -119,7 +119,7 @@
 //      Language select
 // =========================
 #PageHeader .page-header__languages {
-    @include dropdown-pointer-styling();
+    // @include dropdown-pointer-styling();
 
     .wds-dropdown__content {
         @include dropdown-styling();
@@ -134,7 +134,7 @@
 //      Categories ovelflow dropdown
 // ======================================
 #PageHeader .page-header__categories-dropdown {
-    @include dropdown-pointer-styling();
+    // @include dropdown-pointer-styling();
 
     .page-header__categories-dropdown-content {
         @include dropdown-styling();
@@ -183,7 +183,7 @@
 //      Dropdowns
 // -------------------
 .wds-dropdown {
-    @include dropdown-pointer-styling();
+    // @include dropdown-pointer-styling();
 
     .wds-is-selected > a {
         color: $theme-links;

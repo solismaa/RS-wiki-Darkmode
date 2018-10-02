@@ -101,10 +101,10 @@ $infobox-header-border: $table-data;
 @import "HTML tags.scss";
 @import "Interactive input.scss";
 // @import "Lua, js, css pages.scss";
-// @import "Messageboxes.scss";
+@import "Messageboxes.scss";
 // @import "Namespace specific styling.scss";
 // @import "Page header.scss";
-// @import "Page history.scss";
+@import "Page history.scss";
 // @import "Page specific styles.scss";
 // @import "Popups.scss";
 // @import "Source editor.scss";
@@ -112,7 +112,7 @@ $infobox-header-border: $table-data;
 @import "Templates.scss";
 // @import "Visual editor.scss";
 
-// ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+// ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡ 
 //      General styling
 // ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 
@@ -258,7 +258,7 @@ body {
 
     #searchButton {
         background-color: transparent;
-        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="13"> <g fill="none" stroke="#54595d" stroke-width="2"> <path d="M11.29 11.71l-4-4"/> <circle cx="5" cy="5" r="4"/> </g> </svg>');
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="13"> <g fill="none" stroke="#{$theme-text}" stroke-width="2"> <path d="M11.29 11.71l-4-4"/> <circle cx="5" cy="5" r="4"/> </g> </svg>');
         background-position: center center;
         background-repeat: no-repeat;
     }
@@ -294,13 +294,36 @@ body {
 // -------------------------------
 //      Autocomplete dropdown
 // -------------------------------
-// .ui-autocomplete {
-//     .dropdown-styling;
-//     box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.5);
+.suggestions-results {
+    background: $dropdown-bg;
+    border-color: $theme-borders;
+}
 
-//     .ui-state-hover {
-//         color: $theme-links;
-//         background-color: $dropdown-hover-item;
-//     }
-// }
+.suggestions-result {
+    color: $theme-text;
+}
 
+.suggestions-special {
+    @extend .suggestions-results;
+
+    .special-label {
+        color: darken($theme-text, 10%);
+    }
+    
+    .special-query {
+        color: $theme-text;
+    }
+}
+
+.suggestions-result-current {
+    background: $dropdown-hover-item;
+    color: lighten($theme-text, 10%);
+
+    .special-label {
+        color: $theme-text;
+    }
+    
+    .special-query {
+        color: lighten($theme-text, 10%);
+    }
+}

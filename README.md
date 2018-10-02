@@ -4,8 +4,9 @@ Currently under construction
 This is a dark theme for the [Runescape wiki](https://runescape.wiki/).
 
 ## Preview
-![preview](Images/Preview.png)
-More images: https://imgur.com/a/Ka7sp
+Comming soon™
+<!-- ![preview](Images/Preview.png)
+More images: https://imgur.com/a/Ka7sp -->
 
 ## Installing
 ### Installing as a userstyle:
@@ -26,13 +27,13 @@ More images: https://imgur.com/a/Ka7sp
 #### Step 2: Install the UserScript
 * Install from [Github](https://raw.githubusercontent.com/CephHunter/RS-wiki-DarkMode/master/Darkmode.user.js)
 
-### Installing with a wikia account
+### Installing with a wiki account
 * Advantages: You don't need to install any extensions.
 * Disadvantages: You need to manually update, and the only way to easily disable the style is by loggin out.
-#### Step 1: Wikia account
-You can create an account under the "My account" dropdown at the top of any page on the [Runescape wiki](http://runescape.wikia.com/wiki/RuneScape_Wiki). When your account is created make sure you are logged in.
+#### Step 1: Create a Wiki account
+You can create an account with the `Create account` link found at the top right of any page on the [Runescape wiki](https://runescape.wiki/). When your account is created make sure you are logged in.
 #### Step 2: Installing the style
-* Go to https://runescape.wikia.com/wiki/Special:MyPage/common.css
+* Go to https://runescape.wiki/w/Special:MyPage/vector.css
 * Click on create page
 * Add `@import "https://cdn.rawgit.com/CephHunter/RS-wiki-DarkMode/b0499bf/Darkmode.min.css";` to the top of the page.
 * Replace `b0499bf` with the latest commit hash found [here](https://github.com/CephHunter/RS-wiki-DarkMode/commits/master/Darkmode.min.css) to make sure you have the latest version.
@@ -43,6 +44,6 @@ Stylus, Greasemonkey and Tampermonkey update the style automatically however thi
 If installed with a wikia account, go to [Special:MyPage/common.css](https://runescape.wikia.com/wiki/Special:MyPage/common.css) and click edit and replace `b0499bf` in the link with the latest commit hash found [here](https://github.com/CephHunter/RS-wiki-DarkMode/commits/master/Darkmode.min.css).
 
 ## Contributing/reporting issues
-Help is always appreciated, the Runescape wiki site is huge and always changing and I may not always notice when stuff gets broken. So if you find any problems make sure your style is updated to the latest version and if your problem still exists you can always [open an issue on github](https://github.com/CephHunter/RS-wiki-DarkMode/issues) or leave a message on [this Runescape wiki talkpage](http://runescape.wikia.com/wiki/User_talk:CephHunter/Dark_mode_issues) or message me on Discord `@ceph hunter#6854`, I frequently hang out in the [Runscape wiki Discord](http://runescape.wikia.com/wiki/RuneScape:Off-site/Discord).
+Help is always appreciated, the Runescape wiki site is huge and always changing and I may not always notice when stuff gets broken. So if you find any problems make sure your style is updated to the latest version and if your problem still exists you can always [open an issue on github](https://github.com/CephHunter/RS-wiki-DarkMode/issues) or leave a message on [this Runescape wiki talkpage](https://runescape.wiki/w/User_talk:CephHunter/Dark_mode_issues) or message me on Discord `@ceph hunter#6854`, I frequently hang out in the [Runscape wiki Discord](https://runescape.wiki/w/RuneScape:Off-site/Discord).
 
-If you would like to contribute to the stylesheet head over to [.less#readme](.less#readme) for more information.
+If you would like to contribute to the stylesheet head over to [src#readme](src#readme) for more information.

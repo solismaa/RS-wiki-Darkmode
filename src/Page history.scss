@@ -1,27 +1,38 @@
 // =================
 //      Filters
 // =================
-#pagehistory .selected {
-    background-color: lighten($main-page-bg, 5%);
+#pagehistory  {
+    li {
+        border: none;
+    }
+
+    .selected {
+        background-color: lighten($main-page-bg, 5%);
+        color: $theme-text;
+    }
 }
 
 // ===============
 //      Diffs
 // ===============
-table.diff,
-td.diff-otitle,
-td.diff-ntitle,
-td.diff-deletedline,
-td.diff-addedline,
+.diff,
+.diff-otitle,
+.diff-ntitle,
+.diff-deletedline,
+.diff-addedline,
 .EditPageEditor #diff {
-    background-color: lighten($main-page-bg, 3%);
+    background-color: lighten($main-page-bg, 0%);
     color: $theme-text;
 }
 
-td.diff-context {
-    background: lighten($main-page-bg, 7%);
-    border-color: lighten($main-page-bg, 7%);
+.diff-context {
+    background: lighten($main-page-bg, 5%);
+    border-color: lighten($main-page-bg, 5%);
     color: $theme-text;
+}
+
+.diffchange {
+    color: #222222;
 }
 
 // When undoing something
@@ -44,12 +55,4 @@ td.diff-context {
 #mw-revision-info-current,
 #mw-revision-nav {
     color: $theme-text;
-}
-
-// =========================
-//      Create new page
-// =========================
-.noarticletext {
-    background-color: $messageboxes;
-    border-color: $theme-borders;
 }
