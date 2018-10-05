@@ -86,6 +86,10 @@
     &::placeholder {
         color: $placeholder;
     }
+
+    &:hover {
+        border-color: lighten($theme-borders, 10%);
+    }
 }
 
 // ===================
@@ -100,9 +104,10 @@
         .oo-ui-menuOptionWidget {
             color: $theme-text;
             
-            &.oo-ui-optionWidget-highlighted {
+            &.oo-ui-optionWidget-highlighted,
+            &.oo-ui-optionWidget-selected,
+            &.oo-ui-optionWidget-highlighted.oo-ui-optionWidget-selected {
                 color: $theme-text;
-                // color: $theme-links;
                 background-color: $dropdown-hover-item;
             }
         }
@@ -204,4 +209,20 @@
 
 @mixin counter-inversion($rule, $color, $amount) {
     @include invert-color($rule, $color, $amount/(2 * $amount - 1));
+}
+
+// ========================
+//      Links template
+// ========================
+@mixin links($color: $theme-links, $redlink: $theme-redlinks) {
+    &,
+    &:visited,
+    &:active,
+    &:link {
+        color: $color;
+
+        &.new {
+            color: $redlink;
+        }
+    }
 }

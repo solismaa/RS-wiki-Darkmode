@@ -2,8 +2,8 @@
 //      {{Archive list}}
 // ==========================
 table.archive {
-    background-color: $table-data;
-    border: solid 1px $theme-borders;
+    background-color: $table-data !important;
+    border: solid 1px $theme-borders !important;
 }
 
 // ===============================
@@ -11,11 +11,11 @@ table.archive {
 // ===============================
 // Recolour the totals cell
 .GE-set-cost tr:last-of-type td {
-    background: $table-header;
+    background: $table-header !important;
 }
 
 // ===========================
-//      {{Infobox Quest}}
+//      {{Quest details}}
 // ===========================
 .questdetails {
     @include table-infobox();
@@ -49,19 +49,10 @@ blockquote {
         border: none;
     }
 }
-// blockquote.block {
-//     background-color: lighten($main-page-bg, 4%);
-// }
 
-// .blockquote-mark {
-//     &::before {
-//         background: $main-page-bg;
-//     }
-
-//     &::after {
-//         color: lighten($main-page-bg, 4%);
-//     }
-// }
+.pullquote {
+    color: darken($theme-text, 10%);
+}
 
 // ====================
 //      {{Navbox}}

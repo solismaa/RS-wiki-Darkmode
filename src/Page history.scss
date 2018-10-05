@@ -1,14 +1,22 @@
 // =================
 //      Filters
 // =================
+// filter options
+#mw-history-search {
+    background-color: $input-group-wrapper;
+    border-color: $theme-borders;
+}
+
+// selected items
 #pagehistory  {
     li {
-        border: none;
+        border-color: $main-page-bg;
     }
 
-    .selected {
+    li.selected {
         background-color: lighten($main-page-bg, 5%);
         color: $theme-text;
+        border-color: $main-page-bg;
     }
 }
 
@@ -25,7 +33,7 @@
     color: $theme-text;
 }
 
-.diff-context {
+td.diff-context {
     background: lighten($main-page-bg, 5%);
     border-color: lighten($main-page-bg, 5%);
     color: $theme-text;
@@ -36,9 +44,9 @@
 }
 
 // When undoing something
-.EditPageEditor #diff {
-    border-color: $theme-borders;
-}
+// .EditPageEditor #diff {
+//     border-color: $theme-borders;
+// }
 
 // ==========================================
 //      Viewing old/new revision warning

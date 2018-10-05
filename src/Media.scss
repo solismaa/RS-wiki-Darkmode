@@ -16,9 +16,9 @@
 //     }
 // }
 
-.gifresize,
-.thumbinner,
-.extimage, {
+div.gifresize,
+div.thumbinner,
+div.extimage, {
     @include table-infobox();
 
     .caption,
@@ -35,7 +35,7 @@
 // =====================
 //      Musicplayer
 // =====================
-.musicplayer {
+div.musicplayer {
     @include table-infobox();
 }
 
@@ -49,11 +49,13 @@
 // ===================
 //      Galleries
 // ===================
-.gallerybox .thumb {
-    background-color: $table-data;
-    border-color: $theme-borders;
-}
+.gallery {
+    .gallerybox .thumb {
+        background-color: $table-data;
+        border-color: $theme-borders;
+    }
 
-.gallerytext {
-    color: darken($theme-text, 10%);
+    .gallerytext {
+        color: darken($theme-text, 10%);
+    }
 }

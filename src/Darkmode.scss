@@ -10,7 +10,7 @@ $theme-links         : #6bbaea;
 $theme-redlinks      : #ba0000;
 $theme-green         : #1e5400;
 $theme-green-lighter : lighten($theme-green, 2.5%);
-$theme-grey          : #1e1e1e;//#262626;
+$theme-grey          : #1e1e1e;
 $theme-grey-darker   : darken($theme-grey, 3.5%);
 $theme-gray-lighter  : lighten($theme-grey, 3%);
 $theme-gray-lighter-2: lighten($theme-grey, 9%);
@@ -47,6 +47,7 @@ $popup-header-bg        : lighten($popup-bg, 5%);
 $tooltip-bg             : $theme-gray-lighter;
 $button-accept-bg       : $theme-blue-lighter;
 $button-cancel-bg       : lighten($theme-grey-2, 15%);
+$input-group-wrapper    : $theme-grey-darker;
 
 //----- scrollbar -----//
 $theme-scroll-bar     : hsl(0, 0%, 20%);
@@ -58,11 +59,10 @@ $scroll-bar-2-track: hsl(0, 0%, 50%);
 $scroll-bar-2-thumb: hsl(0, 0%, 20%);
 
 //----- basic htlm elements -----//
-$input-fields   : $theme-gray-lighter-2;
-$code-editor-bg : $documentation-bg;
-$pre-tag-bg     : $theme-gray-lighter-2;
-$code-tag-bg    : $theme-gray-lighter-2;
-$fieldset-tag-bg: $theme-grey-darker;
+$input-fields  : $theme-gray-lighter-2;
+$code-editor-bg: $documentation-bg;
+$pre-tag-bg    : $theme-gray-lighter-2;
+$code-tag-bg   : $theme-gray-lighter-2;
 
 //----- text -----//
 $positive-change: #06df2e;
@@ -71,30 +71,29 @@ $button-text    : lighten($theme-text, 10%);
 $placeholder    : darken($theme-text, 15%);
 
 //----- templates -----//
-$coins-positive   : lighten(#5799c1, 2%);
-$coins-negative   : lighten(#c02614, 5%);
+$coins-positive : lighten(#5799c1, 2%);
+$coins-negative : lighten(#c02614, 5%);
 
-$red-bg           : darken(#861c10, 10%);
-$yellow-bg        : darken(#f3f0b0, 60%);
-$green-bg         : #1e5400;
-$green-lighter-bg : #006d13;
+$red-bg          : darken(#861c10, 10%);
+$yellow-bg       : darken(#f3f0b0, 60%);
+$green-bg        : #1e5400;
+$green-lighter-bg: #006d13;
 
 $navbox-title-bg  : $theme-blue;
 $navbox-title-2-bg: $theme-blue-lighter;
 $navbox-group-bg  : $theme-grey-2-darker;
 
-$infobox-background: $table-data;
-$infobox-header-color: #246c97;
-$infobox-subheader-color: #6ba5c8;
-$infobox-cell-border: $theme-borders;
-$infobox-header-border: $table-data;
+$infobox-background     : $table-data;
+$infobox-header-color   : $theme-blue;//#246c97;
+$infobox-subheader-color: $theme-blue-lighter;//#6ba5c8;
+$infobox-cell-border    : $theme-borders;
+$infobox-header-border  : $table-data;
 
 // ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 //      Imports
 // ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 @import "Mixins.scss";
 
-@import "Categories.scss";
 @import "Custom classes.scss";
 @import "Media.scss";
 // @import "GEcharts.scss";
@@ -130,18 +129,27 @@ $infobox-header-border: $table-data;
 }
 
 // links
-a {
-    color: $theme-links;
+a,
+image a,
+table.wikitable a,
+table.prettytable a,
+table.messagebox a,
+div.vectorTabs li a,
+div.vectorMenu li a,
+div#mw-panel div.portal div.body ul li a {
+    @include links();
+}
 
-    &.new {
-        color: $theme-redlinks;
-    }
+.mw-body-content a.external, 
+.mw-body-content a.extiw {
+    @include links();
 }
 
 // Mediawiki help indicators
 #mw-indicator-mw-helplink a {
-    filter: invert(0.8);
-    @include counter-inversion(color, $theme-links, 0.8);
+    // filter: invert(0.8);
+    // @include counter-inversion(color, $theme-links, 0.8);
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#{$theme-text}"> <path d="M12.001 2.085c-5.478 0-9.916 4.438-9.916 9.916 0 5.476 4.438 9.914 9.916 9.914 5.476 0 9.914-4.438 9.914-9.914 0-5.478-4.438-9.916-9.914-9.916zm.001 18c-4.465 0-8.084-3.619-8.084-8.083 0-4.465 3.619-8.084 8.084-8.084 4.464 0 8.083 3.619 8.083 8.084 0 4.464-3.619 8.083-8.083 8.083z"/> <path d="M11.766 6.688c-2.5 0-3.219 2.188-3.219 2.188l1.411.854s.298-.791.901-1.229c.516-.375 1.625-.625 2.219.125.701.885-.17 1.587-1.078 2.719-.953 1.186-1 3.655-1 3.655h1.969s.135-2.318 1.041-3.381c.603-.707 1.443-1.338 1.443-2.494s-1.187-2.437-3.687-2.437zM11 16h2v2h-2z"/> </svg>') left center no-repeat;
 }
 
 // -----------------
@@ -154,31 +162,52 @@ body {
     // background-image: url("https://i.imgur.com/NmS5DBk.jpg");
 }
 
+#mw-panel .portal h3 {
+    color: $theme-text;
+}
+
 // --------------------------------
 //      Common article styling
 // --------------------------------
 //----- Table of content -----//
-.toc {
+#toc {
     background-color: $table-data;
 
     .toctitle {
         border: solid 1px $theme-borders;
         background: $table-header;
+
+        h2 {
+            color: $theme-text;
+        }
+
+        a {
+            @include links();
+        }
     }
 
+    // border of the box
     & > ul {
         border-color: $theme-borders;
     }
 
+    // indent guide
     ul ul {
         border-color: darken($theme-text, 10%);
     }
+
+    // text
+    .toclevel-1 a {
+        color: $theme-text;
+    }
+
+    .toclevel-2 a {
+        color: darken($theme-text, 10%);
+    }
 }
 
-
-
 //----- "Redirected from" message -----//
-#contentSub, 
+#contentSub,
 #contentSub2 {
     color: darken($theme-text, 10%);
 }
@@ -193,16 +222,16 @@ body {
 // ---------------------
 //      Page header
 // ---------------------
-.vectorTabs {
+div.vectorTabs {
     padding: 0;
     background: $sidebar;
 }
 
-.vectorTabs li {
-    background: $sidebar;
+#mw-head .vectorTabs ul li {
+    background-color: $sidebar;
 
     &.selected {
-        background: $main-page-bg;
+        background-color: $main-page-bg;
         border: solid 1px $theme-borders;
         border-bottom: none;
 
@@ -217,12 +246,12 @@ body {
     }
 
     &:hover {
-        background: lighten($sidebar, 5%);
+        background-color: lighten($sidebar, 5%);
     }
 }
 
 //----- "More" dropdown -----//
-#mw-head .vectorMenu h3 {
+#mw-head #p-cactions.vectorMenu h3 {
     background: $sidebar;
 
     span {
@@ -234,11 +263,11 @@ body {
     }
 }
 
-#mw-head .vectorMenu:hover h3 {
+#mw-head #p-cactions.vectorMenu:hover h3 {
     background: lighten($sidebar, 5%);
 }
 
-.vectorMenu .menu {
+#mw-head .vectorMenu .menu {
     background: $dropdown-bg;
     border-color: $theme-borders;
 
@@ -248,11 +277,11 @@ body {
 }
 
 //----- Searchbar -----//
-#simpleSearch {
+#mw-head #simpleSearch {
     background: $input-fields;
-    // border: solid 1px $theme-borders;
 
     #searchInput {
+        @include text-input-styling();
         border: none;
     }
 
@@ -273,24 +302,6 @@ body {
     filter: invert(1);
 }
 
-
-
-// ------------------------
-//      Page navigator
-// ------------------------
-// Example used on the bottom of [[Special:Search]]
-// .paginator-page.active {
-//     color: $theme-text;
-// }
-
-// .paginator-prev::after {
-//     border-right-color: lighten($theme-text, 10%);
-// }
-
-// .paginator-next::after {
-//     border-left-color: lighten($theme-text, 10%);
-// }
-
 // -------------------------------
 //      Autocomplete dropdown
 // -------------------------------
@@ -309,7 +320,7 @@ body {
     .special-label {
         color: darken($theme-text, 10%);
     }
-    
+
     .special-query {
         color: $theme-text;
     }
@@ -322,8 +333,16 @@ body {
     .special-label {
         color: $theme-text;
     }
-    
+
     .special-query {
         color: lighten($theme-text, 10%);
     }
+}
+
+// =====================================
+//      Categories on wiki articles
+// =====================================
+.catlinks {
+    background: $categories;
+    border-color: $theme-borders;
 }

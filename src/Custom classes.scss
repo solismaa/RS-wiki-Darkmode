@@ -42,7 +42,7 @@
 .portal-link {
         a {
             background-color: $theme-grey-2;
-            color: $theme-text;
+            @include links($theme-text);
         }
 
     a:hover {

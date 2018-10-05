@@ -51,7 +51,7 @@ function dev() {
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
-        .pipe(postcss([ autoprefixer(), safeImportant() ]))
+        .pipe(postcss([ autoprefixer()/*, safeImportant() */]))
         .pipe(sourcemaps.write())
         .pipe(rename('Darkmode.dev.user.css'))
         .pipe(header(headerMsg))
@@ -68,8 +68,8 @@ function clean() {
     const finalCSS = gulp.src('./src/darkmode.scss')
         .pipe(plumber())
         .pipe(sass().on('error', sass.logError))
-        .pipe(postcss([ autoprefixer(), safeImportant()]))
-        .pipe(cleanCSS({level: {2: {all: true}}, format: 'beautify'}))
+        .pipe(postcss([ autoprefixer()/*, safeImportant()*/]))
+        /*.pipe(cleanCSS({level: {2: {all: true}}, format: 'beautify'}))*/
         .pipe(lec({eolc: 'LF'}));
 
     //----- Final css file -----//

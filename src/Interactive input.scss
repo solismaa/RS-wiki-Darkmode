@@ -1,6 +1,8 @@
 // ====================
 //      Text input
 // ====================
+.oo-ui-textInputWidget.oo-ui-widget-enabled input, 
+.oo-ui-textInputWidget.oo-ui-widget-enabled textarea,
 input[type="search"],
 input[type="text"],
 input[type="number"],
@@ -12,17 +14,30 @@ input[type="number"],
 //      Dropdown select
 // =========================
 // Input bar
-.oo-ui-tagMultiselectWidget-handle {
+.oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle {
     @include text-input-styling();
 
-    .oo-ui-inputWidget-input {
-        border: none;
+    &:hover {
+        background: $input-fields;
+        color: $theme-text;
     }
+
+    // .oo-ui-inputWidget-input {
+    //     border: none;
+    // }
+}
+
+// dropdown arrow
+.oo-ui-indicator-down {
+    filter: invert(1);
 }
 
 // Selected items
-.oo-ui-tagItemWidget {
-    @include button-styling("cancel");
+// .oo-ui-tagItemWidget {
+//     @include button-styling("cancel");
+// }
+.oo-ui-dropdownWidget.oo-ui-widget-enabled.oo-ui-dropdownWidget-open .oo-ui-dropdownWidget-handle {
+    @include text-input-styling();
 }
 
 // Dropdown list
@@ -56,3 +71,19 @@ button {
 // .oo-ui-buttonElement-button .oo-ui-iconElement-icon {
 //     filter: invert(0.6);
 // }
+
+// ====================
+//      Checkboxes
+// ====================
+.oo-ui-checkboxInputWidget [type='checkbox'] + span {
+    border-color: $theme-borders;
+    background-color: $input-fields;
+}
+
+// =========================
+//      Group of inputs
+// =========================
+.oo-ui-panelLayout-framed {
+    border-color: $theme-borders;
+    background-color: $input-group-wrapper;
+}

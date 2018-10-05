@@ -16,19 +16,23 @@ table.wikitable,
 table.article-table {
     @include table-wikitable();
 
-    td {
+    > * > tr > td {
         @include table-data();
     }
 
-    th {
+    > * > tr > th {
         @include table-header();
+
+        a {
+            @include links();
+        }
     }
 }
 
 // --------------------
 //      Lighttable
 // --------------------
-.lighttable {
+table.lighttable {
     .highlight-over {
         background-color: $highlight-table-hover;
     }
@@ -107,6 +111,10 @@ table.jquery-tablesorter th.headerSortDown {
     th:not([colspan="2"]) {
         border-left-color: $infobox-cell-border;
         border-right-color: $infobox-subheader-color;
+    }
+
+    th:not(.infobox-header):not(.infobox-subheader) {
+        border-left-color: $infobox-cell-border;
     }
 
     td {
