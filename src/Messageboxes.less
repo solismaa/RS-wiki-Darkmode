@@ -2,7 +2,7 @@
 //      Wikipedia
 // ===================
 table.wikipedia {
-    background: $messageboxes;
+    background: @messageboxes;
     border: none;
 }
 
@@ -12,7 +12,7 @@ table.wikipedia {
 .messagebox,
 .official,
 .forumheader {
-    background-color: $messageboxes;
+    background-color: @messageboxes;
 }
 
 .messagebox {
@@ -28,7 +28,7 @@ table.wikipedia {
     &.halloween,
     &.thanksgiving,
     &.christmas {
-        background: $messageboxes;
+        background: @messageboxes;
     }
 }
 
@@ -36,8 +36,8 @@ table.wikipedia {
 //      Create new page
 // =========================
 .noarticletext .tile {
-    background-color: $messageboxes;
-    border-color: $theme-borders;
+    background-color: @messageboxes;
+    border-color: @theme-borders;
 }
 
 // ==========================
@@ -45,7 +45,7 @@ table.wikipedia {
 // ==========================
 // Example: protected pages, [[https://runescape.wiki/w/Template:Clear?action=edit]]
 .editnotice {
-    background: $messageboxes;
-    color: $theme-text;
-    border-color: $theme-borders;
+    background: @messageboxes;
+    color: @theme-text;
+    border-color: @theme-borders;
 }

@@ -3,20 +3,20 @@
 // =================
 // filter options
 #mw-history-search {
-    background-color: $input-group-wrapper;
-    border-color: $theme-borders;
+    background-color: @input-group-wrapper;
+    border-color: @theme-borders;
 }
 
 // selected items
 #pagehistory  {
     li {
-        border-color: $main-page-bg;
+        border-color: @main-page-bg;
     }
 
     li.selected {
-        background-color: lighten($main-page-bg, 5%);
-        color: $theme-text;
-        border-color: $main-page-bg;
+        background-color: lighten(@main-page-bg, 5%);
+        color: @theme-text;
+        border-color: @main-page-bg;
     }
 }
 
@@ -29,14 +29,14 @@
 .diff-deletedline,
 .diff-addedline,
 .EditPageEditor #diff {
-    background-color: lighten($main-page-bg, 0%);
-    color: $theme-text;
+    background-color: lighten(@main-page-bg, 0%);
+    color: @theme-text;
 }
 
 td.diff-context {
-    background: lighten($main-page-bg, 5%);
-    border-color: lighten($main-page-bg, 5%);
-    color: $theme-text;
+    background: lighten(@main-page-bg, 5%);
+    border-color: lighten(@main-page-bg, 5%);
+    color: @theme-text;
 }
 
 .diffchange {
@@ -45,7 +45,7 @@ td.diff-context {
 
 // When undoing something
 // .EditPageEditor #diff {
-//     border-color: $theme-borders;
+//     border-color: @theme-borders;
 // }
 
 // ==========================================
@@ -53,7 +53,7 @@ td.diff-context {
 // ==========================================
 #viewingold-warning,
 #viewingnew-warning {
-    @include table-infobox();
+    .table-infobox();
 }
 
 // =============================
@@ -62,5 +62,5 @@ td.diff-context {
 #mw-revision-info,
 #mw-revision-info-current,
 #mw-revision-nav {
-    color: $theme-text;
+    color: @theme-text;
 }

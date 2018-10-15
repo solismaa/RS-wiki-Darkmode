@@ -5,49 +5,49 @@
 //      Background
 // --------------------
 .GEChartBox {
-    background: $table-header;
+    background: @table-header;
 }
 
 .highcharts-background {
-    fill: $table-header;
+    fill: @table-header;
 }
 
 .highcharts-plot-background {
-    fill: $table-header;
+    fill: @table-header;
 }
 
 .highcharts-legend-box {
-    fill: $table-header;
+    fill: @table-header;
 }
 
 // --------------------
 //      Axis color
 // --------------------
 .highcharts-grid-line {
-    stroke: $theme-borders;
+    stroke: @theme-borders;
 }
 
 .highcharts-axis-line {
-    stroke: $theme-borders;
+    stroke: @theme-borders;
 }
 
 // --------------------
 //      text color
 // --------------------
 .highcharts-title {
-    color: $theme-text;
+    color: @theme-text;
 }
 
 .highcharts-axis-labels > text {
-    fill: $theme-text;
+    fill: @theme-text;
 }
 
 // ---------------------------------
 //      No data to display cell     
 // ---------------------------------
 .infobox-switch .hidden td[data-attr-param="graph"] {
-    background: $table-header;
-    color: $theme-text;
+    background: @table-header;
+    color: @theme-text;
 }
 
 // ========================
@@ -57,26 +57,26 @@
 //      Background
 // --------------------
 #GEchartpopup {
-    background: $popup-bg;
+    background: @popup-bg;
 
     a {
-        color: $theme-links;
+        color: @theme-links;
     }
 
     .GEChartBox {
-        background: $popup-bg;
+        background: @popup-bg;
     }
 
     .highcharts-background {
-        fill: $popup-bg;
+        fill: @popup-bg;
     }
 
     .highcharts-plot-background {
-        fill: $popup-bg;
+        fill: @popup-bg;
     }
 
     .highcharts-legend-box {
-        fill: $popup-bg;
+        fill: @popup-bg;
     }
 }
 
@@ -84,28 +84,28 @@
 //      Axis color
 // --------------------
 .highcharts-navigator-outline {
-    stroke: $theme-borders;
+    stroke: @theme-borders;
 }
 
 .highcharts-label-box {
-    stroke: $theme-borders;
+    stroke: @theme-borders;
 }
 
 // --------------------
 //      text color
 // --------------------
 .highcharts-axis-title {
-    fill: $theme-text;
+    fill: @theme-text;
 }
 
 // Input field notes
 #chartPropertiespopup {
-    color: $theme-text;
+    color: @theme-text;
 }
 
 // Legend
 .highcharts-legend-item text {
-    fill: $theme-text;
+    fill: @theme-text;
 }
 
 // -----------------------------
@@ -114,26 +114,26 @@
 #averagepopup,
 #extraItempopup,
 .highcharts-range-selector {
-    @include text-input-styling();
+    .text-input-styling();
 }
 
 // Data range text
 .highcharts-range-input text {
-    fill: $theme-text;
+    fill: @theme-text;
 }
 
 // Buttons
 .zoomButton {
     .highcharts-button-box {
-        fill: $theme-blue-lighter;
+        fill: @theme-blue-lighter;
     }
 
     &:hover .highcharts-button-box{
-        fill: lighten($theme-blue-lighter, 10%);
+        fill: lighten(@theme-blue-lighter, 10%);
     }
 
     text {
-        fill: lighten($theme-text, 10%);
+        fill: lighten(@theme-text, 10%);
     }
 }
 
@@ -141,43 +141,43 @@
 //      Scrollbar
 // -------------------
 .highcharts-scrollbar-track {
-    fill: lighten($table-header, 10%);
-    stroke: lighten($table-header, 10%);
+    fill: lighten(@table-header, 10%);
+    stroke: lighten(@table-header, 10%);
 }
 
 .highcharts-scrollbar-button {
-    fill: lighten($table-header, 20%);
-    stroke: lighten($table-header, 20%);
+    fill: lighten(@table-header, 20%);
+    stroke: lighten(@table-header, 20%);
 }
 
 .highcharts-scrollbar-arrow {
-    fill: lighten($theme-text, 10%);
+    fill: lighten(@theme-text, 10%);
 }
 
 .highcharts-scrollbar-thumb {
-    fill: lighten($table-header, 30%);
-    stroke: lighten($table-header, 30%);
+    fill: lighten(@table-header, 30%);
+    stroke: lighten(@table-header, 30%);
 }
 
 .highcharts-scrollbar-rifles {
-    stroke: lighten($theme-text, 10%);
+    stroke: lighten(@theme-text, 10%);
     stroke-width: 2px;
 }
 
 #GEchartpopup {
     .highcharts-scrollbar-track {
-        fill: lighten($popup-bg, 10%);
-        stroke: lighten($popup-bg, 10%);
+        fill: lighten(@popup-bg, 10%);
+        stroke: lighten(@popup-bg, 10%);
     }
 
     .highcharts-scrollbar-button {
-        fill: lighten($popup-bg, 20%);
-        stroke: lighten($popup-bg, 20%);
+        fill: lighten(@popup-bg, 20%);
+        stroke: lighten(@popup-bg, 20%);
     }
 
     .highcharts-scrollbar-thumb {
-        fill: lighten($popup-bg, 30%);
-        stroke: lighten($popup-bg, 30%);
+        fill: lighten(@popup-bg, 30%);
+        stroke: lighten(@popup-bg, 30%);
     }
 }
 
@@ -185,11 +185,11 @@
 //      Exchange namespace
 // ============================
 #rs-exchange-data {
-    @include button-styling();
+    .button-styling();
 }
 
 #gemw_guide {
-    color: $theme-text;
+    color: @theme-text;
     border: none;
-    background: $messageboxes;
+    background: @messageboxes;
 }

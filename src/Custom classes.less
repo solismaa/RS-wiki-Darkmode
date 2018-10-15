@@ -8,31 +8,31 @@
 // applies to a variety of templates used by a variety of scripts
 .sg-red,
 .nocell {
-    background: $red-bg;
-    color: $theme-text;
+    background: @red-bg;
+    color: @theme-text;
 }
 
 .sg-yellow,
 .maybecell {
-    background: $yellow-bg;
-    color: $theme-text;
+    background: @yellow-bg;
+    color: @theme-text;
 }
 
 .sg-green,
 .yescell {
-    background: $green-bg;
-    color: $theme-text;
+    background: @green-bg;
+    color: @theme-text;
 }
 
 // ===============
 //      Coins
 // ===============
 .coins-pos {
-    color: $coins-positive;
+    color: @coins-positive;
 }
 
 .coins-neg {
-    color: $coins-negative;
+    color: @coins-negative;
 }
 
 // ================================
@@ -41,13 +41,13 @@
 // Example: [[Treasure Trails#Types of clues]]
 .portal-link {
         a {
-            background-color: $theme-grey-2;
-            @include links($theme-text);
+            background-color: @theme-grey-2;
+            .links(@theme-text);
         }
 
     a:hover {
-        background-color: $theme-gray-2-lighter;
-        color: $button-text;
+        background-color: @theme-gray-2-lighter;
+        color: @button-text;
     }
 }
 
@@ -56,20 +56,20 @@
 // ==========================
 // Example: [[Experience/Table]]
 table.alternating-rows tr:nth-child(even) {
-    background-color: $table-header;
+    background-color: @table-header;
 }
 
 // =========================
 //      Minigame status
 // =========================
 .status-active {
-    background-color: $green-lighter-bg;
-    color: $theme-text;
+    background-color: @green-lighter-bg;
+    color: @theme-text;
 }
 
 .status-inactive {
-    background-color: $red-bg;
-    color: $theme-text;
+    background-color: @red-bg;
+    color: @theme-text;
 }
 
 // ================================
@@ -77,13 +77,13 @@ table.alternating-rows tr:nth-child(even) {
 // ================================
 // Example: {{Eq infotable}} {{InfoHeader}}
 .attribute-value {
-    @include table-header();
+    .table-header();
 }
 
 .attribute-total {
     td,
     th,
     .attribute-value {
-        @include table-header();
+        .table-header();
     }
 }

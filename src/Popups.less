@@ -5,47 +5,47 @@
 //      References
 // --------------------
 .rsw-tooltip {
-    background: $tooltip-bg ;
+    background: @tooltip-bg ;
 
     a {
-        color: $theme-links;
+        color: @theme-links;
     }
 }
 
 //----- References settings popup -----//
 #rsw-config {
-    border-color: $theme-blue-lighter;
-    box-shadow: 0 10px 60px 0px darken($popup-bg, 20%);
+    border-color: @theme-blue-lighter;
+    box-shadow: 0 10px 60px 0px darken(@popup-bg, 20%);
 
     #rsw-config-header {
-        background-color: $popup-header-bg;
-        color: $theme-text;
-        border-bottom-color: $theme-borders;
+        background-color: @popup-header-bg;
+        color: @theme-text;
+        border-bottom-color: @theme-borders;
     }
 
     #rsw-config-footer {
-        background-color: $popup-header-bg;
-        color: $theme-text;
-        border-top-color: $theme-borders;
+        background-color: @popup-header-bg;
+        color: @theme-text;
+        border-top-color: @theme-borders;
     }
 
     #rsw-config-body {
-        background-color: $popup-bg;
-        color: $theme-text;
+        background-color: @popup-bg;
+        color: @theme-text;
 
         #rsw-config-delay input {
-            @include text-input-styling();
+            .text-input-styling();
         }
 
         #rsw-config-note {
-            border-bottom-color: $theme-borders;
+            border-bottom-color: @theme-borders;
         }
     }
 }
 
 // popup blackout
 #rsw-config-background {
-    background-color: $popup-bg;
+    background-color: @popup-bg;
 }
 
 // ---------------------------
@@ -55,11 +55,11 @@
 .js-tooltip-wrapper {
     &,
     .js-tooltip-text {
-        background-color: $tooltip-bg;
+        background-color: @tooltip-bg;
     }
 
     a {
-        color: $theme-links;
+        color: @theme-links;
     }
 }
 
@@ -72,30 +72,30 @@
     &.wikiaBar,
     &.wikiaBarMessage {
         .arrow {
-            border-top-color: $tooltip-bg;
+            border-top-color: @tooltip-bg;
         }
     }
 
     &.right .arrow {
-        border-right-color: $tooltip-bg;
+        border-right-color: @tooltip-bg;
     }
 
     &.bottom .arrow{
-        border-bottom-color: $tooltip-bg;
+        border-bottom-color: @tooltip-bg;
     }
 
     &.left .arrow {
-        border-left-color: $tooltip-bg;
+        border-left-color: @tooltip-bg;
     }
 
     .popover-inner {
-        border-color: $theme-borders;
-        background-color: $tooltip-bg;
+        border-color: @theme-borders;
+        background-color: @tooltip-bg;
         box-shadow: 0 0 15px 0 #000;
 
         .popover-content {
-            background-color: $tooltip-bg;
-            color: $theme-text;
+            background-color: @tooltip-bg;
+            color: @theme-text;
         }
     }
 }
@@ -103,32 +103,32 @@
 // tooltip example: source editor page -> preview -> hover over ? next to device select
 .tooltip {
     &.top .tooltip-arrow {
-        border-top-color: $tooltip-bg;
+        border-top-color: @tooltip-bg;
     }
 
     &.right .tooltip-arrow {
-        border-right-color: $tooltip-bg;
+        border-right-color: @tooltip-bg;
     }
 
     &.bottom .tooltip-arrow {
-        border-bottom-color: $tooltip-bg;
+        border-bottom-color: @tooltip-bg;
     }
 
     &.left .tooltip-arrow {
-        border-left-color: $tooltip-bg;
+        border-left-color: @tooltip-bg;
     }
 
     .tooltip-inner {
-        border-color: $theme-borders;
-        background-color: $tooltip-bg;
+        border-color: @theme-borders;
+        background-color: @tooltip-bg;
         box-shadow: 0 0 15px 0 #000;
     }
 }
 
 // Warning details popup
 .mw-warning-with-logexcerpt {
-    background-color: $messageboxes;
-    border-color: $theme-borders;
+    background-color: @messageboxes;
+    border-color: @theme-borders;
 }
 
 // ======================
@@ -136,17 +136,17 @@
 // ======================
 // example [[RuneScape:Semantic_MediaWiki_cheatsheet/examples]]
 .qtip-bootstrap {
-    background-color: $tooltip-bg;
-    color: $theme-text;
-    border: 1px solid $theme-borders;
+    background-color: @tooltip-bg;
+    color: @theme-text;
+    border: 1px solid @theme-borders;
 
     .qtip-titlebar {
-        background-color: darken($tooltip-bg, 3%);
-        border-bottom-color: $theme-borders;
+        background-color: darken(@tooltip-bg, 3%);
+        border-bottom-color: @theme-borders;
     }
 
     .qtip .qtip-tip canvas {
-        background-color: $theme-borders;
+        background-color: @theme-borders;
     }
 }
 
@@ -155,17 +155,17 @@
 // ===================
 // Modal blackouts
 .blackout {
-    background-color: $main-page-bg;
+    background-color: @main-page-bg;
 }
 
 // File namespace -> appears on these pages -> next page (appears only during loading of next items)
 .wikiaThrobber {
-    background-color: lighten($main-page-bg, 3%);
+    background-color: lighten(@main-page-bg, 3%);
 }
 
 // Edit exchange data blackout
 .ui-widget-overlay {
-    background: $main-page-bg;
+    background: @main-page-bg;
     opacity: 0.65;
 }
 
@@ -176,13 +176,13 @@
 // Header and footer
 .LightboxHeader,
 .LightboxCarousel {
-    background-color: $popup-header-bg;
+    background-color: @popup-header-bg;
     box-shadow: none;
 }
 
 // Header
 .LightboxHeader  {
-    border-bottom-color: $theme-borders;
+    border-bottom-color: @theme-borders;
 
     .wikia-button::before {
         filter: invert(85%);
@@ -191,15 +191,15 @@
 
 // Footer
 .LightboxCarousel {
-    border-top-color: $theme-borders;
+    border-top-color: @theme-borders;
 
     .carousel-arrow {
         &.next::after {
-            border-left-color: $theme-text;
+            border-left-color: @theme-text;
         }
 
         &.previous::after {
-            border-right-color: $theme-text;
+            border-right-color: @theme-text;
         }
     }
 }
@@ -208,34 +208,34 @@
 //      Gallery editor
 // ------------------------
 #WikiaPhotoGalleryEditorPreview {
-    @include scroll-bar-styling();
+    .scroll-bar-styling();
 
     // border when hovering over an image
     .accent {
-        border-color: $button-accept-bg;
+        border-color: @button-accept-bg;
     }
 
     // Modify/delete buttons
     .color1 {
-        background-color: $button-accept-bg;
+        background-color: @button-accept-bg;
 
         a {
-            color: $button-text;
+            color: @button-text;
         }
     }
 
     // Background when dragging an image around
     .WikiaPhotoGalleryPreviewDDPlaceholder {
-        background-color: lighten($popup-bg, 5%);
+        background-color: lighten(@popup-bg, 5%);
     }
 }
 
 #WikiaPhotoGallerySearchResults {
-    @include scroll-bar-styling();
-    border-color: $theme-borders;
+    .scroll-bar-styling();
+    border-color: @theme-borders;
 
     .accent {
-        border-color: $button-accept-bg;
+        border-color: @button-accept-bg;
     }
 }
 
@@ -244,17 +244,17 @@
 // =====================
 // Example: galery popup
 .modalWrapper {
-    background-color: $popup-bg;
-    color: $theme-text;
+    background-color: @popup-bg;
+    color: @theme-text;
     box-shadow: 0 0 15px 0 #000;
-    border-color: $theme-blue-lighter;
+    border-color: @theme-blue-lighter;
 
     & > h1 {
-        color: $theme-links;
+        color: @theme-links;
     }
 
     h1 {
-        border-color: $theme-borders;
+        border-color: @theme-borders;
     }
 }
 
@@ -265,11 +265,11 @@
 .modal.small {
     > header,
     > footer {
-        background-color: $popup-header-bg;
+        background-color: @popup-header-bg;
 
         &,
         h3 {
-            color: $theme-text;
+            color: @theme-text;
         }
 
         .close {
@@ -278,8 +278,8 @@
     }
 
     section {
-        background-color: $popup-bg;
-        color: $theme-text;
+        background-color: @popup-bg;
+        color: @theme-text;
     }
 }
 
@@ -288,62 +288,62 @@
 // ------------------------------------------------------
 #MyToolsConfigurationWrapper {
     .search-box {
-        border-color: $theme-borders;
+        border-color: @theme-borders;
 
         input.search {
-            @include text-input-styling();
+            .text-input-styling();
             box-shadow: none;
         }
     }
 
     .popular-tools-group {
-        background-image: linear-gradient( 0deg, lighten($popup-bg, 2%), lighten($popup-bg, 6%) 98%, $popup-bg);
-        color: $theme-text;
-        border-color: $theme-borders;
+        background-image: linear-gradient( 0deg, lighten(@popup-bg, 2%), lighten(@popup-bg, 6%) 98%, @popup-bg);
+        color: @theme-text;
+        border-color: @theme-borders;
 
         .popular-toggle {
-            color: $theme-text;
+            color: @theme-text;
 
             .icon-hide {
-                border-bottom-color: $theme-text;
+                border-bottom-color: @theme-text;
             }
 
             .icon-show {
-                border-top-color: $theme-text;
+                border-top-color: @theme-text;
             }
         }
     }
 
     .autocomplete {
-        @include dropdown-styling();
+        .dropdown-styling();
         box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
 
         .selected {
-            color: $theme-links;
-            background-color: $dropdown-hover-item;
+            color: @theme-links;
+            background-color: @dropdown-hover-item;
         }
     }
 
     .options-list {
-        border-color: $theme-borders;
+        border-color: @theme-borders;
 
         li {
-            border-bottom-color: $theme-borders;
+            border-bottom-color: @theme-borders;
 
             .tree-visual {
-                background-color: darken($theme-borders, 5%);
+                background-color: darken(@theme-borders, 5%);
             }
 
             &:hover {
-                color: $theme-text;
-                background-color: lighten($popup-bg, 5%);
+                color: @theme-text;
+                background-color: lighten(@popup-bg, 5%);
             }
         }
     }
 }
 
 #MyToolsRenameItem .input-box {
-    @include text-input-styling();
+    .text-input-styling();
     box-shadow: none;
 }
 
@@ -351,15 +351,15 @@
 //      Add new page popup
 // ----------------------------
 #CreatePageModalDialog .accent {
-    color: $theme-text;
+    color: @theme-text;
 }
 
 #CreatePageDialog input {
-    @include text-input-styling();
+    .text-input-styling();
 }
 
 #CreatePageModalDialog .create-page-dialog__proposals {
-    background: darken($main-page-bg, 2%);
+    background: darken(@main-page-bg, 2%);
 }
 
 // ==================================
@@ -367,7 +367,7 @@
 // ==================================
 //Example: create new template page
 #TemplateClassificationEditModal .tc-type-name {
-    color: $theme-text;
+    color: @theme-text;
 }
 
 // ==================================
@@ -378,31 +378,31 @@
     // Search input
     #global_shortcuts_search_field {
         // Inverted to get the background image to show properly
-        background-color: 255 - $input-fields;
-        color: 255 - $theme-text;
-        border: solid 1px (255 - $theme-borders);
+        background-color: 255 - @input-fields;
+        color: 255 - @theme-text;
+        border: solid 1px (255 - @theme-borders);
         filter:invert(100);
 
         &::placeholder {
-            color: 255 - $placeholder;
+            color: 255 - @placeholder;
         }
     }
 
     .global-shortcuts-field-wrapper {
-        border-bottom-color: $theme-borders;
+        border-bottom-color: @theme-borders;
     }
 
     // Search results
     .autocomplete-suggestions {
-        background-color: lighten($popup-bg, 2%);
-        border-color: $theme-borders;
+        background-color: lighten(@popup-bg, 2%);
+        border-color: @theme-borders;
 
         .autocomplete-group strong {
-            border-bottom-color: $theme-borders;
+            border-bottom-color: @theme-borders;
         }
 
         .autocomplete-selected {
-            background-color: lighten($popup-bg, 7%);
+            background-color: lighten(@popup-bg, 7%);
         }
     }
 }
@@ -416,22 +416,22 @@
 }
 
 .ui-widget-content {
-    background: $popup-bg;
-    color: $theme-text;
-    border-color: $theme-borders;
+    background: @popup-bg;
+    color: @theme-text;
+    border-color: @theme-borders;
 }
 
 .ui-widget-header {
-    color: $theme-text;
-    background: $popup-header-bg;
+    color: @theme-text;
+    background: @popup-header-bg;
     border: none;
 }
 
 .ui-dialog .ui-dialog-buttonpane {
-    background: $popup-header-bg;
+    background: @popup-header-bg;
 
     button.ui-button:first-of-type {
-        @include button-styling("cancel");
+        .button-styling("cancel");
     }
 }
 
@@ -445,6 +445,6 @@
 }
 
 .ui-dialog .ui-dialog-titlebar-close.ui-state-hover {
-    background: lighten($main-page-bg, 30%);
-    border-color: $theme-borders;
+    background: lighten(@main-page-bg, 30%);
+    border-color: @theme-borders;
 }

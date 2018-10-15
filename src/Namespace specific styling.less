@@ -14,21 +14,21 @@
         }
 
         li:hover {
-            background-color: lighten($main-page-bg, 5%);
-            outline-color: $theme-borders;
+            background-color: lighten(@main-page-bg, 5%);
+            outline-color: @theme-borders;
 
             // alternating colours
             li:hover,
             li:hover li:hover li:hover,
             li:hover li:hover li:hover li:hover li:hover,
             li:hover li:hover li:hover li:hover li:hover li:hover li:hover {
-                background-color: lighten($main-page-bg, 1%);
+                background-color: lighten(@main-page-bg, 1%);
             }
 
             li:hover li:hover,
             li:hover li:hover li:hover li:hover,
             li:hover li:hover li:hover li:hover li:hover li:hover {
-                background-color: lighten($main-page-bg, 5%);
+                background-color: lighten(@main-page-bg, 5%);
             }
         }
     }
@@ -36,8 +36,8 @@
 
 // quest actions for transcripts
 .quest-action:hover {
-    background-color: lighten($main-page-bg, 5%);
-    outline-color: $theme-borders;
+    background-color: lighten(@main-page-bg, 5%);
+    outline-color: @theme-borders;
 }
 
 // ==================
@@ -45,10 +45,10 @@
 // ==================
 table.property-page-results {
     .header-title {
-        color: $theme-text;
+        color: @theme-text;
     }
 
     .value-row:hover {
-        background-color: lighten($main-page-bg, 5%);
+        background-color: lighten(@main-page-bg, 5%);
     }
 }

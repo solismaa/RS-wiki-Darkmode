@@ -11,24 +11,24 @@
 //     .caption,
 //     .thumbcaption {
 //         width: auto;
-//         color: $theme-text;
-//         border-top: solid 1px $theme-borders;
+//         color: @theme-text;
+//         border-top: solid 1px @theme-borders;
 //     }
 // }
 
 div.gifresize,
 div.thumbinner,
 div.extimage, {
-    @include table-infobox();
+    .table-infobox();
 
     .caption,
     .thumbcaption {
         width: auto;
-        color: $theme-text;
-        border-color: $theme-borders;
-        background: $table-data;
+        color: @theme-text;
+        border-color: @theme-borders;
+        background: @table-data;
         border: none;
-        border-top: solid 1px $theme-borders;
+        border-top: solid 1px @theme-borders;
     }
 }
 
@@ -36,7 +36,7 @@ div.extimage, {
 //      Musicplayer
 // =====================
 div.musicplayer {
-    @include table-infobox();
+    .table-infobox();
 }
 
 // ======================
@@ -51,11 +51,11 @@ div.musicplayer {
 // ===================
 .gallery {
     .gallerybox .thumb {
-        background-color: $table-data;
-        border-color: $theme-borders;
+        background-color: @table-data;
+        border-color: @theme-borders;
     }
 
     .gallerytext {
-        color: darken($theme-text, 10%);
+        color: darken(@theme-text, 10%);
     }
 }

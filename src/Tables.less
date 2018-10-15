@@ -2,7 +2,7 @@
 //      Infoboxes
 // ===================
 .infobox {
-    @include table-wikitable();
+    .table-wikitable();
 }
 
 // ====================
@@ -14,17 +14,17 @@
 // -----------------------
 table.wikitable,
 table.article-table {
-    @include table-wikitable();
+    .table-wikitable();
 
     > * > tr > td {
-        @include table-data();
+        .table-data();
     }
 
     > * > tr > th {
-        @include table-header();
+        .table-header();
 
         a {
-            @include links();
+            .links();
         }
     }
 }
@@ -34,11 +34,11 @@ table.article-table {
 // --------------------
 table.lighttable {
     .highlight-over {
-        background-color: $highlight-table-hover;
+        background-color: @highlight-table-hover;
     }
 
     .highlight-on {
-        background-color: $highlight-table-on;
+        background-color: @highlight-table-on;
     }
 }
 
@@ -46,86 +46,86 @@ table.lighttable {
 //      Sortable table
 // ------------------------
 table.jquery-tablesorter th.headerSort {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" viewBox="0 0 21 9" fill="#{$theme-text}"> <path d="M14.5 5l-4 4-4-4zM14.5 4l-4-4-4 4z"/> </svg>')
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" viewBox="0 0 21 9" fill="@{theme-text}"> <path d="M14.5 5l-4 4-4-4zM14.5 4l-4-4-4 4z"/> </svg>')
 }
 
 table.jquery-tablesorter th.headerSortUp {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="21" height="4" viewBox="0 0 21 4" fill="#{$theme-text}"> <path d="M6.5 4l4-4 4 4z"/> </svg>')
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="21" height="4" viewBox="0 0 21 4" fill="@{theme-text}"> <path d="M6.5 4l4-4 4 4z"/> </svg>')
 }
 
 table.jquery-tablesorter th.headerSortDown {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="21" height="4" viewBox="0 0 21 4" fill="#{$theme-text}"> <path d="M14.5 0l-4 4-4-4z"/> </svg>');
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="21" height="4" viewBox="0 0 21 4" fill="@{theme-text}"> <path d="M14.5 0l-4 4-4-4z"/> </svg>');
 }
 
 // -------------------
 //      N/A cells
 // -------------------
 .table-na {
-    background: darken($table-data, 3%);
+    background: darken(@table-data, 3%);
 }
 
 // -----------------------
 //      rsw-infoboxes
 // -----------------------
 // .rsw-infobox {
-//     background: $table-data;
-//     // border-color: $theme-borders;
+//     background: @table-data;
+//     // border-color: @theme-borders;
 
 //     .infobox-image.bordered-image {
-//         border-color: $theme-borders;
+//         border-color: @theme-borders;
 //     }
 // }
 
 .rsw-infobox {
-    background-color: $infobox-background;
+    background-color: @infobox-background;
 
     .infobox-header {
-        color: $theme-text;
-        background-color: $infobox-header-color;
-        border-bottom-color: $infobox-header-border;
+        color: @theme-text;
+        background-color: @infobox-header-color;
+        border-bottom-color: @infobox-header-border;
     }
 
     .infobox-subheader {
-        background-color: $infobox-subheader-color;
-        color: lighten($theme-text, 10%);
-        border-top-color: $infobox-header-border;
-        border-bottom-color: $infobox-header-border;
+        background-color: @infobox-subheader-color;
+        color: lighten(@theme-text, 10%);
+        border-top-color: @infobox-header-border;
+        border-bottom-color: @infobox-header-border;
 
         a {
-        	color: lighten($theme-text, 10%);
+        	color: lighten(@theme-text, 10%);
         }
 
     }
 
     // usually first row
     .infobox-image.bordered-image {
-        border-color: $infobox-cell-border;
+        border-color: @infobox-cell-border;
     }
 
     // usually last row
     .infobox-map {
-        border-top-color: $infobox-header-border;
+        border-top-color: @infobox-header-border;
     }
 
     // not header or subheaders
     th:not([colspan="2"]) {
-        border-left-color: $infobox-cell-border;
-        border-right-color: $infobox-subheader-color;
+        border-left-color: @infobox-cell-border;
+        border-right-color: @infobox-subheader-color;
     }
 
     th:not(.infobox-header):not(.infobox-subheader) {
-        border-left-color: $infobox-cell-border;
+        border-left-color: @infobox-cell-border;
     }
 
     td {
 
         &:not(.infobox-image):not(.infobox-map) {
-        	border-right-color: $infobox-cell-border;
+        	border-right-color: @infobox-cell-border;
         }
 
         // for full width td's at the bottom like infobox item examine
         &[colspan="2"]:not(.infobox-image):not(.infobox-map) {
-        	border-color: $infobox-cell-border;
+        	border-color: @infobox-cell-border;
     	}
     }
 }
@@ -155,29 +155,29 @@ table.wikitable {
 
 //     td {
 //         .table-data;
-//         color: $theme-text;
-//         background-color: $table-data;
+//         color: @theme-text;
+//         background-color: @table-data;
 //     }
 
 //     tr:hover td {
-//         background-color: lighten($table-data, 5%);
+//         background-color: lighten(@table-data, 5%);
 //     }
 
 //     th {
 //         .table-header;
-//         color: $theme-text;
+//         color: @theme-text;
 //     }
 // }
 
 // // Image metadata table
 // .mw_metadata th, 
 // .mw_metadata td {
-//     border-color: $theme-borders;
+//     border-color: @theme-borders;
 // }
 
 // ==========================
 //      Undefined tables
 // ==========================
 table {
-    border-color: $theme-borders;
+    border-color: @theme-borders;
 }

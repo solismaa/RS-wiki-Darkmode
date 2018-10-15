@@ -1,11 +1,11 @@
 'use strict';
 const gulp = require('gulp');
-const sass = require('gulp-sass');
+const less = require('gulp-less');
 const plumber = require('gulp-plumber');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cleanCSS = require('gulp-clean-css');
-const safeImportant = require('postcss-safe-important');
+// const safeImportant = require('postcss-safe-important');
 const rename = require("gulp-rename");
 const sourcemaps = require('gulp-sourcemaps');
 const bump = require('gulp-bump');
@@ -19,7 +19,7 @@ const lec = require('gulp-line-ending-corrector');
  * For development
  */
 function watchFiles(cb) {
-    gulp.watch("src/*.scss", dev);
+    gulp.watch("src/*.less", dev);
 
     fs.access("./browser.js", (err) => {
         if (!err) {
@@ -47,10 +47,11 @@ function dev() {
         @-moz-document domain('runescape.wiki') {
         `.replace(/^\s*/gm, "");
 
-    return gulp.src('./src/darkmode.scss')
+    return gulp.src('./src/darkmode.less')
         .pipe(plumber())
         .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
+        // .pipe(sass().on('error', sass.logError))
+        .pipe(less())
         .pipe(postcss([ autoprefixer()/*, safeImportant() */]))
         .pipe(sourcemaps.write())
         .pipe(rename('Darkmode.dev.user.css'))
@@ -65,9 +66,10 @@ function dev() {
 function clean() {
     const pkg = JSON.parse(fs.readFileSync('./package.json'));
 
-    const finalCSS = gulp.src('./src/darkmode.scss')
+    const finalCSS = gulp.src('./src/darkmode.less')
         .pipe(plumber())
-        .pipe(sass().on('error', sass.logError))
+        // .pipe(sass().on('error', sass.logError))
+        .pipe(less())
         .pipe(postcss([ autoprefixer()/*, safeImportant()*/]))
         /*.pipe(cleanCSS({level: {2: {all: true}}, format: 'beautify'}))*/
         .pipe(lec({eolc: 'LF'}));

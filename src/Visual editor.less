@@ -2,27 +2,27 @@
 //      loading icon
 // ======================
 .ve-spinner .content {
-    background-color: lighten($main-page-bg, 5%);
-    border-color: $theme-borders;
-    color: $theme-text;
+    background-color: lighten(@main-page-bg, 5%);
+    border-color: @theme-borders;
+    color: @theme-text;
 }
 
 .ve-spinner .loading {
-    background-color: lighten($main-page-bg, 5%);
+    background-color: lighten(@main-page-bg, 5%);
 }
 
 // ========================================
 //      Toolbar at the top of the page
 // ========================================
 .ve-init-mw-viewPageTarget-toolbar {
-    border-top-color: $theme-borders;
+    border-top-color: @theme-borders;
 }
 
 .oo-ui-toolbar-bar {
-    background-color: $edit-area-sidebar-bg;
-    background-image: linear-gradient( 0deg, $edit-area-sidebar-shade 0%, $edit-area-sidebar-bg 50% );
-    color: $theme-text;
-    border-color: $theme-borders;
+    background-color: @edit-area-sidebar-bg;
+    background-image: linear-gradient( 0deg, @edit-area-sidebar-shade 0%, @edit-area-sidebar-bg 50% );
+    color: @theme-text;
+    border-color: @theme-borders;
 }
 
 // Remove an unwanted background
@@ -34,10 +34,10 @@
 //      Save/cancle buttons
 // -----------------------------
 .oo-ui-buttonElement-button {
-    @include button-styling();
+    .button-styling();
 
     &.secondary {
-        @include button-styling("cancel");
+        .button-styling("cancel");
     }
 }
 
@@ -45,17 +45,17 @@
 //      Buttons
 // -----------------
 .oo-ui-widget-enabled:hover {
-    border-color: $theme-borders;
+    border-color: @theme-borders;
 }
 
 .oo-ui-tool.oo-ui-widget-enabled:hover {
-    border-color: lighten($theme-borders, 5%);
+    border-color: lighten(@theme-borders, 5%);
 }
 
 .oo-ui-tool-active.oo-ui-widget-enabled {
-    background-color: lighten($edit-area-sidebar-bg, 5%);
-    border-color: $theme-borders;
-    background-image: linear-gradient( 0deg, lighten($edit-area-sidebar-bg, 4%), lighten($edit-area-sidebar-bg, 14%) );
+    background-color: lighten(@edit-area-sidebar-bg, 5%);
+    border-color: @theme-borders;
+    background-image: linear-gradient( 0deg, lighten(@edit-area-sidebar-bg, 4%), lighten(@edit-area-sidebar-bg, 14%) );
 }
 
 .oo-ui-iconElement-icon,
@@ -67,27 +67,27 @@
 //      Dropdown buttons
 // --------------------------
 .oo-ui-menuToolGroup {
-    border-color: darken($theme-borders, 5%);
+    border-color: darken(@theme-borders, 5%);
 }
 
 // Colors when activated
 .oo-ui-popupToolGroup-active.oo-ui-widget-enabled {
-    background-color: lighten($edit-area-sidebar-bg, 5%);
-    border-color: $theme-borders;
-    background-image: linear-gradient( 0deg, lighten($edit-area-sidebar-bg, 4%), lighten($edit-area-sidebar-bg, 14%) );
+    background-color: lighten(@edit-area-sidebar-bg, 5%);
+    border-color: @theme-borders;
+    background-image: linear-gradient( 0deg, lighten(@edit-area-sidebar-bg, 4%), lighten(@edit-area-sidebar-bg, 14%) );
 }
 
 // Dropdown
 .oo-ui-popupToolGroup .oo-ui-toolGroup-tools {
-    @include dropdown-styling();
+    .dropdown-styling("ooui");
 
     .oo-ui-tool-title {
-        color: $theme-text;
+        color: @theme-text;
     }
 
     > span:hover {
-        color: $theme-links;
-        background-color: $dropdown-hover-item;
+        color: @theme-links;
+        background-color: @dropdown-hover-item;
     }
 }
 
@@ -102,39 +102,39 @@
 // Visual editor temporary inserted tables
 .ve-ce-tableCellNode,
 .ve-ce-tableCaptionNode {
-    border-color: $theme-borders;
+    border-color: @theme-borders;
 }
 
 .ve-ce-tableCellNode-header {
-    background-color: $table-header;
+    background-color: @table-header;
 }
 
 // Hover over empty line / start editing new paragraph
 .ve-ce-branchNode-blockSlugWrapper-unfocused:hover,
 .ve-ce-branchNode-blockSlugWrapper-former-unfocused {
-    background-color: lighten($main-page-bg, 5%);
-    outline-color: $theme-borders;
+    background-color: lighten(@main-page-bg, 5%);
+    outline-color: @theme-borders;
 }
 
 // =======================================
 //      Small on page tooltips/popups
 // =======================================
 .oo-ui-popupWidget-popup {
-    background-color: $tooltip-bg;
-    border-color: $theme-borders;
+    background-color: @tooltip-bg;
+    border-color: @theme-borders;
 }
 
 .oo-ui-optionWidget .oo-ui-labelElement-label {
-    color: $theme-text;
+    color: @theme-text;
 }
 
 .oo-ui-optionWidget-highlighted {
-    background-color: lighten($tooltip-bg, 5%);
+    background-color: lighten(@tooltip-bg, 5%);
 }
 
 // Pointer arrow
 .oo-ui-popupWidget-anchored .oo-ui-popupWidget-anchor {
-    @include dropdown-pointer-styling();
+    .dropdown-pointer-styling();
 }
 
 // Pending input field
@@ -145,14 +145,14 @@
 
 // autocomplete dropdown on input fields
 .oo-ui-menuSelectWidget {
-    background: $dropdown-bg;
-    border-color: $theme-borders;
+    background: @dropdown-bg;
+    border-color: @theme-borders;
     box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
 }
 
 .oo-ui-menuSectionOptionWidget {
-    background: $dropdown-bg;
-    color: $theme-text;
+    background: @dropdown-bg;
+    color: @theme-text;
 }
 
 // ====================
@@ -162,20 +162,20 @@
 //      Blackout
 // ------------------
 .oo-ui-windowManager-modal > .oo-ui-dialog {
-    background-color: fade($main-page-bg, 50%);
+    background-color: fade(@main-page-bg, 50%);
 }
 
 // ---------------------
 //      Body colors
 // ---------------------
 .oo-ui-window-frame {
-    background-color: $popup-bg;
-    border-color: $theme-borders;
+    background-color: @popup-bg;
+    border-color: @theme-borders;
 }
 
 .oo-ui-window-head,
 .oo-ui-window-foot {
-    background-color: $popup-header-bg;
+    background-color: @popup-header-bg;
 }
 
 // .oo-ui-window-body {
@@ -187,44 +187,44 @@
 // ------------------------
 //----- Options group switch -----//
 .oo-ui-bookletLayout-outlinePanel {
-    border-color: $theme-borders;
+    border-color: @theme-borders;
 
     .oo-ui-outlineControlsWidget {
-        background: lighten($popup-bg, 2%);
+        background: lighten(@popup-bg, 2%);
     }
 }
 
 .oo-ui-optionWidget-selected,
 .oo-ui-optionWidget-pressed {
-    background: darken($popup-bg, 3%);
+    background: darken(@popup-bg, 3%);
     text-shadow: none;
 }
 
 //----- Text input widget -----//
 .ve-ui-surfaceWidget-surface {
-    border-color: $theme-borders;
+    border-color: @theme-borders;
 }
 
 //----- Input fields -----//
 .oo-ui-inputWidget input {
-    @include text-input-styling();
+    .text-input-styling();
 }
 
 //----- Filter parameters -----//
 .ve-ui-mwTemplateDialog-filter {
-    background-color: lighten($popup-bg, 2%);
-    border-color: $theme-borders;
+    background-color: lighten(@popup-bg, 2%);
+    border-color: @theme-borders;
 }
 
 //----- Go to template documentation button -----//
 .oo-ui-buttonElement-frameless > .oo-ui-buttonElement-button > .oo-ui-labelElement-label {
-    color: $button-text;
+    color: @button-text;
 }
 
 //----- Discard/continue editing popup -----//
 .oo-ui-messageDialog-title,
 .oo-ui-messageDialog-message {
-    color: $button-text;
+    color: @button-text;
 }
 
 // ---------------------------------------
@@ -232,7 +232,7 @@
 // ---------------------------------------
 //----- Right sidebar -----//
 .ve-ui-wikiaCartWidget-wrapper {
-    border-color: $theme-borders;
+    border-color: @theme-borders;
 }
 
 .ve-ui-wikiaSingleMediaCartWidget {
@@ -241,21 +241,21 @@
 }
 
 .ve-ui-wikiaSingleMediaCartOptionImage {
-    border-color: $theme-borders;
+    border-color: @theme-borders;
 }
 
 //----- Search results -----//
 .ve-ui-mwMediaResultWidget-thumbnail {
-    border-color: $theme-grey-2;
+    border-color: @theme-grey-2;
 }
 
 .ve-ui-mwMediaResultWidget .oo-ui-labelElement-label {
-    background-color:$theme-grey-2;
+    background-color:@theme-grey-2;
 }
 
 //----- Upload image box -----//
 .ve-ui-wikiaUploadButtonWidget {
-    border-color: lighten($theme-borders, 5%);
+    border-color: lighten(@theme-borders, 5%);
 }
 
 // ====================
@@ -265,5 +265,5 @@
 .oo-ui-outlineSelectWidget,
 .ve-ui-wikiaMediaResultsWidget,
 .ve-ui-wikiaCartWidget-wrapper {
-    @include scroll-bar-styling();
+    .scroll-bar-styling();
 }

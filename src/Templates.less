@@ -2,8 +2,8 @@
 //      {{Archive list}}
 // ==========================
 table.archive {
-    background-color: $table-data !important;
-    border: solid 1px $theme-borders !important;
+    background-color: @table-data !important;
+    border: solid 1px @theme-borders !important;
 }
 
 // ===============================
@@ -11,17 +11,17 @@ table.archive {
 // ===============================
 // Recolour the totals cell
 .GE-set-cost tr:last-of-type td {
-    background: $table-header !important;
+    background: @table-header !important;
 }
 
 // ===========================
 //      {{Quest details}}
 // ===========================
 .questdetails {
-    @include table-infobox();
+    .table-infobox();
 
     .questdetails-header {
-        background-color: $table-header;
+        background-color: @table-header;
     }
 
     #rs-qc-form {
@@ -35,15 +35,15 @@ table.archive {
 
 // quest req indent guide
 .questreq ul {
-    border-left: 1px dotted darken($theme-text, 15%);
+    border-left: 1px dotted darken(@theme-text, 15%);
 }
 
 // ===================
 //      {{Quote}}
 // ===================
 blockquote {
-    border-left: solid 3px $theme-borders;
-    color: darken($theme-text, 10%);
+    border-left: solid 3px @theme-borders;
+    color: darken(@theme-text, 10%);
 
     p {
         border: none;
@@ -51,51 +51,51 @@ blockquote {
 }
 
 .pullquote {
-    color: darken($theme-text, 10%);
+    color: darken(@theme-text, 10%);
 }
 
 // ====================
 //      {{Navbox}}
 // ====================
 .navbox {
-    color: $theme-text;
+    color: @theme-text;
 
     &,
     .navbox-subgroup {
-        background-color: $main-page-bg;
-    }
-
-    .navbox-group {
-        background: $navbox-group-bg;
+        background-color: @main-page-bg;
     }
 
     .navbox-list,
     .navbox-group {
-        border-color: $main-page-bg;
+        border-color: @main-page-bg;
     }
 
-    .navbox-subgroup {
-        .navbox-title,
-        .navbox-group {
-            background: $navbox-group-bg;
-        }
+    .navbox-group {
+        background: @navbox-group-bg;
     }
 
-    .navbox-title,
+    // .navbox-subgroup {
+    //     .navbox-title,
+    //     .navbox-group {
+    //         background: @navbox-group-bg;
+    //     }
+    // }
+
+    #navbox-title,
     .navbox-footer {
-        border-color: $main-page-bg;
-        color: $theme-text;
-        background: $navbox-title-bg;
+        border-color: @main-page-bg;
+        color: @theme-text;
+        background: @navbox-title-bg;
 
         a {
-            color: $theme-text;
+            color: @theme-text;
         }
     }
 
     .navbox-collapsible {
-        .navbox-title,
+        #navbox-title,
         .navbox-footer {
-            background-color: $navbox-title-2-bg;
+            background-color: @navbox-title-2-bg;
         }
     }
 }
@@ -104,52 +104,54 @@ blockquote {
 //      {{Documentation}}
 // ===========================
 .documentation {
-    background-color: $documentation-bg;
-    color: $theme-text;
+    background-color: @documentation-bg;
+    color: @theme-text;
 }
 
 // ======================
 //      {{shortcut}}
 // ======================
 .shortcut {
-    @include table-infobox();
+    .table-infobox();
 }
 
 // ==================
 //      <Tabber>
 // ==================
-// .tabberlive {
-//     ul.tabbernav {
-//         li.tabberactive a {
-//             .button-styling;
-//         }
+.tabberlive {
+    ul.tabbernav {
+        li.tabberactive a {
+            .button-styling();
+            border: none;
+        }
 
-//         li a {
-//             background-color: lighten($main-page-bg, 3%);
-//             color: $theme-text;
+        li a {
+            background-color: lighten(@main-page-bg, 3%);
+            .links(@theme-text);
+            // color: @theme-text;
 
-//             &:hover {
-//                 background-color: lighten($main-page-bg, 13%);
-//             }
-//         }
-//     }
+            &:hover {
+                background-color: lighten(@main-page-bg, 13%);
+            }
+        }
+    }
 
-//     div.tabbertab {
-//         background-color: lighten($main-page-bg, 3%);
-//     }
-// }
+    div.tabbertab {
+        background-color: lighten(@main-page-bg, 3%);
+    }
+}
 
-// ==========================
+// =============================
 //      {{Infobox bonuses}}
-// ==========================
+// =============================
 .infobox-bonuses {
     td {
-        @include table-data();
-        background-color: $table-data;
+        .table-data();
+        background-color: @table-data;
     }
 
     th {
-        @include table-header();
+        .table-header();
     }
 }
 
@@ -157,8 +159,8 @@ blockquote {
 //      Compare popup
 // -----------------------
 // #modal {
-//     background-color: $main-page-bg;
-//     color: $theme-text;
+//     background-color: @main-page-bg;
+//     color: @theme-text;
 
 //     // Add item input field
 //     #cioItem {
@@ -167,18 +169,28 @@ blockquote {
 
 //     // Stat colors
 //     .cioPos {
-//         color: $positive-change;
+//         color: @positive-change;
 //     }
 
 //     .cioNeg {
-//         color: $negative-change;
+//         color: @negative-change;
 //     }
 
 //     // Totals row
 //     #cioTotals {
-//         background-color: $highlight-table-on;
+//         background-color: @highlight-table-on;
 //     }
 // }
+
+.oo-ui-windowManager-modal > .oo-ui-dialog {
+    background: fade-out(@main-page-bg, 0.5);
+}
+
+.oo-ui-window-body {
+    background: @popup-bg;
+    color: @theme-text;
+    border-color: @theme-borders;
+}
 
 // =================================
 //      {{Infobox Monster new}}
@@ -212,34 +224,34 @@ blockquote {
 // ========================
 // Highlight ref when clicked
 .references > li:target {
-    background-color: lighten($main-page-bg, 10%);
+    background-color: lighten(@main-page-bg, 10%);
 }
 
 // ========================
 //      {{Transcript}}
 // ========================
 .transcript {
-    background-color: $documentation-bg;
+    background-color: @documentation-bg;
 }
 
 // =========================
 //      {{Family tree}}
 // =========================
 td.famtreeleaf {
-    @include table-infobox();
+    .table-infobox();
 }
 
 // =================================
 //      {{Alphabetical header}}
 // =================================
 #alphabetical-header {
-    background-color: $messageboxes;
-    border-color: lighten($messageboxes, 5%);
+    background-color: @messageboxes;
+    border-color: lighten(@messageboxes, 5%);
 }
 
 // ================================
 //      {{Mmgtable recurring}}
 // ================================
 .mmgtable-details {
-    border-color: $theme-borders;
+    border-color: @theme-borders;
 }

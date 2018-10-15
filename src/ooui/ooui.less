@@ -1,0 +1,1184 @@
+/*!
+ * OOUI v0.26.4
+ * https://www.mediawiki.org/wiki/OOUI
+ *
+ * Copyright 2011–2018 OOUI Team and other contributors.
+ * Released under the MIT license
+ * http://oojs.mit-license.org
+ */
+ @import "common.less";
+ @import "icon-imports.less";
+ 
+.oo-ui-buttonElement.oo-ui-widget-enabled > .oo-ui-buttonElement-button > .oo-ui-iconElement-icon,
+.oo-ui-buttonElement.oo-ui-widget-enabled > .oo-ui-buttonElement-button > .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-icon-base;
+}
+.oo-ui-buttonElement.oo-ui-widget-enabled > .oo-ui-buttonElement-button > .oo-ui-iconElement-icon.oo-ui-image-invert,
+.oo-ui-buttonElement.oo-ui-widget-enabled > .oo-ui-buttonElement-button > .oo-ui-indicatorElement-indicator.oo-ui-image-invert {
+  opacity: @opacity-icon-base--selected;
+}
+.oo-ui-buttonElement.oo-ui-widget-enabled > .oo-ui-buttonElement-button:hover > .oo-ui-iconElement-icon,
+.oo-ui-buttonElement.oo-ui-widget-enabled > .oo-ui-buttonElement-button:hover > .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-icon-base--hover;
+}
+.oo-ui-buttonElement.oo-ui-widget-enabled > .oo-ui-buttonElement-button:hover > .oo-ui-iconElement-icon.oo-ui-image-invert,
+.oo-ui-buttonElement.oo-ui-widget-enabled > .oo-ui-buttonElement-button:hover > .oo-ui-indicatorElement-indicator.oo-ui-image-invert {
+  opacity: @opacity-icon-base--selected;
+}
+.oo-ui-buttonElement.oo-ui-widget-enabled.oo-ui-buttonElement-pressed > .oo-ui-buttonElement-button > .oo-ui-iconElement-icon,
+.oo-ui-buttonElement.oo-ui-widget-enabled.oo-ui-buttonElement-pressed > .oo-ui-buttonElement-button > .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-icon-base--selected;
+}
+.oo-ui-buttonElement-frameless.oo-ui-iconElement > .oo-ui-buttonElement-button {
+  border-color: @border-color-frameless--fallback;
+  border-color: @border-color-frameless;
+}
+.oo-ui-buttonElement-frameless.oo-ui-labelElement > .oo-ui-buttonElement-button {
+  border-color: @border-color-frameless--fallback;
+  border-color: @border-color-frameless;
+}
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled > .oo-ui-buttonElement-button {
+  color: @color-base;
+}
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled > .oo-ui-buttonElement-button:hover {
+  color: @color-base--hover;
+}
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-iconElement > .oo-ui-buttonElement-button:focus,
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-labelElement > .oo-ui-buttonElement-button:focus {
+  border-color: @border-color-base--focus;
+  box-shadow: @box-shadow-widget--focus;
+}
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-iconElement > .oo-ui-buttonElement-button:focus:active,
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-labelElement > .oo-ui-buttonElement-button:focus:active {
+  border-color: @border-color-frameless--fallback;
+  border-color: @border-color-frameless;
+}
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-indicatorElement:not( .oo-ui-iconElement ):not( .oo-ui-labelElement ) > .oo-ui-buttonElement-button:focus {
+  box-shadow: @box-shadow-frameless-indicator--focus;
+}
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-buttonElement-pressed > input.oo-ui-buttonElement-button,
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled > .oo-ui-buttonElement-button:active {
+  color: @color-base--active;
+  border-color: @border-color-frameless--fallback;
+  border-color: @border-color-frameless;
+}
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button {
+  color: @color-progressive;
+}
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button:hover {
+  color: @color-progressive--hover;
+}
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button:active,
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button:active:focus,
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-flaggedElement-progressive.oo-ui-buttonElement-pressed > .oo-ui-buttonElement-button {
+  color: @color-progressive--active;
+}
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button {
+  color: @color-destructive;
+}
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button:hover {
+  color: @color-destructive--hover;
+}
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button:active,
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button:active:focus,
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled.oo-ui-flaggedElement-destructive.oo-ui-buttonElement-pressed > .oo-ui-buttonElement-button {
+  color: @color-destructive--active;
+}
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled[class*='oo-ui-flaggedElement'] > .oo-ui-buttonElement-button > .oo-ui-iconElement-icon,
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled[class*='oo-ui-flaggedElement'] > .oo-ui-buttonElement-button > .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-icon-base--selected;
+}
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled[class*='oo-ui-flaggedElement'] > .oo-ui-buttonElement-button:hover > .oo-ui-iconElement-icon,
+.oo-ui-buttonElement-frameless.oo-ui-widget-enabled[class*='oo-ui-flaggedElement'] > .oo-ui-buttonElement-button:hover > .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-icon-base--hover;
+}
+.oo-ui-buttonElement-frameless.oo-ui-widget-disabled > .oo-ui-buttonElement-button {
+  color: @color-base--disabled;
+}
+.oo-ui-buttonElement-frameless.oo-ui-widget-disabled > .oo-ui-buttonElement-button > .oo-ui-iconElement-icon,
+.oo-ui-buttonElement-frameless.oo-ui-widget-disabled > .oo-ui-buttonElement-button > .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-base--disabled;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-disabled > .oo-ui-buttonElement-button {
+  background-color: @background-color-filled--disabled;
+  color: @color-filled--disabled;
+  border-color: @border-color-base--disabled;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button {
+  background-color: @background-color-framed;
+  color: @color-base;
+  border-color: @border-color-base;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button:hover {
+  background-color: @background-color-framed--hover;
+  color: @color-base--hover;
+  border-color: @border-color-base--hover;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button:focus {
+  border-color: @border-color-base--focus;
+  box-shadow: @box-shadow-widget--focus;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button:active,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button:active:focus,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-buttonElement-pressed > .oo-ui-buttonElement-button {
+  background-color: @background-color-framed--active;
+  color: @color-base--active;
+  border-color: @border-color-base--active;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-buttonElement-active > .oo-ui-buttonElement-button {
+  background-color: @color-progressive--active;
+  color: @color-base--inverted;
+  border-color: @border-color-input-binary--active;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-buttonElement-active > .oo-ui-buttonElement-button:focus {
+  border-color: @color-progressive--focus;
+  box-shadow: @box-shadow-progressive--focus;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button {
+  color: @color-progressive;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button:hover {
+  background-color: @background-color-framed--hover;
+  border-color: @border-color-framed-progressive--hover;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button:active,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button:active:focus,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-progressive.oo-ui-buttonElement-pressed > .oo-ui-buttonElement-button,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-progressive.oo-ui-buttonElement-active > .oo-ui-buttonElement-button,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-progressive.oo-ui-popupToolGroup-active > .oo-ui-buttonElement-button {
+  background-color: lighten( @color-progressive--active, 60% );
+  color: @color-progressive--active;
+  border-color: @color-progressive--active;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button:focus {
+  border-color: @color-progressive--focus;
+  box-shadow: inset 0 0 0 1px @color-progressive--focus;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button {
+  color: @color-destructive-non-primary;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button:hover {
+  background-color: @background-color-framed--hover;
+  border-color: @border-color-framed-destructive--hover;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button:active,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button:active:focus,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-destructive.oo-ui-buttonElement-pressed > .oo-ui-buttonElement-button,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-destructive.oo-ui-buttonElement-active > .oo-ui-buttonElement-button,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-destructive.oo-ui-popupToolGroup-active > .oo-ui-buttonElement-button {
+  background-color: lighten( @color-destructive--active, 60% );
+  color: @color-destructive--active;
+  border-color: @color-destructive--active;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button:focus {
+  border-color: @color-destructive--focus;
+  box-shadow: inset 0 0 0 1px @color-destructive--focus;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button {
+  color: @color-base--inverted;
+  background-color: @color-progressive;
+  border-color: @color-progressive;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button:hover {
+  background-color: @color-progressive--hover;
+  border-color: @color-progressive--hover;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button:active,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button:active:focus,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive.oo-ui-buttonElement-pressed > .oo-ui-buttonElement-button,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive.oo-ui-buttonElement-active > .oo-ui-buttonElement-button,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive.oo-ui-popupToolGroup-active > .oo-ui-buttonElement-button {
+  color: @color-base--inverted;
+  background-color: @color-progressive--active;
+  border-color: @color-progressive--active;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button:focus {
+  border-color: @color-progressive--focus;
+  box-shadow: inset 0 0 0 1px @color-progressive--focus, inset 0 0 0 2px @color-base--inverted;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button {
+  color: @color-base--inverted;
+  background-color: @color-destructive;
+  border-color: @color-destructive;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button:hover {
+  background-color: @color-destructive--hover;
+  border-color: @color-destructive--hover;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button:active,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button:active:focus,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-destructive.oo-ui-buttonElement-pressed > .oo-ui-buttonElement-button,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-destructive.oo-ui-buttonElement-active > .oo-ui-buttonElement-button,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-destructive.oo-ui-popupToolGroup-active > .oo-ui-buttonElement-button {
+  color: @color-base--inverted;
+  background-color: @color-destructive--active;
+  border-color: @color-destructive--active;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-destructive > .oo-ui-buttonElement-button:focus {
+  border-color: @color-destructive--focus;
+  box-shadow: inset 0 0 0 1px @color-destructive--focus, inset 0 0 0 2px @color-base--inverted;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary > .oo-ui-buttonElement-button > .oo-ui-iconElement-icon,
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary > .oo-ui-buttonElement-button > .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-icon-base--selected;
+}
+.oo-ui-pendingElement-pending {
+  background-image: url("@{ooui-default-image-path}/textures/pending.gif");
+}
+.oo-ui-fieldLayout-disabled > .oo-ui-fieldLayout-body > .oo-ui-fieldLayout-header > .oo-ui-labelElement-label {
+  color: @color-base--disabled;
+}
+.oo-ui-panelLayout-framed {
+  border: @border-dialog;
+}
+.oo-ui-optionWidget-selected .oo-ui-buttonElement-button > .oo-ui-iconElement-icon {
+  opacity: @opacity-icon-base--selected;
+}
+.oo-ui-optionWidget.oo-ui-widget-disabled {
+  color: @color-base--disabled;
+}
+.oo-ui-decoratedOptionWidget.oo-ui-widget-disabled .oo-ui-iconElement-icon,
+.oo-ui-decoratedOptionWidget.oo-ui-widget-disabled .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-base--disabled;
+}
+.oo-ui-radioSelectWidget:focus [type='radio']:checked + span:before {
+  border-color: @background-color-base;
+}
+.oo-ui-iconWidget.oo-ui-widget-disabled {
+  opacity: @opacity-base--disabled;
+}
+.oo-ui-indicatorWidget.oo-ui-widget-disabled {
+  opacity: @opacity-base--disabled;
+}
+.oo-ui-buttonGroupWidget .oo-ui-buttonElement-framed.oo-ui-widget-disabled + .oo-ui-widget-disabled > .oo-ui-buttonElement-button {
+  border-left-color: @border-color-filled--disabled;
+}
+.oo-ui-buttonGroupWidget.oo-ui-widget-enabled .oo-ui-buttonElement.oo-ui-toggleWidget-on + .oo-ui-toggleWidget-on > .oo-ui-buttonElement-button,
+.oo-ui-buttonGroupWidget.oo-ui-widget-enabled .oo-ui-buttonElement.oo-ui-toggleWidget-on + .oo-ui-toggleWidget-on > .oo-ui-buttonElement-button:active {
+  border-left-color: @border-color-base;
+}
+.oo-ui-popupWidget-popup {
+  background-color: @background-color-base;
+  border: @border-menu;
+  box-shadow: @box-shadow-menu;
+}
+.oo-ui-popupWidget-anchored-top .oo-ui-popupWidget-anchor:before {
+  border-bottom-color: @border-color-base;
+}
+.oo-ui-popupWidget-anchored-top .oo-ui-popupWidget-anchor:after {
+  border-bottom-color: @background-color-base;
+}
+.oo-ui-popupWidget-anchored-bottom .oo-ui-popupWidget-anchor:before {
+  border-top-color: @border-color-base;
+}
+.oo-ui-popupWidget-anchored-bottom .oo-ui-popupWidget-anchor:after {
+  border-top-color: @background-color-base;
+}
+.oo-ui-popupWidget-anchored-start .oo-ui-popupWidget-anchor:before {
+  border-right-color: @border-color-base;
+}
+.oo-ui-popupWidget-anchored-start .oo-ui-popupWidget-anchor:after {
+  border-right-color: @background-color-base;
+}
+.oo-ui-popupWidget-anchored-end .oo-ui-popupWidget-anchor:before {
+  border-left-color: @border-color-base;
+}
+.oo-ui-popupWidget-anchored-end .oo-ui-popupWidget-anchor:after {
+  border-left-color: @background-color-base;
+}
+.oo-ui-checkboxInputWidget [type='checkbox'] + span {
+  background-color: @background-color-base;
+  border: @border-input-binary;
+}
+.oo-ui-checkboxInputWidget [type='checkbox']:disabled + span {
+  background-color: @background-color-filled--disabled;
+  border-color: @border-color-base--disabled;
+}
+.oo-ui-checkboxInputWidget.oo-ui-widget-enabled [type='checkbox']:focus + span {
+  border-color: @color-progressive;
+  box-shadow: @box-shadow-widget--focus;
+}
+.oo-ui-checkboxInputWidget.oo-ui-widget-enabled [type='checkbox']:hover + span {
+  border-color: @color-progressive;
+}
+.oo-ui-checkboxInputWidget.oo-ui-widget-enabled [type='checkbox']:active + span {
+  background-color: @color-progressive--active;
+  border-color: @border-color-input-binary--active;
+  box-shadow: @box-shadow-input-binary--active;
+}
+.oo-ui-checkboxInputWidget.oo-ui-widget-enabled [type='checkbox']:checked + span {
+  background-color: @background-color-input-binary--checked;
+  border-color: @border-color-input-binary--checked;
+}
+.oo-ui-checkboxInputWidget.oo-ui-widget-enabled [type='checkbox']:checked:focus + span {
+  background-color: @background-color-input-binary--checked;
+  border-color: @border-color-input-binary--checked;
+  box-shadow: @box-shadow-progressive--focus;
+}
+.oo-ui-checkboxInputWidget.oo-ui-widget-enabled [type='checkbox']:checked:hover + span {
+  background-color: @color-progressive--hover;
+  border-color: @color-progressive--hover;
+}
+.oo-ui-checkboxInputWidget.oo-ui-widget-enabled [type='checkbox']:checked:active + span {
+  background-color: @background-color-input-binary--active;
+  border-color: @border-color-input-binary--active;
+  box-shadow: @box-shadow-input-binary--active;
+}
+.oo-ui-dropdownInputWidget-php {
+  border-right: @border-base;
+}
+.oo-ui-dropdownInputWidget select {
+  border: @border-base;
+}
+.oo-ui-dropdownInputWidget.oo-ui-widget-enabled select {
+  background-color: @background-color-framed;
+  color: @color-base;
+}
+.oo-ui-dropdownInputWidget.oo-ui-widget-enabled select:hover {
+  background-color: @background-color-framed--hover;
+  color: @color-base--hover;
+  border-color: @border-color-base--hover;
+}
+.oo-ui-dropdownInputWidget.oo-ui-widget-enabled select:active {
+  color: @color-base--active;
+  border-color: @border-color-base--active;
+}
+.oo-ui-dropdownInputWidget.oo-ui-widget-enabled select:focus {
+  border-color: @border-color-base--focus;
+  box-shadow: @box-shadow-widget--focus;
+}
+.oo-ui-dropdownInputWidget.oo-ui-widget-disabled select {
+  background-color: @background-color-base--disabled;
+  color: @color-base--disabled;
+  border-color: @border-color-base--disabled;
+}
+.oo-ui-radioInputWidget [type='radio'] + span {
+  background-color: @background-color-base;
+  border: @border-input-binary;
+}
+.oo-ui-radioInputWidget [type='radio']:disabled + span {
+  background-color: @background-color-filled--disabled;
+  border-color: @border-color-base--disabled;
+}
+.oo-ui-radioInputWidget [type='radio']:disabled:checked + span {
+  background-color: @background-color-base;
+}
+.oo-ui-radioInputWidget.oo-ui-widget-enabled [type='radio']:hover + span {
+  border-color: @color-progressive;
+}
+.oo-ui-radioInputWidget.oo-ui-widget-enabled [type='radio']:active + span {
+  background-color: @background-color-input-binary--active;
+  border-color: @border-color-input-binary--active;
+}
+.oo-ui-radioInputWidget.oo-ui-widget-enabled [type='radio']:checked + span {
+  border-color: @border-color-input-binary--checked;
+}
+.oo-ui-radioInputWidget.oo-ui-widget-enabled [type='radio']:checked:focus + span:before {
+  border-color: @background-color-base;
+}
+.oo-ui-radioInputWidget.oo-ui-widget-enabled [type='radio']:checked:hover + span {
+  border-color: @color-progressive--hover;
+}
+.oo-ui-radioInputWidget.oo-ui-widget-enabled [type='radio']:checked:active + span {
+  border-color: @border-color-input-binary--active;
+  box-shadow: @box-shadow-input-binary--active;
+}
+.oo-ui-radioInputWidget.oo-ui-widget-enabled [type='radio']:checked:active + span:before {
+  border-color: @border-color-input-binary--active;
+}
+.oo-ui-textInputWidget input,
+.oo-ui-textInputWidget textarea {
+  background-color: @background-color-base;
+  color: @color-base--emphasized;
+  border: @border-base;
+}
+.oo-ui-textInputWidget.oo-ui-widget-enabled input,
+.oo-ui-textInputWidget.oo-ui-widget-enabled textarea {
+  box-shadow: @box-shadow-widget;
+}
+.oo-ui-textInputWidget.oo-ui-widget-enabled input::-webkit-input-placeholder,
+.oo-ui-textInputWidget.oo-ui-widget-enabled textarea::-webkit-input-placeholder {
+  color: @color-placeholder;
+}
+.oo-ui-textInputWidget.oo-ui-widget-enabled input:-ms-input-placeholder,
+.oo-ui-textInputWidget.oo-ui-widget-enabled textarea:-ms-input-placeholder {
+  color: @color-placeholder;
+}
+.oo-ui-textInputWidget.oo-ui-widget-enabled input::-moz-placeholder,
+.oo-ui-textInputWidget.oo-ui-widget-enabled textarea::-moz-placeholder {
+  color: @color-placeholder;
+}
+.oo-ui-textInputWidget.oo-ui-widget-enabled input:-moz-placeholder,
+.oo-ui-textInputWidget.oo-ui-widget-enabled textarea:-moz-placeholder {
+  color: @color-placeholder;
+}
+.oo-ui-textInputWidget.oo-ui-widget-enabled input::placeholder,
+.oo-ui-textInputWidget.oo-ui-widget-enabled textarea::placeholder {
+  color: @color-placeholder;
+}
+.oo-ui-textInputWidget.oo-ui-widget-enabled input:focus,
+.oo-ui-textInputWidget.oo-ui-widget-enabled textarea:focus {
+  border-color: @border-color-base--focus;
+  box-shadow: @box-shadow-widget--focus;
+}
+.oo-ui-textInputWidget.oo-ui-widget-enabled input[readonly],
+.oo-ui-textInputWidget.oo-ui-widget-enabled textarea[readonly] {
+  background-color: @background-color-base--read-only;
+}
+.oo-ui-textInputWidget.oo-ui-widget-enabled:hover input,
+.oo-ui-textInputWidget.oo-ui-widget-enabled:hover textarea {
+  border-color: @border-color-input--hover;
+}
+.oo-ui-textInputWidget.oo-ui-widget-enabled:hover input:focus,
+.oo-ui-textInputWidget.oo-ui-widget-enabled:hover textarea:focus {
+  border-color: @border-color-base--focus;
+}
+@media screen and (min-width: 0) {
+    outline: 1px solid @color-progressive;
+}
+.oo-ui-textInputWidget.oo-ui-widget-enabled.oo-ui-flaggedElement-invalid input,
+.oo-ui-textInputWidget.oo-ui-widget-enabled.oo-ui-flaggedElement-invalid textarea {
+  border-color: @border-color-erroneous;
+}
+.oo-ui-textInputWidget.oo-ui-widget-enabled.oo-ui-flaggedElement-invalid input:hover,
+.oo-ui-textInputWidget.oo-ui-widget-enabled.oo-ui-flaggedElement-invalid textarea:hover {
+  border-color: @border-color-erroneous;
+}
+.oo-ui-textInputWidget.oo-ui-widget-enabled.oo-ui-flaggedElement-invalid input:focus,
+.oo-ui-textInputWidget.oo-ui-widget-enabled.oo-ui-flaggedElement-invalid textarea:focus {
+  border-color: @border-color-erroneous;
+  box-shadow: @box-shadow-erroneous--focus;
+}
+.oo-ui-textInputWidget.oo-ui-widget-disabled input,
+.oo-ui-textInputWidget.oo-ui-widget-disabled textarea {
+  background-color: @background-color-base--disabled;
+  -webkit-text-fill-color: @color-base--disabled;
+  color: @color-base--disabled;
+  text-shadow: @text-shadow-base--disabled;
+  border-color: @border-color-base--disabled;
+}
+.oo-ui-textInputWidget.oo-ui-widget-disabled > .oo-ui-iconElement-icon,
+.oo-ui-textInputWidget.oo-ui-widget-disabled > .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-base--disabled;
+}
+.oo-ui-textInputWidget.oo-ui-widget-disabled > .oo-ui-labelElement-label {
+  color: @color-base--disabled;
+  text-shadow: @text-shadow-base--disabled;
+}
+.oo-ui-textInputWidget > .oo-ui-labelElement-label {
+  color: @color-base--subtle;
+}
+.oo-ui-menuSelectWidget {
+  background-color: @background-color-base;
+  border: @border-menu;
+  box-shadow: @box-shadow-menu;
+}
+.oo-ui-menuOptionWidget.oo-ui-optionWidget-highlighted {
+  background-color: @background-color-base--hover;
+  color: @color-base--emphasized;
+}
+.oo-ui-menuOptionWidget.oo-ui-optionWidget-selected {
+  background-color: @background-color-progressive;
+  color: @color-progressive;
+}
+.oo-ui-menuOptionWidget.oo-ui-optionWidget-selected.oo-ui-menuOptionWidget.oo-ui-optionWidget-highlighted,
+.oo-ui-menuOptionWidget.oo-ui-optionWidget-pressed.oo-ui-menuOptionWidget.oo-ui-optionWidget-highlighted {
+  background-color: @background-color-progressive--hover;
+  color: @color-progressive;
+}
+.oo-ui-menuSectionOptionWidget {
+  color: @color-base--subtle;
+}
+.oo-ui-dropdownWidget-handle {
+  border: @border-base;
+}
+.oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle {
+  background-color: @background-color-framed;
+  color: @color-base;
+}
+.oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle:hover {
+  background-color: @background-color-framed--hover;
+  color: @color-base--hover;
+  border-color: @border-color-base--hover;
+}
+.oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle:hover .oo-ui-iconElement-icon,
+.oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle:hover .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-icon-base--hover;
+}
+.oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle:active {
+  color: @color-base--active;
+  border-color: @border-color-base--active;
+}
+.oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle:focus {
+  border-color: @border-color-base--focus;
+  box-shadow: @box-shadow-widget--focus;
+}
+.oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle .oo-ui-iconElement-icon,
+.oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-icon-base;
+}
+.oo-ui-dropdownWidget.oo-ui-widget-enabled.oo-ui-dropdownWidget-open .oo-ui-dropdownWidget-handle {
+  background-color: @background-color-framed--hover;
+}
+.oo-ui-dropdownWidget.oo-ui-widget-enabled.oo-ui-dropdownWidget-open .oo-ui-dropdownWidget-handle .oo-ui-iconElement-icon,
+.oo-ui-dropdownWidget.oo-ui-widget-enabled.oo-ui-dropdownWidget-open .oo-ui-dropdownWidget-handle .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-icon-base--selected;
+}
+.oo-ui-dropdownWidget.oo-ui-widget-disabled .oo-ui-dropdownWidget-handle {
+  color: @color-base--disabled;
+  text-shadow: @text-shadow-base--disabled;
+  border-color: @border-color-base--disabled;
+  background-color: @background-color-base--disabled;
+}
+.oo-ui-dropdownWidget.oo-ui-widget-disabled .oo-ui-dropdownWidget-handle .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-indicator--disabled;
+}
+.oo-ui-comboBoxInputWidget-open .oo-ui-comboBoxInputWidget-dropdownButton > .oo-ui-buttonElement-button {
+  background-color: @background-color-framed--hover;
+}
+.oo-ui-comboBoxInputWidget-open .oo-ui-comboBoxInputWidget-dropdownButton > .oo-ui-buttonElement-button .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-icon-base--selected;
+}
+.oo-ui-comboBoxInputWidget.oo-ui-widget-disabled .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-filled--disabled;
+}
+.oo-ui-multioptionWidget.oo-ui-widget-disabled {
+  color: @color-base--disabled;
+}
+.oo-ui-progressBarWidget {
+  background-color: @background-color-base;
+  border: @border-base;
+}
+.oo-ui-progressBarWidget.oo-ui-widget-enabled .oo-ui-progressBarWidget-bar {
+  background-color: @color-progressive;
+}
+.oo-ui-progressBarWidget.oo-ui-widget-disabled .oo-ui-progressBarWidget-bar {
+  background-color: @background-color-filled--disabled;
+}
+/*!
+ * OOUI v0.26.4
+ * https://www.mediawiki.org/wiki/OOUI
+ *
+ * Copyright 2011–2018 OOUI Team and other contributors.
+ * Released under the MIT license
+ * http://oojs.mit-license.org
+ */
+/**
+ * WikimediaUI Base v0.10.0
+ * Wikimedia Foundation user interface base variables
+ */
+.oo-ui-bookletLayout-outlinePanel > .oo-ui-outlineControlsWidget {
+  border-top: @border-dialog-bar;
+}
+.oo-ui-bookletLayout > .oo-ui-menuLayout-menu {
+  border-right: @border-dialog-bar;
+}
+.oo-ui-buttonSelectWidget .oo-ui-buttonOptionWidget.oo-ui-widget-disabled + .oo-ui-widget-disabled > .oo-ui-buttonElement-button {
+  border-left-color: @border-color-filled--disabled;
+}
+.oo-ui-buttonSelectWidget.oo-ui-widget-enabled:focus .oo-ui-buttonOptionWidget.oo-ui-optionWidget-selected .oo-ui-buttonElement-button {
+  border-color: @border-color-base--focus;
+  box-shadow: @box-shadow-progressive--focus;
+}
+.oo-ui-toggleSwitchWidget {
+  background-color: @background-color-framed;
+  border: @border-input-binary;
+}
+.oo-ui-toggleSwitchWidget.oo-ui-widget-enabled .oo-ui-toggleSwitchWidget-grip {
+  background-color: @background-color-framed;
+  border: @border-input-binary;
+}
+.oo-ui-toggleSwitchWidget.oo-ui-widget-enabled:hover {
+  background-color: @background-color-framed--hover;
+  border-color: @color-progressive--hover;
+}
+.oo-ui-toggleSwitchWidget.oo-ui-widget-enabled:hover .oo-ui-toggleSwitchWidget-grip {
+  background-color: @background-color-framed--hover;
+  border-color: @color-progressive--hover;
+}
+.oo-ui-toggleSwitchWidget.oo-ui-widget-enabled:active,
+.oo-ui-toggleSwitchWidget.oo-ui-widget-enabled:active:hover,
+.oo-ui-toggleSwitchWidget.oo-ui-widget-enabled:active:focus {
+  background-color: @background-color-input-binary--active;
+  border-color: @border-color-input-binary--active;
+  box-shadow: @box-shadow-input-binary--active;
+}
+.oo-ui-toggleSwitchWidget.oo-ui-widget-enabled:active .oo-ui-toggleSwitchWidget-grip,
+.oo-ui-toggleSwitchWidget.oo-ui-widget-enabled:active:hover .oo-ui-toggleSwitchWidget-grip,
+.oo-ui-toggleSwitchWidget.oo-ui-widget-enabled:active:focus .oo-ui-toggleSwitchWidget-grip {
+  background-color: @background-color-base;
+  border-color: @background-color-base;
+  box-shadow: @box-shadow-input-binary;
+}
+.oo-ui-toggleSwitchWidget.oo-ui-widget-enabled:focus {
+  border-color: @color-progressive;
+  box-shadow: @box-shadow-widget--focus;
+}
+.oo-ui-toggleSwitchWidget.oo-ui-widget-enabled:focus .oo-ui-toggleSwitchWidget-grip {
+  border-color: @color-progressive;
+}
+.oo-ui-toggleSwitchWidget.oo-ui-widget-enabled.oo-ui-toggleWidget-on {
+  background-color: @background-color-input-binary--checked;
+  border-color: @border-color-input-binary--checked;
+}
+.oo-ui-toggleSwitchWidget.oo-ui-widget-enabled.oo-ui-toggleWidget-on .oo-ui-toggleSwitchWidget-grip {
+  background-color: @background-color-base;
+  border-color: @background-color-base;
+  box-shadow: @box-shadow-input-binary;
+}
+.oo-ui-toggleSwitchWidget.oo-ui-widget-enabled.oo-ui-toggleWidget-on:hover {
+  background-color: @color-progressive--hover;
+  border-color: @color-progressive--hover;
+}
+.oo-ui-toggleSwitchWidget.oo-ui-widget-enabled.oo-ui-toggleWidget-on:active,
+.oo-ui-toggleSwitchWidget.oo-ui-widget-enabled.oo-ui-toggleWidget-on:active:hover {
+  background-color: @background-color-input-binary--active;
+  border-color: @border-color-input-binary--active;
+}
+.oo-ui-toggleSwitchWidget.oo-ui-widget-enabled.oo-ui-toggleWidget-on:focus {
+  border-color: @border-color-input-binary--checked;
+}
+.oo-ui-toggleSwitchWidget.oo-ui-widget-enabled.oo-ui-toggleWidget-on:focus:before {
+  border-color: @color-base--inverted;
+}
+.oo-ui-toggleSwitchWidget.oo-ui-widget-disabled {
+  background-color: @background-color-filled--disabled;
+  border-color: @border-color-base--disabled;
+}
+.oo-ui-toggleSwitchWidget.oo-ui-widget-disabled.oo-ui-toggleWidget-off .oo-ui-toggleSwitchWidget-grip {
+  border: @border-filled--disabled;
+  box-shadow: @box-shadow-filled--disabled;
+}
+.oo-ui-toggleSwitchWidget.oo-ui-widget-disabled.oo-ui-toggleWidget-on .oo-ui-toggleSwitchWidget-grip {
+  background-color: @background-color-base;
+}
+.oo-ui-selectFileWidget-info {
+  background-color: @background-color-base;
+  border: @border-base;
+}
+.oo-ui-selectFileWidget-empty .oo-ui-selectFileWidget-label {
+  color: @color-base--disabled;
+}
+.oo-ui-selectFileWidget-dropTarget {
+  background-color: @background-color-base;
+  border: @border-base;
+}
+.oo-ui-selectFileWidget-empty.oo-ui-widget-enabled.oo-ui-selectFileWidget-dropTarget {
+  background-color: @background-color-base;
+}
+.oo-ui-selectFileWidget-empty.oo-ui-widget-enabled.oo-ui-selectFileWidget-dropTarget:hover {
+  border-color: @border-color-input--hover;
+}
+.oo-ui-selectFileWidget-supported.oo-ui-widget-enabled.oo-ui-selectFileWidget-canDrop.oo-ui-selectFileWidget-dropTarget {
+  background-color: @background-color-progressive;
+  color: @color-progressive--active-hover;
+}
+.oo-ui-selectFileWidget.oo-ui-widget-disabled .oo-ui-selectFileWidget-info,
+.oo-ui-selectFileWidget-empty.oo-ui-widget-disabled .oo-ui-selectFileWidget-info {
+  background-color: @background-color-base--disabled;
+  color: @color-base--disabled;
+  border-color: @border-color-base--disabled;
+  text-shadow: @text-shadow-base--disabled;
+}
+.oo-ui-selectFileWidget.oo-ui-widget-disabled .oo-ui-selectFileWidget-info > .oo-ui-iconElement-icon,
+.oo-ui-selectFileWidget-empty.oo-ui-widget-disabled .oo-ui-selectFileWidget-info > .oo-ui-iconElement-icon {
+  opacity: @opacity-base--disabled;
+}
+.oo-ui-selectFileWidget.oo-ui-widget-disabled .oo-ui-selectFileWidget-info > .oo-ui-indicatorElement-indicator,
+.oo-ui-selectFileWidget-empty.oo-ui-widget-disabled .oo-ui-selectFileWidget-info > .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-indicator--disabled;
+}
+.oo-ui-selectFileWidget.oo-ui-widget-disabled.oo-ui-selectFileWidget-dropTarget,
+.oo-ui-selectFileWidget-empty.oo-ui-widget-disabled.oo-ui-selectFileWidget-dropTarget {
+  background-color: @background-color-base--disabled;
+  border-color: @border-color-base--disabled;
+}
+.oo-ui-selectFileWidget-notsupported .oo-ui-selectFileWidget-info {
+  background-color: @background-color-base--disabled;
+  color: @color-base;
+  border-color: @border-color-base--disabled;
+}
+.oo-ui-selectFileWidget-notsupported.oo-ui-selectFileWidget-dropTarget {
+  background-color: @background-color-base--disabled;
+  border-color: @border-color-base--disabled;
+}
+.oo-ui-outlineSelectWidget:focus {
+  box-shadow: inset 0 0 0 2px @color-progressive;
+}
+.oo-ui-outlineOptionWidget.oo-ui-optionWidget-highlighted {
+  background-color: @background-color-base--hover;
+  color: @color-base--emphasized;
+}
+.oo-ui-outlineOptionWidget.oo-ui-optionWidget-selected {
+  background-color: @background-color-progressive;
+  color: @color-progressive;
+}
+.oo-ui-outlineOptionWidget.oo-ui-optionWidget-pressed {
+  background-color: @background-color-progressive--hover;
+  color: @color-progressive;
+}
+.oo-ui-outlineControlsWidget {
+  background-color: @background-color-base;
+}
+.oo-ui-tabSelectWidget {
+  background-color: @background-color-tabs;
+}
+.oo-ui-tabOptionWidget {
+  color: @color-base;
+}
+.oo-ui-tabOptionWidget.oo-ui-optionWidget-selected {
+  background-color: @background-color-base;
+  color: @color-base--active;
+}
+.oo-ui-tabOptionWidget.oo-ui-widget-enabled.oo-ui-optionWidget-selected:hover {
+  background-color: @background-color-base;
+}
+.oo-ui-tagMultiselectWidget-handle {
+  border: @border-base;
+}
+.oo-ui-tagMultiselectWidget-handle > .oo-ui-tagMultiselectWidget-content > input {
+  color: @color-base--emphasized;
+}
+.oo-ui-tagMultiselectWidget-handle > .oo-ui-tagMultiselectWidget-content > input::-webkit-input-placeholder {
+  color: @color-placeholder;
+}
+.oo-ui-tagMultiselectWidget-handle > .oo-ui-tagMultiselectWidget-content > input:-ms-input-placeholder {
+  color: @color-placeholder;
+}
+.oo-ui-tagMultiselectWidget-handle > .oo-ui-tagMultiselectWidget-content > input::-moz-placeholder {
+  color: @color-placeholder;
+}
+.oo-ui-tagMultiselectWidget-handle > .oo-ui-tagMultiselectWidget-content > input:-moz-placeholder {
+  color: @color-placeholder;
+}
+.oo-ui-tagMultiselectWidget-handle > .oo-ui-tagMultiselectWidget-content > input::placeholder {
+  color: @color-placeholder;
+}
+.oo-ui-tagMultiselectWidget.oo-ui-widget-enabled .oo-ui-tagMultiselectWidget-handle {
+  background-color: @background-color-base;
+}
+.oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-inlined:hover .oo-ui-tagMultiselectWidget-handle {
+  border-color: @border-color-input--hover;
+}
+.oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-inlined.oo-ui-tagMultiselectWidget-focus .oo-ui-tagMultiselectWidget-handle {
+  border-color: @border-color-base--focus;
+  box-shadow: @box-shadow-widget--focus;
+}
+.oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined .oo-ui-tagMultiselectWidget-handle {
+  background-color: @background-color-base--read-only;
+}
+.oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined .oo-ui-tagItemWidget.oo-ui-widget-enabled {
+  background-color: @background-color-base;
+}
+.oo-ui-tagMultiselectWidget.oo-ui-widget-disabled .oo-ui-tagMultiselectWidget-handle {
+  color: @color-base--disabled;
+  text-shadow: @text-shadow-base--disabled;
+  border-color: @border-color-base--disabled;
+  background-color: @background-color-base--disabled;
+}
+.oo-ui-tagMultiselectWidget.oo-ui-widget-disabled .oo-ui-tagMultiselectWidget-handle > .oo-ui-iconElement-icon {
+  opacity: @opacity-base--disabled;
+}
+.oo-ui-tagMultiselectWidget.oo-ui-widget-disabled .oo-ui-tagMultiselectWidget-handle > .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-indicator--disabled;
+}
+.oo-ui-tagItemWidget {
+  border: @border-base;
+}
+.oo-ui-tagItemWidget.oo-ui-widget-enabled {
+  background-color: @background-color-framed;
+  color: @color-base;
+}
+.oo-ui-tagItemWidget.oo-ui-widget-enabled:hover {
+  background-color: @background-color-framed--hover;
+  color: @color-base--hover;
+  border-color: @border-color-base--hover;
+}
+.oo-ui-tagItemWidget.oo-ui-widget-enabled:focus {
+  border-color: @border-color-base--focus;
+  box-shadow: @box-shadow-widget--focus;
+}
+.oo-ui-tagItemWidget.oo-ui-widget-enabled.oo-ui-flaggedElement-invalid {
+  border-color: @border-color-erroneous;
+}
+.oo-ui-tagItemWidget.oo-ui-widget-enabled.oo-ui-flaggedElement-invalid:hover {
+  border-color: @border-color-erroneous;
+}
+.oo-ui-tagItemWidget.oo-ui-widget-enabled.oo-ui-flaggedElement-invalid:focus {
+  border-color: @border-color-erroneous;
+  box-shadow: @box-shadow-erroneous--focus;
+}
+.oo-ui-tagItemWidget.oo-ui-widget-disabled {
+  background-color: @background-color-base--disabled;
+  color: @color-base--disabled;
+  border-color: @border-color-base--disabled;
+  text-shadow: @text-shadow-base--disabled;
+}
+.oo-ui-capsuleMultiselectWidget-handle {
+  border: @border-base;
+}
+.oo-ui-capsuleMultiselectWidget-handle > .oo-ui-capsuleMultiselectWidget-content > input {
+  color: @color-base--emphasized;
+}
+.oo-ui-capsuleMultiselectWidget-handle > .oo-ui-capsuleMultiselectWidget-content > input::-webkit-input-placeholder {
+  color: @color-placeholder;
+}
+.oo-ui-capsuleMultiselectWidget-handle > .oo-ui-capsuleMultiselectWidget-content > input:-ms-input-placeholder {
+  color: @color-placeholder;
+}
+.oo-ui-capsuleMultiselectWidget-handle > .oo-ui-capsuleMultiselectWidget-content > input::-moz-placeholder {
+  color: @color-placeholder;
+}
+.oo-ui-capsuleMultiselectWidget-handle > .oo-ui-capsuleMultiselectWidget-content > input:-moz-placeholder {
+  color: @color-placeholder;
+}
+.oo-ui-capsuleMultiselectWidget-handle > .oo-ui-capsuleMultiselectWidget-content > input::placeholder {
+  color: @color-placeholder;
+}
+.oo-ui-capsuleMultiselectWidget.oo-ui-widget-enabled .oo-ui-capsuleMultiselectWidget-handle {
+  background-color: @background-color-base;
+}
+.oo-ui-capsuleMultiselectWidget.oo-ui-widget-enabled:hover .oo-ui-capsuleMultiselectWidget-handle {
+  border-color: @border-color-input--hover;
+}
+.oo-ui-capsuleMultiselectWidget.oo-ui-widget-enabled.oo-ui-capsuleMultiselectWidget-open .oo-ui-capsuleMultiselectWidget-handle {
+  border-color: @border-color-base--focus;
+  box-shadow: @box-shadow-widget--focus;
+}
+.oo-ui-capsuleMultiselectWidget.oo-ui-widget-disabled .oo-ui-capsuleMultiselectWidget-handle {
+  color: @color-base--disabled;
+  text-shadow: @text-shadow-base--disabled;
+  border-color: @border-color-base--disabled;
+  background-color: @background-color-base--disabled;
+}
+.oo-ui-capsuleMultiselectWidget.oo-ui-widget-disabled .oo-ui-capsuleMultiselectWidget-handle > .oo-ui-iconElement-icon {
+  opacity: @opacity-base--disabled;
+}
+.oo-ui-capsuleMultiselectWidget.oo-ui-widget-disabled .oo-ui-capsuleMultiselectWidget-handle > .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-indicator--disabled;
+}
+.oo-ui-capsuleItemWidget {
+  border: @border-base;
+}
+.oo-ui-capsuleItemWidget.oo-ui-widget-enabled {
+  background-color: @background-color-framed;
+  color: @color-base;
+}
+.oo-ui-capsuleItemWidget.oo-ui-widget-enabled:hover {
+  background-color: @background-color-framed--hover;
+  color: @color-base--hover;
+  border-color: @border-color-base--hover;
+}
+.oo-ui-capsuleItemWidget.oo-ui-widget-enabled:focus {
+  border-color: @border-color-base--focus;
+  box-shadow: @box-shadow-widget--focus;
+}
+.oo-ui-capsuleItemWidget.oo-ui-widget-disabled {
+  background-color: @background-color-base--disabled;
+  color: @color-base--disabled;
+  border-color: @border-color-base--disabled;
+  text-shadow: @text-shadow-base--disabled;
+}
+.oo-ui-searchWidget-query {
+  border-bottom: @border-toolbar;
+  box-shadow: @box-shadow-toolbar-top;
+}
+/*!
+ * OOUI v0.26.4
+ * https://www.mediawiki.org/wiki/OOUI
+ *
+ * Copyright 2011–2018 OOUI Team and other contributors.
+ * Released under the MIT license
+ * http://oojs.mit-license.org
+ */
+/**
+ * WikimediaUI Base v0.10.0
+ * Wikimedia Foundation user interface base variables
+ */
+.oo-ui-tool.oo-ui-widget-enabled .oo-ui-tool-link:focus {
+  outline: 1px solid @border-color-base--focus;
+  box-shadow: @box-shadow-base--focus;
+}
+.oo-ui-tool.oo-ui-widget-enabled .oo-ui-iconElement-icon {
+  opacity: @opacity-icon-base;
+}
+.oo-ui-tool.oo-ui-widget-enabled:hover .oo-ui-iconElement-icon {
+  opacity: @opacity-base;
+}
+.oo-ui-tool.oo-ui-widget-enabled[class*='oo-ui-flaggedElement'] .oo-ui-iconElement-icon {
+  opacity: @opacity-base;
+}
+.oo-ui-tool.oo-ui-widget-disabled .oo-ui-iconElement-icon {
+  opacity: @opacity-tool--disabled;
+}
+.oo-ui-toolGroup {
+  border-right: @border-toolbar;
+}
+.oo-ui-toolbar-actions .oo-ui-toolGroup {
+  border-left: @border-toolbar;
+}
+.oo-ui-toolGroup.oo-ui-widget-disabled .oo-ui-indicatorElement-indicator,
+.oo-ui-toolGroup.oo-ui-widget-disabled .oo-ui-iconElement-icon {
+  opacity: @opacity-tool--disabled !important;
+}
+.oo-ui-barToolGroup.oo-ui-widget-enabled > .oo-ui-toolGroup-tools > .oo-ui-tool:not( .oo-ui-toolGroupTool ).oo-ui-widget-enabled:hover {
+  background-color: @background-color-tool--hover;
+}
+.oo-ui-barToolGroup.oo-ui-widget-enabled > .oo-ui-toolGroup-tools > .oo-ui-tool:not( .oo-ui-toolGroupTool ).oo-ui-widget-enabled > .oo-ui-tool-link .oo-ui-tool-title {
+  color: @color-base;
+}
+.oo-ui-barToolGroup.oo-ui-widget-enabled > .oo-ui-toolGroup-tools > .oo-ui-tool:not( .oo-ui-toolGroupTool ).oo-ui-tool-active {
+  background-color: @background-color-tool--active;
+}
+.oo-ui-barToolGroup.oo-ui-widget-enabled > .oo-ui-toolGroup-tools > .oo-ui-tool:not( .oo-ui-toolGroupTool ).oo-ui-tool-active:hover {
+  background-color: @background-color-tool--active-hover;
+}
+.oo-ui-barToolGroup.oo-ui-widget-enabled > .oo-ui-toolGroup-tools > .oo-ui-tool:not( .oo-ui-toolGroupTool ).oo-ui-tool-active > .oo-ui-tool-link .oo-ui-tool-title {
+  color: @color-tool--active;
+}
+.oo-ui-barToolGroup.oo-ui-widget-enabled .oo-ui-tool.oo-ui-widget-disabled > .oo-ui-tool-link .oo-ui-tool-title,
+.oo-ui-barToolGroup.oo-ui-widget-disabled .oo-ui-tool > .oo-ui-tool-link .oo-ui-tool-title {
+  color: @color-base--disabled;
+}
+.oo-ui-popupToolGroup:not( .oo-ui-labelElement ):not( .oo-ui-iconElement ) .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-base;
+}
+.oo-ui-popupToolGroup-header {
+  color: @color-base--subtle;
+}
+.oo-ui-popupToolGroup .oo-ui-toolGroup-tools {
+  border: @border-toolbar;
+  background-color: @background-color-toolbar;
+  box-shadow: @box-shadow-menu;
+}
+.oo-ui-popupToolGroup .oo-ui-tool-link .oo-ui-tool-title {
+  color: @color-base;
+}
+.oo-ui-popupToolGroup .oo-ui-tool-link .oo-ui-tool-accel {
+  color: @color-base--subtle;
+}
+.oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle:hover {
+  background-color: @background-color-tool--hover;
+}
+.oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle:active {
+  background-color: @background-color-tool--active;
+}
+.oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle .oo-ui-iconElement-icon,
+.oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-icon-base;
+}
+.oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle:hover .oo-ui-iconElement-icon,
+.oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle:active .oo-ui-iconElement-icon,
+.oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle:hover .oo-ui-indicatorElement-indicator,
+.oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle:active .oo-ui-indicatorElement-indicator {
+  opacity: @opacity-icon-base--selected;
+}
+.oo-ui-popupToolGroup.oo-ui-widget-enabled > .oo-ui-popupToolGroup-handle:focus {
+  outline: 1px solid @border-color-base--focus;
+  box-shadow: @box-shadow-base--focus;
+}
+.oo-ui-popupToolGroup.oo-ui-widget-enabled[class*='oo-ui-flaggedElement'] > .oo-ui-popupToolGroup-handle .oo-ui-iconElement-icon,
+.oo-ui-popupToolGroup.oo-ui-widget-enabled[class*='oo-ui-flaggedElement'] > .oo-ui-popupToolGroup-handle:hover .oo-ui-iconElement-icon {
+  opacity: @opacity-icon-base--selected;
+}
+.oo-ui-popupToolGroup.oo-ui-popupToolGroup-active > .oo-ui-popupToolGroup-handle {
+  background-color: @background-color-tool--active;
+  color: @color-tool--active;
+}
+.oo-ui-popupToolGroup.oo-ui-popupToolGroup-active > .oo-ui-popupToolGroup-handle:hover {
+  background-color: @background-color-tool--active-hover;
+  color: @color-tool--active;
+}
+.oo-ui-popupToolGroup.oo-ui-popupToolGroup-active .oo-ui-tool-active.oo-ui-widget-enabled .oo-ui-tool-link .oo-ui-tool-title {
+  color: @color-tool--active;
+}
+.oo-ui-listToolGroup .oo-ui-tool.oo-ui-widget-enabled:hover {
+  background-color: @background-color-tool--hover;
+  color: @color-tool--hover;
+}
+.oo-ui-listToolGroup .oo-ui-tool-active.oo-ui-widget-enabled {
+  background-color: @background-color-tool--active;
+}
+.oo-ui-listToolGroup .oo-ui-tool-active.oo-ui-widget-enabled:hover {
+  background-color: @background-color-tool--active-hover;
+}
+.oo-ui-listToolGroup .oo-ui-tool-active.oo-ui-widget-enabled .oo-ui-tool-link .oo-ui-tool-title {
+  color: @color-tool--active;
+}
+.oo-ui-listToolGroup.oo-ui-widget-disabled,
+.oo-ui-listToolGroup .oo-ui-tool.oo-ui-widget-disabled .oo-ui-tool-title {
+  color: @color-base--disabled;
+}
+.oo-ui-menuToolGroup .oo-ui-tool.oo-ui-widget-enabled:hover {
+  background-color: @background-color-tool--active-hover;
+}
+.oo-ui-menuToolGroup .oo-ui-tool.oo-ui-tool-active {
+  background-color: @background-color-tool--active;
+}
+.oo-ui-menuToolGroup.oo-ui-widget-disabled,
+.oo-ui-menuToolGroup .oo-ui-tool.oo-ui-widget-disabled .oo-ui-tool-title {
+  color: @color-base--disabled;
+}
+.oo-ui-toolbar-bar {
+  background-color: @background-color-toolbar;
+  color: @color-base;
+}
+.oo-ui-toolbar-position-top > .oo-ui-toolbar-bar {
+  border-bottom: @border-toolbar;
+  box-shadow: @box-shadow-toolbar-top;
+}
+.oo-ui-toolbar-position-bottom > .oo-ui-toolbar-bar {
+  border-top: @border-toolbar;
+  box-shadow: @box-shadow-toolbar-bottom;
+}
+.oo-ui-toolbar-narrow.oo-ui-toolbar-position-top .oo-ui-toolbar-bar:after {
+  border-bottom: @border-toolbar;
+}
+.oo-ui-toolbar-narrow.oo-ui-toolbar-position-bottom .oo-ui-toolbar-bar:after {
+  border-top: @border-toolbar;
+}
+.oo-ui-toolbar-actions > .oo-ui-buttonElement.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button:focus {
+  box-shadow: @box-shadow-toolbar-action-button--focus;
+}
+.oo-ui-toolbar-actions > .oo-ui-buttonGroupWidget > .oo-ui-popupToolGroup.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-popupToolGroup-handle {
+  color: @color-base--inverted;
+  background-color: @color-progressive;
+  border-color: @color-progressive;
+}
+.oo-ui-toolbar-actions > .oo-ui-buttonGroupWidget > .oo-ui-popupToolGroup.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-popupToolGroup-handle:hover {
+  background-color: @color-progressive--hover;
+  border-color: @color-progressive--hover;
+}
+.oo-ui-toolbar-actions > .oo-ui-buttonGroupWidget > .oo-ui-popupToolGroup.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-popupToolGroup-handle:active,
+.oo-ui-toolbar-actions > .oo-ui-buttonGroupWidget > .oo-ui-popupToolGroup.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-popupToolGroup-handle:active:focus,
+.oo-ui-toolbar-actions > .oo-ui-buttonGroupWidget > .oo-ui-popupToolGroup.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive.oo-ui-buttonElement-pressed > .oo-ui-popupToolGroup-handle,
+.oo-ui-toolbar-actions > .oo-ui-buttonGroupWidget > .oo-ui-popupToolGroup.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive.oo-ui-buttonElement-active > .oo-ui-popupToolGroup-handle,
+.oo-ui-toolbar-actions > .oo-ui-buttonGroupWidget > .oo-ui-popupToolGroup.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive.oo-ui-popupToolGroup-active > .oo-ui-popupToolGroup-handle {
+  color: @color-base--inverted;
+  background-color: @color-progressive--active;
+  border-color: @color-progressive--active;
+}
+.oo-ui-toolbar-actions > .oo-ui-buttonGroupWidget > .oo-ui-popupToolGroup.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-popupToolGroup-handle:focus {
+  border-color: @color-progressive--focus;
+  box-shadow: inset 0 0 0 1px @color-progressive--focus, inset 0 0 0 2px @color-base--inverted;
+}
+.oo-ui-toolbar-actions > .oo-ui-toolbar:not( :last-child ) {
+  border-right: @border-toolbar;
+}
+/*!
+ * OOUI v0.26.4
+ * https://www.mediawiki.org/wiki/OOUI
+ *
+ * Copyright 2011–2018 OOUI Team and other contributors.
+ * Released under the MIT license
+ * http://oojs.mit-license.org
+ */
+/**
+ * WikimediaUI Base v0.10.0
+ * Wikimedia Foundation user interface base variables
+ */
+.oo-ui-messageDialog-content > .oo-ui-window-foot {
+  outline: @border-dialog;
+}
+.oo-ui-messageDialog-title {
+  color: @color-base--emphasized;
+}
+.oo-ui-messageDialog-message {
+  color: @color-base;
+}
+.oo-ui-messageDialog-actions-horizontal .oo-ui-actionWidget {
+  border-right: @border-base;
+}
+.oo-ui-messageDialog-actions-vertical .oo-ui-actionWidget {
+  border-bottom: @border-base;
+}
+.oo-ui-messageDialog-actions .oo-ui-actionWidget.oo-ui-widget-enabled .oo-ui-buttonElement-button:hover {
+  background-color: @background-color-framed;
+}
+.oo-ui-messageDialog-actions .oo-ui-actionWidget.oo-ui-widget-enabled .oo-ui-buttonElement-button:active {
+  background-color: @background-color-framed--active;
+}
+.oo-ui-messageDialog-actions .oo-ui-actionWidget.oo-ui-widget-enabled .oo-ui-buttonElement-button:focus {
+  box-shadow: @box-shadow-action--focus;
+}
+.oo-ui-messageDialog-actions .oo-ui-actionWidget.oo-ui-widget-enabled.oo-ui-flaggedElement-progressive .oo-ui-buttonElement-button:hover {
+  background-color: @background-color-progressive;
+}
+.oo-ui-messageDialog-actions .oo-ui-actionWidget.oo-ui-widget-enabled.oo-ui-flaggedElement-destructive .oo-ui-buttonElement-button:hover {
+  background-color: @background-color-destructive;
+}
+.oo-ui-processDialog-content .oo-ui-window-body {
+  outline: @border-dialog-bar;
+}
+.oo-ui-processDialog-errors-title {
+  color: @color-base--emphasized;
+}
+.oo-ui-processDialog-error {
+  border: 1px solid @border-color-erroneous;
+}
+.oo-ui-windowManager-modal > .oo-ui-dialog > .oo-ui-window-frame {
+  background-color: @background-color-base;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame {
+  border: @border-dialog;
+  box-shadow: @box-shadow-dialog;
+}
+/*!
+ * OOUI v0.26.4
+ * https://www.mediawiki.org/wiki/OOUI
+ *
+ * Copyright 2011–2018 OOUI Team and other contributors.
+ * Released under the MIT license
+ * http://oojs.mit-license.org
+ */
+/**
+ * WikimediaUI Base v0.10.0
+ * Wikimedia Foundation user interface base variables
+ */
+ .oo-ui-indicator-alert() {
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>alert</title><path d="M10 0a10 10 0 1 0 10 10A10 10 0 0 0 10 0zm1 16H9v-2h2zm0-4H9V4h2z"/></svg>');
+}
+.oo-ui-image-invert_oo-ui-indicator-alert() {
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g fill="#fff"><title>alert</title><path d="M10 0a10 10 0 1 0 10 10A10 10 0 0 0 10 0zm1 16H9v-2h2zm0-4H9V4h2z"/></g></svg>');
+}
+.oo-ui-indicator-clear() {
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>clear</title><path d="M10 0a10 10 0 1 0 10 10A10 10 0 0 0 10 0zm5.66 14.24l-1.41 1.41L10 11.41l-4.24 4.25-1.42-1.42L8.59 10 4.34 5.76l1.42-1.42L10 8.59l4.24-4.24 1.41 1.41L11.41 10z"/></svg>');
+}
+.oo-ui-image-invert_oo-ui-indicator-clear() {
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g fill="#fff"><title>clear</title><path d="M10 0a10 10 0 1 0 10 10A10 10 0 0 0 10 0zm5.66 14.24l-1.41 1.41L10 11.41l-4.24 4.25-1.42-1.42L8.59 10 4.34 5.76l1.42-1.42L10 8.59l4.24-4.24 1.41 1.41L11.41 10z"/></g></svg>');
+}
+.oo-ui-indicator-up() {
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><title>up</title><path d="M11 7.974l-.965 1.052L6 5.168 2.053 9.026 1 7.974l5-5 5 5"/></svg>');
+}
+.oo-ui-image-invert_oo-ui-indicator-up() {
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><g fill="#fff"><title>up</title><path d="M11 7.974l-.965 1.052L6 5.168 2.053 9.026 1 7.974l5-5 5 5"/></g></svg>');
+}
+.oo-ui-indicator-down() {
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><title>down</title><path d="M11.05 3.996l-.965-1.053-4.035 3.86-3.947-3.86L1.05 3.996l5 5 5-5"/></svg>');
+}
+.oo-ui-image-invert_oo-ui-indicator-down() {
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><g fill="#fff"><title>down</title><path d="M11.05 3.996l-.965-1.053-4.035 3.86-3.947-3.86L1.05 3.996l5 5 5-5"/></g></svg>');
+}
+.oo-ui-indicator-required() {
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>required</title><path d="M8.5 0h3v20h-3z"/><path d="M19.41 13.701l-1.5 2.598L.59 6.3l1.5-2.598z"/><path d="M17.91 3.701l1.5 2.598-17.32 10-1.5-2.598z"/></svg>');
+}
+.oo-ui-image-invert_oo-ui-indicator-required() {
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g fill="#fff"><title>required</title><path d="M8.5 0h3v20h-3z"/><path d="M19.41 13.701l-1.5 2.598L.59 6.3l1.5-2.598z"/><path d="M17.91 3.701l1.5 2.598-17.32 10-1.5-2.598z"/></g></svg>');
+}
+.oo-ui-indicator-search() {
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>search</title><path d="M19 17l-5.15-5.15a7 7 0 1 0-2 2L17 19zM3.5 8A4.5 4.5 0 1 1 8 12.5 4.5 4.5 0 0 1 3.5 8z"/></svg>');
+}
+.oo-ui-image-invert_oo-ui-indicator-search() {
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g fill="#fff"><title>search</title><path d="M19 17l-5.15-5.15a7 7 0 1 0-2 2L17 19zM3.5 8A4.5 4.5 0 1 1 8 12.5 4.5 4.5 0 0 1 3.5 8z"/></g></svg>');
+}
+/**
+ * WikimediaUI Base v0.10.0
+ * Wikimedia Foundation user interface base variables
+ */
+// .oo-ui-texture-pending {
+//   background-image: url('themes/wikimediaui/images/textures/pending.gif');
+//   background-image: linear-gradient(transparent, transparent), url('themes/wikimediaui/images/textures/pending.gif');
+// }
+.oo-ui-texture-transparency() {
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#c8ccd1" d="M0 0h8v8H0zm8 8h8v8H8z"/><path fill="#fff" d="M8 0h8v8H8zM0 8h8v8H0z"/></svg>');
+}

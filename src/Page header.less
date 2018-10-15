@@ -5,11 +5,11 @@
 #ca-ve-edit,        // Visual mode edit button
 #ca-addsection,     // Talk page add secton
 #ca-viewsource {
-    @include button-styling();
-    border-right-color: $button-text;
+    .button-styling();
+    border-right-color: @button-text;
 
     &:hover {
-        border-right-color: $button-text;
+        border-right-color: @button-text;
     }
 
     // Pencil image
@@ -21,19 +21,19 @@
     & + div.wds-dropdown {
         // Button color
         .wds-button {
-            @include button-styling();
-            border-left-color: $button-text;
+            .button-styling();
+            border-left-color: @button-text;
 
             &:hover {
-                border-left-color: $button-text;
+                border-left-color: @button-text;
             }
         }
 
         // Content colors
-        // @include dropdown-pointer-styling();
+        // .dropdown-pointer-styling();
 
         .wds-dropdown__content {
-            @include dropdown-styling();
+            .dropdown-styling();
         }
     }
 }
@@ -44,20 +44,20 @@
 #ca-addsection {
     & + .wds-dropdown &,
     & ~ .WikiaMenuElement & {
-        color: $theme-text;
+        color: @theme-text;
         background: none;
         border: none;
 
         &:hover {
-            color: $theme-links;
-            background-color: $dropdown-hover-item;
+            color: @theme-links;
+            background-color: @dropdown-hover-item;
         }
     }
 }
 
 // [[Special:Images]]
 #page-header-add-new-photo {
-    @include button-styling();
+    .button-styling();
 
     img {
         filter: brightness(85%);
@@ -66,12 +66,12 @@
 
 // For talk and share button button
 .wds-button.wds-is-secondary {
-    color: darken($theme-text, 5%);
-    border-color: $theme-borders;
+    color: darken(@theme-text, 5%);
+    border-color: @theme-borders;
 
     &:hover {
-        color: lighten($theme-text, 10%);
-        border-color: lighten($theme-borders, 15%);
+        color: lighten(@theme-text, 10%);
+        border-color: lighten(@theme-borders, 15%);
     }
 }
 
@@ -81,26 +81,26 @@
 
     .codepage-publish-button,
     .drop {
-        @include button-styling();
+        .button-styling();
     }
 
     img.chevron {
-        border-top-color: $button-text ;
+        border-top-color: @button-text ;
     }
 
     ul {
-        background-color: $dropdown-bg;
-        border-color: $theme-borders;
+        background-color: @dropdown-bg;
+        border-color: @theme-borders;
 
         li {
-            border-top: 1px solid $theme-borders;
+            border-top: 1px solid @theme-borders;
 
             a {
-                color: $theme-text;
+                color: @theme-text;
 
                 &:hover {
-                    background-color: $dropdown-hover-item;
-                    color: $theme-links;
+                    background-color: @dropdown-hover-item;
+                    color: @theme-links;
                 }
             }
 
@@ -119,13 +119,13 @@
 //      Language select
 // =========================
 #PageHeader .page-header__languages {
-    // @include dropdown-pointer-styling();
+    // .dropdown-pointer-styling();
 
     .wds-dropdown__content {
-        @include dropdown-styling();
+        .dropdown-styling();
 
         ul {
-            @include scroll-bar-styling();
+            .scroll-bar-styling();
         }
     }
 }
@@ -134,13 +134,13 @@
 //      Categories ovelflow dropdown
 // ======================================
 #PageHeader .page-header__categories-dropdown {
-    // @include dropdown-pointer-styling();
+    // .dropdown-pointer-styling();
 
     .page-header__categories-dropdown-content {
-        @include dropdown-styling();
+        .dropdown-styling();
 
         ul {
-            @include scroll-bar-styling();
+            .scroll-bar-styling();
         }
     }
 }
@@ -152,10 +152,10 @@
     // -------------------------------
     //      Blue background color
     // -------------------------------
-    background-color: $pageheader-bg;
+    background-color: @pageheader-bg;
 
     &::before {
-        background-image: linear-gradient( 270deg, fadeout($pageheader-bg, 50%) 0px, fadeout($pageheader-bg, 50%) 200px, $pageheader-bg 430px );
+        background-image: linear-gradient( 270deg, fadeout(@pageheader-bg, 50%) 0px, fadeout(@pageheader-bg, 50%) 200px, @pageheader-bg 430px );
     }
 
     // --------------------
@@ -166,15 +166,15 @@
     .wds-tabs__tab-label,
     .wds-icon,
     a {
-        color: lighten($theme-text, 10%);
+        color: lighten(@theme-text, 10%);
     }
 
     .wds-button.wds-is-secondary {
-        color: lighten($theme-text, 10%);
-        border-color: lighten($theme-text, 10%);
+        color: lighten(@theme-text, 10%);
+        border-color: lighten(@theme-text, 10%);
 
         svg {
-            fill: lighten($theme-text, 10%);
+            fill: lighten(@theme-text, 10%);
         }
     }
 }
@@ -183,41 +183,41 @@
 //      Dropdowns
 // -------------------
 .wds-dropdown {
-    // @include dropdown-pointer-styling();
+    // .dropdown-pointer-styling();
 
     .wds-is-selected > a {
-        color: $theme-links;
-        background-color: $dropdown-hover-item;
+        color: @theme-links;
+        background-color: @dropdown-hover-item;
     }
 }
 
 .wds-dropdown__content {
     &,
     .wds-dropdown-level-2__content {
-        @include dropdown-styling();
+        .dropdown-styling();
     }
 
     li:hover > a:not(.wds-button) {
-        color: $theme-links;
-        background-color: $dropdown-hover-item;
+        color: @theme-links;
+        background-color: @dropdown-hover-item;
     }
 }
 
 // http://dev.wikia.com/wiki/UTCClock
 #DisplayClockJS {
-    color: lighten($theme-text, 10%);
+    color: lighten(@theme-text, 10%);
 }
 
 // Header bottom line
 .WikiaPage .page-header__separator {
-    background-color: $theme-borders;
+    background-color: @theme-borders;
 }
 
 // =======================
 //      Fandom header
 // =======================
 #globalNavigation {
-    box-shadow: 0 1px 0 0 darken($fandomheader-bg, 10%);
+    box-shadow: 0 1px 0 0 darken(@fandomheader-bg, 10%);
 }
 
 // --------------------------
@@ -232,8 +232,8 @@
 .wds-global-navigation__account-menu,
 .wds-global-navigation__notifications-menu,
 .wds-global-navigation__start-a-wiki {
-    background-color: $fandomheader-bg;
-    color: $theme-text;
+    background-color: @fandomheader-bg;
+    color: @theme-text;
 }
 
 .wds-global-navigation__link,
@@ -242,7 +242,7 @@
 .wds-global-navigation__account-menu,
 .wds-global-navigation__notifications-menu {
     &:hover {
-        color: lighten($theme-text, 15%);
+        color: lighten(@theme-text, 15%);
     }
 }
 
@@ -251,51 +251,51 @@
 // --------------------
 //----- fandom logo -----//
 #wds-company-logo-fandom-white > g > path:last-child {
-    fill: $theme-text;
+    fill: @theme-text;
 }
 
 //----- notification icons -----//
 .wds-global-navigation__notifications-dropdown .wds-icon-small path {
-    fill: darken($theme-text, 10%);
+    fill: darken(@theme-text, 10%);
 }
 
 .wds-global-navigation__notifications-dropdown:hover .wds-icon-small path {
-    fill: darken($theme-text, -5%);
+    fill: darken(@theme-text, -5%);
 }
 
 //----- When logged in -----//
 .wds-global-navigation__user-menu.wds-global-navigation__user-logged-in .wds-avatar__image {
-    border-color: lighten($fandomheader-bg, 10%);
-    fill: lighten($fandomheader-bg, 10%);
+    border-color: lighten(@fandomheader-bg, 10%);
+    fill: lighten(@fandomheader-bg, 10%);
 }
 
 .wds-global-navigation__user-menu:hover.wds-global-navigation__user-logged-in .wds-avatar__image {
-    border-color: lighten($fandomheader-bg, 40%);
-    fill: lighten($fandomheader-bg, 40%);
+    border-color: lighten(@fandomheader-bg, 40%);
+    fill: lighten(@fandomheader-bg, 40%);
 }
 
 //----- When not logged in -----//
 .wds-global-navigation__user-menu li {
-    color: $theme-text;
-    border-color: $theme-borders;
+    color: @theme-text;
+    border-color: @theme-borders;
 
     .wds-button {
-        @include button-styling();
+        .button-styling();
 
         &.wds-is-secondary {
-            @include button-styling("cancel");
+            .button-styling("cancel");
         }
     }
 }
 
 .wds-global-navigation__user-menu .wds-avatar__image {
-    border-color: lighten($fandomheader-bg, 30%);
-    fill: lighten($fandomheader-bg, 30%);
+    border-color: lighten(@fandomheader-bg, 30%);
+    fill: lighten(@fandomheader-bg, 30%);
 }
 
 .wds-global-navigation__user-menu:hover .wds-avatar__image {
-    border-color: lighten($fandomheader-bg, 50%);
-    fill: lighten($fandomheader-bg, 50%);
+    border-color: lighten(@fandomheader-bg, 50%);
+    fill: lighten(@fandomheader-bg, 50%);
 }
 
 //----- Dropdown chevrons -----//
@@ -307,24 +307,24 @@
 //      Searchbar
 // -------------------
 .wds-global-navigation__search-label {
-    background-color: $fandomheader-bg;
+    background-color: @fandomheader-bg;
 
     path {
-        fill: darken($theme-text, 15%);
+        fill: darken(@theme-text, 15%);
     }
 }
 
 .wds-global-navigation__search-input {
-    background-color: $fandomheader-bg;
-    color: $theme-text;
+    background-color: @fandomheader-bg;
+    color: @theme-text;
 
     &::placeholder {
-        color: $placeholder;
+        color: @placeholder;
     }
 }
 
 .wds-global-navigation__search-submit {
-    @include button-styling();
+    .button-styling();
 }
 
 .wds-global-navigation__search-close {
@@ -335,7 +335,7 @@
 }
 
 .wds-global-navigation__search-input-wrapper {
-    border-bottom-color: $theme-borders;
+    border-bottom-color: @theme-borders;
 }
 
 // -------------------
@@ -343,23 +343,23 @@
 // -------------------
 // Account login/logout
 .wds-sign-out__button {
-    @include button-styling();
+    .button-styling();
 }
 
 #global-navigation-anon-sign-in {
-    @include button-styling();
+    .button-styling();
 }
 
 #global-navigation-anon-register {
-    @include button-styling("cancel");
+    .button-styling("cancel");
 }
 
 // Notifications
 .wds-notifications__dropdown-content {
-    color: $theme-text;
+    color: @theme-text;
 
     .wds-notifications__zero-state {
-        color: darken($theme-text, 15%);
+        color: darken(@theme-text, 15%);
     }
 }
 
@@ -367,13 +367,13 @@
 #GlobalNavigationWallNotifications {
     .notification {
         border: none;
-        color: $theme-text;
-        background: $dropdown-bg;
+        color: @theme-text;
+        background: @dropdown-bg;
 
         &.empty {
-            color: darken($theme-text, 15%);
+            color: darken(@theme-text, 15%);
         }
     }
 
-    @include dropdown-styling();
+    .dropdown-styling();
 }

@@ -7,7 +7,7 @@ input[type="search"],
 input[type="text"],
 input[type="number"],
 .mw-ui-input {
-    @include text-input-styling();
+    .text-input-styling();
 }
 
 // =========================
@@ -15,11 +15,11 @@ input[type="number"],
 // =========================
 // Input bar
 .oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle {
-    @include text-input-styling();
+    .text-input-styling();
 
     &:hover {
-        background: $input-fields;
-        color: $theme-text;
+        background: @input-fields;
+        color: @theme-text;
     }
 
     // .oo-ui-inputWidget-input {
@@ -34,15 +34,15 @@ input[type="number"],
 
 // Selected items
 // .oo-ui-tagItemWidget {
-//     @include button-styling("cancel");
+//     .button-styling("cancel");
 // }
 .oo-ui-dropdownWidget.oo-ui-widget-enabled.oo-ui-dropdownWidget-open .oo-ui-dropdownWidget-handle {
-    @include text-input-styling();
+    .text-input-styling();
 }
 
 // Dropdown list
 .oo-ui-menuSelectWidget {
-    @include dropdown-styling();
+    .dropdown-styling("ooui");
 }
 
 // =================
@@ -53,19 +53,19 @@ input[type="reset"],
 input[type="button"],
 .button,
 button {
-    @include button-styling();
+    .button-styling();
 
     &.secondary {
-        @include button-styling("cancel");
+        .button-styling("cancel");
     }
 }
 
 .oo-ui-buttonElement-framed.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button {
-    @include button-styling();
+    .button-styling();
 }
 
 .oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button {
-    @include button-styling("cancel");
+    .button-styling("cancel");
 }
 
 // .oo-ui-buttonElement-button .oo-ui-iconElement-icon {
@@ -76,14 +76,14 @@ button {
 //      Checkboxes
 // ====================
 .oo-ui-checkboxInputWidget [type='checkbox'] + span {
-    border-color: $theme-borders;
-    background-color: $input-fields;
+    border-color: @theme-borders;
+    background-color: @input-fields;
 }
 
 // =========================
 //      Group of inputs
 // =========================
 .oo-ui-panelLayout-framed {
-    border-color: $theme-borders;
-    background-color: $input-group-wrapper;
+    border-color: @theme-borders;
+    background-color: @input-group-wrapper;
 }

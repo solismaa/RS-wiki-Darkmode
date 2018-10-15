@@ -9,59 +9,59 @@
 .source-lua,
 .source-css,
 .source-javascript {
-    background-color: $code-editor-bg;
-    color: darken($theme-text, 5%);
+    background-color: @code-editor-bg;
+    color: darken(@theme-text, 5%);
 }
 
 // -------------------
 //      Edit page
 // -------------------
 .editpage-editarea {
-    background-color: $code-editor-bg;
-    color: darken($theme-text, 5%);
+    background-color: @code-editor-bg;
+    color: darken(@theme-text, 5%);
 }
 
 // Row count sidebar
 .ace_gutter {
-    background-color: lighten($code-editor-bg, 5%);
-    color: $theme-text;
+    background-color: lighten(@code-editor-bg, 5%);
+    color: @theme-text;
 }
 
 // Active line highlight
 .ace_marker-layer .ace_active-line {
-    background-color: $code-editor-bg;
-    border-top: solid 2px lighten($code-editor-bg, 6.5%);
-    border-bottom: solid 2px lighten($code-editor-bg, 6.5%);
+    background-color: @code-editor-bg;
+    border-top: solid 2px lighten(@code-editor-bg, 6.5%);
+    border-bottom: solid 2px lighten(@code-editor-bg, 6.5%);
 }
 
 .ace_gutter-active-line {
-    background-color: lighten($code-editor-bg, 8%);
+    background-color: lighten(@code-editor-bg, 8%);
 }
 
 // Selection highlight
 .ace_marker-layer .ace_selection {
-    background-color: fade(lighten($code-editor-bg, 32.5%), 20%);
+    background-color: fade(lighten(@code-editor-bg, 32.5%), 20%);
 }
 
 .ace_cursor {
-    color: $theme-text;
+    color: @theme-text;
 }
 
 .EditPageEditor .editpage-editarea {
-    border-color: $theme-borders;
+    border-color: @theme-borders;
 }
 
 // Scrollbar styling
 .ace_scrollbar,
 .ace_scrollbar-h {
-    @include scroll-bar-styling();
+    .scroll-bar-styling();
 }
 
 //----- Search bar in editor -----//
 // Popup
 .ace_search {
-    background-color: darken($code-editor-bg, 3%);
-    border-color: $theme-borders;
+    background-color: darken(@code-editor-bg, 3%);
+    border-color: @theme-borders;
 }
 
 // Cancel button
@@ -70,51 +70,51 @@
 
     &::before {
         content: "✖";
-        color: $button-text;
+        color: @button-text;
         font-size: 0.8em;
     }
 
     &:hover {
-        background: $button-cancel-bg;
+        background: @button-cancel-bg;
     }
 }
 
 // Searchbar
 .ace_search_form {
-    @include text-input-styling();
+    .text-input-styling();
 }
 
 // Previous/next buttons
 .ace_searchbtn {
-    background: lighten($code-editor-bg, 20%);
-    border-color: lighten($code-editor-bg, 10%);;
+    background: lighten(@code-editor-bg, 20%);
+    border-color: lighten(@code-editor-bg, 10%);;
 
     &.prev:before {
         content: "▲";
-        color: $theme-text;
+        color: @theme-text;
     }
 
     &.next:before {
         content: "▼";
-        color: $theme-text;
+        color: @theme-text;
     }
 
     &:hover {
-        background: lighten($code-editor-bg, 30%);
+        background: lighten(@code-editor-bg, 30%);
     }
 }
 
 // Search options
 .ace_search_options .ace_button {
-    color: $theme-text;
-    border-color: $theme-borders;
+    color: @theme-text;
+    border-color: @theme-borders;
 
     &:hover {
-        background-color: lighten($code-editor-bg, 10%);
+        background-color: lighten(@code-editor-bg, 10%);
     }
 
     &.checked {
-        background-color: lighten($code-editor-bg, 20%);
+        background-color: lighten(@code-editor-bg, 20%);
     }
 }
 
@@ -161,24 +161,24 @@
 // ------------------------
 #mw-scribunto-console,
 .mw-scribunto-console-fieldset {
-    color: $theme-text;
-    background-color: $edit-area-sidebar-bg;
+    color: @theme-text;
+    background-color: @edit-area-sidebar-bg;
 }
 
 .mw-scribunto-message {
     background: none;
-    color: darken($theme-text, 10%);
+    color: darken(@theme-text, 10%);
 }
 
 // Output area
 .mw-scribunto-input {
-    color: $theme-links;
+    color: @theme-links;
 }
 
 .mw-scribunto-normalOutput,
 .mw-scribunto-print {
     background: none;
-    color: $theme-text;
+    color: @theme-text;
 }
 
 .mw-scribunto-error {
@@ -187,5 +187,5 @@
 
 // Text input area
 #mw-scribunto-input {
-    @include text-input-styling();
+    .text-input-styling();
 }
