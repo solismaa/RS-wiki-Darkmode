@@ -2,13 +2,101 @@
 @name           RunescapeWiki darkmode
 @description    A dark theme for the Runescape wiki
 @namespace      https://github.com/CephHunter
-@version        3.0.0-alpha.1
+@version        3.0.0-alpha.2
 @homepageURL    https://github.com/CephHunter/RS-wiki-DarkMode#readme
 @supportURL     https://github.com/CephHunter/RS-wiki-DarkMode/issues
 @author         CephHunter
 @license        CC-BY-SA-4.0
 ==/UserStyle== */
 @-moz-document domain('runescape.wiki') {
+/* START of my own edits */
+/* https://github.com/solismaa/RS-wiki-Darkmode */
+
+.tile-halves, .tile-bottom {
+    background: #262626;
+    border-color: #52555a;
+}
+.mainpage-recent-updates p:not(.byline) {
+    color: #c5c5c5;
+}
+.mainpage-body h2 a {
+    color: #c5c5c5;
+}
+.mainpage-skills li a:last-child {
+    color: #c5c5c5;
+}
+.tile-bottom.read-more {
+    background: #333;
+}
+.tile {
+    background: #262626;
+    border: 1px solid #52555a;
+    box-shadow: 0 0.25rem 0.35rem -0.25rem rgba(0,0,0,0.1);
+}
+.ajaxpoll {
+    background: #262626;
+    border: 1px solid #52555a;
+}
+#p-logo a {
+    filter: invert(0.85);
+}
+.rsw-infobox th:not(.infobox-header):not(.infobox-subheader) {
+    border-right: 1px solid #52555a;
+}
+th[style^="border-top"] {
+    border-top: 0 !important;
+}
+.highcharts-background {
+    fill: #262626;
+    stroke: #52555a
+}
+.highcharts-title {
+    color: #c5c5c5 !important;
+}
+.highcharts-plot-background {
+    fill: #323232;
+}
+.highcharts-grid path, .highcharts-axis path {
+    stroke: #52555a;
+}
+#GEchartpopup {
+    background: #262626;
+    border: 1px solid #52555a;
+    color: #c5c5c5;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button {
+    color: #dfdfdf;
+    border-color: #52555a;
+    background-color: #262626;
+}
+.oo-ui-numberInputWidget-buttoned .oo-ui-inputWidget-input {
+    max-height: 3em;
+    height: 28px;
+    padding-left: 6px;
+    left: 0;
+}
+.oo-ui-numberInputWidget-buttoned .oo-ui-buttonWidget .oo-ui-buttonElement-button {
+    min-width: 31px;
+}
+.oo-ui-fieldsetLayout-group {
+    margin-bottom: 8px;
+}
+.oo-ui-buttonElement-framed.oo-ui-labelElement > .oo-ui-buttonElement-button {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.highcharts-label-box {
+    stroke: #52555a;
+}
+.highcharts-range-input text {
+    fill: #666 !important;
+}
+.highcharts-navigator-outline {
+    stroke: #52555a;
+}
+
+/* END of my own edits */
+
 .sg-red,
 .nocell {
   background: #58120b;
